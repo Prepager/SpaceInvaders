@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/s173170/Downloads/SpaceInvaders/SpaceInvaders.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/s173170/SpaceInvaders/SpaceInvaders.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1a185e4c06c44711bf5328b31f5dd04b"/>
@@ -22,7 +22,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../hdmi-in/hdmi-in.ipdefs/repo_0_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../Downloads/hdmi-in/hdmi-in.ipdefs/repo_0_0"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -65,18 +66,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_rgb2vga_0_0/hdmi_in_rgb2vga_0_0.xci">
-          <Proxy FileSetName="hdmi_in_rgb2vga_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_dynclk_0_0/hdmi_in_axi_dynclk_0_0.xci">
-          <Proxy FileSetName="hdmi_in_axi_dynclk_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_xlconcat_0_0/hdmi_in_xlconcat_0_0.xci">
-          <Proxy FileSetName="hdmi_in_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_dvi2rgb_0_0/hdmi_in_dvi2rgb_0_0.xci">
-          <Proxy FileSetName="hdmi_in_dvi2rgb_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/hdmi_in_wrapper.vhd">
         <FileInfo>
@@ -92,7 +81,7 @@
           <Attr Name="ImportTime" Val="1514552866"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../hdmi-in/archive_project_summary.txt">
+      <File Path="$PPRDIR/../Downloads/hdmi-in/archive_project_summary.txt">
         <FileInfo RelPath="archive_project_summary.txt"/>
       </File>
       <Config>
