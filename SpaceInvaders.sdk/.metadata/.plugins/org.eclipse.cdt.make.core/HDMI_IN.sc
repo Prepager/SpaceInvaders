@@ -2,6 +2,16 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.armv7.exe.debug.1247721330;xilinx.gnu.armv7.exe.debug.1247721330.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_FEATURE_DSP" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_QBIT" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include"/>
+<includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+<includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include"/>
+<includePath path="#undef __ARM_FEATURE_UNALIGNED" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+<includePath path="#undef __ARM_FEATURE_QRDMX" removed="true"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include-fixed"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include"/>
@@ -12,10 +22,13 @@
 <definedSymbol symbol="__STDC_UTF_32__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=6"/>
+<definedSymbol symbol="__GNUC__=7"/>
 <definedSymbol symbol="__GNUC_MINOR__=2"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
 <definedSymbol symbol="__VERSION__=&quot;6.2.1 20161114&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;7.2.1 20171011&quot;"/>
 <definedSymbol symbol="__LINARO_RELEASE__=201611"/>
+<definedSymbol symbol="__LINARO_RELEASE__=201711"/>
 <definedSymbol symbol="__LINARO_SPIN__=0"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
@@ -78,6 +91,7 @@
 <definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
 <definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1010"/>
+<definedSymbol symbol="__GXX_ABI_VERSION=1011"/>
 <definedSymbol symbol="__SCHAR_MAX__=0x7f"/>
 <definedSymbol symbol="__SHRT_MAX__=0x7fff"/>
 <definedSymbol symbol="__INT_MAX__=0x7fffffff"/>
@@ -351,6 +365,70 @@
 <definedSymbol symbol="__GXX_TYPEINFO_EQUALITY_INLINE=0"/>
 <definedSymbol symbol="__ELF__=1"/>
 <definedSymbol symbol="__USES_INITFINI__=1"/>
+<definedSymbol symbol="__SCHAR_WIDTH__=8"/>
+<definedSymbol symbol="__SHRT_WIDTH__=16"/>
+<definedSymbol symbol="__INT_WIDTH__=32"/>
+<definedSymbol symbol="__LONG_WIDTH__=32"/>
+<definedSymbol symbol="__LONG_LONG_WIDTH__=64"/>
+<definedSymbol symbol="__WCHAR_WIDTH__=32"/>
+<definedSymbol symbol="__WINT_WIDTH__=32"/>
+<definedSymbol symbol="__PTRDIFF_WIDTH__=32"/>
+<definedSymbol symbol="__SIZE_WIDTH__=32"/>
+<definedSymbol symbol="__INTMAX_WIDTH__=64"/>
+<definedSymbol symbol="__SIG_ATOMIC_WIDTH__=32"/>
+<definedSymbol symbol="__INT_LEAST8_WIDTH__=8"/>
+<definedSymbol symbol="__INT_LEAST16_WIDTH__=16"/>
+<definedSymbol symbol="__INT_LEAST32_WIDTH__=32"/>
+<definedSymbol symbol="__INT_LEAST64_WIDTH__=64"/>
+<definedSymbol symbol="__INT_FAST8_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST16_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST32_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST64_WIDTH__=64"/>
+<definedSymbol symbol="__INTPTR_WIDTH__=32"/>
+<definedSymbol symbol="__FLT_EVAL_METHOD_TS_18661_3__=0"/>
+<definedSymbol symbol="__LDBL_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT32_MANT_DIG__=24"/>
+<definedSymbol symbol="__FLT32_DIG__=6"/>
+<definedSymbol symbol="__FLT32_MIN_EXP__=(-125)"/>
+<definedSymbol symbol="__FLT32_MIN_10_EXP__=(-37)"/>
+<definedSymbol symbol="__FLT32_MAX_EXP__=128"/>
+<definedSymbol symbol="__FLT32_MAX_10_EXP__=38"/>
+<definedSymbol symbol="__FLT32_DECIMAL_DIG__=9"/>
+<definedSymbol symbol="__FLT32_MAX__=3.4028234663852886e+38F32"/>
+<definedSymbol symbol="__FLT32_MIN__=1.1754943508222875e-38F32"/>
+<definedSymbol symbol="__FLT32_EPSILON__=1.1920928955078125e-7F32"/>
+<definedSymbol symbol="__FLT32_DENORM_MIN__=1.4012984643248171e-45F32"/>
+<definedSymbol symbol="__FLT32_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT32_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT32_HAS_QUIET_NAN__=1"/>
+<definedSymbol symbol="__FLT64_MANT_DIG__=53"/>
+<definedSymbol symbol="__FLT64_DIG__=15"/>
+<definedSymbol symbol="__FLT64_MIN_EXP__=(-1021)"/>
+<definedSymbol symbol="__FLT64_MIN_10_EXP__=(-307)"/>
+<definedSymbol symbol="__FLT64_MAX_EXP__=1024"/>
+<definedSymbol symbol="__FLT64_MAX_10_EXP__=308"/>
+<definedSymbol symbol="__FLT64_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT64_MAX__=1.7976931348623157e+308F64"/>
+<definedSymbol symbol="__FLT64_MIN__=2.2250738585072014e-308F64"/>
+<definedSymbol symbol="__FLT64_EPSILON__=2.2204460492503131e-16F64"/>
+<definedSymbol symbol="__FLT64_DENORM_MIN__=4.9406564584124654e-324F64"/>
+<definedSymbol symbol="__FLT64_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT64_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT64_HAS_QUIET_NAN__=1"/>
+<definedSymbol symbol="__FLT32X_MANT_DIG__=53"/>
+<definedSymbol symbol="__FLT32X_DIG__=15"/>
+<definedSymbol symbol="__FLT32X_MIN_EXP__=(-1021)"/>
+<definedSymbol symbol="__FLT32X_MIN_10_EXP__=(-307)"/>
+<definedSymbol symbol="__FLT32X_MAX_EXP__=1024"/>
+<definedSymbol symbol="__FLT32X_MAX_10_EXP__=308"/>
+<definedSymbol symbol="__FLT32X_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT32X_MAX__=1.7976931348623157e+308F32x"/>
+<definedSymbol symbol="__FLT32X_MIN__=2.2250738585072014e-308F32x"/>
+<definedSymbol symbol="__FLT32X_EPSILON__=2.2204460492503131e-16F32x"/>
+<definedSymbol symbol="__FLT32X_DENORM_MIN__=4.9406564584124654e-324F32x"/>
+<definedSymbol symbol="__FLT32X_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT32X_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT32X_HAS_QUIET_NAN__=1"/>
 </collector>
 </instance>
 <instance id="xilinx.gnu.armv7.exe.release.304332731;xilinx.gnu.armv7.exe.release.304332731.">
@@ -708,6 +786,18 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.1247721330;xilinx.gnu.armv7.exe.debug.1247721330.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1970576914;xilinx.gnu.armv7.c.compiler.input.120289588">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_FEATURE_DSP" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include"/>
+<includePath path="#undef __ARM_FEATURE_QBIT" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+<includePath path="#undef __thumb__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include"/>
+<includePath path="#undef __thumb2__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+<includePath path="#undef __THUMBEL__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_UNALIGNED" removed="true"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include-fixed"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include"/>
@@ -718,10 +808,13 @@
 <definedSymbol symbol="__STDC_UTF_32__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=6"/>
+<definedSymbol symbol="__GNUC__=7"/>
 <definedSymbol symbol="__GNUC_MINOR__=2"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
 <definedSymbol symbol="__VERSION__=&quot;6.2.1 20161114&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;7.2.1 20171011&quot;"/>
 <definedSymbol symbol="__LINARO_RELEASE__=201611"/>
+<definedSymbol symbol="__LINARO_RELEASE__=201711"/>
 <definedSymbol symbol="__LINARO_SPIN__=0"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
@@ -784,6 +877,7 @@
 <definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
 <definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1010"/>
+<definedSymbol symbol="__GXX_ABI_VERSION=1011"/>
 <definedSymbol symbol="__SCHAR_MAX__=0x7f"/>
 <definedSymbol symbol="__SHRT_MAX__=0x7fff"/>
 <definedSymbol symbol="__INT_MAX__=0x7fffffff"/>
@@ -1057,6 +1151,70 @@
 <definedSymbol symbol="__GXX_TYPEINFO_EQUALITY_INLINE=0"/>
 <definedSymbol symbol="__ELF__=1"/>
 <definedSymbol symbol="__USES_INITFINI__=1"/>
+<definedSymbol symbol="__SCHAR_WIDTH__=8"/>
+<definedSymbol symbol="__SHRT_WIDTH__=16"/>
+<definedSymbol symbol="__INT_WIDTH__=32"/>
+<definedSymbol symbol="__LONG_WIDTH__=32"/>
+<definedSymbol symbol="__LONG_LONG_WIDTH__=64"/>
+<definedSymbol symbol="__WCHAR_WIDTH__=32"/>
+<definedSymbol symbol="__WINT_WIDTH__=32"/>
+<definedSymbol symbol="__PTRDIFF_WIDTH__=32"/>
+<definedSymbol symbol="__SIZE_WIDTH__=32"/>
+<definedSymbol symbol="__INTMAX_WIDTH__=64"/>
+<definedSymbol symbol="__SIG_ATOMIC_WIDTH__=32"/>
+<definedSymbol symbol="__INT_LEAST8_WIDTH__=8"/>
+<definedSymbol symbol="__INT_LEAST16_WIDTH__=16"/>
+<definedSymbol symbol="__INT_LEAST32_WIDTH__=32"/>
+<definedSymbol symbol="__INT_LEAST64_WIDTH__=64"/>
+<definedSymbol symbol="__INT_FAST8_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST16_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST32_WIDTH__=32"/>
+<definedSymbol symbol="__INT_FAST64_WIDTH__=64"/>
+<definedSymbol symbol="__INTPTR_WIDTH__=32"/>
+<definedSymbol symbol="__FLT_EVAL_METHOD_TS_18661_3__=0"/>
+<definedSymbol symbol="__LDBL_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT32_MANT_DIG__=24"/>
+<definedSymbol symbol="__FLT32_DIG__=6"/>
+<definedSymbol symbol="__FLT32_MIN_EXP__=(-125)"/>
+<definedSymbol symbol="__FLT32_MIN_10_EXP__=(-37)"/>
+<definedSymbol symbol="__FLT32_MAX_EXP__=128"/>
+<definedSymbol symbol="__FLT32_MAX_10_EXP__=38"/>
+<definedSymbol symbol="__FLT32_DECIMAL_DIG__=9"/>
+<definedSymbol symbol="__FLT32_MAX__=3.4028234663852886e+38F32"/>
+<definedSymbol symbol="__FLT32_MIN__=1.1754943508222875e-38F32"/>
+<definedSymbol symbol="__FLT32_EPSILON__=1.1920928955078125e-7F32"/>
+<definedSymbol symbol="__FLT32_DENORM_MIN__=1.4012984643248171e-45F32"/>
+<definedSymbol symbol="__FLT32_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT32_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT32_HAS_QUIET_NAN__=1"/>
+<definedSymbol symbol="__FLT64_MANT_DIG__=53"/>
+<definedSymbol symbol="__FLT64_DIG__=15"/>
+<definedSymbol symbol="__FLT64_MIN_EXP__=(-1021)"/>
+<definedSymbol symbol="__FLT64_MIN_10_EXP__=(-307)"/>
+<definedSymbol symbol="__FLT64_MAX_EXP__=1024"/>
+<definedSymbol symbol="__FLT64_MAX_10_EXP__=308"/>
+<definedSymbol symbol="__FLT64_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT64_MAX__=1.7976931348623157e+308F64"/>
+<definedSymbol symbol="__FLT64_MIN__=2.2250738585072014e-308F64"/>
+<definedSymbol symbol="__FLT64_EPSILON__=2.2204460492503131e-16F64"/>
+<definedSymbol symbol="__FLT64_DENORM_MIN__=4.9406564584124654e-324F64"/>
+<definedSymbol symbol="__FLT64_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT64_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT64_HAS_QUIET_NAN__=1"/>
+<definedSymbol symbol="__FLT32X_MANT_DIG__=53"/>
+<definedSymbol symbol="__FLT32X_DIG__=15"/>
+<definedSymbol symbol="__FLT32X_MIN_EXP__=(-1021)"/>
+<definedSymbol symbol="__FLT32X_MIN_10_EXP__=(-307)"/>
+<definedSymbol symbol="__FLT32X_MAX_EXP__=1024"/>
+<definedSymbol symbol="__FLT32X_MAX_10_EXP__=308"/>
+<definedSymbol symbol="__FLT32X_DECIMAL_DIG__=17"/>
+<definedSymbol symbol="__FLT32X_MAX__=1.7976931348623157e+308F32x"/>
+<definedSymbol symbol="__FLT32X_MIN__=2.2250738585072014e-308F32x"/>
+<definedSymbol symbol="__FLT32X_EPSILON__=2.2204460492503131e-16F32x"/>
+<definedSymbol symbol="__FLT32X_DENORM_MIN__=4.9406564584124654e-324F32x"/>
+<definedSymbol symbol="__FLT32X_HAS_DENORM__=1"/>
+<definedSymbol symbol="__FLT32X_HAS_INFINITY__=1"/>
+<definedSymbol symbol="__FLT32X_HAS_QUIET_NAN__=1"/>
 </collector>
 </instance>
 </scannerInfo>
