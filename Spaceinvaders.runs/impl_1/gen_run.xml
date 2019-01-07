@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1546864771">
+  <File Type="BITSTR-BMM" Name="hdmi_in_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_in_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hdmi_in_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="hdmi_in_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hdmi_in_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="hdmi_in_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hdmi_in_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="hdmi_in_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hdmi_in_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="hdmi_in_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hdmi_in_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hdmi_in_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="hdmi_in_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hdmi_in_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hdmi_in_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hdmi_in_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hdmi_in_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hdmi_in_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hdmi_in_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hdmi_in_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hdmi_in_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_in_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="hdmi_in_wrapper.bgn"/>
+  <File Type="PLACE-TIMING" Name="hdmi_in_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_in_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="hdmi_in_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hdmi_in_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hdmi_in_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hdmi_in_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="hdmi_in_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="hdmi_in_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hdmi_in_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hdmi_in_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_in_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hdmi_in_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hdmi_in_wrapper_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="hdmi_in_wrapper.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_in_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="hdmi_in_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_in_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_in_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="hdmi_in_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_in_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="hdmi_in_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hdmi_in_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hdmi_in_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_in_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hdmi_in_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hdmi_in_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hdmi_in_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="hdmi_in_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hdmi_in_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hdmi_in_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hdmi_in_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_in_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_in_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hdmi_in_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hdmi_in_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hdmi_in_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hdmi_in_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hdmi_in_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="hdmi_in_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hdmi_in_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="hdmi_in_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="hdmi_in_wrapper.nky"/>
+  <File Type="BG-DRC" Name="hdmi_in_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="hdmi_in_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/hdmi_in/hdmi_in.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/Teaching/2017/Autumn/02321/3_weeks_period/Zybo-hdmi-in-2016.4-3/Zybo-hdmi-in/src/bd/hdmi_in/hdmi_in.bd"/>
+        <Attr Name="ImportTime" Val="1514548314"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/hdmi_in_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/Teaching/2017/Autumn/02321/3_weeks_period/Zybo-hdmi-in-2016.4-3/Zybo-hdmi-in/src/bd/hdmi_in/hdl/hdmi_in_wrapper.vhd"/>
+        <Attr Name="ImportTime" Val="1514548543"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi-in/archive_project_summary.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Kurser/3.Semester/3 Ugers Projekt/vivado/hdmi-in/archive_project_summary.txt"/>
+        <Attr Name="ImportTime" Val="1514552866"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Kurser/3.Semester/3 Ugers Projekt/Zip filer/hdmi-in_2017.2/hdmi-in/archive_project_summary.txt"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hdmi_in_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/ZYBO_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/Teaching/2017/Autumn/02321/3_weeks_period/Zybo-hdmi-in-2016.4-3/Zybo-hdmi-in/src/constraints/ZYBO_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1495017916"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">4</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">14</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design">
+      <Option Id="Directive">5</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_dvi2rgb_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_dynclk_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s00_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rgb2vga_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rst_processing_system7_0_150M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_sw_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_btn_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s01_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_video_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_led_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rst_processing_system7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xlconstant_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_us_df_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xbar_0"/>
+</GenRun>

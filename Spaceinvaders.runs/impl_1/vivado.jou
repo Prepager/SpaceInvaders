@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jan  7 14:24:04 2019
+# Process ID: 3800
+# Current directory: C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.runs/impl_1
+# Command line: vivado.exe -log hdmi_in_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_in_wrapper.tcl -notrace
+# Log file: C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper.vdi
+# Journal file: C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_in_wrapper.tcl -notrace
