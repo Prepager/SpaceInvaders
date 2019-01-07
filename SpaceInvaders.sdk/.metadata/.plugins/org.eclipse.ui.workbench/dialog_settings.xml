@@ -12,17 +12,18 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="NewWizardAction">
+		<item value="com.xilinx.sdk.appwiz.AppWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.xilinx.sdk.ui.category.newWizards"/>
+		</list>
+	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
 	</section>
 	<section name="FileSystemImportWizard">
-		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
-		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
-		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="C:\Users\John\Desktop\sources\zybo\first_zynq_design"/>
-		</list>
 	</section>
 </section>

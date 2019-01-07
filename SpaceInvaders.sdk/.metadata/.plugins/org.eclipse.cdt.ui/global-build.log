@@ -1,218 +1,1085 @@
-11:04:44 **** Build of project Space_Invaders_bsp ****
+13:40:19 **** Build of project HDMI_IN_bsp ****
 make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling cpu_cortexa9"
 "Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling emacps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling gpio"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling scugic"
 "Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling scutimer"
 "Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling standalone"
-In file included from sleep.c:57:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from usleep.c:60:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:55:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:53:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling ttcps"
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
 "Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling xadcps"
 'Finished building libraries'
-11:05:13 **** Build of configuration Debug for project Space_Invaders ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Space_Invaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-'Finished building: ../src/main.cc'
-' '
-'Building target: Space_Invaders.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Space_Invaders_bsp/ps7_cortexa9_0/lib -o "Space_Invaders.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: Space_Invaders.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Space_Invaders.elf  |tee "Space_Invaders.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19024	   1144	  22576	  42744	   a6f8	Space_Invaders.elf
-'Finished building: Space_Invaders.elf.size'
-' '
-11:05:16 **** Auto Build of configuration Debug for project Space_Invaders ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-11:07:43 **** Auto Build of configuration Debug for project Space_Invaders ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/LED_test_tut_1C.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_tut_1C.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Space_Invaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_tut_1C.d" -MT"src/LED_test_tut_1C.o" -o "src/LED_test_tut_1C.o" "../src/LED_test_tut_1C.c"
-'Finished building: ../src/LED_test_tut_1C.c'
-' '
-'Building target: Space_Invaders.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Space_Invaders_bsp/ps7_cortexa9_0/lib -o "Space_Invaders.elf"  ./src/LED_test_tut_1C.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-./src/main.o: In function `main':
-C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/main.cc:6: multiple definition of `main'
-./src/LED_test_tut_1C.o:C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/LED_test_tut_1C.c:79: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [Space_Invaders.elf] Error 1
-11:08:30 **** Auto Build of configuration Debug for project Space_Invaders ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Space_Invaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-'Finished building: ../src/main.cc'
-' '
-'Building target: Space_Invaders.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Space_Invaders_bsp/ps7_cortexa9_0/lib -o "Space_Invaders.elf"  ./src/LED_test_tut_1C.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-./src/main.o:C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/main.cc:45: multiple definition of `Gpio'
-./src/LED_test_tut_1C.o:C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/LED_test_tut_1C.c:45: first defined here
-./src/main.o: In function `LEDOutputExample()':
-C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/main.cc:48: multiple definition of `LEDOutputExample()'
-./src/LED_test_tut_1C.o:C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/LED_test_tut_1C.c:48: first defined here
-./src/main.o: In function `main':
-C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/main.cc:79: multiple definition of `main'
-./src/LED_test_tut_1C.o:C:\Users\John\Documents\GitHub\SpaceInvaders\SpaceInvaders.sdk\Space_Invaders\Debug/../src/LED_test_tut_1C.c:79: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [Space_Invaders.elf] Error 1
-11:08:36 **** Auto Build of configuration Debug for project Space_Invaders ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/LED_test_tut_1C.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_tut_1C.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Space_Invaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_tut_1C.d" -MT"src/LED_test_tut_1C.o" -o "src/LED_test_tut_1C.o" "../src/LED_test_tut_1C.c"
-'Finished building: ../src/LED_test_tut_1C.c'
-' '
-'Building target: Space_Invaders.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Space_Invaders_bsp/ps7_cortexa9_0/lib -o "Space_Invaders.elf"  ./src/LED_test_tut_1C.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: Space_Invaders.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Space_Invaders.elf  |tee "Space_Invaders.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  34996	   2208	  22664	  59868	   e9dc	Space_Invaders.elf
-'Finished building: Space_Invaders.elf.size'
-' '
-11:08:42 **** Clean-only build of configuration Debug for project Space_Invaders ****
+13:42:33 **** Clean-only build of configuration Debug for project HDMI_IN ****
 make clean 
-rm -rf  ./src/main.d  ./src/LED_test_tut_1C.o ./src/main.o  ./src/LED_test_tut_1C.d  Space_Invaders.elf.size  Space_Invaders.elf
-' '
-11:08:43 **** Auto Build of configuration Debug for project Space_Invaders ****
+make: *** No rule to make target `clean'.  Stop.
+13:42:41 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+13:45:37 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+13:46:10 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+13:46:59 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+13:51:44 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+13:54:36 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+14:31:55 **** Build of project HDMI_IN_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+14:33:36 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+14:41:03 **** Build of project HDMI_IN_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+14:42:06 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+14:43:35 **** Build of project HDMI_IN_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_0/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_1/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+14:44:36 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+14:45:02 **** Clean-only build of configuration Debug for project HDMI_IN ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  HDMI_IN.elf.size  HDMI_IN.elf
+ 
+14:45:02 **** Auto Build of configuration Debug for project HDMI_IN ****
+make all 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HDMI_IN.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 105496	   3304	18688240	18797040	11ed1f0	HDMI_IN.elf
+Finished building: HDMI_IN.elf.size
+ 
+14:46:37 **** Auto Build of configuration Debug for project HDMI_IN ****
+make all 
+make: Nothing to be done for `all'.
+14:47:31 **** Build of project HDMI_IN_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling axivdma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+xscugic_g.c:53:2: warning: missing initializer for field 'HandlerTable' of 'XScuGic_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
+  }
+  ^
+In file included from xscugic_g.c:41:0:
+xscugic.h:218:27: note: 'HandlerTable' declared here
+  XScuGic_VectorTableEntry HandlerTable[XSCUGIC_MAX_NUM_INTR_INPUTS];/**<
+                           ^~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:49:06 **** Auto Build of configuration Debug for project HDMI_IN ****
+make all 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [HDMI_IN.elf] Error 1
+14:50:26 **** Clean-only build of configuration Debug for project HDMI_IN ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  HDMI_IN.elf.size  HDMI_IN.elf
+ 
+14:50:26 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [HDMI_IN.elf] Error 1
+
+**** Build of configuration Debug for project HDMI_IN_2 ****
+
+Nothing to build for project HDMI_IN_2
+14:58:28 **** Auto Build of configuration Debug for project HDMI_IN_2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Space_Invaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-'Finished building: ../src/main.cc'
-' '
-'Building target: Space_Invaders.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Space_Invaders_bsp/ps7_cortexa9_0/lib -o "Space_Invaders.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: Space_Invaders.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Space_Invaders.elf  |tee "Space_Invaders.elf.size"
+ 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN_2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HDMI_IN_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size HDMI_IN_2.elf  |tee "HDMI_IN_2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  34996	   2208	  22664	  59868	   e9dc	Space_Invaders.elf
-'Finished building: Space_Invaders.elf.size'
-' '
+ 117352	   4372	18688960	18810684	11f073c	HDMI_IN_2.elf
+Finished building: HDMI_IN_2.elf.size
+ 
+14:59:26 **** Clean-only build of configuration Debug for project HDMI_IN ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  HDMI_IN.elf.size  HDMI_IN.elf
+ 
+14:59:26 **** Build of configuration Debug for project HDMI_IN ****
+make all 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_channel.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_cache.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xil_printf.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_intr.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_selftest.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_sinit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xaxivdma_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xgpio_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xscutimer_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(xvtc_g.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(close.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(read.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(write.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o)
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: error: ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o) uses VFP register arguments, HDMI_IN.elf does not
+c:/xilinx/sdk/2017.2/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: failed to merge target specific data of file ../../HDMI_IN_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [HDMI_IN.elf] Error 1
+14:59:53 **** Clean-only build of configuration Debug for project HDMI_IN ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  HDMI_IN_2.elf.size  HDMI_IN_2.elf
+ 
+14:59:53 **** Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/video_capture/video_capture.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+Finished building: ../src/video_demo.c
+ 
+Building target: HDMI_IN.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HDMI_IN.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117352	   4372	18688960	18810684	11f073c	HDMI_IN.elf
+Finished building: HDMI_IN.elf.size
+ 
+15:01:08 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.

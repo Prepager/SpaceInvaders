@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;Space_Invaders/src/LED_test_tut_1C.c&apos;" deleteContents="false" description="Delete resource &apos;Space_Invaders/src/LED_test_tut_1C.c&apos;" element1="/Space_Invaders/src/LED_test_tut_1C.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1546855722316"/>
-</session>
