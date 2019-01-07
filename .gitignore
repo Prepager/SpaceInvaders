@@ -84,3 +84,8 @@
 !*.elf
 !*.bmm
 !*.xmp
+#########
+#Folders
+#########
+/SpaceInvaders.cache
+/SpaceInvaders.runs
