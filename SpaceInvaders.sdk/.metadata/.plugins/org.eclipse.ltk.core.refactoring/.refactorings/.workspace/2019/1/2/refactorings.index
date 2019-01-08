@@ -1,0 +1,5 @@
+1546954898801	Delete resource 'hdmi_in_wrapper_hw_platform_1'
+1546955094054	Rename resource 'HDMI_IN'
+1546955114499	Rename resource 'HDMI_IN_bsp'
+1546957199584	Delete resource 'HDMI_IN_bsp'
+1546957353663	Delete resource 'hdmi_in_wrapper_hw_platform_1'

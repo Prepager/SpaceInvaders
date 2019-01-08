@@ -11,53 +11,53 @@
 
 ##Switches
 ##IO_L19N_T3_VREF_35
-#set_property PACKAGE_PIN G15 [get_ports {sw[0]}]
+set_property PACKAGE_PIN G15 [get_ports {sw[0]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
 
 ##IO_L24P_T3_34
-#set_property PACKAGE_PIN P15 [get_ports {sw[1]}]
+set_property PACKAGE_PIN P15 [get_ports {sw[1]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
 
 ##IO_L4N_T0_34
-#set_property PACKAGE_PIN W13 [get_ports {sw[2]}]
+set_property PACKAGE_PIN W13 [get_ports {sw[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
 
 ##IO_L9P_T1_DQS_34
-#set_property PACKAGE_PIN T16 [get_ports {sw[3]}]
+set_property PACKAGE_PIN T16 [get_ports {sw[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
 
 ##Buttons
 ##IO_L20N_T3_34
-#set_property PACKAGE_PIN R18 [get_ports {btn[0]}]
+set_property PACKAGE_PIN R18 [get_ports {btn[0]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
 
 ##IO_L24N_T3_34
-#set_property PACKAGE_PIN P16 [get_ports {btn[1]}]
+set_property PACKAGE_PIN P16 [get_ports {btn[1]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {btn[1]}]
 
 ##IO_L18P_T2_34
-#set_property PACKAGE_PIN V16 [get_ports {btn[2]}]
+set_property PACKAGE_PIN V16 [get_ports {btn[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {btn[2]}]
 
 ##IO_L7P_T1_34
-#set_property PACKAGE_PIN Y16 [get_ports {btn[3]}]
+set_property PACKAGE_PIN Y16 [get_ports {btn[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
 
 ##LEDs
 ##IO_L23P_T3_35
-#set_property PACKAGE_PIN M14 [get_ports {led[0]}]
+set_property PACKAGE_PIN M14 [get_ports {led[0]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 
 ##IO_L23N_T3_35
-#set_property PACKAGE_PIN M15 [get_ports {led[1]}]
+set_property PACKAGE_PIN M15 [get_ports {led[1]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
 
 ##IO_0_35
-#set_property PACKAGE_PIN G14 [get_ports {led[2]}]
+set_property PACKAGE_PIN G14 [get_ports {led[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
 
 ##IO_L3N_T0_DQS_AD1N_35
-#set_property PACKAGE_PIN D18 [get_ports {led[3]}]
+set_property PACKAGE_PIN D18 [get_ports {led[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
 
 ##I2S Audio Codec
@@ -91,12 +91,12 @@
 
 ##Audio Codec/external EEPROM IIC bus
 #IO_L13P_T2_MRCC_34
-set_property PACKAGE_PIN N18 [get_ports iic_0_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_0_scl_io]
+#--set_property PACKAGE_PIN N18 [get_ports iic_0_scl_io]
+#--set_property IOSTANDARD LVCMOS33 [get_ports iic_0_scl_io]
 
 #IO_L23P_T3_34
-set_property PACKAGE_PIN N17 [get_ports iic_0_sda_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_0_sda_io]
+#--set_property PACKAGE_PIN N17 [get_ports iic_0_sda_io]
+#--set_property IOSTANDARD LVCMOS33 [get_ports iic_0_sda_io]
 
 ##Additional Ethernet signals
 ##IO_L6P_T0_35
@@ -109,53 +109,53 @@ set_property IOSTANDARD LVCMOS33 [get_ports iic_0_sda_io]
 
 ##HDMI Signals
 #IO_L13N_T2_MRCC_35
-set_property IOSTANDARD TMDS_33 [get_ports TMDS_clk_n]
+#--set_property IOSTANDARD TMDS_33 [get_ports TMDS_clk_n]
 
 #IO_L13P_T2_MRCC_35
-set_property PACKAGE_PIN H16 [get_ports TMDS_clk_p]
-set_property IOSTANDARD TMDS_33 [get_ports TMDS_clk_p]
-create_clock -period 8.334 -waveform {0.000 4.167} [get_ports TMDS_clk_p]
+#--set_property PACKAGE_PIN H16 [get_ports TMDS_clk_p]
+#--set_property IOSTANDARD TMDS_33 [get_ports TMDS_clk_p]
+#--create_clock -period 8.334 -waveform {0.000 4.167} [get_ports TMDS_clk_p]
 
 #IO_L4N_T0_35
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[0]}]
+#--set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[0]}]
 
 #IO_L4P_T0_35
-set_property PACKAGE_PIN D19 [get_ports {TMDS_data_p[0]}]
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[0]}]
+#--set_property PACKAGE_PIN D19 [get_ports {TMDS_data_p[0]}]
+#--set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[0]}]
 
 #IO_L1N_T0_AD0N_35
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[1]}]
+#--set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[1]}]
 
 #IO_L1P_T0_AD0P_35
-set_property PACKAGE_PIN C20 [get_ports {TMDS_data_p[1]}]
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[1]}]
+#--set_property PACKAGE_PIN C20 [get_ports {TMDS_data_p[1]}]
+#--set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[1]}]
 
 #IO_L2N_T0_AD8N_35
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[2]}]
+#--set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_n[2]}]
 
 #IO_L2P_T0_AD8P_35
-set_property PACKAGE_PIN B19 [get_ports {TMDS_data_p[2]}]
-set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[2]}]
+# --set_property PACKAGE_PIN B19 [get_ports {TMDS_data_p[2]}]
+# --set_property IOSTANDARD TMDS_33 [get_ports {TMDS_data_p[2]}]
 
 ##IO_L5N_T0_AD9N_35
 #set_property PACKAGE_PIN E19 [get_ports hdmi_cec]
 #set_property IOSTANDARD LVCMOS33 [get_ports hdmi_cec]
 
 #IO_L5P_T0_AD9P_35
-set_property PACKAGE_PIN E18 [get_ports {hdmi_hpd_tri_o[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {hdmi_hpd_tri_o[0]}]
+#--set_property PACKAGE_PIN E18 [get_ports {hdmi_hpd_tri_o[0]}]
+#--set_property IOSTANDARD LVCMOS33 [get_ports {hdmi_hpd_tri_o[0]}]
 
 ##IO_L6N_T0_VREF_35
-set_property PACKAGE_PIN F17 [get_ports {HDMI_OEN[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {HDMI_OEN[0]}]
+#--set_property PACKAGE_PIN F17 [get_ports {HDMI_OEN[0]}]
+#--set_property IOSTANDARD LVCMOS33 [get_ports {HDMI_OEN[0]}]
 
 #IO_L16P_T2_35
-set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports ddc_scl_io]
+#--set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]
+#--set_property IOSTANDARD LVCMOS33 [get_ports ddc_scl_io]
 
 #IO_L16N_T2_35
-set_property PACKAGE_PIN G18 [get_ports ddc_sda_io]
-set_property IOSTANDARD LVCMOS33 [get_ports ddc_sda_io]
+#--set_property PACKAGE_PIN G18 [get_ports ddc_sda_io]
+#--set_property IOSTANDARD LVCMOS33 [get_ports ddc_sda_io]
 
 ##Pmod Header JA (XADC)
 ##IO_L21N_T3_DQS_AD14N_35

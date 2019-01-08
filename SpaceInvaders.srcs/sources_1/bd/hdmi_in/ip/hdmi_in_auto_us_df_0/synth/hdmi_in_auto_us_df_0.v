@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_dwidth_converter:2.1
-// IP Revision: 13
+// IP Revision: 17
 
-(* X_CORE_INFO = "axi_dwidth_converter_v2_1_13_top,Vivado 2017.2" *)
-(* CHECK_LICENSE_TYPE = "hdmi_in_auto_us_df_0,axi_dwidth_converter_v2_1_13_top,{}" *)
-(* CORE_GENERATION_INFO = "hdmi_in_auto_us_df_0,axi_dwidth_converter_v2_1_13_top,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=0,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=1,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_BEATS=16,C_\
+(* X_CORE_INFO = "axi_dwidth_converter_v2_1_17_top,Vivado 2018.2" *)
+(* CHECK_LICENSE_TYPE = "hdmi_in_auto_us_df_0,axi_dwidth_converter_v2_1_17_top,{}" *)
+(* CORE_GENERATION_INFO = "hdmi_in_auto_us_df_0,axi_dwidth_converter_v2_1_17_top,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=17,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=0,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=1,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_BEATS=16,C_\
 PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module hdmi_in_auto_us_df_0 (
@@ -92,8 +92,10 @@ module hdmi_in_auto_us_df_0 (
   m_axi_rready
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_CLK, FREQ_HZ 142857132, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 SI_CLK CLK" *)
 input wire s_axi_aclk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 SI_RST RST" *)
 input wire s_axi_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *)
@@ -126,6 +128,8 @@ output wire [1 : 0] s_axi_rresp;
 output wire s_axi_rlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *)
 output wire s_axi_rvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 32, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, \
+NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire s_axi_rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *)
@@ -158,10 +162,12 @@ input wire [1 : 0] m_axi_rresp;
 input wire m_axi_rlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *)
 input wire m_axi_rvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, \
+NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_dwidth_converter_v2_1_13_top #(
+  axi_dwidth_converter_v2_1_17_top #(
     .C_FAMILY("zynq"),
     .C_AXI_PROTOCOL(0),
     .C_S_AXI_ID_WIDTH(1),

@@ -69,18 +69,18 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.xpr} [current_project]
-  set_property ip_repo_paths {{C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/hdmi-in_2017.2/hdmi-in/hdmi-in.ipdefs/repo_0_0}} [current_project]
-  set_property ip_output_repo {{C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.cache/ip}} [current_project]
+  set_property webtalk.parent_dir C:/SpaceInvaders/SpaceInvaders.cache/wt [current_project]
+  set_property parent.project_path C:/SpaceInvaders/SpaceInvaders.xpr [current_project]
+  set_property ip_repo_paths C:/Users/John/Desktop/hdmi/hdmi-in/hdmi-in.ipdefs/repo_0_0 [current_project]
+  set_property ip_output_repo C:/SpaceInvaders/SpaceInvaders.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet {{C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.runs/synth_1/hdmi_in_wrapper.dcp}}
+  add_files -quiet C:/SpaceInvaders/SpaceInvaders.runs/synth_1/hdmi_in_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files {{C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.srcs/sources_1/bd/hdmi_in/hdmi_in.bd}}
+  add_files C:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/hdmi_in.bd
   set_param project.isImplRun false
-  read_xdc {{C:/Users/shuha/OneDrive/Skrivebord/Kurser/3.Semester/3 Ugers Projekt/Zip filer/Spaceinvaders/Spaceinvaders.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc}}
+  read_xdc C:/SpaceInvaders/SpaceInvaders.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc
   set_param project.isImplRun true
   link_design -top hdmi_in_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false

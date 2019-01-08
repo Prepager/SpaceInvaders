@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -92,15 +92,17 @@ ARCHITECTURE hdmi_in_rgb2vga_0_0_arch OF hdmi_in_rgb2vga_0_0 IS
     );
   END COMPONENT rgb2vga;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF hdmi_in_rgb2vga_0_0_arch: ARCHITECTURE IS "rgb2vga,Vivado 2017.2";
+  ATTRIBUTE X_CORE_INFO OF hdmi_in_rgb2vga_0_0_arch: ARCHITECTURE IS "rgb2vga,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF hdmi_in_rgb2vga_0_0_arch : ARCHITECTURE IS "hdmi_in_rgb2vga_0_0,rgb2vga,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_INFO OF rgb_pData: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in DATA";
-  ATTRIBUTE X_INTERFACE_INFO OF rgb_pVDE: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO";
-  ATTRIBUTE X_INTERFACE_INFO OF rgb_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in HSYNC";
-  ATTRIBUTE X_INTERFACE_INFO OF rgb_pVSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in VSYNC";
+  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF PixelClk: SIGNAL IS "XIL_INTERFACENAME signal_clock, ASSOCIATED_BUSIF vid_in, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_axi_dynclk_0_0_PXL_CLK_O";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 signal_clock CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF rgb_pVSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in VSYNC";
+  ATTRIBUTE X_INTERFACE_INFO OF rgb_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in HSYNC";
+  ATTRIBUTE X_INTERFACE_INFO OF rgb_pVDE: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO";
+  ATTRIBUTE X_INTERFACE_INFO OF rgb_pData: SIGNAL IS "xilinx.com:interface:vid_io:1.0 vid_in DATA";
 BEGIN
   U0 : rgb2vga
     GENERIC MAP (
