@@ -1,0 +1,54 @@
+16:53:35 **** Auto Build of configuration Debug for project SpaceInvadersCPP ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Renderer/dynclk/dynclk.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/dynclk/dynclk.d" -MT"src/Renderer/dynclk/dynclk.o" -o "src/Renderer/dynclk/dynclk.o" "../src/Renderer/dynclk/dynclk.c"
+'Finished building: ../src/Renderer/dynclk/dynclk.c'
+' '
+'Building file: ../src/Renderer/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/display_ctrl/display_ctrl.d" -MT"src/Renderer/display_ctrl/display_ctrl.o" -o "src/Renderer/display_ctrl/display_ctrl.o" "../src/Renderer/display_ctrl/display_ctrl.c"
+'Finished building: ../src/Renderer/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/Renderer/Renderer.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/Renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/Renderer.d" -MT"src/Renderer/Renderer.o" -o "src/Renderer/Renderer.o" "../src/Renderer/Renderer.cpp"
+'Finished building: ../src/Renderer/Renderer.cpp'
+' '
+'Building file: ../src/Object/Object.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Object/Object.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Object/Object.d" -MT"src/Object/Object.o" -o "src/Object/Object.o" "../src/Object/Object.cpp"
+'Finished building: ../src/Object/Object.cpp'
+' '
+'Building file: ../src/GameLogic/GameLogic.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/GameLogic/GameLogic.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/GameLogic/GameLogic.d" -MT"src/GameLogic/GameLogic.o" -o "src/GameLogic/GameLogic.o" "../src/GameLogic/GameLogic.cpp"
+../src/GameLogic/GameLogic.cpp: In constructor 'GameLogic::GameLogic()':
+../src/GameLogic/GameLogic.cpp:8:32: warning: 'new' of type 'Renderer' with extended alignment 32 [-Waligned-new=]
+  this->renderer = new Renderer();
+                                ^
+../src/GameLogic/GameLogic.cpp:8:32: note: uses 'void* operator new(unsigned int)', which does not have an alignment parameter
+../src/GameLogic/GameLogic.cpp:8:32: note: use '-faligned-new' to enable C++17 over-aligned new support
+'Finished building: ../src/GameLogic/GameLogic.cpp'
+' '
+'Building file: ../src/video_demo.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.cpp"
+'Finished building: ../src/video_demo.cpp'
+' '
+'Building target: SpaceInvadersCPP.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvadersCPP_bsp/ps7_cortexa9_0/lib -o "SpaceInvadersCPP.elf"  ./src/Renderer/dynclk/dynclk.o  ./src/Renderer/display_ctrl/display_ctrl.o  ./src/Renderer/Renderer.o  ./src/Object/Object.o  ./src/GameLogic/GameLogic.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: SpaceInvadersCPP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SpaceInvadersCPP.elf  |tee "SpaceInvadersCPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 163624	   2732	18685788	18852144	11fa930	SpaceInvadersCPP.elf
+'Finished building: SpaceInvadersCPP.elf.size'
+' '
+
+16:53:38 Build Finished (took 2s.873ms)
+

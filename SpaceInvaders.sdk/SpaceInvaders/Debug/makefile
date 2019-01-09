@@ -8,21 +8,33 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/video_capture/subdir.mk
--include src/timer_ps/subdir.mk
--include src/intc/subdir.mk
--include src/dynclk/subdir.mk
--include src/display_ctrl/subdir.mk
+-include src/Renderer/dynclk/subdir.mk
+-include src/Renderer/display_ctrl/subdir.mk
+-include src/Renderer/subdir.mk
+-include src/Object/subdir.mk
+-include src/GameLogic/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
 endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
 endif
 endif
 
@@ -30,12 +42,6 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ELFSIZE += \
-SpaceInvaders.elf.size \
-SpaceInvaders.elf.size \
-SpaceInvaders.elf.size \
-SpaceInvaders.elf.size \
-SpaceInvaders.elf.size \
-SpaceInvaders.elf.size \
 SpaceInvaders.elf.size \
 
 
@@ -48,8 +54,8 @@ main-build: SpaceInvaders.elf secondary-outputs
 # Tool invocations
 SpaceInvaders.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: ARM v7 gcc linker'
-	arm-none-eabi-gcc -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "SpaceInvaders.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: ARM v7 g++ linker'
+	arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -61,7 +67,7 @@ SpaceInvaders.elf.size: SpaceInvaders.elf
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) SpaceInvaders.elf
+	-$(RM) $(CC_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS)$(ELFSIZE) SpaceInvaders.elf
 	-@echo ' '
 
 pre-build:
