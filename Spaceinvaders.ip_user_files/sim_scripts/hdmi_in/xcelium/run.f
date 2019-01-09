@@ -41,7 +41,6 @@
   "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_btn_0/sim/hdmi_in_axi_gpio_btn_0.vhd" \
   "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_led_0/sim/hdmi_in_axi_gpio_led_0.vhd" \
   "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_sw_0/sim/hdmi_in_axi_gpio_sw_0.vhd" \
-  "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_video_0/sim/hdmi_in_axi_gpio_video_0.vhd" \
 -endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -78,21 +77,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/sim/hdmi_in_axi_vdma_0_0.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncBase.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/EEPROM_8b.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TWI_SlaveCtl.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/GlitchFilter.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncAsync.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/DVI_Constants.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncAsyncReset.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/PhaseAlign.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/InputSERDES.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/ChannelBond.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/ResyncToBUFG.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TMDS_Decoder.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TMDS_Clocking.vhd" \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/dvi2rgb.vhd" \
-  "../../../bd/hdmi_in/ip/hdmi_in_dvi2rgb_0_0/sim/hdmi_in_dvi2rgb_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/proc_sys_reset_v5_0_12 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
@@ -140,20 +124,11 @@
   "../../../bd/hdmi_in/ip/hdmi_in_v_tc_0_0/sim/hdmi_in_v_tc_0_0.vhd" \
   "../../../bd/hdmi_in/ip/hdmi_in_v_tc_1_0/sim/hdmi_in_v_tc_1_0.vhd" \
 -endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/sim/hdmi_in_v_vid_in_axi4s_0_0.v" \
--endlib
 -makelib xcelium_lib/xlconcat_v2_1_1 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/sim/hdmi_in_xlconcat_0_0.v" \
--endlib
--makelib xcelium_lib/xlconstant_v1_1_5 \
-  "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/hdmi_in/ip/hdmi_in_xlconstant_0_0/sim/hdmi_in_xlconstant_0_0.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -169,17 +144,17 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_xbar_1/sim/hdmi_in_xbar_1.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_xbar_0/sim/hdmi_in_xbar_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/hdmi_in/sim/hdmi_in.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_17 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_1/sim/hdmi_in_auto_pc_1.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_m00_data_fifo_0/sim/hdmi_in_m00_data_fifo_0.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_m00_regslice_0/sim/hdmi_in_m00_regslice_0.v" \
+  "../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
   "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_0/sim/hdmi_in_auto_pc_0.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_s01_regslice_0/sim/hdmi_in_s01_regslice_0.v" \
 -endlib
 -makelib xcelium_lib/axi_clock_converter_v2_1_16 \
   "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/e9a5/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
@@ -189,11 +164,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_auto_us_df_0/sim/hdmi_in_auto_us_df_0.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
-  "../../../bd/hdmi_in/ip/hdmi_in_s00_data_fifo_0/sim/hdmi_in_s00_data_fifo_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/hdmi_in/sim/hdmi_in.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

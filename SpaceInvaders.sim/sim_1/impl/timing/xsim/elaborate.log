@@ -1,0 +1,6 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Programmer/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 0ac918ce798541aebe49303b679358da --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L xilinx_vip -L simprims_ver -L secureip --snapshot hdmi_in_wrapper_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.hdmi_in_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration

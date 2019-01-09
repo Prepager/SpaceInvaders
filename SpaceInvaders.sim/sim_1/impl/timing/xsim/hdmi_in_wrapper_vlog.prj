@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" --include "../../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" --include "../../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" --include "../../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" --include "D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
+"hdmi_in_wrapper_time_impl.v" \
+
+# Do not sort compile order
+nosort

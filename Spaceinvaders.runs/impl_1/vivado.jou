@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Jan  8 15:13:04 2019
-# Process ID: 12812
-# Current directory: C:/SpaceInvaders/SpaceInvaders.runs/impl_1
+# Start of session at: Wed Jan  9 15:14:29 2019
+# Process ID: 9368
+# Current directory: C:/SpaceInvaders/Spaceinvaders.runs/impl_1
 # Command line: vivado.exe -log hdmi_in_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_in_wrapper.tcl -notrace
-# Log file: C:/SpaceInvaders/SpaceInvaders.runs/impl_1/hdmi_in_wrapper.vdi
-# Journal file: C:/SpaceInvaders/SpaceInvaders.runs/impl_1\vivado.jou
+# Log file: C:/SpaceInvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper.vdi
+# Journal file: C:/SpaceInvaders/Spaceinvaders.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source hdmi_in_wrapper.tcl -notrace

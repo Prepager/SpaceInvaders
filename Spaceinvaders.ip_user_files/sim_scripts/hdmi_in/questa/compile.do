@@ -26,7 +26,6 @@ vlib questa_lib/msim/v_tc_v6_1_12
 vlib questa_lib/msim/v_vid_in_axi4s_v4_0_8
 vlib questa_lib/msim/v_axi4s_vid_out_v4_0_9
 vlib questa_lib/msim/xlconcat_v2_1_1
-vlib questa_lib/msim/xlconstant_v1_1_5
 vlib questa_lib/msim/generic_baseblocks_v2_1_0
 vlib questa_lib/msim/axi_register_slice_v2_1_17
 vlib questa_lib/msim/axi_data_fifo_v2_1_16
@@ -60,7 +59,6 @@ vmap v_tc_v6_1_12 questa_lib/msim/v_tc_v6_1_12
 vmap v_vid_in_axi4s_v4_0_8 questa_lib/msim/v_vid_in_axi4s_v4_0_8
 vmap v_axi4s_vid_out_v4_0_9 questa_lib/msim/v_axi4s_vid_out_v4_0_9
 vmap xlconcat_v2_1_1 questa_lib/msim/xlconcat_v2_1_1
-vmap xlconstant_v1_1_5 questa_lib/msim/xlconstant_v1_1_5
 vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_17 questa_lib/msim/axi_register_slice_v2_1_17
 vmap axi_data_fifo_v2_1_16 questa_lib/msim/axi_data_fifo_v2_1_16
@@ -112,7 +110,6 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_btn_0/sim/hdmi_in_axi_gpio_btn_0.vhd" \
 "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_led_0/sim/hdmi_in_axi_gpio_led_0.vhd" \
 "../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_sw_0/sim/hdmi_in_axi_gpio_sw_0.vhd" \
-"../../../bd/hdmi_in/ip/hdmi_in_axi_gpio_video_0/sim/hdmi_in_axi_gpio_video_0.vhd" \
 
 vcom -work lib_pkg_v1_0_2 -64 -93 \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -149,21 +146,6 @@ vcom -work axi_vdma_v6_3_5 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/sim/hdmi_in_axi_vdma_0_0.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncBase.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/EEPROM_8b.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TWI_SlaveCtl.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/GlitchFilter.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncAsync.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/DVI_Constants.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/SyncAsyncReset.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/PhaseAlign.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/InputSERDES.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/ChannelBond.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/ResyncToBUFG.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TMDS_Decoder.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/TMDS_Clocking.vhd" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/d2d3/src/dvi2rgb.vhd" \
-"../../../bd/hdmi_in/ip/hdmi_in_dvi2rgb_0_0/sim/hdmi_in_dvi2rgb_0_0.vhd" \
 
 vcom -work proc_sys_reset_v5_0_12 -64 -93 \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
@@ -211,20 +193,11 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/hdmi_in/ip/hdmi_in_v_tc_0_0/sim/hdmi_in_v_tc_0_0.vhd" \
 "../../../bd/hdmi_in/ip/hdmi_in_v_tc_1_0/sim/hdmi_in_v_tc_1_0.vhd" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
-"../../../bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/sim/hdmi_in_v_vid_in_axi4s_0_0.v" \
-
 vlog -work xlconcat_v2_1_1 -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/sim/hdmi_in_xlconcat_0_0.v" \
-
-vlog -work xlconstant_v1_1_5 -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
-"../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
-"../../../bd/hdmi_in/ip/hdmi_in_xlconstant_0_0/sim/hdmi_in_xlconstant_0_0.v" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -240,17 +213,17 @@ vlog -work axi_crossbar_v2_1_18 -64 "+incdir+../../../../SpaceInvaders.srcs/sour
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_xbar_1/sim/hdmi_in_xbar_1.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_xbar_0/sim/hdmi_in_xbar_0.v" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/hdmi_in/sim/hdmi_in.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_17 -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_1/sim/hdmi_in_auto_pc_1.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_m00_data_fifo_0/sim/hdmi_in_m00_data_fifo_0.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_m00_regslice_0/sim/hdmi_in_m00_regslice_0.v" \
+"../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
 "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_0/sim/hdmi_in_auto_pc_0.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_s01_regslice_0/sim/hdmi_in_s01_regslice_0.v" \
 
 vlog -work axi_clock_converter_v2_1_16 -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/e9a5/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
@@ -260,11 +233,6 @@ vlog -work axi_dwidth_converter_v2_1_17 -64 "+incdir+../../../../SpaceInvaders.s
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/b37e/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/5bb9/hdl/verilog" "+incdir+../../../../SpaceInvaders.srcs/sources_1/bd/hdmi_in/ipshared/70fd/hdl" "+incdir+D:/Programmer/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_auto_us_df_0/sim/hdmi_in_auto_us_df_0.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
-"../../../bd/hdmi_in/ip/hdmi_in_s00_data_fifo_0/sim/hdmi_in_s00_data_fifo_0.v" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/hdmi_in/sim/hdmi_in.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

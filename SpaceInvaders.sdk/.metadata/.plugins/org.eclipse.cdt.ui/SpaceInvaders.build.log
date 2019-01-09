@@ -1,8 +1,8 @@
-16:11:16 **** Incremental Build of configuration Debug for project SpaceInvaders ****
+15:25:54 **** Incremental Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
 
-16:11:17 Build Finished (took 325ms)
+15:25:55 Build Finished (took 338ms)
 

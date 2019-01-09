@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -46,8 +47,6 @@ set_property used_in_implementation false [get_files -all c:/SpaceInvaders/Space
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/hdmi_in_axi_vdma_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/hdmi_in_axi_vdma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/hdmi_in_axi_vdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_proc_sys_reset_0_0/hdmi_in_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_proc_sys_reset_0_0/hdmi_in_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_processing_system7_0_0/hdmi_in_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_100M_0/hdmi_in_rst_processing_system7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_100M_0/hdmi_in_rst_processing_system7_0_100M_0.xdc]
@@ -55,20 +54,13 @@ set_property used_in_implementation false [get_files -all c:/SpaceInvaders/Space
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_m00_data_fifo_0/hdmi_in_m00_data_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_m00_regslice_0/hdmi_in_m00_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_m00_regslice_0/hdmi_in_m00_regslice_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_0/hdmi_in_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s01_regslice_0/hdmi_in_s01_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s01_regslice_0/hdmi_in_s01_regslice_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/hdmi_in_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/hdmi_in_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/hdmi_in_auto_us_df_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_data_fifo_0/hdmi_in_s00_data_fifo_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/hdmi_in_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
