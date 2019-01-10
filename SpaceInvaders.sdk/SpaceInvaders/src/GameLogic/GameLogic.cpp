@@ -47,13 +47,11 @@ int GameLogic::launch() {
  */
 void GameLogic::generateEnemies() {
 	//
-	u32 width = 40;
-	u32 height = 40;
-	u32 x = 0;
-	u32 y = 0;
+	u32 width = 40, height = 40;
+	u32 x = 0, y = 0;
 
 	//
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 2; i++) {
 		// Create new enemy with given details.
 		/*this->enemies[i] = new Enemy(
 			width, height,
