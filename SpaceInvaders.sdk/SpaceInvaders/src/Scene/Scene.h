@@ -6,6 +6,7 @@
 class Scene: public GameObject {
 	public:
 		Scene(int width, int height);
+		virtual bool collides(u32 x, u32 y);
 		virtual void render(u8 *frame, u32 x, u32 y, int addr);
 };
 

@@ -76,10 +76,19 @@ void Renderer::render() {
 
 		// Loop through the screen height.
 		for (int ycoi = 0; ycoi < RENDERER_HEIGHT; ycoi++) {
+			// Define formatted x and y pos.
+			u32 x = xcoi/3, y = ycoi;
+
 			// Loop through the game objects.
 			for (int i = 0; i < this->objectCount; i++) {
-				// Render the current object.
-				this->objects[i]->render(frame, xcoi/3, ycoi, addr);
+				// Get the current loop object.
+				GameObject *obj = this->objects[i];
+
+				// Check if object should be rendered in range.
+				if (obj->collides(x, y)) {
+					obj->render(frame, x, y, addr);
+				}
+
 			}
 
 			// Jump to next line.

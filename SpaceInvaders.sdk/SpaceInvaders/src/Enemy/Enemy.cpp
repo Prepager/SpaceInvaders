@@ -5,22 +5,31 @@
  */
 Enemy::Enemy(int width, int height, u32 x, u32 y) {
 	//
-	this->width = width;
-	this->height = height;
+	this->x = x;
+	this->y = y;
 
 	//
-	this->xPos = x;
-	this->yPos = y;
+	this->width = width;
+	this->height = height;
 }
 
 /**
  * todo
  */
 void Enemy::render(u8 *frame, u32 x, u32 y, int addr) {
-	// todo
-	if ((x >= this->xPos && x <= this->xPos+this->width) && (y >= this->yPos && y <= this->yPos+this->height)) {
-		frame[addr + 0] = 255;	// G
-		frame[addr + 1] = 255;	// B
-		frame[addr + 2] = 255;	// R
-	}
+	frame[addr + 0] = 255;	// G
+	frame[addr + 1] = 255;	// B
+	frame[addr + 2] = 255;	// R
+}
+
+/**
+ * todo
+ */
+bool Enemy::collides(u32 x, u32 y) {
+	return (
+		x >= this->x &&
+		x <= this->x+this->width &&
+		y >= this->y &&
+		y <= this->y+this->height
+	);
 }

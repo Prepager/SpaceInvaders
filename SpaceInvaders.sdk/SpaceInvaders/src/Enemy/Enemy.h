@@ -6,7 +6,8 @@
 class Enemy: public GameObject {
 	public:
 		Enemy(int width, int height, u32 x, u32 y);
-		virtual void render(u8 *frame, u32 xcoi, u32 ycoi, int addr);
+		virtual bool collides(u32 x, u32 y);
+		virtual void render(u8 *frame, u32 x, u32 y, int addr);
 };
 
 #endif

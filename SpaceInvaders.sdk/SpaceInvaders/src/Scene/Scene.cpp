@@ -18,3 +18,10 @@ void Scene::render(u8 *frame, u32 x, u32 y, int addr) {
 	frame[addr + 1] = 0;	// B
 	frame[addr + 2] = 255;	// R
 }
+
+/**
+ * todo
+ */
+bool Scene::collides(u32 x, u32 y) {
+	return true;
+}

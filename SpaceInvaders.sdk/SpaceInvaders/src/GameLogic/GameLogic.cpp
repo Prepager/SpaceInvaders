@@ -48,7 +48,7 @@ int GameLogic::launch() {
 void GameLogic::generateEnemies() {
 	//
 	u32 width = 40, height = 40;
-	u32 x = 0, y = 0;
+	u32 x = 10, y = 0;
 
 	//
 	for (int i = 0; i < 2; i++) {
@@ -65,7 +65,7 @@ void GameLogic::generateEnemies() {
 		));
 
 		//
-		x += width;
+		x += width+6;
 
 		// Jump to next line for every 11th enemies.
 		/*if (i == 11) {
