@@ -9,6 +9,9 @@ u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 int enemyState = 0, enemyDirection = 1;
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
+// Render memory.
+int renderBackground = 1;
+
 /**
  * Initialize the game logic and display.
  */
@@ -58,10 +61,13 @@ void renderScene()
 		// Loop through the y coordinates.
 		for(int ycoi = 0; ycoi < DISPLAY_HEIGHT; ycoi++)
 		{
-			// Draw the background scene. todo: only draw once.
-			frame[addr + 0] = 0;	// Green
-			frame[addr + 1] = 255;	// Blue
-			frame[addr + 2] = 0;	// Red
+			// Render the background scene if required.
+			if (renderBackground) {
+				// Render background.
+				frame[addr + 0] = BG_G;
+				frame[addr + 1] = BG_B;
+				frame[addr + 2] = BG_R;
+			}
 
 			// Loop through the enemies.
 			for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
@@ -80,6 +86,9 @@ void renderScene()
 			addr += STRIDE;
 		}
 	}
+
+	// Disable background re-render.
+	renderBackground = 0;
 
 	// Flush the frame cache.
 	Xil_DCacheFlushRange((unsigned int) frame, MAX_FRAME);

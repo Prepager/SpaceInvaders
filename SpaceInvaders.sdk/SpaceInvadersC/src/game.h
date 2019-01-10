@@ -25,7 +25,6 @@
 #define ENEMY_X_OFFSET (DISPLAY_WIDTH - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE))) / 2
 #define ENEMY_X_STATE_OFFSET (ENEMY_X_OFFSET / (ENEMY_X_STATES + 1))
 
-//#define ENEMY_Y_STATES
 #define ENEMY_Y_OFFSET (ENEMY_X_OFFSET / 2)
 
 /* ------------------------------------------------------------ */
@@ -34,6 +33,11 @@
 
 #define MAX_FRAME 	(1920*1080*3)
 #define STRIDE 		(1920 * 3)
+
+// Background Color
+#define BG_R	0
+#define BG_G	0
+#define BG_B	255
 
 // Display Size
 #define DISPLAY_WIDTH 	640
