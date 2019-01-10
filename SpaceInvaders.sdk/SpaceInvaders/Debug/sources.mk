@@ -24,10 +24,11 @@ ELFSIZE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+src/Enemy \
 src/GameLogic \
-src/Object \
 src/Renderer \
 src/Renderer/display_ctrl \
 src/Renderer/dynclk \
+src/Scene \
 src \
 

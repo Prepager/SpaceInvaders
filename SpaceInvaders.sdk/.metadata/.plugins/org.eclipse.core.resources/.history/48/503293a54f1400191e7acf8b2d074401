@@ -1,0 +1,8 @@
+#ifndef SRC_GAMEOBJECT_H_
+#define SRC_GAMEOBJECT_H_
+
+class GameObject {
+	//
+};
+
+#endif

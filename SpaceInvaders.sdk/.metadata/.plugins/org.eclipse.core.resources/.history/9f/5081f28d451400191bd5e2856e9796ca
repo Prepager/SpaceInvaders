@@ -1,0 +1,25 @@
+#include "../GameObject/Object.h"
+
+/**
+ * Assign the object attributes.
+ */
+Object::Object(u32 x, u32 y, u32 width, u32 height) {
+	this->xPos = x;
+	this->yPos = y;
+	this->width = width;
+	this->height = height;
+}
+
+/**
+ * Paint the object to the frame.
+ */
+void Object::paint(Renderer *renderer, u8 *frame) {
+	//
+}
+
+/**
+ * Remove the object from the frame.
+ */
+void Object::depaint(Renderer *renderer, u8 *frame) {
+	//
+}

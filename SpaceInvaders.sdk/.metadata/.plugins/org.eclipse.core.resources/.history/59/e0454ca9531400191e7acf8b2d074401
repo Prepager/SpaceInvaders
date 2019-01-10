@@ -1,0 +1,36 @@
+#include "Enemy.h"
+
+/**
+ * todo
+ */
+Enemy::Enemy() {
+	//
+}
+
+/**
+ *
+ */
+void Enemy::render(u8 *frame) {
+	for (int xcoi = 0; xcoi < 640*3; xcoi += 3) {
+		//
+		int addr = xcoi;
+
+		//
+		for (int ycoi = 0; ycoi < 480; ycoi++) {
+			//
+			(*frame)[addr + 0] = 255;	// G
+			*frame[addr + 1] = 0;	// B
+			*frame[addr + 2] = 0;	// R
+
+			//
+			if ((xcoi > 10*3 && xcoi < 630*3) && (ycoi > 10 && ycoi < 470)) {
+				*frame[addr + 0] = 255;	// G
+				*frame[addr + 1] = 255;	// B
+				*frame[addr + 2] = 255;	// R
+			}
+
+			//
+			addr += (1920 * 3);
+		}
+	}
+}

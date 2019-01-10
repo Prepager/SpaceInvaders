@@ -1,0 +1,12 @@
+#include "../GameObject.h"
+
+#ifndef SRC_SCENE_SCENE_H_
+#define SRC_SCENE_SCENE_H_
+
+class Scene: public GameObject {
+public:
+	Scene();
+	virtual void render(u8 *frame);
+};
+
+#endif /* SRC_SCENE_SCENE_H_ */

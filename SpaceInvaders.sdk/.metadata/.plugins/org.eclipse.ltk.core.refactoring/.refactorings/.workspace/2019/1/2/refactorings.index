@@ -11,3 +11,7 @@
 1547049374770	Delete resource 'hdmi_in_wrapper_hw_platform_1'
 1547049438631	Delete 2 resources
 1547049677564	Delete resource 'SpaceInvaders/src/Renderer/dynclk/dynclk.h'
+1547063212749	Delete resource 'SpaceInvaders/src/GameObject'
+1547063446154	Delete resource 'SpaceInvaders/src/BaseObject/BaseObject.cpp'
+1547063460780	Delete resource 'SpaceInvaders/src/BaseObject'
+1547076330713	Delete resource 'SpaceInvaders/src/options'

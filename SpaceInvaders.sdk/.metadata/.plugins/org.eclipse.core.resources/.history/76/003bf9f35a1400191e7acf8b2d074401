@@ -1,0 +1,10 @@
+// Import the game logic.
+#include "GameLogic/GameLogic.h"
+
+/**
+ * Create game logic object and launch.
+ */
+int main()
+{
+	return (new GameLogic())->launch();
+}

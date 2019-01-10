@@ -1,0 +1,15 @@
+#include "Scene.h"
+
+/**
+ * todo
+ */
+Scene::Scene() {
+	//
+}
+
+/**
+ * todo
+ */
+void Scene::render(u8 *frame) {
+
+}

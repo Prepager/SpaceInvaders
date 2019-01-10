@@ -8,11 +8,12 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/Scene/subdir.mk
 -include src/Renderer/dynclk/subdir.mk
 -include src/Renderer/display_ctrl/subdir.mk
 -include src/Renderer/subdir.mk
--include src/Object/subdir.mk
 -include src/GameLogic/subdir.mk
+-include src/Enemy/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

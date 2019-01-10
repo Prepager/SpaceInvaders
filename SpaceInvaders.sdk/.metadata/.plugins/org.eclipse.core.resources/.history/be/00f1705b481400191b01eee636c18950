@@ -1,0 +1,12 @@
+#include <stdlib.h>
+#include "xil_types.h"
+#include "../Renderer/Renderer.h"
+
+#ifndef SRC_GAMEOBJECT_H_
+#define SRC_GAMEOBJECT_H_
+
+class GameObject {
+	//
+};
+
+#endif

@@ -1,5 +1,8 @@
+#include <stdlib.h>
 #include "xil_types.h"
-
+#include "../GameObject.h"
+#include "../Scene/Scene.h"
+#include "../Enemy/Enemy.h"
 #include "../Renderer/Renderer.h"
 
 #ifndef SRC_GAMELOGIC_GAMELOGIC_H_
@@ -8,10 +11,10 @@
 class GameLogic {
 	public:
 		GameLogic();
-		void launch();
+		int launch();
 
 	private:
-		Renderer *renderer;
+		Renderer renderer;
 };
 
 #endif

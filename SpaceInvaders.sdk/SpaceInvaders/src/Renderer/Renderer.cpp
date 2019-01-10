@@ -7,47 +7,14 @@ Renderer::Renderer() {
 	//
 }
 
-void Renderer::render() {
-	// Get the current controller frame.
-	u8 *frame = this->currentFrame();
-
-	// todo
-	for (int xcoi = 0; xcoi < RENDERER_WIDTH*3; xcoi += 3) {
-		//
-		int addr = xcoi;
-
-		//
-		for (int ycoi = 0; ycoi < RENDERER_HEIGHT; ycoi++) {
-			//
-			frame[addr + 0] = 255;	// G
-			frame[addr + 1] = 0;	// B
-			frame[addr + 2] = 0;	// R
-
-			//
-			if ((xcoi > 10*3 && xcoi < 630*3) && (ycoi > 10 && ycoi < 470)) {
-				frame[addr + 0] = 255;	// G
-				frame[addr + 1] = 255;	// B
-				frame[addr + 2] = 255;	// R
-			}
-
-			//
-			addr += STRIDE;
-		}
-	}
-
-	// Flush the cache range.
-	Xil_DCacheFlushRange((unsigned int) bufferPointer, MAX_FRAME);
-}
-
-u8* Renderer::currentFrame() {
-	return this->controller.framePtr[this->controller.curFrame];
-}
-
+/**
+ * Initialize the renderer display.
+ */
 int Renderer::initialize() {
 	// Create status holder.
 	int status;
 
-	// Create the vdma config.
+	// Create the VDMA config.
 	XAxiVdma_Config *vdmaConfig;
 
 	// Initialize buffer pointer array.
@@ -86,4 +53,60 @@ int Renderer::initialize() {
 
 	// Return success.
 	return 1;
+}
+
+/**
+ * Return the current controller frame.
+ */
+u8* Renderer::currentFrame() {
+	return this->controller.framePtr[this->controller.curFrame];
+}
+
+/**
+ * Render the game objects.
+ */
+void Renderer::render() {
+	// Get the current controller frame.
+	u8 *frame = this->currentFrame();
+
+	//
+	/*for (int xcoi = 0; xcoi < RENDERER_WIDTH*3; xcoi += 3) {
+		//
+		int addr = xcoi;
+
+		//
+		for (int ycoi = 0; ycoi < RENDERER_HEIGHT; ycoi++) {
+			//
+			frame[addr + 0] = 255;	// G
+			frame[addr + 1] = 0;	// B
+			frame[addr + 2] = 0;	// R
+
+			//
+			if ((xcoi > 10*3 && xcoi < 630*3) && (ycoi > 10 && ycoi < 470)) {
+				frame[addr + 0] = 255;	// G
+				frame[addr + 1] = 255;	// B
+				frame[addr + 2] = 255;	// R
+			}
+
+			//
+			addr += STRIDE;
+		}
+	}*/
+
+	// Loop through the game objects.
+	for (int i = 0; i < this->objectCount; i++) {
+		// Render the current object.
+		this->objects[i]->render(frame);
+	}
+
+	// Flush the cache range.
+	Xil_DCacheFlushRange((unsigned int) bufferPointer, MAX_FRAME);
+}
+
+/**
+ * Add a object to the render list.
+ */
+void Renderer::addObject(GameObject *obj) {
+	this->objects[this->objectCount] = obj;
+	this->objectCount++;
 }

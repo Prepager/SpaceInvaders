@@ -1,0 +1,13 @@
+#include "../GameObject.h"
+
+#ifndef SRC_SCENE_SCENE_H_
+#define SRC_SCENE_SCENE_H_
+
+class Scene: public GameObject {
+	public:
+		Scene(int width, int height);
+		int drawFrames = 3;
+		void render(u8 *frame);
+};
+
+#endif
