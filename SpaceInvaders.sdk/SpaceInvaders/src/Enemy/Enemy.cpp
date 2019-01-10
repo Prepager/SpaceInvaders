@@ -4,11 +4,11 @@
  * todo
  */
 Enemy::Enemy(int width, int height, u32 x, u32 y) {
-	//
+	// Set the enemy positions.
 	this->x = x;
 	this->y = y;
 
-	//
+	// Set the enemy positions.
 	this->width = width;
 	this->height = height;
 }

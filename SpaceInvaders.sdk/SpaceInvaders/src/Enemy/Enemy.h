@@ -1,7 +1,7 @@
-#include "../GameObject.h"
-
 #ifndef SRC_ENEMY_ENEMY_H_
 #define SRC_ENEMY_ENEMY_H_
+
+#include "../GameObject.h"
 
 class Enemy: public GameObject {
 	public:

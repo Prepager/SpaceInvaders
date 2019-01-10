@@ -22,7 +22,7 @@ GameLogic::GameLogic() {
 int GameLogic::launch() {
 	// Add the game scene object.
 	this->renderer.addObject(
-		new Scene(RENDERER_WIDTH, RENDERER_HEIGHT)
+		new Scene(DISPLAY_WIDTH, DISPLAY_HEIGHT)
 	);
 
 	// Generate the game enemies.
@@ -48,10 +48,10 @@ int GameLogic::launch() {
 void GameLogic::generateEnemies() {
 	//
 	u32 width = 40, height = 40;
-	u32 x = 10, y = 0;
+	u32 x = 10, y = 10;
 
 	//
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 8; i++) {
 		// Create new enemy with given details.
 		/*this->enemies[i] = new Enemy(
 			width, height,
@@ -65,7 +65,8 @@ void GameLogic::generateEnemies() {
 		));
 
 		//
-		x += width+6;
+		x += width+10;
+		y += height+10;
 
 		// Jump to next line for every 11th enemies.
 		/*if (i == 11) {

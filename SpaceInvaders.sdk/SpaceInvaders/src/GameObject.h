@@ -1,8 +1,7 @@
-#include "xil_types.h"
-
 #ifndef SRC_GAMEOBJECT_H_
 #define SRC_GAMEOBJECT_H_
 
+#include "xil_types.h"
 #define STRIDE (1920 * 3)
 
 class GameObject {

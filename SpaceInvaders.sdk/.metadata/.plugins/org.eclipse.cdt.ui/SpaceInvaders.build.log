@@ -1,11 +1,11 @@
-12:05:40 **** Auto Build of configuration Debug for project SpaceInvaders ****
+12:40:25 **** Incremental Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/GameLogic/GameLogic.cpp'
+'Building file: ../src/Enemy/Enemy.cpp'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/GameLogic/GameLogic.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/GameLogic/GameLogic.d" -MT"src/GameLogic/GameLogic.o" -o "src/GameLogic/GameLogic.o" "../src/GameLogic/GameLogic.cpp"
-'Finished building: ../src/GameLogic/GameLogic.cpp'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Enemy/Enemy.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Enemy/Enemy.d" -MT"src/Enemy/Enemy.o" -o "src/Enemy/Enemy.o" "../src/Enemy/Enemy.cpp"
+'Finished building: ../src/Enemy/Enemy.cpp'
 ' '
 'Building target: SpaceInvaders.elf'
 'Invoking: ARM v7 g++ linker'
@@ -19,5 +19,5 @@ arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
 'Finished building: SpaceInvaders.elf.size'
 ' '
 
-12:05:41 Build Finished (took 1s.287ms)
+12:40:26 Build Finished (took 1s.326ms)
 
