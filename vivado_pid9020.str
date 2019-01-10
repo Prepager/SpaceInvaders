@@ -1,0 +1,139 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 9020
+License: Customer
+
+Current time: 	Thu Jan 10 20:11:24 CET 2019
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1280x800
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 34 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Andreas
+User home directory: C:/Users/Andreas
+User working directory: C:/SpaceInvaders
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Andreas/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Andreas/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Andreas/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/SpaceInvaders/vivado.log
+Vivado journal file location: 	C:/SpaceInvaders/vivado.jou
+Engine tmp dir: 	C:/SpaceInvaders/.Xil/Vivado-9020-DESKTOP-OT7K68F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	195 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 484 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 57 MB (+56773kb) [00:00:12]
+// [Engine Memory]: 479 MB (+350665kb) [00:00:12]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\SpaceInvaders\SpaceInvaders.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/SpaceInvaders/SpaceInvaders.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 64 MB (+5361kb) [00:00:16]
+// HMemoryUtils.trashcanNow. Engine heap size: 495 MB. GUI used memory: 34 MB. Current time: 1/10/19 8:11:26 PM CET
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 520 MB (+17473kb) [00:00:21]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 567 MB (+22150kb) [00:00:26]
+// [GUI Memory]: 69 MB (+1154kb) [00:00:29]
+// [Engine Memory]: 612 MB (+17820kb) [00:00:29]
+// Tcl Message: open_project C:/SpaceInvaders/SpaceInvaders.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 832.301 ; gain = 121.027 
+// Project name: SpaceInvaders; location: C:/SpaceInvaders; part: xc7z010clg400-1
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 49 MB. Current time: 1/10/19 8:11:43 PM CET
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 45 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+selectButton("PAResourceItoN.NewLaunchHardwareDialog_EXPORTED_HARDWARE_SYSTEM_OUT_OF_DATE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 72 MB (+17kb) [00:09:53]
+// [GUI Memory]: 76 MB (+186kb) [00:12:59]
+// [GUI Memory]: 80 MB (+120kb) [00:16:29]
+// [GUI Memory]: 85 MB (+548kb) [00:24:29]
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 46 MB. Current time: 1/10/19 8:41:46 PM CET
+// [GUI Memory]: 89 MB (+414kb) [00:33:05]
+// [GUI Memory]: 94 MB (+26kb) [00:43:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 44 MB. Current time: 1/10/19 9:11:46 PM CET
+// [GUI Memory]: 99 MB (+241kb) [01:18:47]
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 44 MB. Current time: 1/10/19 9:41:47 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 44 MB. Current time: 1/10/19 10:11:47 PM CET

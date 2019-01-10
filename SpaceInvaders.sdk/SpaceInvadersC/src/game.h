@@ -2,6 +2,9 @@
 #define GAME_H_
 
 // Includes
+#include "sleep.h"
+#include <stdlib.h>
+#include "xtime_l.h"
 #include "xil_types.h"
 #include "xil_cache.h"
 #include "xparameters.h"
@@ -21,6 +24,8 @@
 #define ENEMY_SIZE 20
 #define ENEMY_SPACE 10
 
+#define ENEMY_SPEED 1000
+
 #define ENEMY_X_STATES 6
 #define ENEMY_X_OFFSET (DISPLAY_WIDTH - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE))) / 2
 #define ENEMY_X_STATE_OFFSET (ENEMY_X_OFFSET / (ENEMY_X_STATES + 1))
@@ -35,9 +40,7 @@
 #define STRIDE 		(1920 * 3)
 
 // Background Color
-#define BG_R	0
-#define BG_G	0
-#define BG_B	255
+#define BACKGROUND 25
 
 // Display Size
 #define DISPLAY_WIDTH 	640
