@@ -5,7 +5,8 @@
 u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
 u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 
-//
+// Object arrays.
+unsigned int enemyState = 0;
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
 /**
@@ -15,26 +16,6 @@ int main()
 {
 	// Initialize the display.
 	initializeDisplay();
-
-	//
-	u32 x = 0, y = 0;
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
-		//
-		enemies[i].x = x;
-		enemies[i].y = y;
-
-		//
-		enemies[i].w = 40;
-		enemies[i].h = 40;
-
-		//
-		x += 40+10;
-
-		//
-		if (i != 0 && i % 11 == 0) {
-			y += 40+10;
-		}
-	}
 
 	// Render the scene.
 	while (1) {
@@ -50,10 +31,10 @@ int main()
  */
 int collides(Enemy *enemy, u32 x, u32 y) {
 	return (
-		(enemy->x >= x) &&
-		(enemy->x <= (x+enemy->w)) &&
-		(enemy->y >= y) &&
-		(enemy->y <= (y+enemy->h))
+		x >= enemy->xPos &&
+		y >= enemy->yPos &&
+		x <= enemy->xPos + enemy->width &&
+		y <= enemy->yPos + enemy->height
 	);
 }
 
@@ -64,6 +45,9 @@ void renderScene()
 {
 	// Get the current frame.
 	u8 *frame = controller.framePtr[controller.curFrame];
+
+	// Update the enemy positions.
+	positionEnemies();
 
 	// Loop through the x coordinates.
 	for(int xcoi = 0; xcoi < (DISPLAY_WIDTH*3); xcoi += 3)
@@ -100,3 +84,49 @@ void renderScene()
 	// Flush the frame cache.
 	Xil_DCacheFlushRange((unsigned int) frame, MAX_FRAME);
 }
+
+/**
+ * todo
+ */
+void positionEnemies() {
+	// Change offset to passed state.
+	//int curOffset = ENEMY_OFFSET;// + (ENEMY_STATE_OFFSET * enemyState);
+
+	//
+	/*if (enemyDirection) {
+		enemyState++;
+	} else {
+		enemyState--;
+	}
+
+	//
+	if (enemyDirection && enemyState > 6) {
+		enemyDirection = 0;
+	} else if (! enemyDirection && enemyState < -6) {
+		enemyDirection = 1;
+	}*/
+
+	//
+	u32 x = ENEMY_OFFSET, y = ENEMY_OFFSET;
+
+	// Loop through enemies.
+	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+		// Set new positions.
+		enemies[i].xPos = x;
+		enemies[i].yPos = y;
+
+		// Set new sizes.
+		enemies[i].width = ENEMY_SIZE;
+		enemies[i].height = ENEMY_SIZE;
+
+		// Increment x with spacing.
+		x += ENEMY_SIZE + ENEMY_SPACE;
+
+		// Increment y and reset x.
+		if ((i+1) % 11 == 0) {
+			x = ENEMY_OFFSET;
+			y += ENEMY_SIZE + ENEMY_SPACE;
+		}
+	}
+}
+

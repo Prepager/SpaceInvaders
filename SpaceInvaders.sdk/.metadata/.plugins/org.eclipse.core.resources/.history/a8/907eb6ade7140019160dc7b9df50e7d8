@@ -1,0 +1,14 @@
+#ifndef SRC_ENEMY_H_
+#define SRC_ENEMY_H_
+
+typedef struct {
+	// Sizes
+	u32 height;
+	u32 width;
+
+	// Positions
+	u32 x;
+	u32 y;
+} Enemy;
+
+#endif

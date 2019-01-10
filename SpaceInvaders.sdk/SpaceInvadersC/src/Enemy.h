@@ -3,12 +3,12 @@
 
 typedef struct {
 	// Sizes
-	u32 h;
-	u32 w;
+	u32 height;
+	u32 width;
 
 	// Positions
-	u32 x;
-	u32 y;
+	u32 xPos;
+	u32 yPos;
 } Enemy;
 
 #endif

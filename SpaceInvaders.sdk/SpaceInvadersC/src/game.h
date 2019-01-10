@@ -18,6 +18,13 @@
 #define ENEMY_ROWS 5
 #define ENEMY_COLS 11
 
+#define ENEMY_SIZE 20
+#define ENEMY_SPACE 10
+
+#define ENEMY_STATES 4
+#define ENEMY_OFFSET ((DISPLAY_WIDTH / 2) - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE)))
+#define ENEMY_STATE_OFFSET (ENEMY_OFFSET / ENEMY_STATES)
+
 /* ------------------------------------------------------------ */
 /*					Miscellaneous Declarations					*/
 /* ------------------------------------------------------------ */
@@ -35,6 +42,7 @@
 
 void initialize();
 void renderScene();
+void positionEnemies();
 int collides(Enemy *enemy, u32 x, u32 y);
 
 /* ------------------------------------------------------------ */

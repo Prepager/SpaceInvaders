@@ -11914,3 +11914,1475 @@ con
 ----------------End of Script----------------
 
 15:52:49 INFO  : Disconnected from the channel tcfchan#10.
+16:01:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:02:04 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:02:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:02:08 INFO  : 'fpga -state' command is executed.
+16:02:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:08 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:02:08 INFO  : 'jtag frequency' command is executed.
+16:02:08 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:02:09 INFO  : Context for 'APU' is selected.
+16:02:09 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:02:09 INFO  : 'configparams force-mem-access 1' command is executed.
+16:02:09 INFO  : Context for 'APU' is selected.
+16:02:09 INFO  : 'stop' command is executed.
+16:02:09 INFO  : 'ps7_init' command is executed.
+16:02:09 INFO  : 'ps7_post_config' command is executed.
+16:02:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:02:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:10 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:02:10 INFO  : 'configparams force-mem-access 0' command is executed.
+16:02:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:02:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:10 INFO  : 'con' command is executed.
+16:02:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:02:10 INFO  : Disconnected from the channel tcfchan#11.
+16:05:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:05:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:05:12 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:05:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:05:17 INFO  : 'fpga -state' command is executed.
+16:05:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:05:17 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:05:17 INFO  : 'jtag frequency' command is executed.
+16:05:17 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:05:17 INFO  : Context for 'APU' is selected.
+16:05:17 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:05:17 INFO  : 'configparams force-mem-access 1' command is executed.
+16:05:17 INFO  : Context for 'APU' is selected.
+16:05:17 INFO  : 'stop' command is executed.
+16:05:18 INFO  : 'ps7_init' command is executed.
+16:05:18 INFO  : 'ps7_post_config' command is executed.
+16:05:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:05:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:18 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:05:18 INFO  : 'configparams force-mem-access 0' command is executed.
+16:05:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:05:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:18 INFO  : 'con' command is executed.
+16:05:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:05:18 INFO  : Disconnected from the channel tcfchan#12.
+16:05:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:03 ERROR : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' is cancelled.
+16:06:03 INFO  : Issued abort command to xsdb.
+16:06:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:06:09 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:06:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:06:13 INFO  : 'fpga -state' command is executed.
+16:06:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:14 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:06:14 INFO  : 'jtag frequency' command is executed.
+16:06:14 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:06:14 INFO  : Context for 'APU' is selected.
+16:06:14 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:06:14 INFO  : 'configparams force-mem-access 1' command is executed.
+16:06:14 INFO  : Context for 'APU' is selected.
+16:06:14 INFO  : 'stop' command is executed.
+16:06:14 INFO  : 'ps7_init' command is executed.
+16:06:14 INFO  : 'ps7_post_config' command is executed.
+16:06:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:06:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:06:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:06:15 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:06:15 INFO  : 'configparams force-mem-access 0' command is executed.
+16:06:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:06:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:06:15 INFO  : 'con' command is executed.
+16:06:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:06:15 INFO  : Disconnected from the channel tcfchan#13.
+16:07:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:07:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:07:46 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:07:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:07:51 INFO  : 'fpga -state' command is executed.
+16:07:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:07:52 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:07:52 INFO  : 'jtag frequency' command is executed.
+16:07:52 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:07:52 INFO  : Context for 'APU' is selected.
+16:07:52 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:07:52 INFO  : 'configparams force-mem-access 1' command is executed.
+16:07:52 INFO  : Context for 'APU' is selected.
+16:07:52 INFO  : 'stop' command is executed.
+16:07:53 INFO  : 'ps7_init' command is executed.
+16:07:53 INFO  : 'ps7_post_config' command is executed.
+16:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:53 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:07:53 INFO  : 'configparams force-mem-access 0' command is executed.
+16:07:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:53 INFO  : 'con' command is executed.
+16:07:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:07:53 INFO  : Disconnected from the channel tcfchan#14.
+16:08:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:08:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:08:54 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:08:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:08:58 INFO  : 'fpga -state' command is executed.
+16:08:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:08:58 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:08:58 INFO  : 'jtag frequency' command is executed.
+16:08:58 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:08:58 INFO  : Context for 'APU' is selected.
+16:08:58 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:08:58 INFO  : 'configparams force-mem-access 1' command is executed.
+16:08:58 INFO  : Context for 'APU' is selected.
+16:08:58 INFO  : 'stop' command is executed.
+16:08:59 INFO  : 'ps7_init' command is executed.
+16:08:59 INFO  : 'ps7_post_config' command is executed.
+16:08:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:08:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:08:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:08:59 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:09:00 INFO  : 'configparams force-mem-access 0' command is executed.
+16:09:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:09:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:09:00 INFO  : 'con' command is executed.
+16:09:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:09:00 INFO  : Disconnected from the channel tcfchan#15.
+16:11:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:11:32 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:11:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:11:37 INFO  : 'fpga -state' command is executed.
+16:11:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:37 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:11:38 INFO  : 'jtag frequency' command is executed.
+16:11:38 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:11:39 INFO  : Context for 'APU' is selected.
+16:11:39 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:11:39 INFO  : 'configparams force-mem-access 1' command is executed.
+16:11:39 INFO  : Context for 'APU' is selected.
+16:11:39 INFO  : 'stop' command is executed.
+16:11:40 INFO  : 'ps7_init' command is executed.
+16:11:40 INFO  : 'ps7_post_config' command is executed.
+16:11:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:11:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:11:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:11:41 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:11:41 INFO  : 'configparams force-mem-access 0' command is executed.
+16:11:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:11:41 INFO  : 'con' command is executed.
+16:11:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:11:41 INFO  : Disconnected from the channel tcfchan#16.
+16:11:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:11:59 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:12:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:12:04 INFO  : 'fpga -state' command is executed.
+16:12:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:12:05 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:12:05 INFO  : 'jtag frequency' command is executed.
+16:12:05 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:12:06 INFO  : Context for 'APU' is selected.
+16:12:06 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:12:06 INFO  : 'configparams force-mem-access 1' command is executed.
+16:12:06 INFO  : Context for 'APU' is selected.
+16:12:06 INFO  : 'stop' command is executed.
+16:12:07 INFO  : 'ps7_init' command is executed.
+16:12:07 INFO  : 'ps7_post_config' command is executed.
+16:12:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:12:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:12:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:12:08 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:12:08 INFO  : 'configparams force-mem-access 0' command is executed.
+16:12:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:12:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:12:08 INFO  : 'con' command is executed.
+16:12:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:12:08 INFO  : Disconnected from the channel tcfchan#17.
+16:14:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:14:34 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:14:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:14:39 INFO  : 'fpga -state' command is executed.
+16:14:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:40 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:14:40 INFO  : 'jtag frequency' command is executed.
+16:14:40 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:14:41 INFO  : Context for 'APU' is selected.
+16:14:41 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:14:41 INFO  : 'configparams force-mem-access 1' command is executed.
+16:14:41 INFO  : Context for 'APU' is selected.
+16:14:41 INFO  : 'stop' command is executed.
+16:14:42 INFO  : 'ps7_init' command is executed.
+16:14:42 INFO  : 'ps7_post_config' command is executed.
+16:14:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:14:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:14:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:14:43 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:14:43 INFO  : 'configparams force-mem-access 0' command is executed.
+16:14:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:14:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:14:43 INFO  : 'con' command is executed.
+16:14:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:14:43 INFO  : Disconnected from the channel tcfchan#18.
+16:14:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:15:01 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:15:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:15:06 INFO  : 'fpga -state' command is executed.
+16:15:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:07 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:15:07 INFO  : 'jtag frequency' command is executed.
+16:15:07 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:15:07 INFO  : Context for 'APU' is selected.
+16:15:07 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:15:07 INFO  : 'configparams force-mem-access 1' command is executed.
+16:15:07 INFO  : Context for 'APU' is selected.
+16:15:07 INFO  : 'stop' command is executed.
+16:15:07 INFO  : 'ps7_init' command is executed.
+16:15:07 INFO  : 'ps7_post_config' command is executed.
+16:15:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:15:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:08 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:15:08 INFO  : 'configparams force-mem-access 0' command is executed.
+16:15:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:15:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:08 INFO  : 'con' command is executed.
+16:15:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:15:08 INFO  : Disconnected from the channel tcfchan#19.
+16:30:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:30:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:30:41 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:31:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:31:02 INFO  : 'fpga -state' command is executed.
+16:31:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:31:03 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:31:03 INFO  : 'jtag frequency' command is executed.
+16:31:03 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:31:03 INFO  : Context for 'APU' is selected.
+16:31:03 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:31:03 INFO  : 'configparams force-mem-access 1' command is executed.
+16:31:03 INFO  : Context for 'APU' is selected.
+16:31:03 INFO  : 'stop' command is executed.
+16:31:04 INFO  : 'ps7_init' command is executed.
+16:31:04 INFO  : 'ps7_post_config' command is executed.
+16:31:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:31:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:04 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:31:04 INFO  : 'configparams force-mem-access 0' command is executed.
+16:31:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:31:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:04 INFO  : 'con' command is executed.
+16:31:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:31:04 INFO  : Disconnected from the channel tcfchan#20.
+16:31:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:31:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:31:46 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:31:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:31:51 INFO  : 'fpga -state' command is executed.
+16:31:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:31:52 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:31:52 INFO  : 'jtag frequency' command is executed.
+16:31:52 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:31:52 INFO  : Context for 'APU' is selected.
+16:31:52 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:31:52 INFO  : 'configparams force-mem-access 1' command is executed.
+16:31:52 INFO  : Context for 'APU' is selected.
+16:31:53 INFO  : 'stop' command is executed.
+16:31:53 INFO  : 'ps7_init' command is executed.
+16:31:53 INFO  : 'ps7_post_config' command is executed.
+16:31:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:54 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:31:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:54 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:31:54 INFO  : 'configparams force-mem-access 0' command is executed.
+16:31:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:31:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:31:54 INFO  : 'con' command is executed.
+16:31:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:31:54 INFO  : Disconnected from the channel tcfchan#21.
+16:32:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:32:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:32:58 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:33:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:33:04 INFO  : 'fpga -state' command is executed.
+16:33:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:33:04 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:33:04 INFO  : 'jtag frequency' command is executed.
+16:33:04 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:33:05 INFO  : Context for 'APU' is selected.
+16:33:05 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:33:05 INFO  : 'configparams force-mem-access 1' command is executed.
+16:33:05 INFO  : Context for 'APU' is selected.
+16:33:06 INFO  : 'stop' command is executed.
+16:33:06 INFO  : 'ps7_init' command is executed.
+16:33:06 INFO  : 'ps7_post_config' command is executed.
+16:33:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:33:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:33:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:33:07 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:33:07 INFO  : 'configparams force-mem-access 0' command is executed.
+16:33:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:33:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:33:07 INFO  : 'con' command is executed.
+16:33:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:33:07 INFO  : Disconnected from the channel tcfchan#22.
+16:38:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:38:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:38:19 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:39:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:39:07 INFO  : 'fpga -state' command is executed.
+16:39:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:39:07 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:39:07 INFO  : 'jtag frequency' command is executed.
+16:39:07 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:39:07 INFO  : Context for 'APU' is selected.
+16:39:07 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:39:07 INFO  : 'configparams force-mem-access 1' command is executed.
+16:39:07 INFO  : Context for 'APU' is selected.
+16:39:08 INFO  : 'stop' command is executed.
+16:39:08 INFO  : 'ps7_init' command is executed.
+16:39:08 INFO  : 'ps7_post_config' command is executed.
+16:39:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:39:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:39:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:39:09 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:39:09 INFO  : 'configparams force-mem-access 0' command is executed.
+16:39:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:39:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:39:09 INFO  : 'con' command is executed.
+16:39:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:39:09 INFO  : Disconnected from the channel tcfchan#23.
+16:40:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:40:11 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:40:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:40:19 INFO  : 'fpga -state' command is executed.
+16:40:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:20 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:40:20 INFO  : 'jtag frequency' command is executed.
+16:40:20 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:40:20 INFO  : Context for 'APU' is selected.
+16:40:20 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:40:20 INFO  : 'configparams force-mem-access 1' command is executed.
+16:40:20 INFO  : Context for 'APU' is selected.
+16:40:20 INFO  : 'stop' command is executed.
+16:40:21 INFO  : 'ps7_init' command is executed.
+16:40:21 INFO  : 'ps7_post_config' command is executed.
+16:40:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:40:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:21 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:40:21 INFO  : 'configparams force-mem-access 0' command is executed.
+16:40:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:40:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:21 INFO  : 'con' command is executed.
+16:40:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:40:21 INFO  : Disconnected from the channel tcfchan#24.
+16:40:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:40:44 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:40:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:40:50 INFO  : 'fpga -state' command is executed.
+16:40:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:50 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:40:50 INFO  : 'jtag frequency' command is executed.
+16:40:50 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:40:51 INFO  : Context for 'APU' is selected.
+16:40:51 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:40:51 INFO  : 'configparams force-mem-access 1' command is executed.
+16:40:51 INFO  : Context for 'APU' is selected.
+16:40:51 INFO  : 'stop' command is executed.
+16:40:52 INFO  : 'ps7_init' command is executed.
+16:40:52 INFO  : 'ps7_post_config' command is executed.
+16:40:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:40:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:53 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:40:53 INFO  : 'configparams force-mem-access 0' command is executed.
+16:40:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:40:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:40:53 INFO  : 'con' command is executed.
+16:40:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:40:53 INFO  : Disconnected from the channel tcfchan#25.
+16:42:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:42:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:42:21 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:42:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:42:26 INFO  : 'fpga -state' command is executed.
+16:42:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:42:26 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:42:27 INFO  : 'jtag frequency' command is executed.
+16:42:27 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:42:27 INFO  : Context for 'APU' is selected.
+16:42:28 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:42:28 INFO  : 'configparams force-mem-access 1' command is executed.
+16:42:28 INFO  : Context for 'APU' is selected.
+16:42:28 INFO  : 'stop' command is executed.
+16:42:29 INFO  : 'ps7_init' command is executed.
+16:42:29 INFO  : 'ps7_post_config' command is executed.
+16:42:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:42:29 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:42:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:42:30 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:42:30 INFO  : 'configparams force-mem-access 0' command is executed.
+16:42:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:42:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:42:30 INFO  : 'con' command is executed.
+16:42:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:42:30 INFO  : Disconnected from the channel tcfchan#26.
+16:45:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:45:37 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:45:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:45:59 INFO  : 'fpga -state' command is executed.
+16:45:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:59 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:45:59 INFO  : 'jtag frequency' command is executed.
+16:45:59 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:45:59 INFO  : Context for 'APU' is selected.
+16:45:59 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:45:59 INFO  : 'configparams force-mem-access 1' command is executed.
+16:45:59 INFO  : Context for 'APU' is selected.
+16:45:59 INFO  : 'stop' command is executed.
+16:46:00 INFO  : 'ps7_init' command is executed.
+16:46:00 INFO  : 'ps7_post_config' command is executed.
+16:46:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:46:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:46:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:46:01 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:46:01 INFO  : 'configparams force-mem-access 0' command is executed.
+16:46:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:46:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:46:01 INFO  : 'con' command is executed.
+16:46:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:46:01 INFO  : Disconnected from the channel tcfchan#27.
+16:46:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:46:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:46:22 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:47:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:47:34 INFO  : 'fpga -state' command is executed.
+16:47:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:47:34 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:47:34 INFO  : 'jtag frequency' command is executed.
+16:47:34 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:47:34 INFO  : Context for 'APU' is selected.
+16:47:34 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:47:34 INFO  : 'configparams force-mem-access 1' command is executed.
+16:47:34 INFO  : Context for 'APU' is selected.
+16:47:34 INFO  : 'stop' command is executed.
+16:47:35 INFO  : 'ps7_init' command is executed.
+16:47:35 INFO  : 'ps7_post_config' command is executed.
+16:47:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:47:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:47:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:47:36 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:47:36 INFO  : 'configparams force-mem-access 0' command is executed.
+16:47:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:47:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:47:36 INFO  : 'con' command is executed.
+16:47:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:47:36 INFO  : Disconnected from the channel tcfchan#28.
+16:48:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:48:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:48:06 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:48:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:48:12 INFO  : 'fpga -state' command is executed.
+16:48:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:48:13 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:48:13 INFO  : 'jtag frequency' command is executed.
+16:48:13 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:48:13 INFO  : Context for 'APU' is selected.
+16:48:13 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:48:13 INFO  : 'configparams force-mem-access 1' command is executed.
+16:48:14 INFO  : Context for 'APU' is selected.
+16:48:14 INFO  : 'stop' command is executed.
+16:48:14 INFO  : 'ps7_init' command is executed.
+16:48:14 INFO  : 'ps7_post_config' command is executed.
+16:48:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:48:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:48:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:48:15 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:48:15 INFO  : 'configparams force-mem-access 0' command is executed.
+16:48:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:48:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:48:15 INFO  : 'con' command is executed.
+16:48:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:48:15 INFO  : Disconnected from the channel tcfchan#29.
+16:49:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:49:17 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:49:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:49:23 INFO  : 'fpga -state' command is executed.
+16:49:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:24 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:49:24 INFO  : 'jtag frequency' command is executed.
+16:49:24 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:49:24 INFO  : Context for 'APU' is selected.
+16:49:24 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:49:24 INFO  : 'configparams force-mem-access 1' command is executed.
+16:49:24 INFO  : Context for 'APU' is selected.
+16:49:25 INFO  : 'stop' command is executed.
+16:49:25 INFO  : 'ps7_init' command is executed.
+16:49:25 INFO  : 'ps7_post_config' command is executed.
+16:49:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:49:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:49:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:49:26 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:49:26 INFO  : 'configparams force-mem-access 0' command is executed.
+16:49:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:49:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:49:26 INFO  : 'con' command is executed.
+16:49:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:49:26 INFO  : Disconnected from the channel tcfchan#30.
+16:49:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:49:51 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:49:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:49:57 INFO  : 'fpga -state' command is executed.
+16:49:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:57 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:49:57 INFO  : 'jtag frequency' command is executed.
+16:49:57 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:49:58 INFO  : Context for 'APU' is selected.
+16:49:58 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:49:58 INFO  : 'configparams force-mem-access 1' command is executed.
+16:49:58 INFO  : Context for 'APU' is selected.
+16:49:59 INFO  : 'stop' command is executed.
+16:49:59 INFO  : 'ps7_init' command is executed.
+16:49:59 INFO  : 'ps7_post_config' command is executed.
+16:49:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:50:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:00 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:50:00 INFO  : 'configparams force-mem-access 0' command is executed.
+16:50:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:50:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:00 INFO  : 'con' command is executed.
+16:50:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:50:00 INFO  : Disconnected from the channel tcfchan#31.
+16:50:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:50:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:50:30 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:50:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:50:34 INFO  : 'fpga -state' command is executed.
+16:50:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:50:35 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:50:36 INFO  : 'jtag frequency' command is executed.
+16:50:36 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:50:36 INFO  : Context for 'APU' is selected.
+16:50:36 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:50:36 INFO  : 'configparams force-mem-access 1' command is executed.
+16:50:36 INFO  : Context for 'APU' is selected.
+16:50:36 INFO  : 'stop' command is executed.
+16:50:37 INFO  : 'ps7_init' command is executed.
+16:50:37 INFO  : 'ps7_post_config' command is executed.
+16:50:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:50:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:38 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:50:38 INFO  : 'configparams force-mem-access 0' command is executed.
+16:50:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:50:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:50:38 INFO  : 'con' command is executed.
+16:50:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:50:38 INFO  : Disconnected from the channel tcfchan#32.
+16:51:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:51:40 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:51:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:51:48 INFO  : 'fpga -state' command is executed.
+16:51:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:49 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:51:49 INFO  : 'jtag frequency' command is executed.
+16:51:49 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:51:49 INFO  : Context for 'APU' is selected.
+16:51:49 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:51:49 INFO  : 'configparams force-mem-access 1' command is executed.
+16:51:49 INFO  : Context for 'APU' is selected.
+16:51:49 INFO  : 'stop' command is executed.
+16:51:50 INFO  : 'ps7_init' command is executed.
+16:51:50 INFO  : 'ps7_post_config' command is executed.
+16:51:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:50 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:51:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:50 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:51:50 INFO  : 'configparams force-mem-access 0' command is executed.
+16:51:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:51:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:50 INFO  : 'con' command is executed.
+16:51:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:51:50 INFO  : Disconnected from the channel tcfchan#33.
+16:52:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:52:07 INFO  : 'fpga -state' command is executed.
+16:52:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:52:07 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:52:07 INFO  : 'jtag frequency' command is executed.
+16:52:07 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:52:08 INFO  : Context for 'APU' is selected.
+16:52:08 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:52:08 INFO  : 'configparams force-mem-access 1' command is executed.
+16:52:09 INFO  : Context for 'APU' is selected.
+16:52:09 INFO  : 'stop' command is executed.
+16:52:09 INFO  : 'ps7_init' command is executed.
+16:52:09 INFO  : 'ps7_post_config' command is executed.
+16:52:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:52:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:52:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:52:11 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:52:11 INFO  : 'configparams force-mem-access 0' command is executed.
+16:52:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:52:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:52:12 INFO  : 'con' command is executed.
+16:52:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:52:12 INFO  : Disconnected from the channel tcfchan#34.
+16:58:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:59:01 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:59:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:59:14 INFO  : 'fpga -state' command is executed.
+16:59:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:15 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:59:15 INFO  : 'jtag frequency' command is executed.
+16:59:15 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:59:15 INFO  : Context for 'APU' is selected.
+16:59:15 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:59:15 INFO  : 'configparams force-mem-access 1' command is executed.
+16:59:15 INFO  : Context for 'APU' is selected.
+16:59:15 INFO  : 'stop' command is executed.
+16:59:15 INFO  : 'ps7_init' command is executed.
+16:59:15 INFO  : 'ps7_post_config' command is executed.
+16:59:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:59:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:16 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:59:16 INFO  : 'configparams force-mem-access 0' command is executed.
+16:59:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:59:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:16 INFO  : 'con' command is executed.
+16:59:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:59:16 INFO  : Disconnected from the channel tcfchan#35.
+16:59:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:59:42 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+16:59:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+16:59:48 INFO  : 'fpga -state' command is executed.
+16:59:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:49 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+16:59:49 INFO  : 'jtag frequency' command is executed.
+16:59:49 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:59:49 INFO  : Context for 'APU' is selected.
+16:59:49 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+16:59:49 INFO  : 'configparams force-mem-access 1' command is executed.
+16:59:50 INFO  : Context for 'APU' is selected.
+16:59:50 INFO  : 'stop' command is executed.
+16:59:50 INFO  : 'ps7_init' command is executed.
+16:59:50 INFO  : 'ps7_post_config' command is executed.
+16:59:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:50 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:59:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:51 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:59:51 INFO  : 'configparams force-mem-access 0' command is executed.
+16:59:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:59:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:51 INFO  : 'con' command is executed.
+16:59:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+16:59:51 INFO  : Disconnected from the channel tcfchan#36.
+17:00:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:00:17 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:00:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:00:22 INFO  : 'fpga -state' command is executed.
+17:00:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:23 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:00:23 INFO  : 'jtag frequency' command is executed.
+17:00:23 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:00:23 INFO  : Context for 'APU' is selected.
+17:00:23 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:00:23 INFO  : 'configparams force-mem-access 1' command is executed.
+17:00:24 INFO  : Context for 'APU' is selected.
+17:00:24 INFO  : 'stop' command is executed.
+17:00:24 INFO  : 'ps7_init' command is executed.
+17:00:24 INFO  : 'ps7_post_config' command is executed.
+17:00:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:00:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:25 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:00:26 INFO  : 'configparams force-mem-access 0' command is executed.
+17:00:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:00:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:26 INFO  : 'con' command is executed.
+17:00:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:00:26 INFO  : Disconnected from the channel tcfchan#37.
+17:06:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:06:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:06:25 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:06:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:06:39 INFO  : 'fpga -state' command is executed.
+17:06:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:06:39 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:06:39 INFO  : 'jtag frequency' command is executed.
+17:06:39 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:06:39 INFO  : Context for 'APU' is selected.
+17:06:39 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:06:39 INFO  : 'configparams force-mem-access 1' command is executed.
+17:06:39 INFO  : Context for 'APU' is selected.
+17:06:39 INFO  : 'stop' command is executed.
+17:06:40 INFO  : 'ps7_init' command is executed.
+17:06:40 INFO  : 'ps7_post_config' command is executed.
+17:06:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:06:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:06:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:06:40 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:06:40 INFO  : 'configparams force-mem-access 0' command is executed.
+17:06:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:06:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:06:41 INFO  : 'con' command is executed.
+17:06:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:06:41 INFO  : Disconnected from the channel tcfchan#38.
+17:07:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:07:17 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:07:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:07:24 INFO  : 'fpga -state' command is executed.
+17:07:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:25 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:07:25 INFO  : 'jtag frequency' command is executed.
+17:07:25 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:07:25 INFO  : Context for 'APU' is selected.
+17:07:25 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:07:25 INFO  : 'configparams force-mem-access 1' command is executed.
+17:07:25 INFO  : Context for 'APU' is selected.
+17:07:25 INFO  : 'stop' command is executed.
+17:07:26 INFO  : 'ps7_init' command is executed.
+17:07:26 INFO  : 'ps7_post_config' command is executed.
+17:07:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:07:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:26 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:07:26 INFO  : 'configparams force-mem-access 0' command is executed.
+17:07:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:07:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:26 INFO  : 'con' command is executed.
+17:07:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:07:26 INFO  : Disconnected from the channel tcfchan#39.
+17:07:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:07:43 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:07:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:07:48 INFO  : 'fpga -state' command is executed.
+17:07:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:49 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:07:49 INFO  : 'jtag frequency' command is executed.
+17:07:49 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:07:49 INFO  : Context for 'APU' is selected.
+17:07:49 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:07:49 INFO  : 'configparams force-mem-access 1' command is executed.
+17:07:49 INFO  : Context for 'APU' is selected.
+17:07:49 INFO  : 'stop' command is executed.
+17:07:50 INFO  : 'ps7_init' command is executed.
+17:07:50 INFO  : 'ps7_post_config' command is executed.
+17:07:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:07:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:51 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:07:51 INFO  : 'configparams force-mem-access 0' command is executed.
+17:07:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:07:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:51 INFO  : 'con' command is executed.
+17:07:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:07:51 INFO  : Disconnected from the channel tcfchan#40.
+17:08:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:08:29 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:09:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:09:05 INFO  : 'fpga -state' command is executed.
+17:09:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:05 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:09:06 INFO  : 'jtag frequency' command is executed.
+17:09:06 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:09:06 INFO  : Context for 'APU' is selected.
+17:09:06 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:09:06 INFO  : 'configparams force-mem-access 1' command is executed.
+17:09:06 INFO  : Context for 'APU' is selected.
+17:09:06 INFO  : 'stop' command is executed.
+17:09:06 INFO  : 'ps7_init' command is executed.
+17:09:06 INFO  : 'ps7_post_config' command is executed.
+17:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:07 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:09:07 INFO  : 'configparams force-mem-access 0' command is executed.
+17:09:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:07 INFO  : 'con' command is executed.
+17:09:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:07 INFO  : Disconnected from the channel tcfchan#41.
+17:09:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:09:28 INFO  : FPGA configured successfully with bitstream "C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/hdmi_in_wrapper.bit"
+17:09:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574143A" && level==0} -index 1' command is executed.
+17:09:32 INFO  : 'fpga -state' command is executed.
+17:09:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:32 INFO  : Jtag cable 'Digilent Zybo 210279574143A' is selected.
+17:09:32 INFO  : 'jtag frequency' command is executed.
+17:09:32 INFO  : Sourcing of 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:09:32 INFO  : Context for 'APU' is selected.
+17:09:32 INFO  : Hardware design information is loaded from 'C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf'.
+17:09:32 INFO  : 'configparams force-mem-access 1' command is executed.
+17:09:33 INFO  : Context for 'APU' is selected.
+17:09:33 INFO  : 'stop' command is executed.
+17:09:33 INFO  : 'ps7_init' command is executed.
+17:09:33 INFO  : 'ps7_post_config' command is executed.
+17:09:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:09:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:34 INFO  : The application 'C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:09:34 INFO  : 'configparams force-mem-access 0' command is executed.
+17:09:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+loadhw -hw C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+dow C:/SpaceInvaders/SpaceInvaders.sdk/SpaceInvadersC/Debug/SpaceInvadersC.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:09:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:34 INFO  : 'con' command is executed.
+17:09:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574143A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:34 INFO  : Disconnected from the channel tcfchan#42.
