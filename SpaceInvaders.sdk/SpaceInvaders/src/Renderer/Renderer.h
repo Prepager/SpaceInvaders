@@ -32,7 +32,7 @@ class Renderer {
 		DisplayCtrl controller;
 		u8* currentFrame();
 		int objectCount = 0;
-		GameObject *objects[30];
+		GameObject *objects[4/*55+1*/];
 };
 
 #endif

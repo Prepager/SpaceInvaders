@@ -1,3 +1,4 @@
+#include "stdio.h"
 #include <stdlib.h>
 #include "xil_types.h"
 #include "../GameObject.h"
@@ -12,9 +13,12 @@ class GameLogic {
 	public:
 		GameLogic();
 		int launch();
+		void generateEnemies();
 
-	private:
+	protected:
 		Renderer renderer;
+		//GameObject *player;
+		//GameObject *enemies[55+1];
 };
 
 #endif

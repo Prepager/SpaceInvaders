@@ -25,8 +25,8 @@ int GameLogic::launch() {
 		new Scene(RENDERER_WIDTH, RENDERER_HEIGHT)
 	);
 
-	//
-	this->renderer.addObject(new Enemy());
+	// Generate the game enemies.
+	this->generateEnemies();
 
 	// Start game infinity loop.
 	while (1) {
@@ -36,6 +36,45 @@ int GameLogic::launch() {
 		this->renderer.render();
 	}
 
+	//while(1);
+
 	// Return loop failed.
 	return 0;
+}
+
+/**
+ *
+ */
+void GameLogic::generateEnemies() {
+	//
+	u32 width = 40;
+	u32 height = 40;
+	u32 x = 0;
+	u32 y = 0;
+
+	//
+	for (int i = 0; i < 1; i++) {
+		// Create new enemy with given details.
+		/*this->enemies[i] = new Enemy(
+			width, height,
+			x, y
+		);*/
+
+		// Add the object to the rendering list.
+		this->renderer.addObject(new Enemy(
+			width, height,
+			x, y
+		));
+
+		//
+		x += width;
+
+		// Jump to next line for every 11th enemies.
+		/*if (i == 11) {
+			y += height;
+		}*/
+		/*if (i % 11 == 0) {
+			y += height;
+		}*/
+	}
 }

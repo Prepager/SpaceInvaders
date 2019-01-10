@@ -1,0 +1,30 @@
+#include "Enemy.h"
+
+/**
+ * todo
+ */
+Enemy::Enemy() {
+	//
+	this->width = 100;//640;
+	this->height = 100;//480;
+
+	//
+	this->xPos = 50;
+	this->yPos = 50;
+}
+
+/**
+ * todo
+ */
+void Enemy::render(u8 *frame, u32 x, u32 y, int addr) {
+	//
+	/*u32 lastX = this->xPos + this->width;
+	u32 lastY = this->yPos + this->height;
+
+	// todo
+	if ((x > this->xPos && x < lastX) && (y > this->yPos && y < lastY)) {
+		frame[addr + 0] = 255;	// G
+		frame[addr + 1] = 255;	// B
+		frame[addr + 2] = 255;	// R
+	}*/
+}

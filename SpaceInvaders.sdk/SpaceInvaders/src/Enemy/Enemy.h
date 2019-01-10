@@ -5,8 +5,8 @@
 
 class Enemy: public GameObject {
 	public:
-		Enemy();
-		virtual void render(u8 *frame);
+		Enemy(int width, int height, u32 x, u32 y);
+		virtual void render(u8 *frame, u32 xcoi, u32 ycoi, int addr);
 };
 
 #endif
