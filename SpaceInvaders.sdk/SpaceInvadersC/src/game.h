@@ -21,9 +21,12 @@
 #define ENEMY_SIZE 20
 #define ENEMY_SPACE 10
 
-#define ENEMY_STATES 4
-#define ENEMY_OFFSET ((DISPLAY_WIDTH / 2) - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE)))
-#define ENEMY_STATE_OFFSET (ENEMY_OFFSET / ENEMY_STATES)
+#define ENEMY_X_STATES 6
+#define ENEMY_X_OFFSET (DISPLAY_WIDTH - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE))) / 2
+#define ENEMY_X_STATE_OFFSET (ENEMY_X_OFFSET / (ENEMY_X_STATES + 1))
+
+//#define ENEMY_Y_STATES
+#define ENEMY_Y_OFFSET (ENEMY_X_OFFSET / 2)
 
 /* ------------------------------------------------------------ */
 /*					Miscellaneous Declarations					*/

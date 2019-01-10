@@ -6,7 +6,7 @@ u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
 u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 
 // Object arrays.
-unsigned int enemyState = 0;
+int enemyState = 0, enemyDirection = 1;
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
 /**
@@ -89,25 +89,23 @@ void renderScene()
  * todo
  */
 void positionEnemies() {
-	// Change offset to passed state.
-	//int curOffset = ENEMY_OFFSET;// + (ENEMY_STATE_OFFSET * enemyState);
+	// Change offset based on state.
+	int curOffset = ENEMY_X_OFFSET + (ENEMY_X_STATE_OFFSET * enemyState);
 
-	//
-	/*if (enemyDirection) {
+	// Change state based on direction.
+	if (enemyDirection) {
 		enemyState++;
 	} else {
 		enemyState--;
 	}
 
-	//
-	if (enemyDirection && enemyState > 6) {
-		enemyDirection = 0;
-	} else if (! enemyDirection && enemyState < -6) {
-		enemyDirection = 1;
-	}*/
+	// Change directions on bounds.
+	if (enemyState <= -ENEMY_X_STATES || enemyState >= ENEMY_X_STATES) {
+		enemyDirection = ! enemyDirection;
+	}
 
-	//
-	u32 x = ENEMY_OFFSET, y = ENEMY_OFFSET;
+	// Define starting x and y positions.
+	u32 x = curOffset, y = ENEMY_Y_OFFSET;
 
 	// Loop through enemies.
 	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
@@ -124,7 +122,7 @@ void positionEnemies() {
 
 		// Increment y and reset x.
 		if ((i+1) % 11 == 0) {
-			x = ENEMY_OFFSET;
+			x = curOffset;
 			y += ENEMY_SIZE + ENEMY_SPACE;
 		}
 	}
