@@ -5,6 +5,7 @@
 #include "xil_types.h"
 #include "xil_cache.h"
 #include "../GameObject.h"
+#include "../Enemy/Enemy.h"
 #include "../GameSettings.h"
 #include "display_ctrl/display_ctrl.h"
 
@@ -25,7 +26,8 @@ class Renderer {
 		DisplayCtrl controller;
 		u8* currentFrame();
 		int objectCount = 0;
-		GameObject *objects[20/*55+1*/];
+		GameObject *objects[30];
+
 };
 
 #endif

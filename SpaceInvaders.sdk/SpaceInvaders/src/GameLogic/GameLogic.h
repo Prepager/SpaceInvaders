@@ -17,8 +17,6 @@ class GameLogic {
 
 	protected:
 		Renderer renderer;
-		//GameObject *player;
-		//GameObject *enemies[55+1];
 };
 
 #endif

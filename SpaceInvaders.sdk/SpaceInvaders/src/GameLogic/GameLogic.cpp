@@ -8,12 +8,12 @@ GameLogic::GameLogic() {
 	int status;
 
 	// Create and initialize new rendering engine.
-	status = this->renderer.initialize();
+	/*status = this->renderer.initialize();
 	if (! status) {
 		xil_printf("Failed to initialize renderer.\r\n");
 		exit(EXIT_FAILURE);
 		return;
-	}
+	}*/
 }
 
 /**
@@ -36,8 +36,6 @@ int GameLogic::launch() {
 		this->renderer.render();
 	}
 
-	//while(1);
-
 	// Return loop failed.
 	return 0;
 }
@@ -47,33 +45,13 @@ int GameLogic::launch() {
  */
 void GameLogic::generateEnemies() {
 	//
-	u32 width = 40, height = 40;
-	u32 x = 10, y = 10;
+	//Enemy *enemies[16];
+
+	/*for (int i = 0; i < 10; i++) {
+		enemies[i] = new Enemy();
+	}*/
+
+
 
 	//
-	for (int i = 0; i < 8; i++) {
-		// Create new enemy with given details.
-		/*this->enemies[i] = new Enemy(
-			width, height,
-			x, y
-		);*/
-
-		// Add the object to the rendering list.
-		this->renderer.addObject(new Enemy(
-			width, height,
-			x, y
-		));
-
-		//
-		x += width+10;
-		y += height+10;
-
-		// Jump to next line for every 11th enemies.
-		/*if (i == 11) {
-			y += height;
-		}*/
-		/*if (i % 11 == 0) {
-			y += height;
-		}*/
-	}
 }

@@ -1,11 +1,51 @@
-12:40:25 **** Incremental Build of configuration Debug for project SpaceInvaders ****
+15:12:47 **** Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
+' '
+'Building file: ../src/Scene/Scene.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Scene/Scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Scene/Scene.d" -MT"src/Scene/Scene.o" -o "src/Scene/Scene.o" "../src/Scene/Scene.cpp"
+'Finished building: ../src/Scene/Scene.cpp'
+' '
+'Building file: ../src/Renderer/dynclk/dynclk.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/dynclk/dynclk.d" -MT"src/Renderer/dynclk/dynclk.o" -o "src/Renderer/dynclk/dynclk.o" "../src/Renderer/dynclk/dynclk.c"
+'Finished building: ../src/Renderer/dynclk/dynclk.c'
+' '
+'Building file: ../src/Renderer/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/display_ctrl/display_ctrl.d" -MT"src/Renderer/display_ctrl/display_ctrl.o" -o "src/Renderer/display_ctrl/display_ctrl.o" "../src/Renderer/display_ctrl/display_ctrl.c"
+'Finished building: ../src/Renderer/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/Renderer/Renderer.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Renderer/Renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Renderer/Renderer.d" -MT"src/Renderer/Renderer.o" -o "src/Renderer/Renderer.o" "../src/Renderer/Renderer.cpp"
+'Finished building: ../src/Renderer/Renderer.cpp'
+' '
+'Building file: ../src/GameLogic/GameLogic.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/GameLogic/GameLogic.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/GameLogic/GameLogic.d" -MT"src/GameLogic/GameLogic.o" -o "src/GameLogic/GameLogic.o" "../src/GameLogic/GameLogic.cpp"
+../src/GameLogic/GameLogic.cpp: In constructor 'GameLogic::GameLogic()':
+../src/GameLogic/GameLogic.cpp:8:6: warning: unused variable 'status' [-Wunused-variable]
+  int status;
+      ^~~~~~
+'Finished building: ../src/GameLogic/GameLogic.cpp'
 ' '
 'Building file: ../src/Enemy/Enemy.cpp'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Enemy/Enemy.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Enemy/Enemy.d" -MT"src/Enemy/Enemy.o" -o "src/Enemy/Enemy.o" "../src/Enemy/Enemy.cpp"
 'Finished building: ../src/Enemy/Enemy.cpp'
+' '
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:10:35: warning: 'new' of type 'GameLogic' with extended alignment 32 [-Waligned-new=]
+  GameLogic *logic = new GameLogic();
+                                   ^
+../src/main.cpp:10:35: note: uses 'void* operator new(unsigned int)', which does not have an alignment parameter
+../src/main.cpp:10:35: note: use '-faligned-new' to enable C++17 over-aligned new support
+'Finished building: ../src/main.cpp'
 ' '
 'Building target: SpaceInvaders.elf'
 'Invoking: ARM v7 g++ linker'
@@ -15,9 +55,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 164508	   2732	18685788	18853028	11faca4	SpaceInvaders.elf
+ 164308	   2732	18685796	18852836	11fabe4	SpaceInvaders.elf
 'Finished building: SpaceInvaders.elf.size'
 ' '
 
-12:40:26 Build Finished (took 1s.326ms)
+15:12:51 Build Finished (took 3s.632ms)
 

@@ -70,12 +70,12 @@ void Renderer::render() {
 	u8 *frame = this->currentFrame();
 
 	// Loop through the width timed with color values.
-	for (int xcoi = 0; xcoi < DISPLAY_WIDTH*3; xcoi += 3) {
+	for (int xcoi = 0; xcoi < DISPLAY_HEIGHT*3; xcoi += 3) {
 		// Set the upcoming pixel address.
 		int addr = xcoi;
 
 		// Loop through the screen height.
-		for (int ycoi = 0; ycoi < DISPLAY_HEIGHT; ycoi++) {
+		for (int ycoi = 0; ycoi < DISPLAY_WIDTH; ycoi++) {
 			// Define formatted x and y pos.
 			u32 x = xcoi/3, y = ycoi;
 

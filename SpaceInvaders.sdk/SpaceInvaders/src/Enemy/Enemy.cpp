@@ -3,6 +3,17 @@
 /**
  * todo
  */
+Enemy::Enemy() {
+	//
+	this->width = 10;
+	this->height = 10;
+	this->x = 0;
+	this->y = 0;
+}
+
+/**
+ * todo
+ */
 Enemy::Enemy(int width, int height, u32 x, u32 y) {
 	// Set the enemy positions.
 	this->x = x;

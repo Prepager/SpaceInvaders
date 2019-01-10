@@ -1,0 +1,39 @@
+#ifndef GAME_H_
+#define GAME_H_
+
+/* ------------------------------------------------------------ */
+/*				Include File Definitions						*/
+/* ------------------------------------------------------------ */
+
+//#include "math.h"
+//#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "xuartps.h"
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "display_ctrl/display_ctrl.h"
+
+/* ------------------------------------------------------------ */
+/*					Miscellaneous Declarations					*/
+/* ------------------------------------------------------------ */
+
+#define MAX_FRAME 	(1920*1080*3)
+#define STRIDE 		(1920 * 3)
+
+#define DISPLAY_WIDTH 	640
+#define DISPLAY_HEIGHT	480
+
+/* ------------------------------------------------------------ */
+/*					Procedure Declarations						*/
+/* ------------------------------------------------------------ */
+
+void initialize();
+void renderScene();
+
+/* ------------------------------------------------------------ */
+
+/************************************************************************/
+
+#endif
