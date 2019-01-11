@@ -8,7 +8,7 @@
 #define ENEMY_ROWS 5
 #define ENEMY_COLS 11
 
-#define ENEMY_SIZE 20
+#define ENEMY_SIZE 24
 #define ENEMY_SPACE 10
 
 #define ENEMY_SPEED 1000
@@ -27,7 +27,7 @@
 #define STRIDE 		(1920 * 3)
 
 // Background Color
-#define BACKGROUND 255
+#define BACKGROUND 0
 
 // Display Size
 #define DISPLAY_WIDTH 	640

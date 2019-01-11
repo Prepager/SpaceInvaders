@@ -130,3 +130,4 @@ dismissDialog("Launch SDK"); // aa (ck)
 // Tcl Message: update_compile_order -fileset sources_1 
 // [GUI Memory]: 84 MB (+1572kb) [00:00:37]
 // [GUI Memory]: 89 MB (+1115kb) [00:02:27]
+// [GUI Memory]: 94 MB (+78kb) [00:09:58]

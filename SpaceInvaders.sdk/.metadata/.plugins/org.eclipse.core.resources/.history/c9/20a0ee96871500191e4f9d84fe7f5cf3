@@ -1,0 +1,17 @@
+/*
+ * Animation0.h
+ *
+ *  Created on: Jan 11, 2019
+ *      Author: Andreas
+ */
+
+#ifndef SRC_RESOURCES_MONSTER1_ANIMATION0_H_
+#define SRC_RESOURCES_MONSTER1_ANIMATION0_H_
+
+class Animation0 {
+public:
+	Animation0();
+	virtual ~Animation0();
+};
+
+#endif /* SRC_RESOURCES_MONSTER1_ANIMATION0_H_ */

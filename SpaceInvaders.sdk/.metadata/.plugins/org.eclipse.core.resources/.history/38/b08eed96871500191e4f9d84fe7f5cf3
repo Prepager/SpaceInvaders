@@ -1,0 +1,18 @@
+/*
+ * Animation0.cpp
+ *
+ *  Created on: Jan 11, 2019
+ *      Author: Andreas
+ */
+
+#include "Animation0.h"
+
+Animation0::Animation0() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Animation0::~Animation0() {
+	// TODO Auto-generated destructor stub
+}
+
