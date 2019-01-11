@@ -20,6 +20,7 @@ typedef struct {
 
 // Constructors
 void positionPlayer(Player *player);
+void initializePlayer(Player *player);
 void paintPlayer(Player *player, u8 *frame);
 void depaintPlayer(Player *player, u8 *frame);
 

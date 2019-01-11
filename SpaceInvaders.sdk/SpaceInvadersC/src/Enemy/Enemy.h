@@ -15,6 +15,15 @@
 #include "Resources/Monster3/State0.h"
 #include "Resources/Monster3/State1.h"
 
+static u8 *MonsterImages[6] = {
+	Monster1State0,
+	Monster1State1,
+	Monster2State0,
+	Monster2State1,
+	Monster3State0,
+	Monster3State1,
+};
+
 // Struct
 typedef struct {
 	// Sizes
@@ -33,6 +42,7 @@ typedef struct {
 // Constructors
 u8* enemyImage(Enemy *enemy);
 void positionEnemies(Enemy *enemies);
+void initializeEnemies(Enemy *enemies);
 void paintEnemies(Enemy *enemies, u8 *frame);
 void depaintEnemies(Enemy *enemies, u8 *frame);
 

@@ -1,6 +1,12 @@
 // Header
 #include "Player.h"
 
+// Initialize the player.
+void initializePlayer(Player *player) {
+	// Set starting position.
+	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_SIZE / 2);
+}
+
 // Paint the player.
 void paintPlayer(Player *player, u8 *frame) {
 	// Generate the frame address for the starting position.
@@ -33,15 +39,12 @@ void depaintPlayer(Player *player, u8 *frame) {
 
 // Position the enemies.
 void positionPlayer(Player *player) {
-	//
+	// todo: add movement
 	u32 nextPos = player->position + PLAYER_SIZE;
-	player->position = nextPos;
-
-	/*u8 nextPos = player->position + PLAYER_SIZE;
 	if (nextPos > (DISPLAY_WIDTH - PLAYER_SIZE)) {
 		nextPos = 0;
 	}
 
-	// todo: add movement
-	player->position = 0;*/
+	//
+	player->position = nextPos;
 }

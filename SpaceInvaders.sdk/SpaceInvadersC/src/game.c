@@ -20,6 +20,10 @@ int main()
 	// Initialize the display.
 	initializeDisplay();
 
+	// Initalize game objects.
+	initializePlayer(&player);
+	initializeEnemies(enemies);
+
 	// Render the scene.
 	while (1) {
 		sleep(1);

@@ -7,24 +7,25 @@ int enemyDirection = 1;
 
 // Get the enemy animation state.
 u8* enemyImage(Enemy *enemy) {
-	if (enemy->row == 0) {
-		if (enemy->animation) {
-			return Monster1State0;
-		} else {
-			return Monster1State1;
-		}
-	} else if (enemy->row < 3) {
-		if (enemy->animation) {
-			return Monster2State0;
-		} else {
-			return Monster2State1;
-		}
-	} else {
-		if (enemy->animation) {
-			return Monster3State0;
-		} else {
-			return Monster3State1;
-		}
+	// Calculate offset based on enemy row.
+	int offset = 0;
+	if (enemy->row < 3) offset = 2;
+	if (enemy->row >= 3) offset = 4;
+
+	// Return the image at offset + animation.
+	return MonsterImages[offset + enemy->animation];
+}
+
+// Initialize the enemies.
+void initializeEnemies(Enemy *enemies) {
+	// Loop through all possible enemies.
+	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+		// Load in the current enemy.
+		Enemy *enemy = &enemies[i];
+
+		// Set default sizes.
+		enemy->width = ENEMY_SIZE;
+		enemy->height = ENEMY_SIZE;
 	}
 }
 
@@ -96,24 +97,23 @@ void positionEnemies(Enemy *enemies) {
 	// Loop through enemies.
 	int row = 0;
 	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
-		// Set new positions.
-		enemies[i].xPos = x;
-		enemies[i].yPos = y;
+		// Load in the current enemy.
+		Enemy *enemy = &enemies[i];
 
-		// Set new sizes.
-		enemies[i].width = ENEMY_SIZE;
-		enemies[i].height = ENEMY_SIZE;
+		// Set new positions.
+		enemy->xPos = x;
+		enemy->yPos = y;
 
 		// Set new animation.
-		enemies[i].row = row;
-		enemies[i].animation = ! enemies[i].animation;
+		enemy->row = row;
+		enemy->animation = ! enemy->animation;
 
 		// Increment x with spacing.
 		x += ENEMY_SIZE + ENEMY_SPACE;
 
-		// Increment y and reset x.
-		if ((i+1) % 11 == 0) {
-			//
+		// Jump to next line if equal to columns.
+		if ((i+1) % ENEMY_COLS == 0) {
+			// Increment the current row.
 			row++;
 
 			//
