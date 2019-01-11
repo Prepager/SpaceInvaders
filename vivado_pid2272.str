@@ -227,3 +227,6 @@ selectButton("PAResourceItoN.NewLaunchHardwareDialog_EXPORTED_HARDWARE_SYSTEM_OU
 dismissDialog("Launch SDK"); // aa (ck)
 // Tcl Message: launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 96 MB (+235kb) [00:34:53]
+// HMemoryUtils.trashcanNow. Engine heap size: 655 MB. GUI used memory: 47 MB. Current time: 1/11/19 12:17:53 PM CET
+// [GUI Memory]: 101 MB (+414kb) [01:02:19]
