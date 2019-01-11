@@ -15,6 +15,7 @@
 
 // Game objects
 #include "Enemy/Enemy.h"
+#include "Player/Player.h"
 
 /* ------------------------------------------------------------ */
 /*					Procedure Declarations						*/

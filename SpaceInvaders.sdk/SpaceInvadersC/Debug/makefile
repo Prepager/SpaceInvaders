@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include src/dynclk/subdir.mk
 -include src/display_ctrl/subdir.mk
+-include src/Player/subdir.mk
 -include src/Enemy/subdir.mk
 -include src/subdir.mk
 -include subdir.mk

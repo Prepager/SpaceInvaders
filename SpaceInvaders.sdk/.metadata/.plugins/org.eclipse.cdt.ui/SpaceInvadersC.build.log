@@ -1,15 +1,10 @@
-11:59:03 **** Auto Build of configuration Debug for project SpaceInvadersC ****
+12:12:53 **** Auto Build of configuration Debug for project SpaceInvadersC ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/Enemy/Enemy.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Enemy/Enemy.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersC_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Enemy/Enemy.d" -MT"src/Enemy/Enemy.o" -o "src/Enemy/Enemy.o" "../src/Enemy/Enemy.c"
-In file included from ../src/Enemy/Enemy.h:10:0,
-                 from ../src/Enemy/Enemy.c:2:
-../src/Enemy/Resources/MonsterDeath.h:4:11: warning: 'MonsterDeath' defined but not used [-Wunused-variable]
- static u8 MonsterDeath[(24*24*3)] = {
-           ^~~~~~~~~~~~
 'Finished building: ../src/Enemy/Enemy.c'
 ' '
 'Building file: ../src/game.c'
@@ -20,61 +15,25 @@ In file included from ../src/game.h:6:0,
 ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
  #pragma message ("For the sleep routines, Global timer is being used")
          ^~~~~~~
-In file included from ../src/Enemy/Enemy.h:16:0,
-                 from ../src/game.h:17,
+In file included from ../src/Player/Player.h:9:0,
+                 from ../src/game.h:18,
                  from ../src/game.c:2:
-../src/Enemy/Resources/Monster3/State1.h:4:11: warning: 'Monster3State1' defined but not used [-Wunused-variable]
- static u8 Monster3State1[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:15:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/Monster3/State0.h:4:11: warning: 'Monster3State0' defined but not used [-Wunused-variable]
- static u8 Monster3State0[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:14:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/Monster2/State1.h:4:11: warning: 'Monster2State1' defined but not used [-Wunused-variable]
- static u8 Monster2State1[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:13:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/Monster2/State0.h:4:11: warning: 'Monster2State0' defined but not used [-Wunused-variable]
- static u8 Monster2State0[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:12:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/Monster1/State1.h:4:11: warning: 'Monster1State1' defined but not used [-Wunused-variable]
- static u8 Monster1State1[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:11:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/Monster1/State0.h:4:11: warning: 'Monster1State0' defined but not used [-Wunused-variable]
- static u8 Monster1State0[(24*24*3)] = {
-           ^~~~~~~~~~~~~~
-In file included from ../src/Enemy/Enemy.h:10:0,
-                 from ../src/game.h:17,
-                 from ../src/game.c:2:
-../src/Enemy/Resources/MonsterDeath.h:4:11: warning: 'MonsterDeath' defined but not used [-Wunused-variable]
- static u8 MonsterDeath[(24*24*3)] = {
-           ^~~~~~~~~~~~
+../src/Player/Resources/Ship.h:4:11: warning: 'Ship' defined but not used [-Wunused-variable]
+ static u8 Ship[(24*24*3)] = {
+           ^~~~
 'Finished building: ../src/game.c'
 ' '
 'Building target: SpaceInvadersC.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvadersC_bsp/ps7_cortexa9_0/lib -o "SpaceInvadersC.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/Enemy/Enemy.o  ./src/game.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvadersC_bsp/ps7_cortexa9_0/lib -o "SpaceInvadersC.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/Player/Player.o  ./src/Enemy/Enemy.o  ./src/game.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: SpaceInvadersC.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SpaceInvadersC.elf  |tee "SpaceInvadersC.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  53860	  25488	18689168	18768516	11e6284	SpaceInvadersC.elf
+  53860	  28944	18689168	18771972	11e7004	SpaceInvadersC.elf
 'Finished building: SpaceInvadersC.elf.size'
 ' '
 
-11:59:04 Build Finished (took 1s.531ms)
+12:12:54 Build Finished (took 1s.365ms)
 

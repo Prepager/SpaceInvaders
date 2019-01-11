@@ -32,7 +32,8 @@ src/game.o src/game.o: ../src/game.c ../src/game.h \
  ../src/Enemy/Resources/Monster2/State0.h \
  ../src/Enemy/Resources/Monster2/State1.h \
  ../src/Enemy/Resources/Monster3/State0.h \
- ../src/Enemy/Resources/Monster3/State1.h
+ ../src/Enemy/Resources/Monster3/State1.h ../src/Player/Player.h \
+ ../src/Player/../settings.h ../src/Player/Resources/Ship.h
 
 ../src/game.h:
 
@@ -109,3 +110,9 @@ src/game.o src/game.o: ../src/game.c ../src/game.h \
 ../src/Enemy/Resources/Monster3/State0.h:
 
 ../src/Enemy/Resources/Monster3/State1.h:
+
+../src/Player/Player.h:
+
+../src/Player/../settings.h:
+
+../src/Player/Resources/Ship.h:

@@ -8,6 +8,9 @@ u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 // Object arrays.
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
+// todo
+int drawBackground = 1;
+
 /**
  * Initialize the game logic and display.
  */
@@ -47,7 +50,9 @@ void renderScene()
 	u8 *frame = controller.framePtr[controller.curFrame];
 
 	// Draw the background.
-	memset(&frame[0], BACKGROUND, sizeof(u8) * MAX_FRAME);
+	if (drawBackground) {
+		memset(&frame[0], BACKGROUND, sizeof(u8) * MAX_FRAME);
+	}
 
 	// Position and paint enemies.
 	depaintEnemies(enemies, frame);
