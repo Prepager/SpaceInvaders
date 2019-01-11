@@ -1,0 +1,7 @@
+// Header
+#include "Enemy.h"
+
+//
+void paintEnemies(Enemy *enemies) {
+
+}

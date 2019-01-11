@@ -1,0 +1,17 @@
+/*
+ * image1.h
+ *
+ *  Created on: Jan 11, 2019
+ *      Author: Andreas
+ */
+
+#ifndef SRC_IMAGES_IMAGE1_IMAGE1_H_
+#define SRC_IMAGES_IMAGE1_IMAGE1_H_
+
+class image1 {
+public:
+	image1();
+	virtual ~image1();
+};
+
+#endif /* SRC_IMAGES_IMAGE1_IMAGE1_H_ */

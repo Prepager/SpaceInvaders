@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;SpaceInvadersC/src/InitializeDisplay.h&apos; to &apos;initializeDisplay.h&apos;" description="Rename resource &apos;InitializeDisplay.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/InitializeDisplay.h" name="initializeDisplay.h" stamp="1547129435235" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SpaceInvadersC/src/InitializeDisplay.h&apos; to &apos;initializeDisplay.h&apos;" description="Rename resource &apos;InitializeDisplay.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/InitializeDisplay.h" name="initializeDisplay.h" stamp="1547129435235" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SpaceInvadersC/src/Enemy/Enemy.cpp&apos; to &apos;Enemy.c&apos;" description="Rename resource &apos;Enemy.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Enemy/Enemy.cpp" name="Enemy.c" stamp="1547196570740" updateReferences="true"/>
 </session>

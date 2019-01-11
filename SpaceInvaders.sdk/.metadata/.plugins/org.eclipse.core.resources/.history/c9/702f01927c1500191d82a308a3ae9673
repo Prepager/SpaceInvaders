@@ -1,0 +1,17 @@
+// Header
+#include "Enemy.h"
+
+//
+void paintEnemies(Enemy *enemies) {
+
+}
+
+//
+void depaintEnemies(Enemy *enemies) {
+
+}
+
+//
+void positionEnemies(Enemy *enemies) {
+
+}

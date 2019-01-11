@@ -1,0 +1,19 @@
+/*
+ * image1.c
+ *
+ *  Created on: Jan 11, 2019
+ *      Author: Andreas
+ */
+
+#include "image1.h"
+
+image1::image1()
+{
+	// TODO Auto-generated constructor stub
+
+}
+
+image1::~image1()
+{
+	// TODO Auto-generated destructor stub
+}
