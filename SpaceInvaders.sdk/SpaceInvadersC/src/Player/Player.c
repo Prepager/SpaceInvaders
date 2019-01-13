@@ -1,10 +1,17 @@
 // Header
 #include "Player.h"
 
+// Create BTN gpio struct.
+XGpio BTNGpio;
+
 // Initialize the player.
 void initializePlayer(Player *player) {
 	// Set starting position.
 	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_SIZE / 2);
+
+	// Initialize the button XGPIO.
+	XGpio_Initialize(&BTNGpio, GPIO_BTN_ID);
+	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
 }
 
 // Paint the player.
@@ -39,12 +46,21 @@ void depaintPlayer(Player *player, u8 *frame) {
 
 // Position the enemies.
 void positionPlayer(Player *player) {
-	// todo: add movement
-	u32 nextPos = player->position + PLAYER_SIZE;
-	if (nextPos > (DISPLAY_WIDTH - PLAYER_SIZE)) {
-		nextPos = 0;
+	// Read in the current button state.
+	u8 state = XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+
+	// Set default next position.
+	u32 nextPosition = player->position;
+
+	// Determine the direction.
+	if (state == PLAYER_KEY_LEFT) {
+		nextPosition += PLAYER_MOVEMENT;
+	} else if (state == PLAYER_KEY_RIGHT) {
+		nextPosition -= PLAYER_MOVEMENT;
 	}
 
-	//
-	player->position = nextPos;
+	// Update position if not outside bounds.
+	if (nextPosition > 0 && nextPosition < (DISPLAY_WIDTH - PLAYER_SIZE)) {
+		player->position = nextPosition;
+	}
 }

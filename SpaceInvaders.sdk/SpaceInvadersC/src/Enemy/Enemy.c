@@ -2,15 +2,16 @@
 #include "Enemy.h"
 
 // Globals
-int enemyState = 0;
-int enemyDirection = 1;
+int xState = 0;
+int yState = 0;
+int direction = 1;
 
 // Get the enemy animation state.
 u8* enemyImage(Enemy *enemy) {
 	// Calculate offset based on enemy row.
 	int offset = 0;
-	if (enemy->row < 3) offset = 2;
 	if (enemy->row >= 3) offset = 4;
+	else if (enemy->row > 0) offset = 2;
 
 	// Return the image at offset + animation.
 	return MonsterImages[offset + enemy->animation];
@@ -76,26 +77,43 @@ void depaintEnemies(Enemy *enemies, u8 *frame) {
 
 // Position the enemies.
 void positionEnemies(Enemy *enemies) {
-	// Change offset based on state.
-	int curOffset = ENEMY_X_OFFSET + (ENEMY_X_STATE_OFFSET * enemyState);
+	// Make x state respect bounds.
+	int xStateBounds = xState;
+	if (xState > ENEMY_X_STATES) xStateBounds = ENEMY_X_STATES;
+	if (xState < -ENEMY_X_STATES) xStateBounds = -ENEMY_X_STATES;
 
-	// Change state based on direction.
-	if (enemyDirection) {
-		enemyState++;
+	// Calculate offset based on state.
+	u32 curYOffset = ENEMY_Y_OFFSET + (ENEMY_SIZE * yState);
+	u32 curXOffset = ENEMY_X_OFFSET + (ENEMY_X_STATE_OFFSET * xStateBounds);
+
+	// Increment state based on direction.
+	if (direction) {
+		xState++;
 	} else {
-		enemyState--;
+		xState--;
 	}
 
-	// Change directions on bounds.
-	if (enemyState <= -ENEMY_X_STATES || enemyState >= ENEMY_X_STATES) {
-		enemyDirection = ! enemyDirection;
+	// Check if horizontal state is outside bounds.
+	if (xState == -(ENEMY_X_STATES + 1) || xState == (ENEMY_X_STATES + 1)) {
+		// Increment the vertical state.
+		yState++;
+
+		// Change the state direction.
+		direction = ! direction;
+
+		// Move horizontal state back to bounds.
+		if (xState < 0) {
+			xState++;
+		} else {
+			xState--;
+		}
 	}
 
 	// Define starting x and y positions.
-	u32 x = curOffset, y = ENEMY_Y_OFFSET;
+	u32 x = curXOffset, y = curYOffset;
 
 	// Loop through enemies.
-	int row = 0;
+	int currentRow = 0;
 	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
@@ -105,19 +123,21 @@ void positionEnemies(Enemy *enemies) {
 		enemy->yPos = y;
 
 		// Set new animation.
-		enemy->row = row;
+		enemy->row = currentRow;
 		enemy->animation = ! enemy->animation;
 
 		// Increment x with spacing.
 		x += ENEMY_SIZE + ENEMY_SPACE;
 
-		// Jump to next line if equal to columns.
+		// Jump to next line if hit column count.
 		if ((i+1) % ENEMY_COLS == 0) {
 			// Increment the current row.
-			row++;
+			currentRow++;
 
-			//
-			x = curOffset;
+			// Reset x back to offset.
+			x = curXOffset;
+
+			// Jump to next line.
 			y += ENEMY_SIZE + ENEMY_SPACE;
 		}
 	}

@@ -9,8 +9,15 @@ u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 Player player;
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
+//
+XTime enemyTimer;
+XTime timeReader;
+
 // todo
+
 int drawBackground = 1;
+
+
 
 /**
  * Initialize the game logic and display.
@@ -20,15 +27,12 @@ int main()
 	// Initialize the display.
 	initializeDisplay();
 
-	// Initalize game objects.
+	// Initialize game objects.
 	initializePlayer(&player);
 	initializeEnemies(enemies);
 
 	// Render the scene.
-	while (1) {
-		sleep(1);
-		renderScene();
-	}
+	while (1) renderScene();
 
 	// Return out.
 	return 0;
@@ -51,6 +55,9 @@ int collides(Enemy *enemy, u32 x, u32 y) {
  */
 void renderScene()
 {
+	// Read in the current time.
+	XTime_GetTime(&timeReader);
+
 	// Get the current frame.
 	u8 *frame = controller.framePtr[controller.curFrame];
 
@@ -63,10 +70,16 @@ void renderScene()
 		drawBackground = 0;
 	}
 
-	// Position and paint enemies.
-	depaintEnemies(enemies, frame);
-	positionEnemies(enemies);
-	paintEnemies(enemies, frame);
+	// Check if should process enemies.
+	if ((timeReader - enemyTimer) > ENEMY_SPEED) {
+		// Position and paint enemies.
+		depaintEnemies(enemies, frame);
+		positionEnemies(enemies);
+		paintEnemies(enemies, frame);
+
+		// Save enemy drawn time.
+		enemyTimer = timeReader;
+	}
 
 	// Position and paint player.
 	depaintPlayer(&player, frame);

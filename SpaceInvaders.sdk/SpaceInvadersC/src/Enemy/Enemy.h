@@ -15,6 +15,7 @@
 #include "Resources/Monster3/State0.h"
 #include "Resources/Monster3/State1.h"
 
+__attribute__ ((unused))
 static u8 *MonsterImages[6] = {
 	Monster1State0,
 	Monster1State1,

@@ -23,7 +23,6 @@
 
 void initialize();
 void renderScene();
-//void positionEnemies();
 int collides(Enemy *enemy, u32 x, u32 y);
 
 /* ------------------------------------------------------------ */

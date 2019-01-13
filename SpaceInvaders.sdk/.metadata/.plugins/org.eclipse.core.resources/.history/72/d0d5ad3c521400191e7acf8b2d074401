@@ -1,6 +1,0 @@
-#include "Enemy.h"
-
-Enemy::Enemy() {
-	// TODO Auto-generated constructor stub
-
-}
