@@ -49,3 +49,14 @@ Bullet* positionBullet(Bullet *bullet) {
 	// Return the existing pointer.
 	return bullet;
 }
+
+// Check collision for the bullet.
+int collidesBullet(Bullet *bullet, u32 xPos, u32 yPos, int width, int height) {
+	//
+	return (
+		bullet->xPos >= xPos &&
+		bullet->yPos >= yPos &&
+		(bullet->xPos + BULLET_WIDTH) <= (xPos + width) &&
+		(bullet->yPos + BULLET_HEIGHT) <= (yPos + height)
+	);
+}

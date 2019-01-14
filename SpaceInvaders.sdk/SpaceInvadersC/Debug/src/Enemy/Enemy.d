@@ -10,7 +10,9 @@ src/Enemy/Enemy.o src/Enemy/Enemy.o: ../src/Enemy/Enemy.c \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xil_types.h \
- ../src/Enemy/../settings.h ../src/Enemy/Resources/MonsterDeath.h \
+ ../src/Enemy/../settings.h ../src/Enemy/../Bullet/Bullet.h \
+ ../src/Enemy/../Bullet/../settings.h \
+ ../src/Enemy/Resources/MonsterDeath.h \
  ../src/Enemy/Resources/Monster1/State0.h \
  ../src/Enemy/Resources/Monster1/State1.h \
  ../src/Enemy/Resources/Monster2/State0.h \
@@ -41,6 +43,10 @@ src/Enemy/Enemy.o src/Enemy/Enemy.o: ../src/Enemy/Enemy.c \
 ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xil_types.h:
 
 ../src/Enemy/../settings.h:
+
+../src/Enemy/../Bullet/Bullet.h:
+
+../src/Enemy/../Bullet/../settings.h:
 
 ../src/Enemy/Resources/MonsterDeath.h:
 

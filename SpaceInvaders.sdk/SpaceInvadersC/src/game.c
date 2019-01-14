@@ -82,6 +82,17 @@ void renderScene()
 	positionPlayer(&player, input);
 	paintPlayer(&player, frame);
 
+	//
+	if (player.bullet) {
+		//
+		player.bullet = collidesEnemies(enemies, player.bullet);
+
+		//
+		if (! player.bullet) {
+			paintEnemies(enemies, frame);
+		}
+	}
+
 	// Flush the frame cache.
 	Xil_DCacheFlushRange((unsigned int) frame, MAX_FRAME);
 }

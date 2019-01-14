@@ -5,9 +5,9 @@
 /*		    			Bullet Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
-#define BULLET_WIDTH 3
-#define BULLET_HEIGHT 9
-#define BULLET_MOVEMENT 1
+#define BULLET_WIDTH 2
+#define BULLET_HEIGHT 6
+#define BULLET_MOVEMENT 3
 
 /* ------------------------------------------------------------ */
 /*		    			Player Declarations		    		  	*/
@@ -32,9 +32,9 @@
 #define ENEMY_SIZE 24
 #define ENEMY_SPACE 10
 
-#define ENEMY_SPEED (COUNTS_PER_SECOND * 1)
+#define ENEMY_SPEED (COUNTS_PER_SECOND * 0.8)
 
-#define ENEMY_X_STATES 6
+#define ENEMY_X_STATES 9
 #define ENEMY_X_OFFSET (DISPLAY_WIDTH - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE))) / 2
 #define ENEMY_X_STATE_OFFSET (ENEMY_X_OFFSET / (ENEMY_X_STATES + 1))
 

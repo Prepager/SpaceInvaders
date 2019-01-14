@@ -13,6 +13,11 @@ u8* enemyImage(Enemy *enemy) {
 	if (enemy->row >= 3) offset = 4;
 	else if (enemy->row > 0) offset = 2;
 
+	// Return dead image if dying.
+	if (enemy->dying) {
+		return MonsterDeath;
+	}
+
 	// Return the image at offset + animation.
 	return MonsterImages[offset + enemy->animation];
 }
@@ -37,6 +42,9 @@ void paintEnemies(Enemy *enemies, u8 *frame) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
+		// Continue if already dead.
+		if (enemy->dead) continue;
+
 		// Get the enemy animation state.
 		u8 *state = enemyImage(enemy);
 
@@ -60,6 +68,9 @@ void depaintEnemies(Enemy *enemies, u8 *frame) {
 	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
+
+		// Continue if already dead.
+		if (enemy->dead) continue;
 
 		// Generate the frame address for the starting position.
 		int addr = (enemy->xPos * 3) + (enemy->yPos * STRIDE);
@@ -126,6 +137,12 @@ void positionEnemies(Enemy *enemies) {
 		enemy->row = currentRow;
 		enemy->animation = ! enemy->animation;
 
+		// Enable dead status when dying.
+		if (enemy->dying) {
+			enemy->dead = 1;
+			enemy->dying = 0;
+		}
+
 		// Increment x with spacing.
 		x += ENEMY_SIZE + ENEMY_SPACE;
 
@@ -141,4 +158,29 @@ void positionEnemies(Enemy *enemies) {
 			y += ENEMY_SIZE + ENEMY_SPACE;
 		}
 	}
+}
+
+// Check collision between bullet and enemies.
+Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet) {
+	// Loop through all possible enemies.
+	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+		// Load in the current enemy.
+		Enemy *enemy = &enemies[i];
+
+		// Skip check if dead or dying.
+		if (enemy->dead || enemy->dying) continue;
+
+		// Check if bullet collides with enemy.
+		if (collidesBullet(bullet, enemy->xPos, enemy->yPos, ENEMY_SIZE, ENEMY_SIZE)) {
+			// Enable dying status on enemy.
+			enemy->dying = 1;
+
+			// Delete the bullet and pointer.
+			free(bullet);
+			return NULL;
+		}
+	}
+
+	// Return the original bullet
+	return bullet;
 }

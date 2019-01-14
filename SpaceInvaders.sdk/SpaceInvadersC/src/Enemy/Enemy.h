@@ -5,6 +5,7 @@
 #include "xil_io.h"
 #include "xil_types.h"
 #include "../settings.h"
+#include "../Bullet/Bullet.h"
 
 // Images
 #include "Resources/MonsterDeath.h"
@@ -38,6 +39,10 @@ typedef struct {
 	// Animation
 	int row;
 	int animation;
+
+	// States
+	int dead;
+	int dying;
 } Enemy;
 
 // Constructors
@@ -46,5 +51,6 @@ void positionEnemies(Enemy *enemies);
 void initializeEnemies(Enemy *enemies);
 void paintEnemies(Enemy *enemies, u8 *frame);
 void depaintEnemies(Enemy *enemies, u8 *frame);
+Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet);
 
 #endif

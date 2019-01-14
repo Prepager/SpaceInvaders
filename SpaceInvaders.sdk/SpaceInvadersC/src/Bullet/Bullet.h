@@ -21,5 +21,6 @@ typedef struct {
 Bullet* positionBullet(Bullet *bullet);
 void paintBullet(Bullet *bullet, u8 *frame);
 void depaintBullet(Bullet *bullet, u8 *frame);
+int collidesBullet(Bullet *bullet, u32 xPos, u32 yPos, int width, int height);
 
 #endif

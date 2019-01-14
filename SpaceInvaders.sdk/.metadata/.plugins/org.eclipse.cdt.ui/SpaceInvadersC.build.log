@@ -1,23 +1,8 @@
-09:09:40 **** Auto Build of configuration Debug for project SpaceInvadersC ****
+10:03:35 **** Incremental Build of configuration Debug for project SpaceInvadersC ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/Bullet/Bullet.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bullet/Bullet.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvadersC_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Bullet/Bullet.d" -MT"src/Bullet/Bullet.o" -o "src/Bullet/Bullet.o" "../src/Bullet/Bullet.c"
-'Finished building: ../src/Bullet/Bullet.c'
-' '
-'Building target: SpaceInvadersC.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvadersC_bsp/ps7_cortexa9_0/lib -o "SpaceInvadersC.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/Player/Player.o  ./src/Enemy/Enemy.o  ./src/Bullet/Bullet.o  ./src/game.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: SpaceInvadersC.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size SpaceInvadersC.elf  |tee "SpaceInvadersC.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  59528	  30096	18689248	18778872	11e8af8	SpaceInvadersC.elf
-'Finished building: SpaceInvadersC.elf.size'
-' '
+make: Nothing to be done for `main-build'.
 
-09:09:41 Build Finished (took 969ms)
+10:03:35 Build Finished (took 322ms)
 
