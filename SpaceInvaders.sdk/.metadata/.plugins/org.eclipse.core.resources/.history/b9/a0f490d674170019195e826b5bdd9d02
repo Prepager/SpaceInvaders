@@ -1,0 +1,27 @@
+// Header
+#include "Bullet.h"
+
+// Paint the bullet.
+void paintBullet(Bullet *bullet, u8 *frame) {
+	// Generate the frame address for the starting position.
+	int addr = (bullet->xPos * 3) + (bullet->yPos * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < 3; ycoi++) {
+		// Copy enemy image data into frame.
+		//memcpy(&frame[addr], &Ship[ycoi * PLAYER_SIZE * 3], PLAYER_SIZE * 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+}
+
+// Depaint the bullet.
+void depaintBullet(Bullet *bullet, u8 *frame) {
+	//
+}
+
+// Position the bullet.
+void positionBullet(Bullet *bullet) {
+	//
+}

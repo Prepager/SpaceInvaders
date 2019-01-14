@@ -1,0 +1,26 @@
+#ifndef SRC_BULLET_BULLET_H_
+#define SRC_BULLET_BULLET_H_
+
+// Includes
+#include "xil_io.h"
+#include "xil_types.h"
+#include "../settings.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+// Struct
+typedef struct {
+	// Positions
+	u32 xPos;
+	u32 yPos;
+
+	// Direction
+	int direction;
+} Bullet;
+
+// Constructors
+void positionBullet(Bullet *bullet);
+void paintBullet(Bullet *bullet, u8 *frame);
+void depaintBullet(Bullet *bullet, u8 *frame);
+
+#endif

@@ -12,6 +12,7 @@ RM := rm -rf
 -include src/display_ctrl/subdir.mk
 -include src/Player/subdir.mk
 -include src/Enemy/subdir.mk
+-include src/Bullet/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

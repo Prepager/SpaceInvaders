@@ -1,17 +1,10 @@
 // Header
 #include "Player.h"
 
-// Create BTN gpio struct.
-XGpio BTNGpio;
-
 // Initialize the player.
 void initializePlayer(Player *player) {
 	// Set starting position.
 	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_SIZE / 2);
-
-	// Initialize the button XGPIO.
-	XGpio_Initialize(&BTNGpio, GPIO_BTN_ID);
-	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
 }
 
 // Paint the player.
@@ -26,6 +19,11 @@ void paintPlayer(Player *player, u8 *frame) {
 
 		// Jump to next line.
 		addr += STRIDE;
+	}
+
+	// Paint the bullet if exists.
+	if (player->bullet != NULL) {
+		paintBullet(player->bullet, frame);
 	}
 }
 
@@ -42,25 +40,43 @@ void depaintPlayer(Player *player, u8 *frame) {
 		// Jump to next line.
 		addr += STRIDE;
 	}
+
+	// Depaint the bullet if exists.
+	if (player->bullet != NULL) {
+		depaintBullet(player->bullet, frame);
+	}
 }
 
 // Position the enemies.
-void positionPlayer(Player *player) {
-	// Read in the current button state.
-	u8 state = XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
-
+void positionPlayer(Player *player, u8 input) {
 	// Set default next position.
 	u32 nextPosition = player->position;
 
 	// Determine the direction.
-	if (state == PLAYER_KEY_LEFT) {
+	if (input == PLAYER_KEY_LEFT) {
 		nextPosition += PLAYER_MOVEMENT;
-	} else if (state == PLAYER_KEY_RIGHT) {
+	} else if (input == PLAYER_KEY_RIGHT) {
 		nextPosition -= PLAYER_MOVEMENT;
 	}
 
 	// Update position if not outside bounds.
 	if (nextPosition > 0 && nextPosition < (DISPLAY_WIDTH - PLAYER_SIZE)) {
 		player->position = nextPosition;
+	}
+
+	// Check if shooting and no bullet exists.
+	if (player->bullet == NULL && input == PLAYER_KEY_SHOOT) {
+		// Allocate space for new bullet.
+		player->bullet = malloc(sizeof(Bullet));
+
+		// Set new bullet position.
+		player->bullet->direction = 1;
+		player->bullet->yPos = PLAYER_Y_OFFSET;
+		player->bullet->xPos = player->position + (PLAYER_SIZE / 2);
+	}
+
+	// Position bullet if exists.
+	if (player->bullet != NULL) {
+		player->bullet = positionBullet(player->bullet);
 	}
 }

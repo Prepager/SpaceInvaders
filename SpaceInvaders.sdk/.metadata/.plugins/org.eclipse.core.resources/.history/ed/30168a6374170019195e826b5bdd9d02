@@ -1,0 +1,12 @@
+// Header
+#include "Bullet.h"
+
+// Paint the bullet.
+void paintBullet(Bullet *bullet, u8 *frame) {
+	//
+}
+
+// Depaint the bullet.
+void depaintBullet(Bullet *bullet, u8 *frame) {
+	//
+}

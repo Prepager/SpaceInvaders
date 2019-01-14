@@ -16,6 +16,7 @@ ELFSIZE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+src/Bullet \
 src/Enemy \
 src/Player \
 src/display_ctrl \

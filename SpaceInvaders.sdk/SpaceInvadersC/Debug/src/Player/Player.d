@@ -15,7 +15,8 @@ src/Player/Player.o src/Player/Player.o: ../src/Player/Player.c \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xil_types.h \
- ../src/Player/../settings.h ../src/Player/Resources/Ship.h
+ ../src/Player/../settings.h ../src/Player/../Bullet/Bullet.h \
+ ../src/Player/../Bullet/../settings.h ../src/Player/Resources/Ship.h
 
 ../src/Player/Player.h:
 
@@ -50,5 +51,9 @@ src/Player/Player.o src/Player/Player.o: ../src/Player/Player.c \
 ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xil_types.h:
 
 ../src/Player/../settings.h:
+
+../src/Player/../Bullet/Bullet.h:
+
+../src/Player/../Bullet/../settings.h:
 
 ../src/Player/Resources/Ship.h:

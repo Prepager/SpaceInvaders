@@ -9,15 +9,16 @@ u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 Player player;
 Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
+
+// Create BTN gpio struct.
+XGpio BTNGpio;
+
 //
 XTime enemyTimer;
 XTime timeReader;
 
 // todo
-
 int drawBackground = 1;
-
-
 
 /**
  * Initialize the game logic and display.
@@ -26,6 +27,10 @@ int main()
 {
 	// Initialize the display.
 	initializeDisplay();
+
+	// Initialize the button XGPIO.
+	XGpio_Initialize(&BTNGpio, GPIO_BTN_ID);
+	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
 
 	// Initialize game objects.
 	initializePlayer(&player);
@@ -39,25 +44,10 @@ int main()
 }
 
 /**
- * todo
- */
-int collides(Enemy *enemy, u32 x, u32 y) {
-	return (
-		x >= enemy->xPos &&
-		y >= enemy->yPos &&
-		x <= enemy->xPos + enemy->width &&
-		y <= enemy->yPos + enemy->height
-	);
-}
-
-/**
  * Render the scene.
  */
 void renderScene()
 {
-	// Read in the current time.
-	XTime_GetTime(&timeReader);
-
 	// Get the current frame.
 	u8 *frame = controller.framePtr[controller.curFrame];
 
@@ -70,6 +60,9 @@ void renderScene()
 		drawBackground = 0;
 	}
 
+	// Read in the current time.
+	XTime_GetTime(&timeReader);
+
 	// Check if should process enemies.
 	if ((timeReader - enemyTimer) > ENEMY_SPEED) {
 		// Position and paint enemies.
@@ -81,9 +74,12 @@ void renderScene()
 		enemyTimer = timeReader;
 	}
 
+	// Read in the current button state.
+	u8 input = XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+
 	// Position and paint player.
 	depaintPlayer(&player, frame);
-	positionPlayer(&player);
+	positionPlayer(&player, input);
 	paintPlayer(&player, frame);
 
 	// Flush the frame cache.

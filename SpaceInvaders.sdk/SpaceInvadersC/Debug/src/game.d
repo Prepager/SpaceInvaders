@@ -35,7 +35,8 @@ src/game.o src/game.o: ../src/game.c ../src/game.h \
  ../src/Enemy/Resources/Monster3/State1.h ../src/Player/Player.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xgpio.h \
  ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xgpio_l.h \
- ../src/Player/../settings.h ../src/Player/Resources/Ship.h
+ ../src/Player/../settings.h ../src/Player/../Bullet/Bullet.h \
+ ../src/Player/../Bullet/../settings.h ../src/Player/Resources/Ship.h
 
 ../src/game.h:
 
@@ -120,5 +121,9 @@ src/game.o src/game.o: ../src/game.c ../src/game.h \
 ../../SpaceInvadersC_bsp/ps7_cortexa9_0/include/xgpio_l.h:
 
 ../src/Player/../settings.h:
+
+../src/Player/../Bullet/Bullet.h:
+
+../src/Player/../Bullet/../settings.h:
 
 ../src/Player/Resources/Ship.h:

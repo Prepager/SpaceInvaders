@@ -1,0 +1,10 @@
+#include "Bullet.h"
+
+// Struct
+typedef struct {
+	// Positions
+	u32 xPos;
+	u32 yPos;
+
+	//
+} Bullet;

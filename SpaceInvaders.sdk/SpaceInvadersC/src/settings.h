@@ -2,6 +2,14 @@
 #define SETTINGS_H_
 
 /* ------------------------------------------------------------ */
+/*		    			Bullet Declarations		    		  	*/
+/* ------------------------------------------------------------ */
+
+#define BULLET_WIDTH 3
+#define BULLET_HEIGHT 9
+#define BULLET_MOVEMENT 1
+
+/* ------------------------------------------------------------ */
 /*		    			Player Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
@@ -10,6 +18,7 @@
 
 #define PLAYER_KEY_LEFT 1
 #define PLAYER_KEY_RIGHT 2
+#define PLAYER_KEY_SHOOT 8
 
 #define PLAYER_Y_OFFSET (DISPLAY_HEIGHT - (PLAYER_SIZE * 2))
 
@@ -44,5 +53,10 @@
 // Display Size
 #define DISPLAY_WIDTH 	640
 #define DISPLAY_HEIGHT	480
+
+// GPIO
+#define BTN_CHANNEL 1
+#define BTN_MASK XGPIO_IR_CH1_MASK
+#define GPIO_BTN_ID  XPAR_AXI_GPIO_BTN_DEVICE_ID
 
 #endif

@@ -1,0 +1,37 @@
+// Header
+#include "Bullet.h"
+
+// Paint the bullet.
+void paintBullet(Bullet *bullet, u8 *frame) {
+	// Generate the frame address for the starting position.
+	int addr = (bullet->xPos * 3) + (bullet->yPos * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < 3; ycoi++) {
+		// Draw single white pixel.
+		memset(&frame[addr], 255, 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+}
+
+// Depaint the bullet.
+void depaintBullet(Bullet *bullet, u8 *frame) {
+	// Generate the frame address for the starting position.
+	int addr = (bullet->xPos * 3) + (bullet->yPos * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < 3; ycoi++) {
+		// Draw the background color.
+		memset(&frame[addr], BACKGROUND, 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+}
+
+// Position the bullet.
+void positionBullet(Bullet *bullet) {
+	//
+}
