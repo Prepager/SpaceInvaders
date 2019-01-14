@@ -1,0 +1,7 @@
+// Header
+#include "Shield.h"
+
+// Initialize the shield.
+void initializeShield(Shield *shield) {
+
+}

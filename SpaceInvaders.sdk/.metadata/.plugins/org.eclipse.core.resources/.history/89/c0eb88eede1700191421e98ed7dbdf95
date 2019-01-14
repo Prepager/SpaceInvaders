@@ -1,0 +1,14 @@
+/*
+ * Shield.h
+ *
+ *  Created on: Jan 14, 2019
+ *      Author: Andreas
+ */
+
+#ifndef SRC_SHIELD_SHIELD_H_
+#define SRC_SHIELD_SHIELD_H_
+
+class Shield {
+};
+
+#endif /* SRC_SHIELD_SHIELD_H_ */

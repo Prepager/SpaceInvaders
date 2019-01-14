@@ -1,0 +1,14 @@
+/*
+ * Corner.h
+ *
+ *  Created on: Jan 14, 2019
+ *      Author: Andreas
+ */
+
+#ifndef SRC_SHIELD_CORNER_CORNER_H_
+#define SRC_SHIELD_CORNER_CORNER_H_
+
+class Corner {
+};
+
+#endif /* SRC_SHIELD_CORNER_CORNER_H_ */

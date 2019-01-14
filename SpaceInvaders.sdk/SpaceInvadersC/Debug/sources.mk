@@ -19,6 +19,9 @@ SUBDIRS := \
 src/Bullet \
 src/Enemy \
 src/Player \
+src/Shield/Block \
+src/Shield/Corner \
+src/Shield \
 src/display_ctrl \
 src/dynclk \
 src \

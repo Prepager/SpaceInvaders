@@ -1,0 +1,9 @@
+#ifndef SRC_SHIELD_RESOURCES_BLOCK_STATE0_H_
+#define SRC_SHIELD_RESOURCES_BLOCK_STATE0_H_
+
+__attribute__ ((unused))
+static u8 BlockState0[(20*17*3)] = {
+	//
+};
+
+#endif

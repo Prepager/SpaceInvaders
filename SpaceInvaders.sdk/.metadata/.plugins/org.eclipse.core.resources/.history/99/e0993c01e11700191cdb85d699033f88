@@ -1,0 +1,26 @@
+#ifndef SRC_SHIELD_CORNER_CORNER_H_
+#define SRC_SHIELD_CORNER_CORNER_H_
+
+// Includes
+#include "xil_io.h"
+#include "xil_types.h"
+#include "../settings.h"
+
+// Images
+
+
+// Struct
+typedef struct {
+	// Sizes
+	u32 height;
+	u32 width;
+
+	// Positions
+	u32 xPos;
+	u32 yPos;
+
+	// States
+	int health;
+} ShieldCorner;
+
+#endif
