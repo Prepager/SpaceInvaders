@@ -1,7 +1,0 @@
-// Header
-#include "Bullet.h"
-
-// Paint the bullet.
-void paintBullet(Bullet *bullet, u8 *frame) {
-
-}

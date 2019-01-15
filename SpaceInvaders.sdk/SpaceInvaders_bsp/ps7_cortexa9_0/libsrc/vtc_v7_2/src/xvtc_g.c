@@ -49,10 +49,6 @@ XVtc_Config XVtc_ConfigTable[XPAR_XVTC_NUM_INSTANCES] =
 	{
 		XPAR_V_TC_0_DEVICE_ID,
 		XPAR_V_TC_0_BASEADDR
-	},
-	{
-		XPAR_V_TC_1_DEVICE_ID,
-		XPAR_V_TC_1_BASEADDR
 	}
 };
 

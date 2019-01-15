@@ -42,7 +42,7 @@
 #define XPAR_AXI_VDMA_0_INCLUDE_MM2S 1U
 #define XPAR_AXI_VDMA_0_INCLUDE_MM2S_DRE 0U
 #define XPAR_AXI_VDMA_0_M_AXI_MM2S_DATA_WIDTH 32U
-#define XPAR_AXI_VDMA_0_INCLUDE_S2MM 1U
+#define XPAR_AXI_VDMA_0_INCLUDE_S2MM 0U
 #define XPAR_AXI_VDMA_0_INCLUDE_S2MM_DRE 0U
 #define XPAR_AXI_VDMA_0_M_AXI_S2MM_DATA_WIDTH 64U
 #define XPAR_AXI_VDMA_0_AXI_MM2S_ACLK_FREQ_HZ 0U
@@ -60,7 +60,7 @@
 #define XPAR_AXI_VDMA_0_INCLUDE_INTERNAL_GENLOCK 1U
 #define XPAR_AXI_VDMA_0_S2MM_SOF_ENABLE 1U
 #define XPAR_AXI_VDMA_0_M_AXIS_MM2S_TDATA_WIDTH 24U
-#define XPAR_AXI_VDMA_0_S_AXIS_S2MM_TDATA_WIDTH 24U
+#define XPAR_AXI_VDMA_0_S_AXIS_S2MM_TDATA_WIDTH 32U
 #define XPAR_AXI_VDMA_0_ENABLE_DEBUG_INFO_1 0U
 #define XPAR_AXI_VDMA_0_ENABLE_DEBUG_INFO_5 0U
 #define XPAR_AXI_VDMA_0_ENABLE_DEBUG_INFO_6 1U
@@ -83,7 +83,7 @@
 #define XPAR_AXIVDMA_0_INCLUDE_MM2S 1U
 #define XPAR_AXIVDMA_0_INCLUDE_MM2S_DRE 0U
 #define XPAR_AXIVDMA_0_M_AXI_MM2S_DATA_WIDTH 32U
-#define XPAR_AXIVDMA_0_INCLUDE_S2MM 1U
+#define XPAR_AXIVDMA_0_INCLUDE_S2MM 0U
 #define XPAR_AXIVDMA_0_INCLUDE_S2MM_DRE 0U
 #define XPAR_AXIVDMA_0_M_AXI_S2MM_DATA_WIDTH 64U
 #define XPAR_AXIVDMA_0_AXI_MM2S_ACLK_FREQ_HZ 0U
@@ -101,7 +101,7 @@
 #define XPAR_AXIVDMA_0_INCLUDE_INTERNAL_GENLOCK 1U
 #define XPAR_AXIVDMA_0_S2MM_SOF_ENABLE 1U
 #define XPAR_AXIVDMA_0_M_AXIS_MM2S_TDATA_WIDTH 24U
-#define XPAR_AXIVDMA_0_S_AXIS_S2MM_TDATA_WIDTH 24U
+#define XPAR_AXIVDMA_0_S_AXIS_S2MM_TDATA_WIDTH 32U
 #define XPAR_AXIVDMA_0_ENABLE_DEBUG_INFO_1 0U
 #define XPAR_AXIVDMA_0_ENABLE_DEBUG_INFO_5 0U
 #define XPAR_AXIVDMA_0_ENABLE_DEBUG_INFO_6 1U
@@ -215,6 +215,11 @@
 #define XPAR_AXI_DYNCLK_0_HIGHADDR 0x43C1FFFF
 
 
+/* Definitions for peripheral LMS_PCORE_0 */
+#define XPAR_LMS_PCORE_0_BASEADDR 0x43C30000
+#define XPAR_LMS_PCORE_0_HIGHADDR 0x43C3FFFF
+
+
 /* Definitions for peripheral PS7_AFI_0 */
 #define XPAR_PS7_AFI_0_S_AXI_BASEADDR 0xF8008000
 #define XPAR_PS7_AFI_0_S_AXI_HIGHADDR 0xF8008FFF
@@ -307,72 +312,77 @@
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
 
 
+/* Definitions for peripheral ZYBO_AUDIO_CTRL_0 */
+#define XPAR_ZYBO_AUDIO_CTRL_0_BASEADDR 0x60000000
+#define XPAR_ZYBO_AUDIO_CTRL_0_HIGHADDR 0x60003FFF
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */
 #define XPAR_XGPIO_NUM_INSTANCES 4
 
+/* Definitions for peripheral DIGITAL_MUTE */
+#define XPAR_DIGITAL_MUTE_BASEADDR 0x41230000
+#define XPAR_DIGITAL_MUTE_HIGHADDR 0x4123FFFF
+#define XPAR_DIGITAL_MUTE_DEVICE_ID 0
+#define XPAR_DIGITAL_MUTE_INTERRUPT_PRESENT 0
+#define XPAR_DIGITAL_MUTE_IS_DUAL 0
+
+
 /* Definitions for peripheral AXI_GPIO_BTN */
 #define XPAR_AXI_GPIO_BTN_BASEADDR 0x41210000
-#define XPAR_AXI_GPIO_BTN_HIGHADDR 0x4121FFFF
-#define XPAR_AXI_GPIO_BTN_DEVICE_ID 0
+#define XPAR_AXI_GPIO_BTN_HIGHADDR 0x41210FFF
+#define XPAR_AXI_GPIO_BTN_DEVICE_ID 1
 #define XPAR_AXI_GPIO_BTN_INTERRUPT_PRESENT 0
 #define XPAR_AXI_GPIO_BTN_IS_DUAL 0
 
 
 /* Definitions for peripheral AXI_GPIO_LED */
 #define XPAR_AXI_GPIO_LED_BASEADDR 0x41200000
-#define XPAR_AXI_GPIO_LED_HIGHADDR 0x4120FFFF
-#define XPAR_AXI_GPIO_LED_DEVICE_ID 1
+#define XPAR_AXI_GPIO_LED_HIGHADDR 0x41200FFF
+#define XPAR_AXI_GPIO_LED_DEVICE_ID 2
 #define XPAR_AXI_GPIO_LED_INTERRUPT_PRESENT 0
 #define XPAR_AXI_GPIO_LED_IS_DUAL 0
 
 
 /* Definitions for peripheral AXI_GPIO_SW */
 #define XPAR_AXI_GPIO_SW_BASEADDR 0x41220000
-#define XPAR_AXI_GPIO_SW_HIGHADDR 0x4122FFFF
-#define XPAR_AXI_GPIO_SW_DEVICE_ID 2
+#define XPAR_AXI_GPIO_SW_HIGHADDR 0x41220FFF
+#define XPAR_AXI_GPIO_SW_DEVICE_ID 3
 #define XPAR_AXI_GPIO_SW_INTERRUPT_PRESENT 0
 #define XPAR_AXI_GPIO_SW_IS_DUAL 0
 
 
-/* Definitions for peripheral AXI_GPIO_VIDEO */
-#define XPAR_AXI_GPIO_VIDEO_BASEADDR 0x41230000
-#define XPAR_AXI_GPIO_VIDEO_HIGHADDR 0x4123FFFF
-#define XPAR_AXI_GPIO_VIDEO_DEVICE_ID 3
-#define XPAR_AXI_GPIO_VIDEO_INTERRUPT_PRESENT 1
-#define XPAR_AXI_GPIO_VIDEO_IS_DUAL 1
-
-
 /******************************************************************/
 
-/* Canonical definitions for peripheral AXI_GPIO_BTN */
-#define XPAR_GPIO_0_BASEADDR 0x41210000
-#define XPAR_GPIO_0_HIGHADDR 0x4121FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_BTN_DEVICE_ID
+/* Canonical definitions for peripheral DIGITAL_MUTE */
+#define XPAR_GPIO_0_BASEADDR 0x41230000
+#define XPAR_GPIO_0_HIGHADDR 0x4123FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_DIGITAL_MUTE_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_0_IS_DUAL 0
 
-/* Canonical definitions for peripheral AXI_GPIO_LED */
-#define XPAR_GPIO_1_BASEADDR 0x41200000
-#define XPAR_GPIO_1_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_LED_DEVICE_ID
+/* Canonical definitions for peripheral AXI_GPIO_BTN */
+#define XPAR_GPIO_1_BASEADDR 0x41210000
+#define XPAR_GPIO_1_HIGHADDR 0x41210FFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_BTN_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_1_IS_DUAL 0
 
-/* Canonical definitions for peripheral AXI_GPIO_SW */
-#define XPAR_GPIO_2_BASEADDR 0x41220000
-#define XPAR_GPIO_2_HIGHADDR 0x4122FFFF
-#define XPAR_GPIO_2_DEVICE_ID XPAR_AXI_GPIO_SW_DEVICE_ID
+/* Canonical definitions for peripheral AXI_GPIO_LED */
+#define XPAR_GPIO_2_BASEADDR 0x41200000
+#define XPAR_GPIO_2_HIGHADDR 0x41200FFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_AXI_GPIO_LED_DEVICE_ID
 #define XPAR_GPIO_2_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_2_IS_DUAL 0
 
-/* Canonical definitions for peripheral AXI_GPIO_VIDEO */
-#define XPAR_GPIO_3_BASEADDR 0x41230000
-#define XPAR_GPIO_3_HIGHADDR 0x4123FFFF
-#define XPAR_GPIO_3_DEVICE_ID XPAR_AXI_GPIO_VIDEO_DEVICE_ID
-#define XPAR_GPIO_3_INTERRUPT_PRESENT 1
-#define XPAR_GPIO_3_IS_DUAL 1
+/* Canonical definitions for peripheral AXI_GPIO_SW */
+#define XPAR_GPIO_3_BASEADDR 0x41220000
+#define XPAR_GPIO_3_HIGHADDR 0x41220FFF
+#define XPAR_GPIO_3_DEVICE_ID XPAR_AXI_GPIO_SW_DEVICE_ID
+#define XPAR_GPIO_3_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_3_IS_DUAL 0
 
 
 /******************************************************************/
@@ -417,6 +427,25 @@
 
 /******************************************************************/
 
+/* Definitions for driver NCO */
+#define XPAR_XNCO_NUM_INSTANCES 1
+
+/* Definitions for peripheral NCO_0 */
+#define XPAR_NCO_0_DEVICE_ID 0
+#define XPAR_NCO_0_S_AXI_AXILITES_BASEADDR 0x43C20000
+#define XPAR_NCO_0_S_AXI_AXILITES_HIGHADDR 0x43C27FFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral NCO_0 */
+#define XPAR_XNCO_0_DEVICE_ID XPAR_NCO_0_DEVICE_ID
+#define XPAR_XNCO_0_S_AXI_AXILITES_BASEADDR 0x43C20000
+#define XPAR_XNCO_0_S_AXI_AXILITES_HIGHADDR 0x43C27FFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 
@@ -443,20 +472,14 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXI_VDMA_0_S2MM_INTROUT_INTR 61U
-#define XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR 62U
-#define XPAR_FABRIC_V_TC_0_IRQ_INTR 63U
-#define XPAR_FABRIC_V_TC_1_IRQ_INTR 64U
-#define XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR 65U
+#define XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR 61U
+#define XPAR_FABRIC_V_TC_0_IRQ_INTR 62U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXIVDMA_0_S2MM_INTROUT_VEC_ID XPAR_FABRIC_AXI_VDMA_0_S2MM_INTROUT_INTR
-#define XPAR_FABRIC_AXIVDMA_0_MM2S_INTROUT_VEC_ID XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR
+#define XPAR_FABRIC_AXIVDMA_0_VEC_ID XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR
 #define XPAR_FABRIC_VTC_0_VEC_ID XPAR_FABRIC_V_TC_0_IRQ_INTR
-#define XPAR_FABRIC_VTC_1_VEC_ID XPAR_FABRIC_V_TC_1_IRQ_INTR
-#define XPAR_FABRIC_GPIO_3_VEC_ID XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 
@@ -633,7 +656,7 @@
 /******************************************************************/
 
 /* Definitions for driver VTC */
-#define XPAR_XVTC_NUM_INSTANCES 2
+#define XPAR_XVTC_NUM_INSTANCES 1
 
 /* Definitions for peripheral V_TC_0 */
 #define XPAR_V_TC_0_DEVICE_ID 0
@@ -647,20 +670,6 @@
 #define XPAR_V_TC_0_DET_VBLANK_EN 1
 #define XPAR_V_TC_0_DET_AVIDEO_EN 1
 #define XPAR_V_TC_0_DET_ACHROMA_EN 0
-
-
-/* Definitions for peripheral V_TC_1 */
-#define XPAR_V_TC_1_DEVICE_ID 1
-#define XPAR_V_TC_1_BASEADDR 0x43C20000
-#define XPAR_V_TC_1_HIGHADDR 0x43C2FFFF
-#define XPAR_V_TC_1_GENERATE_EN 0
-#define XPAR_V_TC_1_DETECT_EN 1
-#define XPAR_V_TC_1_DET_HSYNC_EN 1
-#define XPAR_V_TC_1_DET_VSYNC_EN 1
-#define XPAR_V_TC_1_DET_HBLANK_EN 0
-#define XPAR_V_TC_1_DET_VBLANK_EN 0
-#define XPAR_V_TC_1_DET_AVIDEO_EN 1
-#define XPAR_V_TC_1_DET_ACHROMA_EN 0
 
 
 /******************************************************************/
@@ -677,19 +686,6 @@
 #define XPAR_VTC_0_DET_VBLANK_EN 1
 #define XPAR_VTC_0_DET_AVIDEO_EN 1
 #define XPAR_VTC_0_DET_ACHROMA_EN 0
-
-/* Canonical definitions for peripheral V_TC_1 */
-#define XPAR_VTC_1_DEVICE_ID XPAR_V_TC_1_DEVICE_ID
-#define XPAR_VTC_1_BASEADDR 0x43C20000
-#define XPAR_VTC_1_HIGHADDR 0x43C2FFFF
-#define XPAR_VTC_1_GENERATE_EN 0
-#define XPAR_VTC_1_DETECT_EN 1
-#define XPAR_VTC_1_DET_HSYNC_EN 1
-#define XPAR_VTC_1_DET_VSYNC_EN 1
-#define XPAR_VTC_1_DET_HBLANK_EN 0
-#define XPAR_VTC_1_DET_VBLANK_EN 0
-#define XPAR_VTC_1_DET_AVIDEO_EN 1
-#define XPAR_VTC_1_DET_ACHROMA_EN 0
 
 
 /******************************************************************/

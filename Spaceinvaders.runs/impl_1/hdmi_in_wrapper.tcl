@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -72,7 +71,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/SpaceInvaders/SpaceInvaders.cache/wt [current_project]
   set_property parent.project_path C:/SpaceInvaders/SpaceInvaders.xpr [current_project]
-  set_property ip_repo_paths C:/Users/John/Desktop/hdmi/hdmi-in/hdmi-in.ipdefs/repo_0_0 [current_project]
+  set_property ip_repo_paths {
+  C:/Users/John/Desktop/hdmi/hdmi-in/hdmi-in.ipdefs/repo_0_0
+  C:/SpaceInvaders/ip_repo
+} [current_project]
   set_property ip_output_repo C:/SpaceInvaders/SpaceInvaders.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

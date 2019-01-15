@@ -1,6 +1,0 @@
-#include "Scene.h"
-
-Scene::Scene() {
-	// TODO Auto-generated constructor stub
-
-}

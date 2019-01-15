@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,7 +29,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/John/Desktop/hdmi/hdmi-in/hdmi-in.ipdefs/repo_0_0 [current_project]
+set_property ip_repo_paths {
+  c:/Users/John/Desktop/hdmi/hdmi-in/hdmi-in.ipdefs/repo_0_0
+  c:/SpaceInvaders/ip_repo
+} [current_project]
 set_property ip_output_repo c:/SpaceInvaders/SpaceInvaders.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib C:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/hdl/hdmi_in_wrapper.vhd
@@ -54,6 +56,10 @@ set_property used_in_implementation false [get_files -all c:/SpaceInvaders/Space
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_nco_0_0/constraints/nco_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_ooc.xdc]
