@@ -215,11 +215,6 @@
 #define XPAR_AXI_DYNCLK_0_HIGHADDR 0x43C1FFFF
 
 
-/* Definitions for peripheral LMS_PCORE_0 */
-#define XPAR_LMS_PCORE_0_BASEADDR 0x43C30000
-#define XPAR_LMS_PCORE_0_HIGHADDR 0x43C3FFFF
-
-
 /* Definitions for peripheral PS7_AFI_0 */
 #define XPAR_PS7_AFI_0_S_AXI_BASEADDR 0xF8008000
 #define XPAR_PS7_AFI_0_S_AXI_HIGHADDR 0xF8008FFF
@@ -423,25 +418,6 @@
 #define XPAR_XIICPS_0_BASEADDR 0xE0004000
 #define XPAR_XIICPS_0_HIGHADDR 0xE0004FFF
 #define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 108333336
-
-
-/******************************************************************/
-
-/* Definitions for driver NCO */
-#define XPAR_XNCO_NUM_INSTANCES 1
-
-/* Definitions for peripheral NCO_0 */
-#define XPAR_NCO_0_DEVICE_ID 0
-#define XPAR_NCO_0_S_AXI_AXILITES_BASEADDR 0x43C20000
-#define XPAR_NCO_0_S_AXI_AXILITES_HIGHADDR 0x43C27FFF
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral NCO_0 */
-#define XPAR_XNCO_0_DEVICE_ID XPAR_NCO_0_DEVICE_ID
-#define XPAR_XNCO_0_S_AXI_AXILITES_BASEADDR 0x43C20000
-#define XPAR_XNCO_0_S_AXI_AXILITES_HIGHADDR 0x43C27FFF
 
 
 /******************************************************************/

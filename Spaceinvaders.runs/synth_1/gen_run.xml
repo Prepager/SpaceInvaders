@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1547632969">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1547634874">
   <File Type="PA-TCL" Name="hdmi_in_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="hdmi_in_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hdmi_in_wrapper_reports.tcl"/>
@@ -54,11 +54,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
-    <Step Id="synth_design">
-      <Option Id="Directive">0</Option>
-      <Option Id="FlattenHierarchy">1</Option>
-      <Option Id="FsmExtraction">0</Option>
-    </Step>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
