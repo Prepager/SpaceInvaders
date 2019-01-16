@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="hdmi_in" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1547557596"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1547557596"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1547557596"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1547557596"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1547632967"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1547632967"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1547632967"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1547632967"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\hdmi_in_axi_dynclk_0_0\hdmi_in_axi_dynclk_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dynclk_0"/>
@@ -135,22 +135,6 @@
       <File Name="sim\hdmi_in.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_in_nco_0_0\hdmi_in_nco_0_0.xci" Type="IP">
-        <Instance HierarchyPath="nco_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_in_lms_pcore_0_0\hdmi_in_lms_pcore_0_0.xci" Type="IP">
-        <Instance HierarchyPath="lms_pcore_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\hdmi_in_zybo_audio_ctrl_0_0\hdmi_in_zybo_audio_ctrl_0_0.xci" Type="IP">

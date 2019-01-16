@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Mon Jan 14 15:23:46 2019
+--Date        : Wed Jan 16 11:02:20 2019
 --Host        : DESKTOP-ND2U3FO running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_in_wrapper.bd
 --Design      : hdmi_in_wrapper
@@ -83,6 +83,15 @@ architecture STRUCTURE of hdmi_in_wrapper is
     leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    IIC_0_sda_i : in STD_LOGIC;
+    IIC_0_sda_o : out STD_LOGIC;
+    IIC_0_sda_t : out STD_LOGIC;
+    IIC_0_scl_i : in STD_LOGIC;
+    IIC_0_scl_o : out STD_LOGIC;
+    IIC_0_scl_t : out STD_LOGIC;
+    Mute_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Mute_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    Mute_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_hs : out STD_LOGIC;
@@ -93,16 +102,7 @@ architecture STRUCTURE of hdmi_in_wrapper is
     PBLRCLK : out STD_LOGIC;
     RECLRCLK : out STD_LOGIC;
     PBDATA : out STD_LOGIC;
-    IIC_0_sda_i : in STD_LOGIC;
-    IIC_0_sda_o : out STD_LOGIC;
-    IIC_0_sda_t : out STD_LOGIC;
-    IIC_0_scl_i : in STD_LOGIC;
-    IIC_0_scl_o : out STD_LOGIC;
-    IIC_0_scl_t : out STD_LOGIC;
-    FCLK_CLK2 : out STD_LOGIC;
-    Mute_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Mute_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    Mute_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 )
+    FCLK_CLK2 : out STD_LOGIC
   );
   end component hdmi_in;
   component IOBUF is

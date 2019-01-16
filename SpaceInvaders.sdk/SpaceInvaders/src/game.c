@@ -24,7 +24,7 @@ int enemySpeed = ENEMY_SPEED;
  */
 int main()
 {
-	// Initialize_Sound_IPs();
+	 Initialize_Sound_IPs();
 	// Initialize the devices.
 	initialize();
 

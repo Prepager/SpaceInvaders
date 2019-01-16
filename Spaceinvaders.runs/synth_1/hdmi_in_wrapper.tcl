@@ -56,7 +56,6 @@ set_property used_in_implementation false [get_files -all c:/SpaceInvaders/Space
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_nco_0_0/constraints/nco_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xdc]

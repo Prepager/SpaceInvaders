@@ -8,44 +8,21 @@
 #ifndef SRC_AUDIO_AUDIO_H_
 #define SRC_AUDIO_AUDIO_H_
 
-#include "xparameters.h"
-#include <xil_types.h>
-
-
 /* ---------------------------------------------------------------------------- *
  * 								Header Files									*
  * ---------------------------------------------------------------------------- */
-#include <stdio.h>
 #include <xil_io.h>
 #include <sleep.h>
 #include "xiicps.h"
-#include <xil_printf.h>
 #include <xparameters.h>
 #include "xgpio.h"
-#include "xuartps.h"
-#include "stdlib.h"
-#include "xnco.h"
-#include "audio.h"
+#include <xil_types.h>
 
 #include "death.h"
-//#include "lms_pcore_addr.h"
 
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
-#define NCO_ID XPAR_NCO_0_DEVICE_ID
-
-#define LMS_LOC XPAR_LMS_PCORE_0_BASEADDR
-#define LMS_X LMS_LOC + x_k__Data_lms_pcore
-#define LMS_D LMS_LOC + d_k__Data_lms_pcore
-#define LMS_E LMS_LOC + e_k__Data_lms_pcore
-#define LMS_STROBE LMS_LOC + IPCore_Strobe_lms_pcore
-
-#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-
-//#define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
-//#define LED_BASE XPAR_AXI_GPIO_LED_BASEADDR
-//#define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
 #define AUDIO_ENABLE_ID XPAR_DIGITAL_MUTE_DEVICE_ID
 
 /* ---------------------------------------------------------------------------- *
@@ -57,10 +34,7 @@
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
 XIicPs Iic;
-XGpio Gpio; // Gpio instance for buttons and switches
 XGpio Gpio_audio_enable; // GPIO instance for digital mute
-XNco Nco;
-
 
 /* Redefine audio controller base address from xparameters.h */
 #define AUDIO_BASE				XPAR_ZYBO_AUDIO_CTRL_0_BASEADDR
@@ -105,7 +79,5 @@ void AudioWriteToReg(u8 u8RegAddr, u16 u16Data);
 int Initialize_Sound_IPs();
 void audio_stream();
 
-void nco_init(void *InstancePtr);
-void menu();
 
 #endif /* SRC_AUDIO_AUDIO_H_ */

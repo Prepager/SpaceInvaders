@@ -16,7 +16,7 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmer/Xilinx/Vivado
 Command: link_design -top hdmi_in_wrapper -part xc7z010clg400-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 638 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 463 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
 INFO: [Device 21-403] Loading part xc7z010clg400-1
@@ -59,7 +59,7 @@ Finished Parsing XDC File [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi
 Parsing XDC File [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'hdmi_in_i/v_tc_0/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc:2]
 INFO: [Timing 38-2] Deriving generated clocks [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc:2]
-get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1264.691 ; gain = 565.285
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1255.047 ; gain = 562.391
 Finished Parsing XDC File [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'hdmi_in_i/v_tc_0/U0'
 Parsing XDC File [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc] for cell 'hdmi_in_i/axi_mem_intercon/s00_couplers/s00_regslice/inst'
 Finished Parsing XDC File [c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc] for cell 'hdmi_in_i/axi_mem_intercon/s00_couplers/s00_regslice/inst'
@@ -85,7 +85,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 13 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1264.691 ; gain = 957.852
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1255.047 ; gain = 948.980
 Command: opt_design -directive RuntimeOptimized
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -97,66 +97,66 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.911 . Memory (MB): peak = 1255.047 ; gain = 0.000
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 16 inverter(s) to 110 load pin(s).
+INFO: [Opt 31-138] Pushed 15 inverter(s) to 109 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 18dd418b0
+Phase 1 Retarget | Checksum: 256d54016
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Phase 2 Constant propagation | Checksum: f023ebe8
+Phase 2 Constant propagation | Checksum: 23258b839
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 52 cells and removed 583 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 151b570f0
+Phase 3 Sweep | Checksum: 25bf942e0
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1264.691 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1043 cells
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1255.047 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1084 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 151b570f0
+Phase 4 BUFG optimization | Checksum: 25bf942e0
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 187775750
+Phase 5 Shift Register Optimization | Checksum: 15e9dda8f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1b64dfc49
+Phase 6 Post Processing Netlist | Checksum: 1a5e010eb
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1264.691 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 13a193987
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1255.047 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1f7260314
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 29 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1264.691 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/SpaceInvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file hdmi_in_wrapper_drc_opted.rpt -pb hdmi_in_wrapper_drc_opted.pb -rpx hdmi_in_wrapper_drc_opted.rpx
 Command: report_drc -file hdmi_in_wrapper_drc_opted.rpt -pb hdmi_in_wrapper_drc_opted.pb -rpx hdmi_in_wrapper_drc_opted.rpx
@@ -172,12 +172,8 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENARDEN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_rbuf_en) which is driven by a register (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENARDEN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_rbuf_en) which is driven by a register (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 6 Warnings
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
@@ -187,97 +183,97 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1264.691 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 108b0c349
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1255.047 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 137eb806a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1255.047 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1255.047 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 17c303186
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 106c3cd23
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1264.691 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.047 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1dc7ca6aa
+Phase 1.3 Build Placer Netlist Model | Checksum: 28d437d0f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1dc7ca6aa
+Phase 1.4 Constrain Clocks/Macros | Checksum: 28d437d0f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1305.238 ; gain = 40.547
-Phase 1 Placer Initialization | Checksum: 1dc7ca6aa
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1267.590 ; gain = 12.543
+Phase 1 Placer Initialization | Checksum: 28d437d0f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 11ce8ffb6
+Phase 2.1 Floorplanning | Checksum: 225c0b8e5
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1305.238 ; gain = 40.547
-Phase 2 Global Placement | Checksum: eb6d3a36
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1267.590 ; gain = 12.543
+Phase 2 Global Placement | Checksum: 215efbb89
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: eb6d3a36
+Phase 3.1 Commit Multi Column Macros | Checksum: 215efbb89
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: d77f50c9
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ec38a0ef
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 11102b982
+Phase 3.3 Area Swap Optimization | Checksum: 18f9fbd9a
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: a512e7a4
+Phase 3.4 Pipeline Register Optimization | Checksum: 134c0e91f
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: a512e7a4
+Phase 3.5 Timing Path Optimizer | Checksum: 134c0e91f
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: f8f1e2dc
+Phase 3.6 Fast Optimization | Checksum: 1388a05f9
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:24 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 1225e3788
+Phase 3.7 Small Shape Detail Placement | Checksum: 12a6c88c6
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 18519794e
+Phase 3.8 Re-assign LUT pins | Checksum: 1e209d057
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 18519794e
+Phase 3.9 Pipeline Register Optimization | Checksum: 1e209d057
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 15fded76c
+Phase 3.10 Fast Optimization | Checksum: 1e209d057
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 1305.238 ; gain = 40.547
-Phase 3 Detail Placement | Checksum: 15fded76c
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1267.590 ; gain = 12.543
+Phase 3 Detail Placement | Checksum: 1e209d057
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 1305.238 ; gain = 40.547
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1267.590 ; gain = 12.543
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -285,59 +281,59 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1ff18fd7d
+Post Placement Optimization Initialization | Checksum: 13b468668
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-33] Processed net hdmi_in_i/v_tc_0/U0/U_VIDEO_CTRL/GEN_HAS_IRQ.irq_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-31] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1ff18fd7d
+Phase 4.1.1.1 BUFG Insertion | Checksum: 13b468668
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1328.313 ; gain = 63.621
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-21.661. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 11f9e8546
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 1301.672 ; gain = 46.625
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-6.731. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 181a49d59
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
-Phase 4.1 Post Commit Optimization | Checksum: 11f9e8546
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
+Phase 4.1 Post Commit Optimization | Checksum: 181a49d59
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 11f9e8546
+Phase 4.2 Post Placement Cleanup | Checksum: 181a49d59
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 11f9e8546
+Phase 4.3 Placer Reporting | Checksum: 181a49d59
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 18e3391b0
+Phase 4.4 Final Placement Cleanup | Checksum: 247651e70
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 18e3391b0
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 247651e70
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
-Ending Placer Task | Checksum: 161234b71
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
+Ending Placer Task | Checksum: 17bac1788
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1328.313 ; gain = 63.621
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1301.672 ; gain = 46.625
 INFO: [Common 17-83] Releasing license: Implementation
-51 Infos, 6 Warnings, 1 Critical Warnings and 0 Errors encountered.
+51 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:00 ; elapsed = 00:00:48 . Memory (MB): peak = 1328.313 ; gain = 63.621
+place_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 1301.672 ; gain = 46.625
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1336.617 ; gain = 8.305
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.987 . Memory (MB): peak = 1311.070 ; gain = 9.398
 INFO: [Common 17-1381] The checkpoint 'C:/SpaceInvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file hdmi_in_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1336.617 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1311.070 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_wrapper_utilization_placed.rpt -pb hdmi_in_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1336.617 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1311.070 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file hdmi_in_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 1336.617 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1311.070 ; gain = 0.000
 Command: route_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -350,121 +346,114 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 6888bdab ConstDB: 0 ShapeSum: f89a8dc6 RouteDB: 0
+Checksum: PlaceDB: 8f01dd1c ConstDB: 0 ShapeSum: ecaa3a6c RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 15445d458
+Phase 1 Build RT Design | Checksum: e8c58152
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1369.660 ; gain = 33.043
-Post Restoration Checksum: NetGraph: 5eec779c NumContArr: f5595cbc Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1343.316 ; gain = 32.246
+Post Restoration Checksum: NetGraph: 2e7cf0e8 NumContArr: ba48906a Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 15445d458
+Phase 2.1 Create Timer | Checksum: e8c58152
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1369.660 ; gain = 33.043
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1343.316 ; gain = 32.246
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 15445d458
+Phase 2.2 Fix Topology Constraints | Checksum: e8c58152
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1376.547 ; gain = 39.930
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1348.473 ; gain = 37.402
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 15445d458
+Phase 2.3 Pre Route Cleanup | Checksum: e8c58152
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1376.547 ; gain = 39.930
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1348.473 ; gain = 37.402
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 22e58172c
+Phase 2.4 Update Timing | Checksum: 17d05bf5d
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1401.438 ; gain = 64.820
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-21.298| TNS=-5363.056| WHS=-1.246 | THS=-147.125|
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1364.695 ; gain = 53.625
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.682 | TNS=-33.172| WHS=-1.210 | THS=-147.392|
 
-Phase 2 Router Initialization | Checksum: 1e5deef68
+Phase 2 Router Initialization | Checksum: 1c916a513
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: ff4d2352
+Phase 3 Initial Routing | Checksum: 161cda5e1
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 940
- Number of Nodes with overlaps = 233
- Number of Nodes with overlaps = 104
- Number of Nodes with overlaps = 63
- Number of Nodes with overlaps = 37
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 708
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-22.470| TNS=-5670.934| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.703 | TNS=-35.091| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 2431b556d
+Phase 4.1 Global Iteration 0 | Checksum: 16e21c9d7
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:40 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 8
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-22.601| TNS=-5670.006| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.703 | TNS=-35.091| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: d8a46565
+Phase 4.2 Global Iteration 1 | Checksum: 1dd1437f6
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:40 . Memory (MB): peak = 1463.418 ; gain = 126.801
-Phase 4 Rip-up And Reroute | Checksum: d8a46565
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
+Phase 4 Rip-up And Reroute | Checksum: 1dd1437f6
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:40 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: d8a46565
-
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:40 . Memory (MB): peak = 1463.418 ; gain = 126.801
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-22.470| TNS=-5670.934| WHS=N/A    | THS=N/A    |
-
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 101318734
+Phase 5.1 Delay CleanUp | Checksum: 1fe327036
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:40 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 101318734
+Phase 5.2 Clock Skew Optimization | Checksum: 1fe327036
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
-Phase 5 Delay and Skew Optimization | Checksum: 101318734
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
+Phase 5 Delay and Skew Optimization | Checksum: 1fe327036
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1375.512 ; gain = 64.441
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1a5989f59
+Phase 6.1.1 Update Timing | Checksum: 1e5d96e67
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-22.461| TNS=-5639.647| WHS=0.001  | THS=0.000  |
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1375.512 ; gain = 64.441
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.703 | TNS=-35.091| WHS=-0.139 | THS=-0.278 |
 
-Phase 6.1 Hold Fix Iter | Checksum: 13421cfa2
+Phase 6.1 Hold Fix Iter | Checksum: 23b7ce6d9
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
-Phase 6 Post Hold Fix | Checksum: 13421cfa2
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1383.141 ; gain = 72.070
+WARNING: [Route 35-468] The router encountered 1 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	hdmi_in_i/axi_vdma_0/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.LB_BUILT_IN.I_LINEBUFFER_FIFO/fg_builtin_fifo_inst/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/rsync.ric.rd_rst_reg1_reg/PRE
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Phase 6 Post Hold Fix | Checksum: 23f0dff71
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1383.141 ; gain = 72.070
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 8.96565 %
-  Global Horizontal Routing Utilization  = 7.98575 %
+  Global Vertical Routing Utilization    = 4.22044 %
+  Global Horizontal Routing Utilization  = 4.92877 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -474,10 +463,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 64.8649%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 74.7748%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 39.6396%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -499,45 +488,50 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 17d261432
+Phase 7 Route finalize | Checksum: 1a22a426e
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1383.141 ; gain = 72.070
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 17d261432
+Phase 8 Verifying routed nets | Checksum: 1a22a426e
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1383.141 ; gain = 72.070
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 13e441c54
+Phase 9 Depositing Routes | Checksum: ffe29978
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:42 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 1383.141 ; gain = 72.070
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-22.461| TNS=-5639.647| WHS=0.001  | THS=0.000  |
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 1a29c5390
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:24 . Memory (MB): peak = 1383.141 ; gain = 72.070
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-6.703 | TNS=-37.525| WHS=0.050  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 13e441c54
+Phase 10 Post Router Timing | Checksum: 1a29c5390
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:43 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:25 . Memory (MB): peak = 1383.141 ; gain = 72.070
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:43 . Memory (MB): peak = 1463.418 ; gain = 126.801
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:25 . Memory (MB): peak = 1383.141 ; gain = 72.070
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-70 Infos, 7 Warnings, 1 Critical Warnings and 0 Errors encountered.
+69 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:10 ; elapsed = 00:00:46 . Memory (MB): peak = 1463.418 ; gain = 126.801
+route_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:28 . Memory (MB): peak = 1383.141 ; gain = 72.070
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1463.418 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1383.141 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/SpaceInvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file hdmi_in_wrapper_drc_routed.rpt -pb hdmi_in_wrapper_drc_routed.pb -rpx hdmi_in_wrapper_drc_routed.rpx
 Command: report_drc -file hdmi_in_wrapper_drc_routed.rpt -pb hdmi_in_wrapper_drc_routed.pb -rpx hdmi_in_wrapper_drc_routed.rpx
@@ -551,7 +545,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/SpaceInvaders/Spaceinvaders.runs/impl_1/hdmi_in_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1502.965 ; gain = 39.547
+report_methodology: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1425.809 ; gain = 35.105
 INFO: [runtcl-4] Executing : report_power -file hdmi_in_wrapper_power_routed.rpt -pb hdmi_in_wrapper_power_summary_routed.pb -rpx hdmi_in_wrapper_power_routed.rpx
 Command: report_power -file hdmi_in_wrapper_power_routed.rpt -pb hdmi_in_wrapper_power_summary_routed.pb -rpx hdmi_in_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -560,7 +554,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-82 Infos, 8 Warnings, 1 Critical Warnings and 0 Errors encountered.
+81 Infos, 5 Warnings, 1 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file hdmi_in_wrapper_route_status.rpt -pb hdmi_in_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file hdmi_in_wrapper_timing_summary_routed.rpt -pb hdmi_in_wrapper_timing_summary_routed.pb -rpx hdmi_in_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -573,251 +567,62 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file hdmi_in_wrapper_cloc
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file hdmi_in_wrapper_bus_skew_routed.rpt -pb hdmi_in_wrapper_bus_skew_routed.pb -rpx hdmi_in_wrapper_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 16 11:13:06 2019...
+
+*** Running vivado
+    with args -log hdmi_in_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hdmi_in_wrapper.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source hdmi_in_wrapper.tcl -notrace
+Command: open_checkpoint hdmi_in_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 232.875 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 432 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1155.543 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1155.543 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 41 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 7 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 25 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1155.543 ; gain = 930.344
 INFO: [Memdata 28-167] Found XPM memory block hdmi_in_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_sync_fifo.FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the hdmi_in_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_sync_fifo.FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
 Command: write_bitstream -force hdmi_in_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
 Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmer/Xilinx/Vivado/2018.2/data/ip'.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 input hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-INFO: [Common 17-14] Message 'DRC DPIP-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9 output hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__15/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__16/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__17/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__18/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__19/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__21/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__22/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__29/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__30/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/ARG__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9 multiplier stage hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENARDEN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_rbuf_en) which is driven by a register (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENARDEN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_rbuf_en) which is driven by a register (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst has an input control pin hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst/ENBWREN (net: hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_transfer) which is driven by a register (hdmi_in_i/lms_pcore_0/U0/u_lms_pcore_axi_lite_inst/u_lms_pcore_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 25 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 25 listed).
 INFO: [DRC REQP-165] writefirst: Synchronous clocking is detected for BRAM (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-165] writefirst: Synchronous clocking is detected for BRAM (hdmi_in_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 295 Warnings, 2 Advisories
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 3 Warnings, 2 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -829,9 +634,9 @@ Creating bitstream...
 Writing bitstream ./hdmi_in_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/SpaceInvaders/Spaceinvaders.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Jan 15 13:34:21 2019. For additional details about this file, please refer to the WebTalk help file at D:/Programmer/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/SpaceInvaders/Spaceinvaders.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Jan 16 11:18:33 2019. For additional details about this file, please refer to the WebTalk help file at D:/Programmer/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-105 Infos, 243 Warnings, 2 Critical Warnings and 0 Errors encountered.
+26 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1943.582 ; gain = 414.371
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 15 13:34:21 2019...
+write_bitstream: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 1630.918 ; gain = 475.375
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 16 11:18:33 2019...

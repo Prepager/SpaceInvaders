@@ -9,7 +9,7 @@
 
 
 /* ---------------------------------------------------------------------------- *
- * 									Initialize_Sound_IPs()									*
+ * 									Initialize_Sound_IPs()						*
  * ---------------------------------------------------------------------------- *
  * Initialises the IIC driver by looking up the configuration in the config
  * table and then initialising it. Also sets the IIC serial clock rate.
@@ -21,25 +21,16 @@ int Initialize_Sound_IPs(void) {
 	//Configure the Audio Codec's PLL
 	AudioPllConfig();
 
-	xil_printf("SSM2603 configured\n\r");
-
 	// Initialise GPIO
 	int Status;
-
 	Status = XGpio_Initialize(&Gpio_audio_enable, AUDIO_ENABLE_ID);
 	if(Status != XST_SUCCESS) return XST_FAILURE;
 
+	// Set direction for enable
 	XGpio_SetDataDirection(&Gpio_audio_enable, 1, 0x00);
 
-	//return XST_SUCCESS;
 
-	nco_init(&Nco);
-
-	xil_printf("GPIO and NCO peripheral configured\r\n");
-
-	/* Display interactive menu interface via terminal */
-	//menu(); - Stream Audio
-	u32 sound;
+	u32 sound = 0;
 	XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
 	while(1) {
 			for(int i = 0; i <= sizeof(deathSound); i++){
@@ -49,39 +40,8 @@ int Initialize_Sound_IPs(void) {
 			}
 			sleep(1);
 	}
-	while(1) {
-		xil_printf("STREAMING AUDIO\r\n");
-		xil_printf("Press 'q' to return to the main menu\r\n");
-		XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
-		audio_stream();
-	}
 
     return XST_SUCCESS;
-}
-
-/* ---------------------------------------------------------------------------- *
- * 								nco_initi()									*
- * ---------------------------------------------------------------------------- *
- * Initialises the NCO driver by looking up the configuration in the config
- * table and then initialising it.
- * ---------------------------------------------------------------------------- */
-void nco_init(void *InstancePtr) {
-	XNco_Config *cfgPtr;
-	int status;
-
-	/* Initialise the NCO driver so that it's ready to use */
-
-	// Look up the configuration in the config table
-	cfgPtr = XNco_LookupConfig(NCO_ID);
-	if (!cfgPtr) {
-		print("ERROR: Lookup of NCO configuration failed.\n\r");
-	}
-
-	// Initialise the NCO driver configuration
-	status = XNco_CfgInitialize(InstancePtr, cfgPtr);
-	if (status != XST_SUCCESS) {
-		print("ERROR: Could not initialise NCO.\n\r");
-	}
 }
 
 /* ---------------------------------------------------------------------------- *
@@ -92,15 +52,17 @@ void nco_init(void *InstancePtr) {
  * activate the SSM CODEC.
  * ---------------------------------------------------------------------------- */
 void AudioPllConfig() {
+	int adc_vol = 0b100010111; // 0b100 + volume
+	int dac_vol = 0b001110000; // 0b.0 + volume 111 1001 def.
 	AudioWriteToReg(R15_SOFTWARE_RESET, 				0b000000000); //Perform Reset
 	usleep(75000);
 	AudioWriteToReg(R6_POWER_MANAGEMENT, 				0b000110000); //Power Up
-	AudioWriteToReg(R0_LEFT_CHANNEL_ADC_INPUT_VOLUME, 	0b000010111); //Default Volume
-	AudioWriteToReg(R1_RIGHT_CHANNEL_ADC_INPUT_VOLUME, 	0b000010111); //Default Volume
-	AudioWriteToReg(R2_LEFT_CHANNEL_DAC_VOLUME, 		0b001111001);
-	AudioWriteToReg(R3_RIGHT_CHANNEL_DAC_VOLUME, 		0b001111001);
+	AudioWriteToReg(R0_LEFT_CHANNEL_ADC_INPUT_VOLUME, 	adc_vol); //Default Volume
+	AudioWriteToReg(R1_RIGHT_CHANNEL_ADC_INPUT_VOLUME, 	adc_vol); //Default Volume
+	AudioWriteToReg(R2_LEFT_CHANNEL_DAC_VOLUME, 		dac_vol);
+	AudioWriteToReg(R3_RIGHT_CHANNEL_DAC_VOLUME, 		dac_vol);
 	AudioWriteToReg(R4_ANALOG_AUDIO_PATH, 				0b000010010); //Allow Mixed DAC, Mute MIC
-	AudioWriteToReg(R5_DIGITAL_AUDIO_PATH, 				0b000000111); //48 kHz Sampling Rate emphasis, no high pass
+	AudioWriteToReg(R5_DIGITAL_AUDIO_PATH, 				0b000000111); //48 kHz Sampling Rate emphasis, no high pass -- 0b000000111
 	AudioWriteToReg(R7_DIGITAL_AUDIO_I_F, 				0b000001110); //I2S Mode, set-up 32 bits
 	AudioWriteToReg(R8_SAMPLING_RATE, 					0b000000000);
 	usleep(75000);
@@ -182,11 +144,9 @@ void AudioWriteToReg(u8 u8RegAddr, u16 u16Data) {
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
 void audio_stream(){
-
-	//int index = 0;
 	u32  in_left, in_right;
 
-	while (!XUartPs_IsReceiveData(UART_BASEADDR)){
+	while (1) {
 		// Read audio input from codec
 		in_left = Xil_In32(I2S_DATA_RX_L_REG);
 		in_right = Xil_In32(I2S_DATA_RX_R_REG);
@@ -195,56 +155,6 @@ void audio_stream(){
 		Xil_Out32(I2S_DATA_TX_L_REG, in_left);
 		Xil_Out32(I2S_DATA_TX_R_REG, in_right);
 	}
-
-	/* If input from the terminal is 'q', then return to menu.
-	 * Else, continue streaming. */
-	if(XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') menu();
-	else audio_stream();
-} // audio_stream()
-
-void menu(){
-	u8 inp = 0x00;
-	u32 CntrlRegister;
-
-	XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 0);
-
-	CntrlRegister = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_CR_OFFSET);
-
-	XUartPs_WriteReg(UART_BASEADDR, XUARTPS_CR_OFFSET,
-				  ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
-				   XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
-
-	xil_printf("\r\n\r\n");
-	xil_printf("Embedded LMS Filtering Demo\r\n");
-	xil_printf("Enter 's' to stream pure audio, 'n' to add tonal noise and 'f' to adaptively filter\r\n");
-	xil_printf("----------------------------------------\r\n");
-
-	// Wait for input from UART via the terminal
-	while (!XUartPs_IsReceiveData(UART_BASEADDR));
-				inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	// Select function based on UART input
-	switch(inp){
-	case 's':
-		xil_printf("STREAMING AUDIO\r\n");
-		xil_printf("Press 'q' to return to the main menu\r\n");
-		XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
-		audio_stream();
-		break;
-	case 'n':
-		xil_printf("ENTERING NOISE GENERATION OPERATION\r\n");
-		xil_printf("Select step size via the DIP switches...\r\n\n");
-		xil_printf("Press 'q' to return to the main menu\r\n");
-		XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
-		//tonal_noise();
-		break;
-	case 'f':
-		xil_printf("ENTERING LMS FILTERING OPERATION\r\n");
-		xil_printf("Press 'q' to return to the main menu\r\n");
-		XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
-		//lms_filter();
-		break;
-	default:
-		menu();
-		break;
-	} // switch
-} // menu()
+	// WIP
+	audio_stream();
+}
