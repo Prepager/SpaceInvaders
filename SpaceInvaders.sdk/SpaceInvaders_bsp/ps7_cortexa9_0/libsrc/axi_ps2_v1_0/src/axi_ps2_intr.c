@@ -86,7 +86,9 @@ extern u32 axi_ps2_ReceiveBuffer(axi_ps2 *InstancePtr);
 * is (nor should it)
 *
 *****************************************************************************/
-void axi_ps2_SetHandler(axi_ps2 *InstancePtr, axi_ps2_Handler FuncPtr, void *CallBackRef) {
+void axi_ps2_SetHandler(axi_ps2 *InstancePtr, axi_ps2_Handler FuncPtr,
+					 void *CallBackRef)
+{
 	/*
 	 * Assert validates the input arguments
 	 * CallBackRef not checked, no way to know what is valid
@@ -116,7 +118,8 @@ void axi_ps2_SetHandler(axi_ps2 *InstancePtr, axi_ps2_Handler FuncPtr, void *Cal
 * @note		None.
 *
 ******************************************************************************/
-void axi_ps2_IntrHandler(axi_ps2 *InstancePtr) {
+void axi_ps2_IntrHandler(axi_ps2 *InstancePtr)
+{
 	u32 IntrStatus;
 
 	Xil_AssertVoid(InstancePtr != NULL);

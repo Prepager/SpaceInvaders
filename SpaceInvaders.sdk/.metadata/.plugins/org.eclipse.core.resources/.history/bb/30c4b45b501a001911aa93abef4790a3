@@ -1,0 +1,16 @@
+/*
+ * SDcard.h
+ *
+ *  Created on: 17 Jan 2019
+ *      Author: John
+ */
+
+#ifndef SRC_SDCARD_SDCARD_H_
+#define SRC_SDCARD_SDCARD_H_
+
+#include "platform.h"
+#include "ff.h" //  SD CARD Configuration file
+
+void insertHighScore();
+
+#endif /* SRC_SDCARD_SDCARD_H_ */

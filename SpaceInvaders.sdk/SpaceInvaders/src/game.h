@@ -11,6 +11,7 @@
 
 #include "audio/audio.h"
 #include "PS2/keyboard.h"
+#include "SDCARD/SDcard.h"
 // Settings
 #include "settings.h"
 

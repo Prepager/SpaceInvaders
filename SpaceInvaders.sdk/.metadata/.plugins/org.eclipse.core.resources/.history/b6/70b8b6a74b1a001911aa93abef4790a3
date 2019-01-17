@@ -1,0 +1,15 @@
+/*
+ * SDcard.h
+ *
+ *  Created on: 17 Jan 2019
+ *      Author: John
+ */
+
+#ifndef SRC_SDCARD_SDCARD_H_
+#define SRC_SDCARD_SDCARD_H_
+
+#include "platform.h"
+
+void sdTester();
+
+#endif /* SRC_SDCARD_SDCARD_H_ */

@@ -1,0 +1,220 @@
+/*
+ * SDcard.c
+ *
+ *  Created on: 17 Jan 2019
+ *      Author: John
+ */
+#include "SDcard.h"
+
+#define MAX_SCORES 5
+#define SCORE_LIMIT sizeof(int)
+#define debug 1
+
+/************ SD card parameters ************/
+static FATFS FS;						// File System instance
+
+//FRESULT result;									// FRESULT variable
+char FileName[32];								// File name
+//static char *Log_File; 							// pointer to the log
+//static const char *RootPath = "0:/";			//  string pointer to the logical drive number
+unsigned int BytesWr;							// Bytes written
+/************ SD card parameters ************/
+char data[] = "This is a test";
+
+void insertHighScore() {
+    // Initializes the SD Card
+	initializeSD();
+	if(debug) xil_printf("SD Initialized\n");
+
+	// Mount root path, with forced imidiate mount
+	f_mount(&FS,/*"0:/"*/"", 1);
+	if(debug) xil_printf("FS Mounted\n");
+
+	// Open file
+		//File Path string pointer
+	static const char *FilePath = "Scores.TXT";//"HighScores.txt";	//  string pointer to the logical drive number
+		// File instance
+	FIL file;
+	if(debug) xil_printf("File opened\n");
+
+	// Open file if exists, create if not
+	FRESULT result = f_open(&file, "Scores.TXT", FA_OPEN_ALWAYS | FA_READ);
+	// If file is non existing create it
+	if (result) {
+		if(debug) xil_printf("Returning ... \n");
+	    f_close(&file);
+		return;
+	}
+	if(debug) xil_printf("File found\n");
+
+	// Buffer
+	char scores[SCORE_LIMIT*MAX_SCORES];
+	if(debug) xil_printf("Scores Initialized\n");
+
+	/* Read every line and display it */
+
+//	uint bytesToRead, bytesRead;
+//	bytesToRead = *(file)->obj.objsize;
+//    result = f_read(&file, scores, bytesToRead, &bytesRead);
+//    if(debug) xil_printf("scores read:\n%s\n", scores);
+
+	int players = 0;
+	while(f_gets(scores, sizeof scores, &file) ) {
+		players++;
+		if(debug) xil_printf("Players: %d\n",players);
+	}
+	int playerScores[players];
+	int e = 0;
+	result = f_open(&file, "Scores.TXT", FA_OPEN_ALWAYS | FA_READ);
+	while(f_gets(scores, sizeof scores, &file) ) {
+		if(debug) xil_printf("Scores: %s\n",scores);
+		for(int i = 0; i <= sizeof scores; i++) {
+			playerScores[e] = (playerScores << 3) + (playerScores << 1) + scores[i];
+		}
+		e++;
+//		if (num == UINTMAX_MAX && errno == ERANGE)
+//		    /* Could not convert. */
+//    	players ++;
+        if(debug) xil_printf("Int: %d\n",playerScores[i]);
+    }
+
+//
+//
+//    f_gets(scores, sizeof scores, &file);
+//    if(debug) xil_printf(scores);
+//    if(debug) xil_printf("\n\n");
+	//int players = 0;
+
+    // Create Array for scores
+//    if( (sizeof scores) != 0) {
+//        if(debug) xil_printf("Here are the scores!\n");
+//        int players = 0;
+//        for(int i = 0; i <= sizeof scores; i++) {
+//        	if(scores[i] == '\n') { players++; }
+//        }
+//
+//        int playerScores[players];
+//        int temp = 0;
+//        int j = 0;
+//        for(int i = 0; i <= sizeof scores; i++) {
+//        	if(scores[i] == '\n') {
+//        		playerScores[j++] = temp;
+//        	}
+//       		temp = /*((temp << 3) + (temp << 1))*/ (temp*10) + (int)scores[i];
+//        }
+//        if(debug) for(int i = 0; i <= sizeof playerScores; i++) {xil_printf("%d: %d\n", i, playerScores[i]);}
+//    }
+
+    /* Close the file */
+    f_close(&file);
+	if(debug) xil_printf("File Closed\n");
+
+	//result = f_open(&file, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
+
+//	FREAD file = f_read(&FS_instance, RootPath, );
+//	for (int j = 0; j < 5; j++) {
+//	    sprintf(FileName, "File_%d.TXT",j);
+//		Log_File = (char *)FileName;
+//		result = f_open(&file, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
+//
+//		result = f_write(&file, (const void*)data,  strlen(data), &BytesWr);
+//		xil_printf("GPS data = %s\n\r", data);
+//
+//	    result = f_close(&file);
+//	    sleep(3);
+//	}
+
+	// Closes the SD card
+    cleanup_platform();
+}
+
+//int assertHighScoreFile(){
+//	   // Initializes the SD Card
+//		initializeSD();
+//		if(debug) xil_printf("SD Initialized\n");
+//
+//		// Mount root path, with forced imidiate mount
+//		f_mount(&FS,"", 1);
+//		if(debug) xil_printf("FS Mounted\n");
+//
+//		// Open file
+//			//File Path string pointer
+////		static const char *FilePath = "HighScores.txt";	//  string pointer to the logical drive number
+//			// File instance
+//		FIL file;
+////		if(debug) xil_printf("File opened\n");
+//
+//		FRESULT result = f_open(&file, "HighScores.txt", FA_READ);
+//		// If result
+//		if (result) return;
+//
+//		if(debug) xil_printf("Result found\n");
+//
+//
+//	// Mount root dir, force mount
+//	f_mount(&FS, "", 1);
+//
+//	// OPEN DIR
+//	DIR dir;
+//
+//	// Open directory "" (root) and save to result struct
+//	result = f_opendir(&dir,"/");
+//	if(debug) xil_printf("DIR opened\n");
+//
+//	// If Directory was opened without errors run through all elements of dir
+//	static FILINFO fileinfo;
+//	if(result == FR_OK) {
+//		if(debug) xil_printf("No errors\n");
+//		for(;;){
+//			if(debug) xil_printf("Looping\n");
+//			// Read directory
+//			result = f_readdir(&dir, &fileinfo);
+//			if(debug) xil_printf("Read Dir\n");
+//			// Break if error occourred or defined end of dir (.fname[0] == 0) found
+//			if(result != FR_OK || fileinfo.fname[0] == 0) break;
+//			if(debug) xil_printf("Filename\n");
+//			if(debug) xil_printf("%s\n",fileinfo.fname);
+//			// If file HighScores.txt found close dir and return that it has been found
+//			if(strcmp(fileinfo.fname, "HighScores.txt")) {
+//				if(debug) xil_printf("File found!!\n");
+//				f_closedir(&dir);
+//				return 1; // HighScores.txt found
+//			}
+//		}
+//		f_closedir(&dir);
+//	}
+//
+//	if(debug) xil_printf("Creating File\n");
+////	sprintf(FileName, "HighScores.txt");
+////	Log_File = (char *)FileName;
+//
+//	static FIL file;
+//	result = f_open(&file, "HighScores.txt", FA_CREATE_ALWAYS | FA_WRITE );
+//	if(debug) xil_printf("File opened\n");
+//
+//	result = f_write(&file, "",  0, &BytesWr);
+//	if(debug) xil_printf("File Written\n");
+//	//xil_printf("GPS data = %s\n\r", data);
+//	result = f_open(&file, "HighScores.txt", FA_READ);
+//	if(result == FR_OK) {
+//		if(debug) xil_printf("File Created!!\n");
+//		f_close(&file);
+//		return 2; // HighScores.txt found
+//	}
+//
+//	result = f_close(&file);
+//	return 0;
+//
+////	for (int j = 0; j < 5; j++) {
+////		sprintf(FileName, "File_%d.TXT",j);
+////		Log_File = (char *)FileName;
+////		result = f_open(&file1, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
+////
+////		result = f_write(&file1, (const void*)data,  strlen(data), &BytesWr);
+////		xil_printf("GPS data = %s\n\r", data);
+////
+////		result = f_close(&file1);
+////		sleep(3);
+////	}
+////	cleanup_platform();
+//}

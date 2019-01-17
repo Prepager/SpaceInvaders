@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
+	<item value="Default C source template" key="LastUsedSourceTemplate"/>
 	<item value="Default C header template" key="LastUsedHeaderTemplate"/>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item value="933" key="DIALOG_WIDTH"/>
@@ -25,8 +25,12 @@
 		<item value="false" key="testFileSelected"/>
 		<item value="false" key="stubSelected0"/>
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="0" key="askReindex.detail"/>
+	</section>
+	<section name="CRenameRefactoringInputPage">
 	</section>
 	<section name="completion_proposal_size">
 	</section>

@@ -23,6 +23,10 @@ int enemySpeed = ENEMY_SPEED;
  * Initialize program and start rendering.
  */
 int main() {
+//	assertHighScoreFile();
+//	while(1){}
+	insertHighScore();
+
 	initializePS2(); // Initializes the PS 2 Keyboard
 	testKeyboard();		// Has infinite LOOP !!!!!
 

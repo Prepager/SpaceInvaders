@@ -21,6 +21,8 @@ src/Enemy \
 src/Health \
 src/PS2 \
 src/Player \
+src/SDCARD \
+src/SDCARD/src \
 src/Shield/Block \
 src/Shield/Corner \
 src/Shield \

@@ -14,6 +14,8 @@ RM := rm -rf
 -include src/Shield/Corner/subdir.mk
 -include src/Shield/Block/subdir.mk
 -include src/Shield/subdir.mk
+-include src/SDCARD/src/subdir.mk
+-include src/SDCARD/subdir.mk
 -include src/Player/subdir.mk
 -include src/PS2/subdir.mk
 -include src/Health/subdir.mk
