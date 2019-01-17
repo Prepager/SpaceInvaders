@@ -19,6 +19,7 @@ SUBDIRS := \
 src/Bullet \
 src/Enemy \
 src/Health \
+src/PS2 \
 src/Player \
 src/Shield/Block \
 src/Shield/Corner \

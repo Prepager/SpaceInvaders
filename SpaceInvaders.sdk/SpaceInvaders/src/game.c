@@ -22,11 +22,14 @@ int enemySpeed = ENEMY_SPEED;
 /**
  * Initialize program and start rendering.
  */
-int main()
-{
-	 Initialize_Sound_IPs();
+int main() {
+	initializePS2(); // Initializes the PS 2 Keyboard
+	testKeyboard();		// Has infinite LOOP !!!!!
+
+	Initialize_Sound_IPs(); // Has while loop !!!!!!
 	// Initialize the devices.
 	initialize();
+
 
 	// Start rendering infinity loop.
 	while(1) {

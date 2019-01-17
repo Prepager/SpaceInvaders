@@ -27,10 +27,20 @@
 #define PLATFORM_ZYNQ
  
 /* Definitions for sleep timer configuration */
-#define XSLEEP_TIMER_IS_DEFAULT_TIMER
  
  
 /******************************************************************/
+/* Definitions for driver AXI_PS2 */
+#define XPAR_AXI_PS2_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_PS2_0 */
+#define XPAR_AXI_PS2_0_DEVICE_ID 0
+#define XPAR_AXI_PS2_0_S_AXI_BASEADDR 0x43C20000
+#define XPAR_AXI_PS2_0_S_AXI_HIGHADDR 0x43C2FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver AXIVDMA */
 #define XPAR_XAXIVDMA_NUM_INSTANCES 1U
 
@@ -448,12 +458,14 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR 61U
-#define XPAR_FABRIC_V_TC_0_IRQ_INTR 62U
+#define XPAR_FABRIC_AXI_PS2_0_PS2_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR 62U
+#define XPAR_FABRIC_V_TC_0_IRQ_INTR 63U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_AXI_PS2_0_VEC_ID XPAR_FABRIC_AXI_PS2_0_PS2_INTERRUPT_INTR
 #define XPAR_FABRIC_AXIVDMA_0_VEC_ID XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR
 #define XPAR_FABRIC_VTC_0_VEC_ID XPAR_FABRIC_V_TC_0_IRQ_INTR
 

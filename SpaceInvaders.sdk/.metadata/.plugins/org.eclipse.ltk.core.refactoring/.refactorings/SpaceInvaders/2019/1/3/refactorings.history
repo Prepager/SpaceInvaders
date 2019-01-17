@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpaceInvaders/src/PS2/demo.c&apos; to &apos;keyboard.c&apos;" description="Rename resource &apos;demo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/PS2/demo.c" name="keyboard.c" stamp="1547717320770" updateReferences="true"/>
+</session>

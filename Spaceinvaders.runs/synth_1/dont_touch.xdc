@@ -57,6 +57,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_zybo_au
 # IP: bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_in_axi_gpio_0_0} -quiet] -quiet
 
+# IP: bd/hdmi_in/ip/hdmi_in_axi_ps2_0_0/hdmi_in_axi_ps2_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_axi_ps2_0_0 || ORIG_REF_NAME==hdmi_in_axi_ps2_0_0} -quiet] -quiet
+
+# IP: bd/hdmi_in/ip/hdmi_in_axi_ps2_0_0/src/fifo_generator_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] -quiet
+
 # IP: bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_auto_pc_1 || ORIG_REF_NAME==hdmi_in_auto_pc_1} -quiet] -quiet
 
@@ -130,12 +136,13 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_in_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_in_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
+# XDC: bd/hdmi_in/ip/hdmi_in_axi_ps2_0_0/src/fifo_generator_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
 # XDC: bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1_ooc.xdc
 
 # XDC: bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_in_s00_regslice_0 || ORIG_REF_NAME==hdmi_in_s00_regslice_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_ooc.xdc
 
 # XDC: bd/hdmi_in/ip/hdmi_in_auto_pc_0/hdmi_in_auto_pc_0_ooc.xdc
 

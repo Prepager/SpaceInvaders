@@ -294,16 +294,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports IIC_0_sda_io]
 
 ##Pmod Header JE
     ##IO_L4P_T0_34
-    #set_property PACKAGE_PIN V12 [get_ports {je[0]}]
-    #set_property IOSTANDARD LVCMOS33 [get_ports {je[0]}]
+    set_property PACKAGE_PIN V12 [get_ports {PS2_Data}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {PS2_Data}]
     
     ##IO_L18N_T2_34
     #set_property PACKAGE_PIN W16 [get_ports {je[1]}]
     #set_property IOSTANDARD LVCMOS33 [get_ports {je[1]}]
     
     ##IO_25_35
-    #set_property PACKAGE_PIN J15 [get_ports {je[2]}]
-    #set_property IOSTANDARD LVCMOS33 [get_ports {je[2]}]
+    set_property PACKAGE_PIN J15 [get_ports {PS2_Clk}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {PS2_Clk}]
     
     ##IO_L19P_T3_35
     #set_property PACKAGE_PIN H15 [get_ports {je[3]}]

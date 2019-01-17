@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Wed Jan 16 11:02:20 2019
+--Date        : Wed Jan 16 14:41:13 2019
 --Host        : DESKTOP-ND2U3FO running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_in_wrapper.bd
 --Design      : hdmi_in_wrapper
@@ -41,6 +41,8 @@ entity hdmi_in_wrapper is
     Mute_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     PBDATA : out STD_LOGIC;
     PBLRCLK : out STD_LOGIC;
+    PS2_Clk : in STD_LOGIC;
+    PS2_Data : in STD_LOGIC;
     RECDAT_0 : in STD_LOGIC;
     RECLRCLK : out STD_LOGIC;
     btns_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -102,7 +104,9 @@ architecture STRUCTURE of hdmi_in_wrapper is
     PBLRCLK : out STD_LOGIC;
     RECLRCLK : out STD_LOGIC;
     PBDATA : out STD_LOGIC;
-    FCLK_CLK2 : out STD_LOGIC
+    FCLK_CLK2 : out STD_LOGIC;
+    PS2_Clk : in STD_LOGIC;
+    PS2_Data : in STD_LOGIC
   );
   end component hdmi_in;
   component IOBUF is
@@ -197,6 +201,8 @@ hdmi_in_i: component hdmi_in
       Mute_tri_t(0) => Mute_tri_t_0(0),
       PBDATA => PBDATA,
       PBLRCLK => PBLRCLK,
+      PS2_Clk => PS2_Clk,
+      PS2_Data => PS2_Data,
       RECDAT_0 => RECDAT_0,
       RECLRCLK => RECLRCLK,
       btns_tri_i(3 downto 0) => btns_tri_i(3 downto 0),

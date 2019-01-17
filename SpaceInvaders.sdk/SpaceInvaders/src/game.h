@@ -10,6 +10,7 @@
 #include "display_ctrl/display_ctrl.h"
 
 #include "audio/audio.h"
+#include "PS2/keyboard.h"
 // Settings
 #include "settings.h"
 

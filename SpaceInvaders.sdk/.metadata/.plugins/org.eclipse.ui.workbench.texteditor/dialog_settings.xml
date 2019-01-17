@@ -9,18 +9,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value=" " key="selection"/>
+		<item value="printf" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="*/"/>
-			<item value="/*"/>
-			<item value="I2S_DATA_RX_L_REG"/>
-			<item value="st"/>
-			<item value="collides"/>
-			<item value="enemyState"/>
+			<item value="printf"/>
+			<item value="XPAR_FABRIC"/>
+			<item value="IP2INTC_IRPT"/>
+			<item value="XPAR_AXI_GPIO"/>
+			<item value="XPAR_FABRIC_AXI_GPIO"/>
+			<item value="axi_ps2_CfgInitialize"/>
+			<item value="XPAR"/>
+			<item value="XPAR_FABRIC_AXI"/>
 		</list>
 		<list key="replacehistory">
 			<item value=" "/>

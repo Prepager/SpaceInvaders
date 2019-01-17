@@ -59,9 +59,9 @@ set_property used_in_implementation false [get_files -all c:/SpaceInvaders/Space
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_ps2_0_0/src/fifo_generator_0.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_0/hdmi_in_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/hdmi_in_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/hdmi_in_auto_us_df_0_clocks.xdc]
@@ -90,5 +90,6 @@ synth_design -top hdmi_in_wrapper -part xc7z010clg400-1
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef hdmi_in_wrapper.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file hdmi_in_wrapper_utilization_synth.rpt -pb hdmi_in_wrapper_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

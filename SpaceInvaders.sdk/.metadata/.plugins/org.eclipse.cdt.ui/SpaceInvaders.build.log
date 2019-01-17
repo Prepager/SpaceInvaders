@@ -1,8 +1,27 @@
-11:50:55 **** Incremental Build of configuration Debug for project SpaceInvaders ****
+10:30:15 **** Auto Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
+'Building file: ../src/PS2/keyboard.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PS2/keyboard.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PS2/keyboard.d" -MT"src/PS2/keyboard.o" -o "src/PS2/keyboard.o" "../src/PS2/keyboard.c"
+../src/PS2/keyboard.c: In function 'readKey':
+../src/PS2/keyboard.c:13:16: warning: unused variable 'array' [-Wunused-variable]
+  unsigned char array[2] = { 0 };
+                ^~~~~
+'Finished building: ../src/PS2/keyboard.c'
+' '
+'Building target: SpaceInvaders.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/audio/audio.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/Player/Player.o  ./src/PS2/keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Bullet/Bullet.o  ./src/game.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SpaceInvaders.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74904	 180824	18689968	18945696	12116a0	SpaceInvaders.elf
+'Finished building: SpaceInvaders.elf.size'
+' '
 
-11:50:56 Build Finished (took 355ms)
+10:30:16 Build Finished (took 1s.110ms)
 
