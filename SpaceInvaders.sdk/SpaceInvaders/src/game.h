@@ -9,14 +9,14 @@
 #include "initializeDisplay.h"
 #include "display_ctrl/display_ctrl.h"
 
-#include "audio/audio.h"
-#include "PS2/keyboard.h"
-#include "SDCARD/SDcard.h"
 // Settings
 #include "settings.h"
 
 // Game objects
+#include "Menu/Menu.h"
+#include "Bonus/Bonus.h"
 #include "Enemy/Enemy.h"
+#include "Score/Score.h"
 #include "Shield/Shield.h"
 #include "Player/Player.h"
 #include "Health/Health.h"
@@ -29,7 +29,8 @@ void paint();
 void depaint();
 void collides();
 void position();
-void initialize();
+void initializeDevices();
+void initializeObjects();
 
 u8* getFrame();
 int timePast(XTime timer, int time);

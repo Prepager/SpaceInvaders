@@ -44,6 +44,9 @@ typedef struct {
 	// States
 	int dead;
 	int dying;
+
+	// Other
+	int points;
 } Enemy;
 
 // Constructors
@@ -54,7 +57,7 @@ void paintEnemy(Enemy *enemy, u8 *frame);
 void paintEnemies(Enemy *enemies, u8 *frame);
 void depaintEnemies(Enemy *enemies, u8 *frame);
 void fireEnemies(Enemy *enemies, Bullet *bullets[]);
-Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet);
 Enemy* collidesReturnEnemy(Enemy *enemies, Bullet *bullet);
+Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet, int *score);
 
 #endif

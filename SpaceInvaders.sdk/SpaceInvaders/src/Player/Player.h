@@ -11,18 +11,28 @@
 
 // Images
 #include "Resources/Ship.h"
+#include "Resources/Death/State0.h"
+#include "Resources/Death/State1.h"
 
 // Struct
 typedef struct {
 	// General
+	int score;
 	int health;
 	u32 position;
+
+	// General
+	int dying;
+	int dyingState;
 
 	// Relations
 	Bullet *bullet;
 } Player;
 
 // Constructors
+u8 readPlayerInput();
+void centerPlayer(Player *player);
+void writePlayerHealth(int health);
 void positionPlayer(Player *player);
 void initializePlayer(Player *player);
 void paintPlayer(Player *player, u8 *frame);

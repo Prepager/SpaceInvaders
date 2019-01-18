@@ -33,6 +33,7 @@ typedef struct {
 	// States
 	int health;
 	int depaint;
+	int repaint;
 
 	// Directions
 	int inverseX;

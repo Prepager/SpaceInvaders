@@ -3,7 +3,16 @@
 
 // Initialize the health
 void initializeHealth(Health *health, int *value) {
+	// Set health defaults.
 	health->health = value;
+	health->drawnHealth = 0;
+
+	// Set text defaults.
+	health->text.length = 5;
+	health->text.text = "LIVES";
+
+	health->text.yPos = (TOPBAR_HEIGHT - CHAR_TEXT_HEIGHT) / 2;
+	health->text.xPos = DISPLAY_WIDTH - calculateTextWidth(&health->text);
 }
 
 // Paint the health.
@@ -16,7 +25,7 @@ void paintHealth(Health *health, u8 *frame) {
 
 	// Set starting positions.
 	u32 y = HEALTH_Y;
-	u32 x = (HEALTH_X + HEALTH_WIDTH) - PLAYER_WIDTH - HEALTH_SPACE;
+	u32 x = (HEALTH_X + HEALTH_WIDTH) - PLAYER_WIDTH - (HEALTH_SPACE * 2) - calculateTextWidth(&health->text);
 
 	// Loop through the health.
 	for (int i = 0; i < *health->health; i++) {
@@ -38,15 +47,18 @@ void paintHealth(Health *health, u8 *frame) {
 
 	// Save drawn health.
 	health->drawnHealth = *health->health;
+
+	// Draw the lives text.
+	paintText(&health->text, frame);
 }
 
 // Depaint the health.
 void depaintHealth(Health *health, u8 *frame) {
 	// Generate the frame address for the starting position.
-	int addr = (HEALTH_X * 3) + (HEALTH_Y * STRIDE);
+	int addr = (HEALTH_X * 3) + (0 * STRIDE);
 
 	// Loop through the height and set data.
-	for (int ycoi = 0; ycoi < HEALTH_HEIGHT; ycoi++) {
+	for (int ycoi = 0; ycoi < TOPBAR_HEIGHT; ycoi++) {
 		// Draw the background color.
 		memset(&frame[addr], BACKGROUND, HEALTH_WIDTH * 3);
 

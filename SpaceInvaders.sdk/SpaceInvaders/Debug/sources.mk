@@ -16,16 +16,20 @@ ELFSIZE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+src/Bonus \
 src/Bullet \
 src/Enemy \
 src/Health \
-src/PS2 \
+src/Keyboard \
+src/Menu \
 src/Player \
 src/SDCARD \
 src/SDCARD/src \
+src/Score \
 src/Shield/Block \
 src/Shield/Corner \
 src/Shield \
+src/Text \
 src/audio \
 src/display_ctrl \
 src/dynclk \

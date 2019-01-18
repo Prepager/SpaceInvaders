@@ -41,7 +41,7 @@ Bullet* positionBullet(Bullet *bullet, int speed) {
 	}
 
 	// Delete the bullet and pointer if has hit bounds.
-	if (bullet->yPos < BULLET_HEIGHT || bullet->yPos > (DISPLAY_HEIGHT - BULLET_HEIGHT)) {
+	if (bullet->yPos < BULLET_MAX_TOP || bullet->yPos > BULLET_MAX_BOTTOM) {
 		free(bullet);
 		return NULL;
 	}
@@ -53,9 +53,9 @@ Bullet* positionBullet(Bullet *bullet, int speed) {
 // Check collision for the bullet.
 int collidesBullet(Bullet *bullet, u32 xPos, u32 yPos, int width, int height) {
 	return (
-		bullet->xPos >= xPos &&
-		bullet->yPos >= yPos &&
-		(bullet->xPos + BULLET_WIDTH) <= (xPos + width) &&
-		(bullet->yPos + BULLET_HEIGHT) <= (yPos + height)
+		bullet->xPos < (xPos + width) &&
+		bullet->yPos < (yPos + height) &&
+		(bullet->xPos + BULLET_WIDTH) > xPos &&
+		(bullet->yPos + BULLET_HEIGHT) > yPos
 	);
 }

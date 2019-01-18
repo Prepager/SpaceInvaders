@@ -2,19 +2,33 @@
 #include "Player.h"
 
 // Globals
-XGpio BTNGpio;
+XGpio BTNGpio, LEDGpio;
 
 // Initialize the player.
 void initializePlayer(Player *player) {
-	// Set base health.
+	// Set base values.
+	player->score = 0;
+	player->dying = 0;
 	player->health = PLAYER_HEALTH;
 
+	// Delete bullet.
+	free(player->bullet);
+
 	// Set starting position.
-	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_WIDTH / 2);
+	centerPlayer(player);
+
+	// Initialize the LED XGPIO.
+	XGpio_Initialize(&LEDGpio, LED_ID);
+	XGpio_SetDataDirection(&LEDGpio, LED_CHANNEL, 0x00);
 
 	// Initialize the button XGPIO.
-	XGpio_Initialize(&BTNGpio, GPIO_BTN_ID);
+	XGpio_Initialize(&BTNGpio, BTN_ID);
 	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
+}
+
+// Place player at the center.
+void centerPlayer(Player *player) {
+	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_WIDTH / 2);
 }
 
 // Paint the player.
@@ -22,10 +36,42 @@ void paintPlayer(Player *player, u8 *frame) {
 	// Generate the frame address for the starting position.
 	int addr = (player->position * 3) + (PLAYER_Y_OFFSET * STRIDE);
 
+	// Point to current player image.
+	u8 *image = Ship;
+
+	// Check if player is dying.
+	if (player->dying) {
+		// Change dying state every defined change.
+		if ((player->dying % PLAYER_DYING_CHANGE) == 0) {
+			player->dyingState = ! player->dyingState;
+		}
+
+		// Select current death state image.
+		image = player->dyingState ? PlayerDeathState0 : PlayerDeathState1;
+
+		// Decrement dying counter.
+		player->dying--;
+
+		// Center player if no longer dying.
+		if (player->health && ! player->dying) {
+			// Depaint the current player.
+			depaintPlayer(player, frame);
+
+			// Return the player to the center.
+			centerPlayer(player);
+
+			// Return out to prevent redraw.
+			return;
+		} else if (! player->health && ! player->dying) {
+			// Restart the death animation.
+			player->dying = PLAYER_DYING;
+		}
+	}
+
 	// Loop through the height and set data.
 	for (int ycoi = 0; ycoi < PLAYER_HEIGHT; ycoi++) {
 		// Copy enemy image data into frame.
-		memcpy(&frame[addr], &Ship[ycoi * PLAYER_WIDTH * 3], PLAYER_WIDTH * 3);
+		memcpy(&frame[addr], &image[ycoi * PLAYER_WIDTH * 3], PLAYER_WIDTH * 3);
 
 		// Jump to next line.
 		addr += STRIDE;
@@ -35,6 +81,9 @@ void paintPlayer(Player *player, u8 *frame) {
 	if (player->bullet != NULL) {
 		paintBullet(player->bullet, frame);
 	}
+
+	// Write the player health to LEDs.
+	writePlayerHealth(player->health);
 }
 
 // Depaint the player.
@@ -57,13 +106,23 @@ void depaintPlayer(Player *player, u8 *frame) {
 	}
 }
 
+// Read input from player.
+u8 readPlayerInput() {
+	return XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+}
+
+// Write player health.
+void writePlayerHealth(int health) {
+	return XGpio_DiscreteWrite(&LEDGpio, BTN_MASK, health);
+}
+
 // Position the enemies.
 void positionPlayer(Player *player) {
 	// Set default next position.
 	u32 nextPosition = player->position;
 
 	// Read in input from buttons.
-	u8 input = XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+	u8 input = readPlayerInput();
 
 	// Determine the direction.
 	if (input & PLAYER_KEY_LEFT) {
@@ -85,7 +144,7 @@ void positionPlayer(Player *player) {
 		// Set new bullet position.
 		player->bullet->direction = 1;
 		player->bullet->yPos = PLAYER_Y_OFFSET;
-		player->bullet->xPos = player->position + (PLAYER_WIDTH / 2);
+		player->bullet->xPos = player->position + (PLAYER_WIDTH / 2) - (BULLET_WIDTH / 2);
 	}
 
 	// Position bullet if exists.
@@ -103,6 +162,10 @@ Bullet* collidesPlayer(Player *player, Bullet *bullet) {
 	if (collidesBullet(bullet, player->position, PLAYER_Y_OFFSET, PLAYER_WIDTH, PLAYER_HEIGHT)) {
 		// Decrement player health.
 		player->health--;
+
+		// Enable player dying time.
+		player->dying = PLAYER_DYING;
+		player->dyingState = 0;
 
 		// Delete the bullet and pointer.
 		free(bullet);

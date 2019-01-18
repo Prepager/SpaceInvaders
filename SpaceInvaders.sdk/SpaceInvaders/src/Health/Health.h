@@ -5,6 +5,7 @@
 #include "xil_io.h"
 #include "xil_types.h"
 #include "../settings.h"
+#include "../Text/Text.h"
 
 // Images
 #include "../Player/Resources/Ship.h"
@@ -14,6 +15,9 @@ typedef struct {
 	// General
 	int *health;
 	int drawnHealth;
+
+	// Relations
+	Text text;
 } Health;
 
 // Constructors

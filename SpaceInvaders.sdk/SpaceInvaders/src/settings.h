@@ -2,14 +2,37 @@
 #define SETTINGS_H_
 
 /* ------------------------------------------------------------ */
-/*		    			Health Declarations		    		  	*/
+/*		    			Menu Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
-#define HEALTH_Y 10
-#define HEALTH_X (DISPLAY_WIDTH / 2)
+#define MENU_OFFSET 125
+#define MENU_LOGO_WIDTH 320
+#define MENU_LOGO_HEIGHT 134
+#define MENU_LOGO_Y 10
+#define MENU_LOGO_X ((DISPLAY_WIDTH / 2) - (MENU_LOGO_WIDTH / 2))
+
+/* ------------------------------------------------------------ */
+/*		    			Topbar Declarations		    		  	*/
+/* ------------------------------------------------------------ */
+
+#define TOPBAR_HEIGHT 30
+
+#define CHAR_WIDTH 20
+#define CHAR_HEIGHT 25
+#define CHAR_SPACE 4
+
+#define CHAR_TEXT_WIDTH 20
+#define CHAR_TEXT_HEIGHT 20
+
+#define SCORE_X 15
+#define SCORE_Y (TOPBAR_HEIGHT - CHAR_HEIGHT) / 2
+#define SCORE_WIDTH ((DISPLAY_WIDTH / 3) + CHAR_WIDTH)
+
+#define HEALTH_X ((DISPLAY_WIDTH / 3) + CHAR_WIDTH)
+#define HEALTH_Y (TOPBAR_HEIGHT - HEALTH_HEIGHT) / 2
 #define HEALTH_SPACE 10
-#define HEALTH_HEIGHT 30
-#define HEALTH_WIDTH (DISPLAY_WIDTH / 2)
+#define HEALTH_HEIGHT PLAYER_HEIGHT
+#define HEALTH_WIDTH (((DISPLAY_WIDTH / 3) * 2) - CHAR_WIDTH)
 
 /* ------------------------------------------------------------ */
 /*		    			Shield Declarations		    		  	*/
@@ -29,16 +52,18 @@
 #define SHIELD_WIDTH (SHIELD_BLOCK_WIDTH * 2 + SHIELD_CORNER_WIDTH * 2)
 #define SHIELD_HEIGHT (SHIELD_CORNER_HEIGHT + SHIELD_CORNER_HEIGHT * 2)
 #define SHIELD_X_OFFSET (DISPLAY_WIDTH / SHIELD_COUNT) / 2
-#define SHIELD_Y_OFFSET PLAYER_Y_OFFSET - SHIELD_HEIGHT
+#define SHIELD_Y_OFFSET (PLAYER_Y_OFFSET - SHIELD_HEIGHT)
 
 /* ------------------------------------------------------------ */
 /*		    			Bullet Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
 #define BULLET_WIDTH 2
-#define BULLET_HEIGHT 6
+#define BULLET_HEIGHT 8
 #define BULLET_ENEMY_MOVEMENT 1
 #define BULLET_PLAYER_MOVEMENT 3
+#define BULLET_MAX_TOP (BULLET_HEIGHT + TOPBAR_HEIGHT)
+#define BULLET_MAX_BOTTOM (DISPLAY_HEIGHT - BULLET_HEIGHT)
 
 /* ------------------------------------------------------------ */
 /*		    			Player Declarations		    		  	*/
@@ -47,11 +72,17 @@
 #define PLAYER_WIDTH 24
 #define PLAYER_HEIGHT 12
 #define PLAYER_HEALTH 3
+#define PLAYER_HEALTH_MAX 6
 #define PLAYER_MOVEMENT 1
 
 #define PLAYER_KEY_LEFT 1
 #define PLAYER_KEY_RIGHT 2
 #define PLAYER_KEY_SHOOT 8
+
+#define PLAYER_DYING 250
+#define PLAYER_DYING_CHANGE 25
+
+#define PLAYER_RESPAWN_TIME (COUNTS_PER_SECOND * 2)
 
 #define PLAYER_Y_OFFSET (DISPLAY_HEIGHT - (PLAYER_HEIGHT * 2))
 
@@ -61,20 +92,30 @@
 
 #define ENEMY_ROWS 5
 #define ENEMY_COLS 11
+#define ENEMY_TOTAL (ENEMY_ROWS * ENEMY_COLS)
 
 #define ENEMY_SIZE 24
-#define ENEMY_SPACE 10
+#define ENEMY_SPACE 8
+#define ENEMY_SPACE_HITAREA 4
 
 #define ENEMY_BULLETS 3
 
-#define ENEMY_SPEED (COUNTS_PER_SECOND * 0.8)
-#define ENEMY_SPEED_ROW (COUNTS_PER_SECOND * 0.08)
+#define ENEMY_SPEED (COUNTS_PER_SECOND * 0.85)
+#define ENEMY_SPEED_MAX (COUNTS_PER_SECOND * 0.4)
+#define ENEMY_SPEED_INCREASE (COUNTS_PER_SECOND * 0.0025)
 
 #define ENEMY_X_STATES 9
 #define ENEMY_X_OFFSET (DISPLAY_WIDTH - (ENEMY_COLS * (ENEMY_SIZE + ENEMY_SPACE))) / 2
 #define ENEMY_X_STATE_OFFSET (ENEMY_X_OFFSET / (ENEMY_X_STATES + 1))
 
 #define ENEMY_Y_OFFSET (ENEMY_X_OFFSET / 2)
+#define ENEMY_Y_DEATH (SHIELD_Y_OFFSET - (SHIELD_BLOCK_HEIGHT * 1.5))
+
+#define ENEMY_BONUS_WIDTH 27
+#define ENEMY_BONUS_HEIGHT 12
+
+#define ENEMY_BONUS_SPEED 1
+#define ENEMY_BONUS_SPAWN (25+10) // Around 10 seconds to pass.
 
 /* ------------------------------------------------------------ */
 /*					Miscellaneous Declarations					*/
@@ -93,6 +134,10 @@
 // GPIO
 #define BTN_CHANNEL 1
 #define BTN_MASK XGPIO_IR_CH1_MASK
-#define GPIO_BTN_ID  XPAR_AXI_GPIO_BTN_DEVICE_ID
+#define BTN_ID XPAR_AXI_GPIO_BTN_DEVICE_ID
+
+#define LED_CHANNEL 1
+#define LED_MASK XGPIO_IR_CH1_MASK
+#define LED_ID XPAR_AXI_GPIO_LED_DEVICE_ID
 
 #endif

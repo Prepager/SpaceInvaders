@@ -2,46 +2,44 @@
 #include "game.h"
 
 // Timer structs.
-XTime enemyTimer;
-XTime currentTime;
+XTime bonusTimer = 0;
+XTime endedTimer = 0;
+XTime enemyTimer = 0;
+XTime currentTime = 0;
 
 // Buffer arrays.
 u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
 u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 
 // Object arrays.
+Menu menu;
+Score score;
 Player player;
 Health health;
+BonusEnemy bonusEnemy;
+Enemy enemies[ENEMY_TOTAL];
 Shield shields[SHIELD_COUNT];
 Bullet *enemyBullets[ENEMY_BULLETS];
-Enemy enemies[ENEMY_ROWS*ENEMY_COLS];
 
 // Object values.
-int enemySpeed = ENEMY_SPEED;
+int showMenu = 0;
+int drawScene = 1;
+int gameLevel = 0;
+int gameEnded = 0;
+int *gamePaused = 0;
+int enemyBonusCounter = 0;
+
+u32 enemySpeed = ENEMY_SPEED;
+u32 nextEnemySpeed = ENEMY_SPEED;
 
 /**
  * Initialize program and start rendering.
  */
-int main() {
-//	assertHighScoreFile();
-//	int a[5] = {10, 20, 44, 33, 1};
-//	saveScores(a);
-//	while(1){}
-
-	readScores();
-
-	insertScore(99, "John");
-//	insertScore(200, "Emil");
-//	insertScore(1000, "AnneMarethe");
-	while(1)
-
-	initializePS2(); // Initializes the PS 2 Keyboard
-	testKeyboard();		// Has infinite LOOP !!!!!
-
-	Initialize_Sound_IPs(); // Has while loop !!!!!!
-	// Initialize the devices.
-	initialize();
-
+int main()
+{
+	// Initialize the devices and objects.
+	initializeDevices();
+	initializeObjects();
 
 	// Start rendering infinity loop.
 	while(1) {
@@ -49,20 +47,63 @@ int main() {
 		XTime_GetTime(&currentTime);
 
 		// Depaint the game objects.
-		depaint();
+		if (! showMenu) depaint();
 
-		// Reposition the game objects.
-		position();
+		// Check if the game is paused or ended.
+		if (! gameEnded && (gamePaused == NULL || ! (*gamePaused))) {
+			// Check if bonus should spawn.
+			if (timePast(bonusTimer, COUNTS_PER_SECOND)) {
+				// Increment bonus counter.
+				enemyBonusCounter++;
 
-		// Check for collisions.
-		collides();
+				// Check if has hit enemy bonus spawn time.
+				if (enemyBonusCounter >= ENEMY_BONUS_SPAWN) {
+					// Respawn bonus enemy.
+					bonusEnemy.dead = 0;
+					bonusEnemy.dying = 0;
+					bonusEnemy.xPos = -ENEMY_BONUS_WIDTH;
+
+					// Reset bonus counter.
+					enemyBonusCounter = 0;
+				}
+
+				// Save the current time.
+				XTime_GetTime(&bonusTimer);
+			}
+
+			// Reposition the game objects.
+			position();
+
+			// Check for collisions.
+			collides();
+		} else if (gameEnded && timePast(endedTimer, PLAYER_RESPAWN_TIME)) {
+			// Redraw scene if menu is not already enabled.
+			if (! showMenu) {
+				drawScene = 1;
+			}
+
+			// Set show menu state.
+			showMenu = 1;
+
+			// Check for input from player.
+			xil_printf("Checking...");
+			if (readPlayerInput()) {
+				// Disable menu and redraw.
+				showMenu = 0;
+				drawScene = 1;
+
+				// Reinitialize the objects.
+				initializeObjects();
+			}
+		}
 
 		// Repaint the game objects.
 		paint();
 
-		// Update draw timers.
+		// Update the enemy timer.
 		if (timePast(enemyTimer, enemySpeed)) {
 			enemyTimer = currentTime;
+			enemySpeed = nextEnemySpeed;
 		}
 
 		// Flush the frame cache.
@@ -76,16 +117,48 @@ int main() {
 /**
  * Initialize the devices and objects.
  */
-void initialize()
+void initializeDevices()
 {
 	// Initialize the display.
 	initializeDisplay();
+}
 
+/**
+ * Initialize the devices and objects.
+ */
+void initializeObjects()
+{
 	// Initialize game objects.
 	initializePlayer(&player);
 	initializeShields(shields);
 	initializeEnemies(enemies);
+	initializeMenu(&menu, &player);
+	initializeBonusEnemy(&bonusEnemy);
+	initializeScore(&score, &player.score);
 	initializeHealth(&health, &player.health);
+
+	// Delete player bullet.
+	free(player.bullet);
+	player.bullet = NULL;
+
+	// Delete enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		if (enemyBullets[i]) {
+			// Deallocate the space.
+			free(enemyBullets[i]);
+
+			// Reset pointer to null.
+			enemyBullets[i] = NULL;
+		}
+	}
+
+	// Reset game state.
+	gameLevel = 0;
+	gameEnded = 0;
+	gamePaused = NULL;
+
+	// Redraw the background scene.
+	drawScene = 1;
 }
 
 /**
@@ -97,18 +170,23 @@ void paint()
 	u8 *frame = getFrame();
 
 	// Draw the background if needed.
-	static int drawBackground = 1;
-	if (drawBackground) {
+	if (drawScene) {
 		// Draw the background.
 		memset(&frame[0], BACKGROUND, sizeof(u8) * MAX_FRAME);
 
-		// Disable background drawing.
-		drawBackground = 0;
+		// Disable scene drawing.
+		drawScene = 0;
+	}
+
+	// Draw the menu and return if visible.
+	if (showMenu) {
+		return paintMenu(&menu, getFrame());
 	}
 
 	// Draw the game elements.
 	paintPlayer(&player, frame);
 	paintShields(shields, frame);
+	paintBonusEnemy(&bonusEnemy, frame);
 	if (timePast(enemyTimer, enemySpeed)) paintEnemies(enemies, frame);
 
 	// Draw enemy bullets.
@@ -117,6 +195,7 @@ void paint()
 	}
 
 	// Draw the top elements.
+	paintScore(&score, frame);
 	paintHealth(&health, frame);
 }
 
@@ -130,6 +209,7 @@ void depaint()
 
 	// Remove the game elements.
 	depaintPlayer(&player, frame);
+	depaintBonusEnemy(&bonusEnemy, frame);
 	if (timePast(enemyTimer, enemySpeed)) depaintEnemies(enemies, frame);
 
 	// Draw enemy bullets.
@@ -143,11 +223,68 @@ void depaint()
  */
 void position()
 {
+	// Skip positioning if in menu.
+	if (showMenu) return;
+
 	// Position the game elements.
 	positionPlayer(&player);
+	if (currentTime % 2) positionBonusEnemy(&bonusEnemy);
 	if (timePast(enemyTimer, enemySpeed)) {
-		// Position the enemies and recalculate speed.
-		enemySpeed = ENEMY_SPEED - (ENEMY_SPEED_ROW * positionEnemies(enemies));
+		// Position and get the amount of alive enemies.
+		int alive = positionEnemies(enemies);
+
+		// Check if no more enemy exists.
+		if (alive == 0) {
+			// Pause the game.
+			int paused = 1;
+			gamePaused = &paused;
+
+			// Increment the level.
+			gameLevel++;
+
+			// Increment player health.
+			if (player.health < PLAYER_HEALTH_MAX) {
+				player.health++;
+			}
+
+			// Delete player bullet.
+			free(player.bullet);
+			player.bullet = NULL;
+
+			// Respawn the enemies.
+			initializeEnemies(enemies);
+
+			// Restart the game.
+			gamePaused = NULL;
+			return;
+		}
+
+		// Check if enemy at death position.
+		if (alive == -1) {
+			// Enable player dying time.
+			player.health = 0;
+			player.dying = PLAYER_DYING;
+			player.dyingState = 0;
+
+			// Mark the game as ended.
+			gameEnded = 1;
+
+			// Save the current ended time.
+			XTime_GetTime(&endedTimer);
+
+			// Return out of positioning.
+			return;
+		}
+
+		// Calculate the next enemy movement speed.
+		nextEnemySpeed = ENEMY_SPEED;
+		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (ENEMY_TOTAL - alive);
+		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (gameLevel * (ENEMY_TOTAL / 2));
+
+		// Check next enemy speed bounds.
+		if (nextEnemySpeed > ENEMY_SPEED_MAX) {
+			nextEnemySpeed = ENEMY_SPEED_MAX;
+		}
 
 		// Fire bullets from enemies.
 		fireEnemies(enemies, enemyBullets);
@@ -167,8 +304,9 @@ void collides()
 	// Check if the bullet exists.
 	if (player.bullet) {
 		// Check collision for enemies and shields.
-		if (player.bullet) player.bullet = collidesEnemies(enemies, player.bullet);
 		if (player.bullet) player.bullet = collidesShields(shields, player.bullet);
+		if (player.bullet) player.bullet = collidesEnemies(enemies, player.bullet, &player.score);
+		if (player.bullet) player.bullet = collidesBonusEnemy(&bonusEnemy, player.bullet, &player.score);
 
 		// Repaint enemies if hit.
 		if (! player.bullet) {
@@ -178,8 +316,31 @@ void collides()
 
 	// Check collision enemy bullets.
 	for (int i = 0; i < ENEMY_BULLETS; i++) {
-		// Check collision with player and shields.
-		if(enemyBullets[i]) enemyBullets[i] = collidesPlayer(&player, enemyBullets[i]);
+		// Check collision with player.
+		if(enemyBullets[i]) {
+			// Check collision and update bullet.
+			enemyBullets[i] = collidesPlayer(&player, enemyBullets[i]);
+
+			// Check if player was hit.
+			if (! enemyBullets[i]) {
+				// Pause game while player is dying.
+				gamePaused = &player.dying;
+
+				// Check if player has died.
+				if (! player.health) {
+					// Mark the game as ended.
+					gameEnded = 1;
+
+					// Save the current ended time.
+					XTime_GetTime(&endedTimer);
+
+					// Return out.
+					return;
+				}
+			}
+		}
+
+		// Check collision with shields.
 		if(enemyBullets[i]) enemyBullets[i] = collidesShields(shields, enemyBullets[i]);
 
 		// Repaint enemy if collides with enemy bullets.

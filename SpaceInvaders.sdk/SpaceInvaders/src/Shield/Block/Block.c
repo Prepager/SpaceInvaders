@@ -11,7 +11,7 @@ u8* blockImage(ShieldBlock *block) {
 void paintShieldBlock(ShieldBlock *block, u8 *frame) {
 	//
 	if (block->depaint) depaintShieldBlock(block, frame);
-	if (! block->health) return;
+	if (! block->health || ! block->repaint) return;
 
 	// Get the block animation state.
 	u8 *state = blockImage(block);
@@ -27,6 +27,9 @@ void paintShieldBlock(ShieldBlock *block, u8 *frame) {
 		// Jump to next line.
 		addr += STRIDE;
 	}
+
+	// Disable repaint request.
+	block->repaint = 0;
 }
 
 //
@@ -58,6 +61,7 @@ Bullet* collidesShieldBlock(ShieldBlock *block, Bullet *bullet) {
 	if (collidesBullet(bullet, block->xPos, block->yPos, SHIELD_BLOCK_WIDTH, SHIELD_BLOCK_HEIGHT)) {
 		// Decrement block health.
 		block->health--;
+		block->repaint = 1;
 
 		// Delete the bullet and pointer.
 		free(bullet);

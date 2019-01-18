@@ -29,7 +29,7 @@ void depaintShieldCorner(ShieldCorner *corner, u8 *frame) {
 void paintShieldCorner(ShieldCorner *corner, u8 *frame) {
 	//
 	if (corner->depaint) depaintShieldCorner(corner, frame);
-	if (! corner->health) return;
+	if (! corner->health || ! corner->repaint) return;
 
 	// Get the corner animation state.
 	u8 *state = cornerImage(corner);
@@ -51,6 +51,9 @@ void paintShieldCorner(ShieldCorner *corner, u8 *frame) {
 		// Jump to next line.
 		addr += STRIDE;
 	}
+
+	// Disable repaint request.
+	corner->repaint = 0;
 }
 
 // Check if bullet collides with shield corner.
@@ -64,6 +67,7 @@ Bullet* collidesShieldCorner(ShieldCorner *corner, Bullet *bullet) {
 	if (collidesBullet(bullet, corner->xPos, corner->yPos, SHIELD_CORNER_WIDTH, SHIELD_CORNER_HEIGHT)) {
 		// Decrement corner health.
 		corner->health--;
+		corner->repaint = 1;
 
 		// Delete the bullet and pointer.
 		free(bullet);

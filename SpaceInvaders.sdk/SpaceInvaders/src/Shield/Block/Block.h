@@ -29,6 +29,7 @@ typedef struct {
 	// States
 	int health;
 	int depaint;
+	int repaint;
 } ShieldBlock;
 
 // Constructors

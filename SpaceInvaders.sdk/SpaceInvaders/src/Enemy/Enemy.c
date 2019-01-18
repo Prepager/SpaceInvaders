@@ -24,21 +24,47 @@ u8* enemyImage(Enemy *enemy) {
 
 // Initialize the enemies.
 void initializeEnemies(Enemy *enemies) {
+	// Reset enemy state.
+	xState = 0;
+	yState = 0;
+	direction = 1;
+
 	// Loop through all possible enemies.
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	int currentRow = 0;
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
-		// Set default sizes.
+		// Set defaults.
 		enemy->width = ENEMY_SIZE;
 		enemy->height = ENEMY_SIZE;
+
+		enemy->row = currentRow;
+
+		enemy->dead = 0;
+		enemy->dying = 0;
+		enemy->animation = 0;
+
+		// Set points.
+		enemy->points = 30;
+		if (enemy->row >= 3) enemy->points = 10;
+		else if (enemy->row > 0) enemy->points = 20;
+
+		// Jump to next line if hit column count.
+		if ((i+1) % ENEMY_COLS == 0) {
+			// Increment the current row.
+			currentRow++;
+		}
 	}
+
+	// Position the enemies.
+	positionEnemies(enemies);
 }
 
 // Paint the enemies.
 void paintEnemies(Enemy *enemies, u8 *frame) {
 	// Loop through all possible enemies.
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
@@ -54,6 +80,9 @@ void paintEnemy(Enemy *enemy, u8 *frame) {
 
 	// Get the enemy animation state.
 	u8 *state = enemyImage(enemy);
+
+	// Skip rendering if outside display height.
+	if ((enemy->yPos + ENEMY_SIZE) > DISPLAY_HEIGHT) return;
 
 	// Generate the frame address for the starting position.
 	int addr = (enemy->xPos * 3) + (enemy->yPos * STRIDE);
@@ -71,12 +100,15 @@ void paintEnemy(Enemy *enemy, u8 *frame) {
 // Depaint the enemies.
 void depaintEnemies(Enemy *enemies, u8 *frame) {
 	// Loop through all possible enemies.
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
 		// Continue if already dead.
 		if (enemy->dead) continue;
+
+		// Skip rendering if outside display height.
+		if ((enemy->yPos + ENEMY_SIZE) > DISPLAY_HEIGHT) continue;
 
 		// Generate the frame address for the starting position.
 		int addr = (enemy->xPos * 3) + (enemy->yPos * STRIDE);
@@ -130,8 +162,8 @@ int positionEnemies(Enemy *enemies) {
 	u32 x = curXOffset, y = curYOffset;
 
 	// Loop through enemies.
-	int currentRow = 0;
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	int atDeath = 0, alive = 0;
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
@@ -140,7 +172,6 @@ int positionEnemies(Enemy *enemies) {
 		enemy->yPos = y;
 
 		// Set new animation.
-		enemy->row = currentRow;
 		enemy->animation = ! enemy->animation;
 
 		// Enable dead status when dying.
@@ -149,14 +180,22 @@ int positionEnemies(Enemy *enemies) {
 			enemy->dying = 0;
 		}
 
+		// Increment alive count.
+		if (! enemy->dead) {
+			alive++;
+		}
+
+		// Check if at or above death position and not dead.
+		if (! enemy->dead && ! enemy->dying && y > ENEMY_Y_DEATH) {
+			// Set dead status.
+			atDeath = 1;
+		}
+
 		// Increment x with spacing.
 		x += ENEMY_SIZE + ENEMY_SPACE;
 
 		// Jump to next line if hit column count.
 		if ((i+1) % ENEMY_COLS == 0) {
-			// Increment the current row.
-			currentRow++;
-
 			// Reset x back to offset.
 			x = curXOffset;
 
@@ -165,15 +204,18 @@ int positionEnemies(Enemy *enemies) {
 		}
 	}
 
-	// Return the current y-state.
-	return yState;
+	// Return -1 if dead.
+	if (atDeath) return -1;
+
+	// Return the alive count.
+	return alive;
 }
 
 // Make defined amount of enemies fire bullets.
 void fireEnemies(Enemy *enemies, Bullet *bullets[]) {
 	// Create array of alive enemies.
-	int count = 0, alive[ENEMY_ROWS*ENEMY_COLS];
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	int count = 0, alive[ENEMY_TOTAL];
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Get the current enemy.
 		Enemy *enemy = &enemies[i];
 
@@ -201,14 +243,14 @@ void fireEnemies(Enemy *enemies, Bullet *bullets[]) {
 		// Set new bullet position.
 		bullets[i]->direction = 0;
 		bullets[i]->yPos = enemy->yPos;
-		bullets[i]->xPos = enemy->xPos + (ENEMY_SIZE / 2);
+		bullets[i]->xPos = enemy->xPos + (ENEMY_SIZE / 2) - (BULLET_WIDTH / 2);
 	}
 }
 
 // Check collision between bullet and enemies.
-Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet) {
+Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet, int *score) {
 	// Loop through all possible enemies.
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
@@ -216,9 +258,16 @@ Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet) {
 		if (enemy->dead || enemy->dying) continue;
 
 		// Check if bullet collides with enemy.
-		if (collidesBullet(bullet, enemy->xPos, enemy->yPos, ENEMY_SIZE, ENEMY_SIZE)) {
+		if (collidesBullet(
+				bullet,
+				enemy->xPos - ENEMY_SPACE_HITAREA, enemy->yPos,
+				ENEMY_SIZE + ENEMY_SPACE_HITAREA, ENEMY_SIZE
+		)) {
 			// Enable dying status on enemy.
 			enemy->dying = 1;
+
+			// Add enemy points to score.
+			*score += enemy->points;
 
 			// Delete the bullet and pointer.
 			free(bullet);
@@ -233,7 +282,7 @@ Bullet* collidesEnemies(Enemy *enemies, Bullet *bullet) {
 // Find collision between bullet and enemies and return enemy.
 Enemy* collidesReturnEnemy(Enemy *enemies, Bullet *bullet) {
 	// Loop through all possible enemies.
-	for (int i = 0; i < ENEMY_ROWS*ENEMY_COLS; i++) {
+	for (int i = 0; i < ENEMY_TOTAL; i++) {
 		// Load in the current enemy.
 		Enemy *enemy = &enemies[i];
 
