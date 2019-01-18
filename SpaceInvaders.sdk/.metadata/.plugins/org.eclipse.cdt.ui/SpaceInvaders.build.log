@@ -1,34 +1,23 @@
-16:57:30 **** Auto Build of configuration Debug for project SpaceInvaders ****
+15:16:36 **** Auto Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/SDCARD/SDcard.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/SDcard.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/SDcard.d" -MT"src/SDCARD/SDcard.o" -o "src/SDCARD/SDcard.o" "../src/SDCARD/SDcard.c"
-../src/SDCARD/SDcard.c: In function 'insertHighScore':
-../src/SDCARD/SDcard.c:35:21: warning: unused variable 'FilePath' [-Wunused-variable]
-  static const char *FilePath = "Scores.TXT";//"HighScores.txt"; //  string pointer to the logical drive number
-                     ^~~~~~~~
-At top level:
-../src/SDCARD/SDcard.c:35:21: warning: 'FilePath' defined but not used [-Wunused-variable]
 'Finished building: ../src/SDCARD/SDcard.c'
-' '
-'Building file: ../src/game.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
-'Finished building: ../src/game.c'
 ' '
 'Building target: SpaceInvaders.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/audio/audio.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/SDCARD/src/cc932.o ./src/SDCARD/src/diskio.o ./src/SDCARD/src/ff.o  ./src/SDCARD/SDcard.o ./src/SDCARD/platform.o  ./src/Player/Player.o  ./src/PS2/keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Bullet/Bullet.o  ./src/game.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/audio/audio.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/SDCARD/src/cc932.o ./src/SDCARD/src/diskio.o ./src/SDCARD/src/ff.o  ./src/SDCARD/SDcard.o ./src/SDCARD/platform.o  ./src/Player/Player.o  ./src/PS2/keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Bullet/Bullet.o  ./src/game.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: SpaceInvaders.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 113608	 180888	18691920	18986416	121b5b0	SpaceInvaders.elf
+ 115464	 180864	18691952	18988280	121bcf8	SpaceInvaders.elf
 'Finished building: SpaceInvaders.elf.size'
 ' '
 
-16:57:32 Build Finished (took 1s.655ms)
+15:16:37 Build Finished (took 1s.158ms)
 

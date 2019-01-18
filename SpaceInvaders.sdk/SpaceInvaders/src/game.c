@@ -24,8 +24,16 @@ int enemySpeed = ENEMY_SPEED;
  */
 int main() {
 //	assertHighScoreFile();
+//	int a[5] = {10, 20, 44, 33, 1};
+//	saveScores(a);
 //	while(1){}
-	insertHighScore();
+
+	readScores();
+
+	insertScore(99, "John");
+//	insertScore(200, "Emil");
+//	insertScore(1000, "AnneMarethe");
+	while(1)
 
 	initializePS2(); // Initializes the PS 2 Keyboard
 	testKeyboard();		// Has infinite LOOP !!!!!

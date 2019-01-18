@@ -8,12 +8,31 @@
 #ifndef SRC_SDCARD_SDCARD_H_
 #define SRC_SDCARD_SDCARD_H_
 
+//#define _USE_STRFUNC 1
+//#undef FILE_SYSTEM_USE_STRFUNC
+//#define FILE_SYSTEM_USE_STRFUNC 1
+
 #include <stdlib.h>
+#include <math.h>
 
 #include "platform.h"
 #include "src/include/ff.h" //  SD CARD Configuration file
 
-void insertHighScore();
+#define MAX_SCORES 5
+#define PLAYERNAME_LENGTH 5
+#define SCORE_LIMIT sizeof(int)
+#define debug 1
+
+typedef struct {
+	int playerScore;
+	char playerName[PLAYERNAME_LENGTH];
+} PlayerEntity;
+
+void insertScore(int newScore, char *name);
+void saveScores(PlayerEntity *scoreList);
+PlayerEntity * bubbleSort(PlayerEntity *array);
+PlayerEntity * readScores();
 int charToInt(char c);
+void swap(PlayerEntity *a, PlayerEntity *b);
 
 #endif /* SRC_SDCARD_SDCARD_H_ */

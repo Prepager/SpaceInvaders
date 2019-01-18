@@ -9,20 +9,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="f_read" key="selection"/>
+		<item value="playerScores" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="f_size"/>
+			<item value="playerScores"/>
 			<item value="f_gets"/>
+			<item value="f_size"/>
 			<item value="f_read"/>
 			<item value="printf"/>
 			<item value="XPAR_FABRIC"/>
 			<item value="IP2INTC_IRPT"/>
 			<item value="XPAR_AXI_GPIO"/>
-			<item value="XPAR_FABRIC_AXI_GPIO"/>
 		</list>
 		<list key="replacehistory">
 			<item value=" "/>
@@ -33,7 +33,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="388" key="DIALOG_HEIGHT"/>
-		<item value="1218" key="DIALOG_X_ORIGIN"/>
-		<item value="197" key="DIALOG_Y_ORIGIN"/>
+		<item value="1374" key="DIALOG_X_ORIGIN"/>
+		<item value="133" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

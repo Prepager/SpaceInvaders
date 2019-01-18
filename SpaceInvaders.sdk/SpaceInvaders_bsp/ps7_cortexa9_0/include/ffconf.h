@@ -41,7 +41,7 @@ extern "C" {
 /   3: f_lseek() function is removed in addition to 2. */
 
 #if FILE_SYSTEM_USE_STRFUNC == 0
-#define	_USE_STRFUNC	1	/* 0:Disable */
+#define	_USE_STRFUNC	0	/* 0:Disable */
 #elif FILE_SYSTEM_USE_STRFUNC == 1
 #define	_USE_STRFUNC	1	/* 1:Enable */
 #elif FILE_SYSTEM_USE_STRFUNC == 2
