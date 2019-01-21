@@ -1,0 +1,232 @@
+#include "SDcard.h"
+
+
+/************ SD card parameters ************/
+static FATFS FS;						// File System instance
+FRESULT result;									// FRESULT variable
+//char FileName[32];								// File name
+//static char *Log_File; 							// pointer to the log
+//static const char *RootPath = "0:/";			//  string pointer to the logical drive number
+unsigned int BytesWr;							// Bytes written
+/************ SD card parameters ************/
+
+//PlayerEntity players[MAX_SCORES];
+
+void insertScore(int newScore, char * name) {
+//	if(debug) xil_printf("\nInsert Scores...\n");
+	// Read Scores
+//	PlayerEntity * scores = readScores();
+	PlayerEntity scores[MAX_SCORES];
+//	PlayerEntity * scoresPTR = scores;
+	readScores(scores);
+//	#if debug
+//		for(int i = 0; i <= MAX_SCORES; i++) xil_printf("Orig: %d, %s , %d\n", i, scores[i].playerName, scores[i].playerScore);
+//	#endif
+
+	// If new score is high enough add it to list
+	if(scores[MAX_SCORES - 1].playerScore < newScore) {
+		// Create new player list and populate with old players
+		PlayerEntity scoreList[MAX_SCORES+1];
+		for(int i = 0; i < MAX_SCORES; i++) {
+				scoreList[i].playerScore = scores[i].playerScore;
+				scoreList[i].playerName = scores[i].playerName;
+		}
+
+		// Create new player entity and add to list
+		PlayerEntity newPlayer;
+		newPlayer.playerScore = newScore;
+		strcpy(newPlayer.playerName, name);
+		scoreList[MAX_SCORES] = newPlayer;
+
+		#if debug
+			for(int i = 0; i <= MAX_SCORES; i++) xil_printf("New: %d, %d, %s\n", i, scoreList[i].playerScore, scoreList[i].playerName );
+		#endif
+
+		// Sort scores and save in MAX_SCORES long array
+		bubbleSort(scoreList);
+
+		for(int i = 0; i < MAX_SCORES; i++) {
+				scores[i] = scoreList[i];
+		}
+
+		#if debug
+			for(int i = 0; i < MAX_SCORES; i++) xil_printf("Sorted: %d, %d, %s\n", i, scoreList[i].playerScore, scoreList[i].playerName );
+		#endif
+
+		// Save scores to SD
+		saveScores(scoreList);
+	}
+
+}
+
+void saveScores(PlayerEntity *scoreList) {
+	if(debug) xil_printf("\nSave scores ...\n");
+//	if(debug) for(int i = 0; i < MAX_SCORES; i++){xil_printf("Player %s, %d\n", scoreList[i].playerName, scoreList[i].playerScore);}
+	// Initializes the SD Card
+	initializeSD();
+
+//	if(debug) xil_printf("SD Initialized\n");
+
+	// Mount root path, with forced imidiate mount
+	f_mount(&FS,"0:/", 1);
+//	if(debug) xil_printf("FS Mounted\n");
+
+	// File instance
+	FIL file;
+//	if(debug) xil_printf("File obj created\n");
+
+	// Open file if exists, create if not
+	result = f_open(&file, _FILE_, FA_CREATE_ALWAYS | FA_WRITE /*| FA_READ*/);
+//	if(debug) xil_printf("File opened\n");
+	if (result) {
+//		if(debug) xil_printf("Returning ... \n");
+	    f_close(&file);
+		return;
+	}
+
+//	if(debug) xil_printf("Beginning to calculate and write\n");
+	// Write scores and players
+	for(int i = 0; i < MAX_SCORES; i++) {
+
+//		if(debug) xil_printf("Initializing str array");
+
+		// Score String
+		char score[12];
+		sprintf(score, "%d", scoreList[i].playerScore);
+
+		// Allocate complete string
+		char format[strlen(score) + strlen(scoreList[i].playerName) + 1 + 4];
+		format[0] = '\0';
+
+		// Lineending and what not
+		char ending[3] = {13, 10, 0};
+//		char ending[1] = {0};
+
+		// Concat strings
+		strcat(format, score);
+//		if(debug) xil_printf("Concatinating: %s \t %s\n", format, score);
+		strcat(format,";");
+//		if(debug) xil_printf("Concatinating: %s\n", format);
+		strcat(format,scoreList[i].playerName);
+//		if(debug) xil_printf("Concatinating: %s\n", format);
+		strcat(format,ending);
+//		if(debug) xil_printf("%s\n", format);
+
+		result = f_write(&file, (char*)format, strlen(format), &BytesWr);
+		if(debug) xil_printf("Writing %s...\n", format);
+	}
+
+
+	//*bw < strlen(str)
+
+    f_close(&file);
+//    cleanup_platform();
+//	if(debug) xil_printf("File Closed\n");
+}
+
+void bubbleSort(PlayerEntity *array) {
+	for(int i = 0; i <= (MAX_SCORES); i++) {
+		for(int j = 0; j < (MAX_SCORES - i); j++) {
+			if (array[j].playerScore < array[j+1].playerScore) {
+				swap(&array[j], &array[j+1]);
+				#if debug
+					xil_printf("%s, %d swapped with %s, %d\n", array[j].playerName, array[j].playerScore, array[j+1].playerName, array[j+1].playerScore);
+				#endif
+			}
+		}
+	}
+//	return array;
+}
+
+void swap(PlayerEntity *a, PlayerEntity *b) {
+	PlayerEntity temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void readScores(PlayerEntity * playerList) {
+//	if(debug) xil_printf("\nReading Scores ...\n");
+    // Initializes the SD Card
+	initializeSD();
+//	if(debug) xil_printf("SD Initialized\n");
+
+	// Mount root path, with forced imidiate mount
+	f_mount(&FS,/*"0:/"*/"", 1);
+//	if(debug) xil_printf("FS Mounted\n");
+
+	// File instance
+	FIL file;
+//	if(debug) xil_printf("File opened\n");
+
+	// Open file if exists, create if not
+	result = f_open(&file, _FILE_, FA_OPEN_ALWAYS | FA_READ);
+	// If file is non existing create it
+	if (result) {
+//		if(debug) xil_printf("Returning ... \n");
+	    f_close(&file);
+		return;
+	}
+//	if(debug) xil_printf("File found\n");
+
+	// Buffer
+	char buffer[(SCORE_LIMIT*MAX_SCORES) + (PLAYERNAME_LENGTH)];
+//	if(debug) xil_printf("Scores Initialized (%d indices)\n", sizeof buffer);
+
+	// Clear playerScores and create counter
+	for(int i = 0; i < MAX_SCORES; i++) {
+		playerList[i].playerScore = 0;
+		//strcpy(playerList[i].playerName, "");
+		playerList[i].playerName[0] = '\0';
+	}
+	int e = 0;
+	// Read line
+	while(f_gets(buffer, sizeof buffer, &file) ) {
+//		if(debug) xil_printf("\nScore (%d): %s", strlen(buffer), buffer);
+//		if(debug) xil_printf("%d gets: ",e);
+		// instansiate variables for read mode (numbers/names) and indice in names
+		int seperation = 0, n = 0;
+
+		// Loop through the read buffer
+		for(int i = 0; i <= sizeof buffer; i++) {
+			if (debug) xil_printf("\t%c = %d\n", buffer[i], buffer[i]);
+			// If \r \n \0 is found break out - and reset seperation var
+			if( ((buffer[i] == 13) && (buffer[i+1] == 10) && (buffer[i+2] == 0)) || (n >= PLAYERNAME_LENGTH)) {
+				seperation = 0;
+				break;
+			}
+
+			// If score/name seperater is found set mode and continue
+			if( buffer[i] == ';') {
+				seperation = 1;
+				continue;
+			}
+
+			// Seperation 0 = getting numbers
+			if(seperation == 0) {
+				// Read char as int
+				int temp = charToInt(buffer[i]);
+//				if(debug) xil_printf("%d=%d, ",buffer[i], temp);
+				// Multiply by 10 and add temp (current char in buffer)
+				playerList[e].playerScore = temp == -1 ? playerList[e].playerScore : (playerList[e].playerScore << 3) + (playerList[e].playerScore << 1) + temp;
+			} else { // Seperation = 1, get remaining non termination chars and save
+				playerList[e].playerName[n] = buffer[i];
+				n++;
+			}
+		}
+//        if(debug) xil_printf("\nPlayer: %s, Int: %d\n",playerList[e].playerName , playerList[e].playerScore);
+        e++;
+    }
+
+    // Close the file and SD platform
+    f_close(&file);
+//    cleanup_platform();
+//	if(debug) xil_printf("File Closed\n");
+//	return players;
+}
+
+int charToInt(char c) {
+	int temp = -1;
+	if( (c > 47)&&(c < 58) ) temp = c - 48;
+	return temp;
+}
+

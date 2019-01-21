@@ -37,6 +37,47 @@ u32 nextEnemySpeed = ENEMY_SPEED;
  */
 int main()
 {
+	// SD TEST
+	//	readScores();
+		PlayerEntity playerList[5];
+
+		playerList[0].playerScore = 29;
+		strcpy(playerList[0].playerName, "John");
+
+		playerList[1].playerScore = 50;
+		strcpy(playerList[1].playerName, "Fisk");
+
+		for(int i = 2; i < 5; i++) {
+			playerList[i].playerScore = 0;
+			strcpy(playerList[i].playerName, "");
+		}
+
+		xil_printf("Save Players\n");
+		saveScores(playerList);
+
+		readScores(playerList);
+		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
+
+		insertScore(200, "BBB");
+		readScores(playerList);
+		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
+
+		insertScore(10, "BAA");
+		readScores(playerList);
+		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
+
+		insertScore(1999, "Oste");
+		readScores(playerList);
+		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
+
+		insertScore(2000, "AAA");
+		readScores(playerList);
+		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
+
+		xil_printf("Done");
+		while(1)
+
+
 	// Initialize the devices and objects.
 	initializeDevices();
 	initializeObjects();

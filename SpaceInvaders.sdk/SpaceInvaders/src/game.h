@@ -8,6 +8,7 @@
 #include "xparameters.h"
 #include "initializeDisplay.h"
 #include "display_ctrl/display_ctrl.h"
+#include "SDCARD/SDcard.h"
 
 // Settings
 #include "settings.h"

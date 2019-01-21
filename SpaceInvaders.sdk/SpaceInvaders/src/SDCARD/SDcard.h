@@ -22,6 +22,7 @@
 #define PLAYERNAME_LENGTH 5
 #define SCORE_LIMIT sizeof(int)
 #define debug 1
+#define _FILE_ "Scores.TXT"
 
 typedef struct {
 	int playerScore;
@@ -30,8 +31,8 @@ typedef struct {
 
 void insertScore(int newScore, char *name);
 void saveScores(PlayerEntity *scoreList);
-PlayerEntity * bubbleSort(PlayerEntity *array);
-PlayerEntity * readScores();
+void bubbleSort(PlayerEntity *array);
+void readScores(PlayerEntity * playerList);
 int charToInt(char c);
 void swap(PlayerEntity *a, PlayerEntity *b);
 
