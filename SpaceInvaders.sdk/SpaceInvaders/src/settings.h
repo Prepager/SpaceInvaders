@@ -2,6 +2,16 @@
 #define SETTINGS_H_
 
 /* ------------------------------------------------------------ */
+/*		    		Keyboard Declarations		    		  	*/
+/* ------------------------------------------------------------ */
+
+#define KEY_ENTER 13
+#define KEY_BACKSPACE 8
+
+#define PRESSED_LIMIT 10
+#define PS2_BASE_ADDRESS XPAR_AXI_PS2_0_S_AXI_BASEADDR
+
+/* ------------------------------------------------------------ */
 /*		    			Menu Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
@@ -75,8 +85,8 @@
 #define PLAYER_HEALTH_MAX 6
 #define PLAYER_MOVEMENT 1
 
-#define PLAYER_KEY_LEFT 1
-#define PLAYER_KEY_RIGHT 2
+#define PLAYER_KEY_LEFT 2
+#define PLAYER_KEY_RIGHT 1
 #define PLAYER_KEY_SHOOT 8
 
 #define PLAYER_DYING 250

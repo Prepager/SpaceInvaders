@@ -37,47 +37,6 @@ u32 nextEnemySpeed = ENEMY_SPEED;
  */
 int main()
 {
-	// SD TEST
-	//	readScores();
-		PlayerEntity playerList[5];
-
-		playerList[0].playerScore = 29;
-		strcpy(playerList[0].playerName, "John");
-
-		playerList[1].playerScore = 50;
-		strcpy(playerList[1].playerName, "Fisk");
-
-		for(int i = 2; i < 5; i++) {
-			playerList[i].playerScore = 0;
-			strcpy(playerList[i].playerName, "");
-		}
-
-		xil_printf("Save Players\n");
-		saveScores(playerList);
-
-		readScores(playerList);
-		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
-
-		insertScore(200, "BBB");
-		readScores(playerList);
-		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
-
-		insertScore(10, "BAA");
-		readScores(playerList);
-		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
-
-		insertScore(1999, "Oste");
-		readScores(playerList);
-		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
-
-		insertScore(2000, "AAA");
-		readScores(playerList);
-		for(int i = 0; i < MAX_SCORES; i++) xil_printf("%d, %s\n", i, playerList[i].playerName);
-
-		xil_printf("Done");
-		while(1)
-
-
 	// Initialize the devices and objects.
 	initializeDevices();
 	initializeObjects();
@@ -86,6 +45,9 @@ int main()
 	while(1) {
 		// Read in the current time.
 		XTime_GetTime(&currentTime);
+
+		// Process incoming input.
+		processInput();
 
 		// Depaint the game objects.
 		if (! showMenu) depaint();
@@ -127,8 +89,7 @@ int main()
 			showMenu = 1;
 
 			// Check for input from player.
-			xil_printf("Checking...");
-			if (readPlayerInput()) {
+			if (readPlayerInput() || keyPressed(KEY_ENTER)) {
 				// Disable menu and redraw.
 				showMenu = 0;
 				drawScene = 1;
@@ -160,8 +121,9 @@ int main()
  */
 void initializeDevices()
 {
-	// Initialize the display.
+	// Initialize the devices.
 	initializeDisplay();
+	initializeKeyboard();
 }
 
 /**

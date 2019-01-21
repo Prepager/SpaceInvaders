@@ -14,7 +14,7 @@ void initializeMenu(Menu *menu, Player *player) {
 
 	// Set instructions text defaults.
 	menu->pressKey.length = 23;
-	menu->pressKey.text = "PRESS SPACE TO CONTINUE";
+	menu->pressKey.text = "PRESS ENTER TO CONTINUE";
 	menu->pressKey.yPos = DISPLAY_HEIGHT - (CHAR_TEXT_HEIGHT * 2);
 	menu->pressKey.xPos = (DISPLAY_WIDTH / 2) - (calculateTextWidth(&menu->pressKey) / 2);
 }

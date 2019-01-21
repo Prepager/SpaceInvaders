@@ -8,7 +8,6 @@
 #include "xparameters.h"
 #include "initializeDisplay.h"
 #include "display_ctrl/display_ctrl.h"
-#include "SDCARD/SDcard.h"
 
 // Settings
 #include "settings.h"
@@ -21,6 +20,7 @@
 #include "Shield/Shield.h"
 #include "Player/Player.h"
 #include "Health/Health.h"
+#include "Keyboard/Keyboard.h"
 
 /* ------------------------------------------------------------ */
 /*					Procedure Declarations						*/

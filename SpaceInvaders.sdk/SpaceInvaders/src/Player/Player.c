@@ -125,10 +125,10 @@ void positionPlayer(Player *player) {
 	u8 input = readPlayerInput();
 
 	// Determine the direction.
-	if (input & PLAYER_KEY_LEFT) {
-		nextPosition += PLAYER_MOVEMENT;
-	} else if (input & PLAYER_KEY_RIGHT) {
+	if ((input & PLAYER_KEY_LEFT) || keysPressed('A', '<')) {
 		nextPosition -= PLAYER_MOVEMENT;
+	} else if ((input & PLAYER_KEY_RIGHT) || keysPressed('D', '>')) {
+		nextPosition += PLAYER_MOVEMENT;
 	}
 
 	// Update position if not outside bounds.
@@ -137,7 +137,7 @@ void positionPlayer(Player *player) {
 	}
 
 	// Check if shooting and no bullet exists.
-	if (player->bullet == NULL && input & PLAYER_KEY_SHOOT) {
+	if (player->bullet == NULL && ((input & PLAYER_KEY_SHOOT) || keyPressed('W') || keysPressed('^', ' '))) {
 		// Allocate space for new bullet.
 		player->bullet = malloc(sizeof(Bullet));
 

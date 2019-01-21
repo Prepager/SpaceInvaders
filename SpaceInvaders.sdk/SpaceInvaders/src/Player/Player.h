@@ -8,6 +8,7 @@
 #include "xil_types.h"
 #include "../settings.h"
 #include "../Bullet/Bullet.h"
+#include "../Keyboard/Keyboard.h"
 
 // Images
 #include "Resources/Ship.h"

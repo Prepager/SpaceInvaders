@@ -1,185 +1,172 @@
 // Header
 #include "Keyboard.h"
 
+// Globals
+axi_ps2 PS2Instance;
+axi_ps2_Config PS2Config;
+
+int extended = 0;
+int releasing = 0;
+
+int pressedCount = 0;
+char pressed[PRESSED_LIMIT];
+
 // Initialize the keyboard.
-int initializeKeyboard() {
-	//INITIALIZE AXI PS2
-	axi_ps2_CfgInitialize(&PS2_Inst, &PS2ConfigPtr, PS2_Baseaddr);
+void initializeKeyboard() {
+	// Initialize PS2 instance.
+	int status = axi_ps2_CfgInitialize(&PS2Instance, &PS2Config, PS2_BASE_ADDRESS);
+	if (status != XST_SUCCESS)
+	{
+		xil_printf("Keyboard initialization failed %d\r\n", status);
+		return;
+	}
+}
 
+// Return if input is the same as passed char.
+int keyPressed(char character) {
+	// Loop through pressed count.
+	for (int i = 0; i < pressedCount; i++) {
+		// Return 1 if equals.
+		if (pressed[i] == character) {
+			return 1;
+		}
+	}
+
+	// Return 0 if not equals.
 	return 0;
 }
 
-unsigned char readKey() {
-	// Create buffer and receipt array
-	u8 *buffer;
-	unsigned char array[2] = { 0 };
-	unsigned char key = 0;
-	buffer = &key;
-
-	// Read byte(s)
-	int returnvalue = axi_ps2_Recv(&PS2_Inst, buffer, 1);
-
-	// If bytes are sent key is pressed
-	if (returnvalue != 0) {
-//		xil_printf("1, %d Byte(s) was returned!: %u or 0x%X \n", returnvalue, array[0], array[0]);
-//		xil_printf("2, %d Byte(s) was returned!: %u or 0x%X \n", returnvalue, array[1], array[1]);
-		xil_printf("%d Byte(s) was returned!: %u or 0x%X \n", returnvalue, key, key);
-		keyboardCMD(buffer);
-//		return *buffer;
-	}
-	return key;
+// Return if input is the same as passed chars.
+int keysPressed(char char1, char char2) {
+	return keyPressed(char1) || keyPressed(char2);
 }
 
-//----------------------------------------------------
-// MAIN FUNCTION
-//----------------------------------------------------
-int testKeyboard(void) {
+// Read in and return address from keyboard.
+unsigned char readKeyAddress() {
+	// Created unsigned char buffer.
+	unsigned char key;
+	u8 * buffer = &key;
 
-	//initializePS2(); // Initializes the PS 2 Keyboard
+	// Read in data from PS2 instance.
+	int readBytes = axi_ps2_Recv(&PS2Instance, buffer, 1);
 
-	unsigned char key = 0;
-	while (1) {
-		key = readKey();
-		if(key != 0) {
-			xil_printf("%u, was pressed\n\n", key);
-			key = 0;
-		}
-	}
-	return 0;
+	// Return key if read bytes.
+	return readBytes ? key : 0;
 }
 
-/*
- * Takes the buffer and hands it over to the keyboardMap() that will
- * return the char which corresponds to the key pressed or released
- *
- * @param	Unsigned char buffer where a char is located at index 0
- *
- *
- * @note 	When a key is pressed, the scan code for the button will be
- * 			in the buffer. BUT it's a little more complicated when the button
- * 			is released.
- * 				*Either a E0 will be recieved and then the following
- * 					scancode will tell which button was released
- * 				*OR a E0 will be recieved, then a F0 will be recieved
- * 					and THEN a scancode will tell which "Extended"
- * 					button was released.
- *
- Also buttons can be hold down for a longer periode of time and a new "button press"
- will then be recieved every ~ 100 ms. BUT if other buttons also get pushed down
- it will interrupt this "repeat button press every 100 ms",
- like in this serial monitor dump:
+// Process the incoming keyboard input.
+void processInput() {
+	// Read raw key input address.
+	unsigned char input = readKeyAddress();
+	char character = mapCharacter(input);
 
- "<-" was pressed: "107" or "0x6B"
- "^" was pressed: "117" or "0x75"
- "->" was pressed: "116" or "0x74"
- ..
- "->" was pressed: "116" or "0x74"
- "Space" was pressed: "41" or "0x29"
- "Space" button was released: "41" or "0x29"
- "<-" abutton was released: "107" or "0x6B"
- "^" extended button was released: "117" or "0x75"
- "->" button was released: "116" or "0x74"
-
-
- Buttons can be released during a button being hold down. This will
- also interrupt the original buttons "repeat button press every 100 ms".
-
- * Programmer : Christian Mark 12-01-2019
- *****************************************************************************/
-unsigned char keyboardCMD(unsigned char *character /*unsigned char array[2]*/) {
-	unsigned char printchar = 0;
-	static int E0wasRecieved = 0; // A E0 was recieved on the last keyboardMap()
-	static int F0wasRecieved = 0; // A F0 was recieved on the last keyboardMap()
-	printchar = keyboardMap(character, &E0wasRecieved, &F0wasRecieved);
-	if (printchar == 0) {return 0;}
-
-	if (F0wasRecieved == 1) {
-		if (E0wasRecieved == 1) {
-			xil_printf("\t\"%c\" extended button was released", printchar);
-			E0wasRecieved = 0;
-		} else {
-			switch (printchar) {
-			case '<':
-				xil_printf("\t\"<-\" button was released");
-				break;
-			case '>':
-				xil_printf("\t\"->\" button was released");
-				break;
-			case 'E':
-				xil_printf("\t\"Enter\" button was released");
-				break;
-			case 's':
-				xil_printf("\t\"Space\" button was released");
-				break;
-			default:
-				xil_printf("\t\"%c\" button was released", printchar);
-				break;
-			}
-			//printf("\"%c\" button was released\n",printchar);
-		}
-		F0wasRecieved = 0;
-	} else {
-		switch (printchar) {
-		case '<':
-			xil_printf("\"<-\" was pressed");
-			break;
-		case '>':
-			xil_printf("\"->\" was pressed");
-			break;
-		case 'E':
-			xil_printf("\"Enter\" was pressed");
-			break;
-		case 's':
-			xil_printf("\"Space\" was pressed");
-			break;
-		default:
-			xil_printf("\"%c\" was pressed", printchar);
-			break;
-		}
+	// Check if should be added or removed.
+	if (releasing && character) {
+		extended = 0;
+		removeInputCharacter(character);
+	} else if (character) {
+		addInputCharacter(character);
 	}
-	xil_printf(": \"%u\" or \"0x%X\"\n", *character, *character);
-	E0wasRecieved = 0;
-	return printchar;
+
+	// Reset releasing status.
+	releasing = 0;
+
+	// Enable extended buttons.
+	if (input == 0xE0) {
+		extended = 1;
+		return;
+	}
+
+	// Enable releasing status.
+	if (input == 0xF0) {
+		releasing = 1;
+		return;
+	}
 }
 
-unsigned char keyboardMap(unsigned char *array/*[2]*/, int *E0wasRecieved, int *F0wasRecieved) {
+// Add a input character as pressed.
+void addInputCharacter(char character) {
+	// Skip if already is pressed.
+	if (keyPressed(character)) return;
 
-	switch (*array/*[0]*/) {
-	case 0xE0: // Extended button was released
-		*E0wasRecieved = 1;
-		return 0;
-	case 0xF0: // Button was released
-		*F0wasRecieved = 1;
-		return 0;
-	case 0x1C: // A
-		return 'A';
-	case 0x1B: // S
-		return 'S';
-	case 0x23: // D
-		return 'D';
-	case 0x1D: // W
-		return 'W';
-	case 0x75: // Arrow up
-		return '^';
-	case 0x72: // Arrow down
-		return 'v';
-	case 0x6b: // Arrow left
-		*E0wasRecieved = 0;
-		return '<';
-	case 0x74: // Arrow right
-		*E0wasRecieved = 0;
-		return '>';
-	case 0x5A: // Enter
-		*E0wasRecieved = 0;
-		return 'E';
-	case 0x29: // Space
-		*E0wasRecieved = 0;
-		return 's';
-	default:
-//		xil_printf("convertion of %u//%u ", *array, array);
-		*E0wasRecieved = 0;
-		*F0wasRecieved = 0;
-		return 0;
+	// Remove first pressed if over limit.
+	if ((pressedCount + 1) >= PRESSED_LIMIT) {
+		removeInputCharacter(pressed[0]);
 	}
 
+	// Add character to pressed list.
+	pressed[pressedCount++] = character;
+}
+
+
+// Remove a input character as pressed.
+void removeInputCharacter(char character) {
+	// Skip if not already is pressed.
+	if (! keyPressed(character)) return;
+
+	// Loop through the pressed keys.
+	int newCount = 0;
+	for (int i = 0; i < pressedCount; i++) {
+		// Skip if character to be removed.
+		if (pressed[i] == character) continue;
+
+		// Copy key char to pressed input
+		pressed[newCount++] = pressed[i];
+	}
+
+	// Save new counter.
+	pressedCount = newCount;
+}
+
+// Map and return the correct char from the passed value.
+char mapCharacter(unsigned char character) {
+	// Check if extended keys.
+	if (extended) {
+		// Map extended addresses to chars.
+		switch (character) {
+			case 0x6B: return '<';
+			case 0x74: return '>';
+			case 0x75: return '^';
+		}
+
+		// Return 0 if not found.
+		return (char) 0;
+	}
+
+	// Map addresses to chars.
+	switch (character) {
+		case 0x1C: return 'A';
+		case 0x32: return 'B';
+		case 0x21: return 'C';
+		case 0x23: return 'D';
+		case 0x24: return 'E';
+		case 0x2B: return 'F';
+		case 0x34: return 'G';
+		case 0x33: return 'H';
+		case 0x43: return 'I';
+		case 0x3B: return 'J';
+		case 0x42: return 'K';
+		case 0x4B: return 'L';
+		case 0x3A: return 'M';
+		case 0x31: return 'N';
+		case 0x44: return 'O';
+		case 0x4D: return 'P';
+		case 0x15: return 'Q';
+		case 0x2D: return 'R';
+		case 0x1B: return 'S';
+		case 0x2C: return 'T';
+		case 0x3C: return 'U';
+		case 0x2A: return 'V';
+		case 0x1D: return 'W';
+		case 0x22: return 'X';
+		case 0x35: return 'Y';
+		case 0x1A: return 'Z';
+
+		case 0x29: return (char) 32; // Space
+		case 0x5A: return (char) KEY_ENTER; // Enter
+		case 0x66: return (char) KEY_BACKSPACE; // Backspace
+	}
+
+	// Return 0 if not found.
+	return (char) 0;
 }
