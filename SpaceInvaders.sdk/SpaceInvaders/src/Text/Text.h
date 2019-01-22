@@ -7,6 +7,17 @@
 #include "../settings.h"
 
 // Images
+#include "Resources/Char0.h"
+#include "Resources/Char1.h"
+#include "Resources/Char2.h"
+#include "Resources/Char3.h"
+#include "Resources/Char4.h"
+#include "Resources/Char5.h"
+#include "Resources/Char6.h"
+#include "Resources/Char7.h"
+#include "Resources/Char8.h"
+#include "Resources/Char9.h"
+
 #include "Resources/CharA.h"
 #include "Resources/CharB.h"
 #include "Resources/CharC.h"
@@ -35,7 +46,18 @@
 #include "Resources/CharZ.h"
 
 __attribute__ ((unused))
-static u8 *CharTextImages[26] = {
+static u8 *CharTextImages[10 + 26] = {
+	TextChar0,
+	TextChar1,
+	TextChar2,
+	TextChar3,
+	TextChar4,
+	TextChar5,
+	TextChar6,
+	TextChar7,
+	TextChar8,
+	TextChar9,
+
 	TextCharA,
 	TextCharB,
 	TextCharC,
@@ -72,10 +94,10 @@ typedef struct {
 
 	// General
 	char *text;
-	int length;
 } Text;
 
 // Constructors
+u8* textImage(char character);
 int calculateTextWidth(Text *text);
 void paintText(Text *text, u8 *frame);
 void depaintText(Text *text, u8 *frame);

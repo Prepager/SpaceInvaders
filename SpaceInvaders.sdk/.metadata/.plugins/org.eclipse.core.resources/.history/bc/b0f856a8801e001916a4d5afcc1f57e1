@@ -1,0 +1,29 @@
+#ifndef SRC_SDCARD_SDCARD_H_
+#define SRC_SDCARD_SDCARD_H_
+
+// Includes
+#include <math.h>
+#include <stdio.h>
+#include "xil_io.h"
+#include "../settings.h"
+#include "src/include/ff.h"
+
+// Defines
+#define SCORE_FILE "test.txt"
+#define SCORE_BYTES ((sizeof(char) + sizeof(char) * 2 + sizeof(char) * SCORE_LENGTH + sizeof(char) * PLAYERNAME_LENGTH) * 3)
+
+// Struct
+typedef struct {
+	int score;
+	char name[PLAYERNAME_LENGTH + 1];
+} PlayerEntry;
+
+// Prototypes
+void bubbleSort(PlayerEntry *array[]);
+void saveScores(PlayerEntry *entries);
+void readScores(PlayerEntry * entries);
+void swap(PlayerEntry *a, PlayerEntry *b);
+void initializeSDCard(PlayerEntry *entries);
+void insertScore(PlayerEntry *entries, int score, char *name);
+
+#endif

@@ -6,9 +6,11 @@
 /* ------------------------------------------------------------ */
 
 #define MAX_SCORES 5
-#define SCORE_LENGTH 6
-#define PLAYERNAME_LENGTH 10
-#define SCORE_LIMIT sizeof(int)
+#define SCORE_LENGTH 6 + 1
+#define PLAYERNAME_LENGTH 10 + 1
+#define SCORE_FILE "scores.txt"
+#define SCORE_BYTES ((sizeof(char) + sizeof(char) * 2 + sizeof(char) * SCORE_LENGTH + sizeof(char) * PLAYERNAME_LENGTH) * 3)
+
 
 /* ------------------------------------------------------------ */
 /*		    		Keyboard Declarations		    		  	*/

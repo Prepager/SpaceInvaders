@@ -23,8 +23,8 @@ src/Health \
 src/Keyboard \
 src/Menu \
 src/Player \
-src/SDCARD \
-src/SDCARD/src \
+src/SDCard \
+src/SDCard/src \
 src/Score \
 src/Shield/Block \
 src/Shield/Corner \

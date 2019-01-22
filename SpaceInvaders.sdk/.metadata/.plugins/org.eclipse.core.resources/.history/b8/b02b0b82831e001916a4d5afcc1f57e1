@@ -1,0 +1,387 @@
+// Includes
+#include "game.h"
+
+// Timer structs.
+XTime bonusTimer = 0;
+XTime endedTimer = 0;
+XTime enemyTimer = 0;
+XTime currentTime = 0;
+
+// Buffer arrays.
+u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
+u8 *bufferPointer[DISPLAY_NUM_FRAMES];
+
+// Object arrays.
+Menu menu;
+Score score;
+Player player;
+Health health;
+BonusEnemy bonusEnemy;
+Enemy enemies[ENEMY_TOTAL];
+Shield shields[SHIELD_COUNT];
+Bullet *enemyBullets[ENEMY_BULLETS];
+PlayerEntry entries[MAX_SCORES];
+
+// Object values.
+int showMenu = 0;
+int drawScene = 1;
+int gameLevel = 0;
+int gameEnded = 0;
+int *gamePaused = 0;
+int enemyBonusCounter = 0;
+
+u32 enemySpeed = ENEMY_SPEED;
+u32 nextEnemySpeed = ENEMY_SPEED;
+u8 kills = 0, dead = 0, ufo = 0, pew = 0;
+
+/**
+ * Initialize program and start rendering.
+ */
+int main()
+{
+	// Initialize the devices and objects.
+	initializeDevices();
+	initializeObjects();
+
+	// Start rendering infinity loop.
+	while(1) {
+		// Read in the current time.
+		XTime_GetTime(&currentTime);
+
+		// Process incoming input.
+		processInput();
+
+		// Depaint the game objects.
+		if (! showMenu) depaint();
+
+		// Check if the game is paused or ended.
+		if (! gameEnded && (gamePaused == NULL || ! (*gamePaused))) {
+			// Check if bonus should spawn.
+			if (timePast(bonusTimer, COUNTS_PER_SECOND)) {
+				// Increment bonus counter.
+				enemyBonusCounter++;
+
+				// Check if has hit enemy bonus spawn time.
+				if (enemyBonusCounter >= ENEMY_BONUS_SPAWN) {
+					// Respawn bonus enemy.
+					bonusEnemy.dead = 0;
+					// set bonus enemy flag for interrupt
+					ufo = 1;
+					bonusEnemy.dying = 0;
+					bonusEnemy.xPos = -ENEMY_BONUS_WIDTH;
+
+					// Reset bonus counter.
+					enemyBonusCounter = 0;
+				}
+
+				// Save the current time.
+				XTime_GetTime(&bonusTimer);
+			}
+
+			// Reposition the game objects.
+			position();
+
+			// Check for collisions.
+			collides();
+		} else if (gameEnded && timePast(endedTimer, PLAYER_RESPAWN_TIME)) {
+			// Redraw scene if menu is not already enabled.
+			if (! showMenu) {
+				drawScene = 1;
+			}
+
+			// Set show menu state.
+			showMenu = 1;
+
+			// Check for input from player.
+			if (readPlayerInput() || keyPressed(KEY_ENTER)) {
+				// Paint to catch keypress.
+				paint();
+
+				// Disable menu and redraw.
+				showMenu = 0;
+				drawScene = 1;
+
+				// Reinitialize the objects.
+				initializeObjects();
+			}
+		}
+
+		// Repaint the game objects.
+		paint();
+
+		// Update the enemy timer.
+		if (timePast(enemyTimer, enemySpeed)) {
+			enemyTimer = currentTime;
+			enemySpeed = nextEnemySpeed;
+		}
+
+		// Flush the frame cache.
+		Xil_DCacheFlushRange((unsigned int) getFrame(), MAX_FRAME);
+	}
+
+	// Return unsuccessful run.
+	return 0;
+}
+
+/**
+ * Initialize the devices and objects.
+ */
+void initializeDevices()
+{
+	// Initialize the devices.
+	initializeTimer();
+	initializeDisplay();
+	initializeKeyboard();
+	Initialize_Sound_IPs();
+}
+
+/**
+ * Initialize the devices and objects.
+ */
+void initializeObjects()
+{
+	// Initialize game objects.
+	initializePlayer(&player);
+	initializeMenu(&player);
+	initializeShields(shields);
+	initializeEnemies(enemies);
+	initializeBonusEnemy(&bonusEnemy);
+	initializeScore(&score, &player.score);
+	initializeHealth(&health, &player.health);
+
+	// Delete player bullet.
+	free(player.bullet);
+	player.bullet = NULL;
+
+	// Delete enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		if (enemyBullets[i]) {
+			// Deallocate the space.
+			free(enemyBullets[i]);
+
+			// Reset pointer to null.
+			enemyBullets[i] = NULL;
+		}
+	}
+
+	// Reset game state.
+	gameLevel = 0;
+	gameEnded = 0;
+	gamePaused = NULL;
+
+	// Redraw the background scene.
+	drawScene = 1;
+}
+
+/**
+ * Paint the game objects.
+ */
+void paint()
+{
+	// Get the current frame.
+	u8 *frame = getFrame();
+
+	// Draw the background if needed.
+	if (drawScene) {
+		// Draw the background.
+		memset(&frame[0], BACKGROUND, sizeof(u8) * MAX_FRAME);
+
+		// Disable scene drawing.
+		drawScene = 0;
+	}
+
+	// Draw the menu and return if visible.
+	if (showMenu) {
+		return paintMenu(getFrame());
+	}
+
+	// Draw the game elements.
+	paintPlayer(&player, frame);
+	paintShields(shields, frame);
+	paintBonusEnemy(&bonusEnemy, frame);
+	if (timePast(enemyTimer, enemySpeed)) paintEnemies(enemies, frame);
+
+	// Draw enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		if(enemyBullets[i]) paintBullet(enemyBullets[i], frame);
+	}
+
+	// Draw the top elements.
+	paintScore(&score, frame);
+	paintHealth(&health, frame);
+}
+
+/**
+ * Depaint the game objects.
+ */
+void depaint()
+{
+	// Get the current frame.
+	u8 *frame = getFrame();
+
+	// Remove the game elements.
+	depaintPlayer(&player, frame);
+	depaintBonusEnemy(&bonusEnemy, frame);
+	if (timePast(enemyTimer, enemySpeed)) depaintEnemies(enemies, frame);
+
+	// Draw enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		if(enemyBullets[i]) depaintBullet(enemyBullets[i], frame);
+	}
+}
+
+/**
+ * Position the game objects.
+ */
+void position()
+{
+	// Skip positioning if in menu.
+	if (showMenu) return;
+
+	// Position the game elements.
+	positionPlayer(&player);
+	if (currentTime % 2) positionBonusEnemy(&bonusEnemy);
+	if (timePast(enemyTimer, enemySpeed)) {
+		// Position and get the amount of alive enemies.
+		int alive = positionEnemies(enemies);
+
+		// Check if no more enemy exists.
+		if (alive == 0) {
+			// Pause the game.
+			int paused = 1;
+			gamePaused = &paused;
+
+			// Increment the level.
+			gameLevel++;
+
+			// Increment player health.
+			if (player.health < PLAYER_HEALTH_MAX) {
+				player.health++;
+			}
+
+			// Delete player bullet.
+			free(player.bullet);
+			player.bullet = NULL;
+
+			// Respawn the enemies.
+			initializeEnemies(enemies);
+
+			// Restart the game.
+			gamePaused = NULL;
+			return;
+		}
+
+		// Check if enemy at death position.
+		if (alive == -1) {
+			// Enable player dying time.
+			player.health = 0;
+			player.dying = PLAYER_DYING;
+			player.dyingState = 0;
+
+			// Mark the game as ended.
+			gameEnded = 1;
+
+			// Save the current ended time.
+			XTime_GetTime(&endedTimer);
+
+			// Return out of positioning.
+			return;
+		}
+
+		// Calculate the next enemy movement speed.
+		nextEnemySpeed = ENEMY_SPEED;
+		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (ENEMY_TOTAL - alive);
+		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (gameLevel * (ENEMY_TOTAL / 2));
+
+		// Check next enemy speed bounds.
+		if (nextEnemySpeed > ENEMY_SPEED_MAX) {
+			nextEnemySpeed = ENEMY_SPEED_MAX;
+		}
+
+		// Fire bullets from enemies.
+		fireEnemies(enemies, enemyBullets);
+	}
+
+	// Position enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		if(enemyBullets[i]) enemyBullets[i] = positionBullet(enemyBullets[i], BULLET_ENEMY_MOVEMENT);
+	}
+}
+
+/**
+ * Check for collisions on game objects.
+ */
+void collides()
+{
+	// Check if the bullet exists.
+	if (player.bullet) {
+		// Check collision for enemies and shields.
+		if (player.bullet) player.bullet = collidesShields(shields, player.bullet);
+		if (player.bullet) {
+			player.bullet = collidesEnemies(enemies, player.bullet, &player.score);
+			// Increase flag for enemy hit
+			if(player.bullet == NULL) kills++;
+		}
+		if (player.bullet) {
+			player.bullet = collidesBonusEnemy(&bonusEnemy, player.bullet, &player.score);
+			if(player.bullet == NULL) ufo--;
+		}
+
+		// Repaint enemies if hit.
+		if (! player.bullet) {
+			paintEnemies(enemies, getFrame());
+		}
+	}
+
+	// Check collision enemy bullets.
+	for (int i = 0; i < ENEMY_BULLETS; i++) {
+		// Check collision with player.
+		if(enemyBullets[i]) {
+			// Check collision and update bullet.
+			enemyBullets[i] = collidesPlayer(&player, enemyBullets[i]);
+
+			// Check if player was hit.
+			if (! enemyBullets[i]) {
+				// Set flag for dead sound
+				dead++;
+				// Pause game while player is dying.
+				gamePaused = &player.dying;
+
+				// Check if player has died.
+				if (! player.health) {
+					// Mark the game as ended.
+					gameEnded = 1;
+
+					// Save the current ended time.
+					XTime_GetTime(&endedTimer);
+
+					// Return out.
+					return;
+				}
+			}
+		}
+
+		// Check collision with shields.
+		if(enemyBullets[i]) enemyBullets[i] = collidesShields(shields, enemyBullets[i]);
+
+		// Repaint enemy if collides with enemy bullets.
+		Enemy *collides = collidesReturnEnemy(enemies, enemyBullets[i]);
+		if (collides) paintEnemy(collides, getFrame());
+	}
+}
+
+/**
+ * Return the current frame pointer.
+ */
+u8* getFrame()
+{
+	return controller.framePtr[controller.curFrame];
+}
+
+/**
+ * Return whether defined time has passed.
+ */
+int timePast(XTime timer, int time)
+{
+	return (currentTime - timer) >= time;
+}

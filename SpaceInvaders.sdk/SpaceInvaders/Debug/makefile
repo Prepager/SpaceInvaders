@@ -17,8 +17,8 @@ RM := rm -rf
 -include src/Shield/Block/subdir.mk
 -include src/Shield/subdir.mk
 -include src/Score/subdir.mk
--include src/SDCARD/src/subdir.mk
--include src/SDCARD/subdir.mk
+-include src/SDCard/src/subdir.mk
+-include src/SDCard/subdir.mk
 -include src/Player/subdir.mk
 -include src/Menu/subdir.mk
 -include src/Keyboard/subdir.mk

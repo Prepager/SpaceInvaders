@@ -1,37 +1,25 @@
-/*
- * SDcard.h
- *
- *  Created on: 17 Jan 2019
- *      Author: John
- */
-
 #ifndef SRC_SDCARD_SDCARD_H_
 #define SRC_SDCARD_SDCARD_H_
 
-//#define _USE_STRFUNC 1
-//#undef FILE_SYSTEM_USE_STRFUNC
-//#define FILE_SYSTEM_USE_STRFUNC 1
-
-#include <stdlib.h>
+// Includes
 #include <math.h>
-
-#include "platform.h"
+#include <stdio.h>
+#include "xil_io.h"
 #include "../settings.h"
-#include "src/include/ff.h" //  SD CARD Configuration file
+#include "src/include/ff.h"
 
-#define debug 1
-#define _FILE_ "Scores.TXT"
-
+// Struct
 typedef struct {
-	int playerScore;
-	char playerName[PLAYERNAME_LENGTH];
+	int score;
+	char name[PLAYERNAME_LENGTH];
 } PlayerEntry;
 
-void insertScore(int newScore, char *name);
-void saveScores(PlayerEntry *scoreList);
-void bubbleSort(PlayerEntry *array);
-void readScores(PlayerEntry * playerList);
-int charToInt(char c);
+// Prototypes
+void bubbleSort(PlayerEntry *array[]);
+void saveScores(PlayerEntry *entries);
+void readScores(PlayerEntry * entries);
 void swap(PlayerEntry *a, PlayerEntry *b);
+void initializeSDCard(PlayerEntry *entries);
+void insertScore(PlayerEntry *entries, int score, char *name);
 
-#endif /* SRC_SDCARD_SDCARD_H_ */
+#endif
