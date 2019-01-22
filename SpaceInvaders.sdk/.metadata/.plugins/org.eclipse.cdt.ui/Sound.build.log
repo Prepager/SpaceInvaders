@@ -1,0 +1,24 @@
+16:24:44 **** Auto Build of configuration Debug for project Sound ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Timer/Timer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Timer/Timer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Sound_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/Timer/Timer.d" -MT"src/Timer/Timer.o" -o "src/Timer/Timer.o" "../src/Timer/Timer.c"
+In file included from ../src/Timer/Timer.h:4:0,
+                 from ../src/Timer/Timer.c:1:
+../../Sound_bsp/ps7_cortexa9_1/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Timer/Timer.c: In function 'timerHandler':
+../src/Timer/Timer.c:24:4: warning: implicit declaration of function 'audio_stream' [-Wimplicit-function-declaration]
+    audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
+    ^~~~~~~~~~~~
+../src/Timer/Timer.c:24:17: error: 'invaderKilled' undeclared (first use in this function)
+    audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
+                 ^~~~~~~~~~~~~
+../src/Timer/Timer.c:24:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/Timer/Timer.o] Error 1
+
+16:24:45 Build Finished (took 508ms)
+

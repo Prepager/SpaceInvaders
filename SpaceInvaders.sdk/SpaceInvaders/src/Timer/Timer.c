@@ -1,32 +1,66 @@
 #include "Timer.h"
 
-volatile int i = 0, j = 0;
-extern u8 deaths;
+volatile int i = 0, j = 0, k = 0, l = 0;
+extern u8 kills, dead, ufo, pew;
 
 // Create device instances.
 XScuGic IntcInstance;
 XTmrCtr TimerInstance;
-/*
- * u8 Sound determines the sound effect - MSB -> LSB
- *
- */
 
-void timerHandler(void *InstancePtr, u8 timerIndex/*, u8 *death*/) {
-	//xil_printf("Timer Interrupt!!%d\n", i);
+void timerHandler(void *InstancePtr, u8 timerIndex) {
+	if(! (kills || dead || ufo || pew)) return;
 
-	//if(death) {
-	if(deaths){
+	unsigned long out = 0;
+	// if something happened
+	//|| dead || ufo || pew
+//	if(kills){
+//		i++;
+//	}
+	if(kills){
 		if(i < DEATH_ELEMENTS) {
-				audio_stream(deathSound[i], DEATH_ELEMENTS, i);
-				i++;
-			} else {
-				i = 0;
-				deaths--;
-			}
+			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
+			out += invaderKilled[i];
+			i++;
+		} else {
+			i = 0;
+			kills--;
+		}
 	}
 
-	//}
-//	j++;
+	if(dead){
+		if(j < EXPLOSION_LENGTH) {
+			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
+			out += explosion[j];
+			j++;
+		} else {
+			j = 0;
+			dead--;
+		}
+	}
+
+	if(ufo){
+		if(k < UFOHIGHPITCH_LENGTH) {
+			out += (ufohighpitch[k] >> 2);
+//			out = invaderKilled[i];
+			k++;
+		} else {
+			k = 0;
+//			ufo--;
+		}
+	}
+//
+	if(pew){
+		if(l < SHOT_LENGTH) {
+			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
+			out += shot[l];
+			l++;
+		} else {
+			l = 0;
+			pew--;
+		}
+	}
+
+	audio_stream(out/*, DEATH_ELEMENTS, i*/);
 
 	// Convert instance pointer to timer controller.
 	XTmrCtr* TimerPointer = (XTmrCtr*) InstancePtr;

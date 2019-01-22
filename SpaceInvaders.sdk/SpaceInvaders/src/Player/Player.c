@@ -4,6 +4,8 @@
 // Globals
 XGpio BTNGpio, LEDGpio;
 
+extern u8 pew;
+
 // Initialize the player.
 void initializePlayer(Player *player) {
 	// Set base values.
@@ -139,6 +141,8 @@ void positionPlayer(Player *player) {
 
 	// Check if shooting and no bullet exists.
 	if (player->bullet == NULL && ((input & PLAYER_KEY_SHOOT) || keyPressed('W') || keysPressed('^', ' '))) {
+		// Set flag for shoot sound
+		pew++;
 		// Allocate space for new bullet.
 		player->bullet = malloc(sizeof(Bullet));
 

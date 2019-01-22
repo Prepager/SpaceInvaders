@@ -21,6 +21,8 @@ Enemy enemies[ENEMY_TOTAL];
 Shield shields[SHIELD_COUNT];
 Bullet *enemyBullets[ENEMY_BULLETS];
 
+//u8 * shared = (u8 *)0x1FFFFFFF;
+
 // Object values.
 int showMenu = 0;
 int drawScene = 1;
@@ -31,13 +33,17 @@ int enemyBonusCounter = 0;
 
 u32 enemySpeed = ENEMY_SPEED;
 u32 nextEnemySpeed = ENEMY_SPEED;
-u8 deaths = 0;
+u8 kills = 0, dead = 0, ufo = 0, pew = 0;
 
 /**
  * Initialize program and start rendering.
  */
 int main()
 {
+//	while(1) {
+//		xil_printf("core 0\n");
+//		sleep(1);
+//	}
 	// Initialize the devices and objects.
 	initializeDevices();
 	initializeObjects();
@@ -64,6 +70,8 @@ int main()
 				if (enemyBonusCounter >= ENEMY_BONUS_SPAWN) {
 					// Respawn bonus enemy.
 					bonusEnemy.dead = 0;
+					// set bonus enemy flag for interrupt
+					ufo = 1;
 					bonusEnemy.dying = 0;
 					bonusEnemy.xPos = -ENEMY_BONUS_WIDTH;
 
@@ -129,6 +137,7 @@ void initializeDevices()
 	initializeDisplay();
 	initializeKeyboard();
 	Initialize_Sound_IPs();
+	initializeTimer();
 }
 
 /**
@@ -313,8 +322,15 @@ void collides()
 	if (player.bullet) {
 		// Check collision for enemies and shields.
 		if (player.bullet) player.bullet = collidesShields(shields, player.bullet);
-		if (player.bullet) player.bullet = collidesEnemies(enemies, player.bullet, &player.score);
-		if (player.bullet) player.bullet = collidesBonusEnemy(&bonusEnemy, player.bullet, &player.score);
+		if (player.bullet) {
+			player.bullet = collidesEnemies(enemies, player.bullet, &player.score);
+			// Increase flag for enemy hit
+			if(player.bullet == NULL) kills++;
+		}
+		if (player.bullet) {
+			player.bullet = collidesBonusEnemy(&bonusEnemy, player.bullet, &player.score);
+			if(player.bullet == NULL) ufo--;
+		}
 
 		// Repaint enemies if hit.
 		if (! player.bullet) {
@@ -331,6 +347,8 @@ void collides()
 
 			// Check if player was hit.
 			if (! enemyBullets[i]) {
+				// Set flag for dead sound
+				dead++;
 				// Pause game while player is dying.
 				gamePaused = &player.dying;
 

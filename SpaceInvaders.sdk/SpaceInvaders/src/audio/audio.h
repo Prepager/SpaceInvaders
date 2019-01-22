@@ -18,7 +18,7 @@
 #include "xgpio.h"
 #include <xil_types.h>
 
-#include "death.h"
+#include "invaderKilled.h"
 
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*

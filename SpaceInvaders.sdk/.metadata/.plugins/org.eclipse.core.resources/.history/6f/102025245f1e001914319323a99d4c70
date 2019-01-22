@@ -1,0 +1,136 @@
+// Header
+#include "Bonus.h"
+
+// Initialize the bonus enemy.
+void initializeBonusEnemy(BonusEnemy *enemy) {
+	// Set defaults.
+	enemy->dead = 1;
+	enemy->dying = 0;
+	enemy->xPos = -ENEMY_BONUS_WIDTH;
+	enemy->yPos = TOPBAR_HEIGHT + (ENEMY_BONUS_HEIGHT * 2);
+}
+
+// Paint a single enemy.
+void paintBonusEnemy(BonusEnemy *enemy, u8 *frame) {
+	// Continue if already dead.
+	if (enemy->dead) return;
+
+	// Prepare shorthand variables.
+	int offset = 0;
+	int start = enemy->xPos;
+	int width = ENEMY_BONUS_WIDTH;
+
+	// Skip rendering if outside bounds.
+	if (start + width < 0) return;
+	if (start > DISPLAY_WIDTH) return;
+
+	// Manage out of bounds drawing.
+	if (start < 0) {
+		offset = abs(start);
+		width -= offset;
+		start = 0;
+	} else if ((start + width) > DISPLAY_WIDTH) {
+		width -= DISPLAY_WIDTH - start;
+	}
+
+	// Generate the frame address for the starting position.
+	int addr = (start * 3) + (enemy->yPos * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < ENEMY_BONUS_HEIGHT; ycoi++) {
+		// Copy enemy image data into frame.
+		memcpy(
+			&frame[addr],
+			&MonsterBonus[(ycoi * ENEMY_BONUS_WIDTH * 3) + (offset * 3)],
+			(width * 3)
+		);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+}
+
+// Depaint the bonus enemies.
+void depaintBonusEnemy(BonusEnemy *enemy, u8 *frame) {
+	// Continue if already dead.
+	if (enemy->dead) return;
+
+	// Mark as dead if dying.
+	if (enemy->dying) {
+		ufo = 0;
+		enemy->dead = 1;
+		enemy->dying = 0;
+	}
+
+	// Prepare shorthand variables.
+	int start = enemy->xPos;
+	int width = ENEMY_BONUS_WIDTH;
+
+	// Skip rendering if outside bounds.
+	if (start + width < 0) return;
+	if (start > DISPLAY_WIDTH) return;
+
+	// Manage out of bounds drawing.
+	if (start < 0) {
+		width -= start;
+		start = 0;
+	} else if ((start + width) > DISPLAY_WIDTH) {
+		width -= DISPLAY_WIDTH - start;
+	}
+
+	// Generate the frame address for the starting position.
+	int addr = (start * 3) + (enemy->yPos * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < ENEMY_BONUS_HEIGHT; ycoi++) {
+		// Draw the background color.
+		memset(&frame[addr], BACKGROUND, width * 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+}
+
+// Position the enemies.
+void positionBonusEnemy(BonusEnemy *enemy) {
+	// Skip change if already dead.
+	if (enemy->dead) return;
+
+	// Increase the horizontal position.
+	enemy->xPos += ENEMY_BONUS_SPEED;
+
+	// Kill the enemy when outside bounds.
+	if (enemy->xPos >= DISPLAY_WIDTH) {
+		enemy->dying = 1;
+	}
+}
+
+// Check collision between bullet and enemies.
+Bullet* collidesBonusEnemy(BonusEnemy *enemy, Bullet *bullet, int *score) {
+	// Skip check if already dead.
+	if (enemy->dead) return bullet;
+
+	// Check if bullet collides with enemy.
+	if (collidesBullet(
+		bullet,
+		enemy->xPos, enemy->yPos,
+		ENEMY_BONUS_WIDTH, ENEMY_BONUS_HEIGHT
+	)) {
+		// Enable dying status on enemy.
+		enemy->dying = 1;
+
+		// Calculate random points (50-300).
+		int points = 50 + (rand() % 250);
+		points = (int) (50.0 * floor((points / 50.0) + 0.5));
+
+		// Add enemy points to score.
+		*score += points;
+
+		// Delete the bullet and pointer.
+		free(bullet);
+		return NULL;
+	}
+
+	// Return the original bullet
+	return bullet;
+}

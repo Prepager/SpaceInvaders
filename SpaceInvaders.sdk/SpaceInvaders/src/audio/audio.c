@@ -43,7 +43,7 @@ int Initialize_Sound_IPs(void) {
  * ---------------------------------------------------------------------------- */
 void AudioPllConfig() {
 	int adc_vol = 0b100010111; // 0b100 + volume
-	int dac_vol = 0b001110000; // 0b.0 + volume 111 1001 def.
+	int dac_vol = 0b001111000; // 0b.0 + volume 111 1001 def.
 	AudioWriteToReg(R15_SOFTWARE_RESET, 				0b000000000); //Perform Reset
 	usleep(75000);
 	AudioWriteToReg(R6_POWER_MANAGEMENT, 				0b000110000); //Power Up
@@ -133,7 +133,7 @@ void AudioWriteToReg(u8 u8RegAddr, u16 u16Data) {
  *
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
-void audio_stream(u32 /***/Track, u32 length, int i){
+void audio_stream(u32 /***/Track/*, u32 length*/){
 	u32  BUFF,bitsize;
 	bitsize = 8;
 

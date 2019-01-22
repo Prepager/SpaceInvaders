@@ -4,11 +4,15 @@
 #include "xtime_l.h"
 #include "xscugic.h"
 #include "xtmrctr.h"
-#include "../audio/death.h"
+
+#include "../audio/invaderKilled.h"
+#include "../audio/shot.h"
+#include "../audio/explosion.h"
+#include "../audio/ufo_highpitch.h"
 
 /* TIMER */
 // Define timer constants.
-#define TMR_DEFAULT 2800 //9070 //907000000 //1000000
+#define TMR_DEFAULT 95 //9070 //907000000 //1000000
 // Define device IDs.
 #define TMR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
 // Define interrupt controller ID.

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Tue Jan 22 10:50:17 2019
+# Process ID: 12436
+# Current directory: C:/SpaceInvaders/SpaceInvaders.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/SpaceInvaders/SpaceInvaders.sdk/webtalk/webtalk.log
+# Journal file: C:/SpaceInvaders/SpaceInvaders.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
+# webtalk_init -webtalk_dir C:\\SpaceInvaders\\SpaceInvaders.sdk\\webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "2019-01-22 10:50:15" -context "software_version_and_target_device"
