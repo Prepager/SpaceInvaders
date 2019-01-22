@@ -30,6 +30,7 @@ src/Shield/Block \
 src/Shield/Corner \
 src/Shield \
 src/Text \
+src/Timer \
 src/audio \
 src/display_ctrl \
 src/dynclk \

@@ -11,6 +11,7 @@ RM := rm -rf
 -include src/dynclk/subdir.mk
 -include src/display_ctrl/subdir.mk
 -include src/audio/subdir.mk
+-include src/Timer/subdir.mk
 -include src/Text/subdir.mk
 -include src/Shield/Corner/subdir.mk
 -include src/Shield/Block/subdir.mk

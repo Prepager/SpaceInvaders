@@ -5,6 +5,7 @@
 axi_ps2 PS2Instance;
 axi_ps2_Config PS2Config;
 
+char press = 0;
 int extended = 0;
 int releasing = 0;
 
@@ -20,6 +21,11 @@ void initializeKeyboard() {
 		xil_printf("Keyboard initialization failed %d\r\n", status);
 		return;
 	}
+}
+
+// Return the pressed key without stream.
+char keyPress() {
+	return press;
 }
 
 // Return if input is the same as passed char.
@@ -60,6 +66,9 @@ void processInput() {
 	unsigned char input = readKeyAddress();
 	char character = mapCharacter(input);
 
+	// Reset pressed character.
+	press = 0;
+
 	// Check if should be added or removed.
 	if (releasing && character) {
 		extended = 0;
@@ -88,6 +97,9 @@ void processInput() {
 void addInputCharacter(char character) {
 	// Skip if already is pressed.
 	if (keyPressed(character)) return;
+
+	// Save pressed character.
+	press = character;
 
 	// Remove first pressed if over limit.
 	if ((pressedCount + 1) >= PRESSED_LIMIT) {
@@ -161,6 +173,17 @@ char mapCharacter(unsigned char character) {
 		case 0x22: return 'X';
 		case 0x35: return 'Y';
 		case 0x1A: return 'Z';
+
+		case 0x45: case 0x70: return '0';
+		case 0x16: case 0x69: return '1';
+		case 0x1E: case 0x72: return '2';
+		case 0x26: case 0x7A: return '3';
+		case 0x25: case 0x6B: return '4';
+		case 0x2E: case 0x73: return '5';
+		case 0x36: case 0x74: return '6';
+		case 0x3D: case 0x6C: return '7';
+		case 0x3E: case 0x75: return '8';
+		case 0x46: case 0x7D: return '9';
 
 		case 0x29: return (char) 32; // Space
 		case 0x5A: return (char) KEY_ENTER; // Enter

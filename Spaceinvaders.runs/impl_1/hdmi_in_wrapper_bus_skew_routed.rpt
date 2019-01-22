@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Jan 16 14:52:00 2019
+| Date         : Tue Jan 22 10:08:37 2019
 | Host         : DESKTOP-ND2U3FO running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file hdmi_in_wrapper_bus_skew_routed.rpt -pb hdmi_in_wrapper_bus_skew_routed.pb -rpx hdmi_in_wrapper_bus_skew_routed.rpx
 | Design       : hdmi_in_wrapper

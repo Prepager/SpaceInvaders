@@ -29,17 +29,7 @@ int Initialize_Sound_IPs(void) {
 	// Set direction for enable
 	XGpio_SetDataDirection(&Gpio_audio_enable, 1, 0x00);
 
-
-	u32 sound = 0;
 	XGpio_DiscreteWrite(&Gpio_audio_enable, 1, 1);
-	while(1) {
-			for(int i = 0; i <= sizeof(deathSound); i++){
-				sound = deathSound[i];
-				Xil_Out32(I2S_DATA_TX_L_REG, sound);
-				Xil_Out32(I2S_DATA_TX_R_REG, sound);
-			}
-			sleep(1);
-	}
 
     return XST_SUCCESS;
 }
@@ -62,7 +52,7 @@ void AudioPllConfig() {
 	AudioWriteToReg(R2_LEFT_CHANNEL_DAC_VOLUME, 		dac_vol);
 	AudioWriteToReg(R3_RIGHT_CHANNEL_DAC_VOLUME, 		dac_vol);
 	AudioWriteToReg(R4_ANALOG_AUDIO_PATH, 				0b000010010); //Allow Mixed DAC, Mute MIC
-	AudioWriteToReg(R5_DIGITAL_AUDIO_PATH, 				0b000000111); //48 kHz Sampling Rate emphasis, no high pass -- 0b000000111
+	AudioWriteToReg(R5_DIGITAL_AUDIO_PATH, 				0b000000000); //48 kHz Sampling Rate emphasis, no high pass -- 0b000000111
 	AudioWriteToReg(R7_DIGITAL_AUDIO_I_F, 				0b000001110); //I2S Mode, set-up 32 bits
 	AudioWriteToReg(R8_SAMPLING_RATE, 					0b000000000);
 	usleep(75000);
@@ -103,7 +93,7 @@ unsigned char IicConfig(unsigned int DeviceIdPS) {
 		return XST_FAILURE;
 
 	}
-	xil_printf("IIC Passed\r\n");
+//	xil_printf("IIC Passed\r\n");
 
 
 	//Set the IIC serial clock rate.
@@ -143,18 +133,16 @@ void AudioWriteToReg(u8 u8RegAddr, u16 u16Data) {
  *
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
-void audio_stream(){
-	u32  in_left, in_right;
+void audio_stream(u32 /***/Track, u32 length, int i){
+	u32  BUFF,bitsize;
+	bitsize = 8;
 
-	while (1) {
-		// Read audio input from codec
-		in_left = Xil_In32(I2S_DATA_RX_L_REG);
-		in_right = Xil_In32(I2S_DATA_RX_R_REG);
+	BUFF = 	(uint32_t)(	(Track/*[i]*/<<0)|(Track/*[i+1]*/<<bitsize) );
 
-		// Write audio input to codec
-		Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-		Xil_Out32(I2S_DATA_TX_R_REG, in_right);
-	}
-	// WIP
-	audio_stream();
+	// Write audio input to codec
+	Xil_Out32(I2S_DATA_TX_L_REG, BUFF);
+	Xil_Out32(I2S_DATA_TX_R_REG, BUFF);
+
+	//usleep(75);
+
 }

@@ -13,10 +13,10 @@
 #define AUDIO_DEATH_SOUND_H_
 
 
-#define NUM_ELEMENTS 14703
+#define DEATH_ELEMENTS 14703
 
 __attribute__ ((unused))
-unsigned static long deathSound[NUM_ELEMENTS] = {
+unsigned static long deathSound[DEATH_ELEMENTS] = {
 128, 128, 127, 128, 127, 128, 127, 128, /* 0-7 */
 128, 127, 128, 127, 128, 127, 128, 127, /* 8-15 */
 128, 127, 128, 127, 128, 128, 128, 127, /* 16-23 */

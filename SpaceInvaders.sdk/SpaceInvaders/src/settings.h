@@ -2,6 +2,15 @@
 #define SETTINGS_H_
 
 /* ------------------------------------------------------------ */
+/*		    		Highscores Declarations		    		  	*/
+/* ------------------------------------------------------------ */
+
+#define MAX_SCORES 5
+#define SCORE_LENGTH 6
+#define PLAYERNAME_LENGTH 10
+#define SCORE_LIMIT sizeof(int)
+
+/* ------------------------------------------------------------ */
 /*		    		Keyboard Declarations		    		  	*/
 /* ------------------------------------------------------------ */
 
@@ -81,7 +90,7 @@
 
 #define PLAYER_WIDTH 24
 #define PLAYER_HEIGHT 12
-#define PLAYER_HEALTH 3
+#define PLAYER_HEALTH 1 // todo: 3
 #define PLAYER_HEALTH_MAX 6
 #define PLAYER_MOVEMENT 1
 

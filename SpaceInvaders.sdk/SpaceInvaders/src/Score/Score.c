@@ -8,7 +8,6 @@ void initializeScore(Score *score, int *value) {
 	score->drawnScore = -1;
 
 	// Set text defaults.
-	score->text.length = 5;
 	score->text.text = "SCORE";
 
 	score->text.xPos = 0;

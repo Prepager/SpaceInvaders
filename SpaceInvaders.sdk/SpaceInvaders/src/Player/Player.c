@@ -9,6 +9,7 @@ void initializePlayer(Player *player) {
 	// Set base values.
 	player->score = 0;
 	player->dying = 0;
+	strcpy(player->name, "");
 	player->health = PLAYER_HEALTH;
 
 	// Delete bullet.

@@ -16,24 +16,22 @@
 #include <math.h>
 
 #include "platform.h"
+#include "../settings.h"
 #include "src/include/ff.h" //  SD CARD Configuration file
 
-#define MAX_SCORES 5
-#define PLAYERNAME_LENGTH 5
-#define SCORE_LIMIT sizeof(int)
 #define debug 1
 #define _FILE_ "Scores.TXT"
 
 typedef struct {
 	int playerScore;
 	char playerName[PLAYERNAME_LENGTH];
-} PlayerEntity;
+} PlayerEntry;
 
 void insertScore(int newScore, char *name);
-void saveScores(PlayerEntity *scoreList);
-void bubbleSort(PlayerEntity *array);
-void readScores(PlayerEntity * playerList);
+void saveScores(PlayerEntry *scoreList);
+void bubbleSort(PlayerEntry *array);
+void readScores(PlayerEntry * playerList);
 int charToInt(char c);
-void swap(PlayerEntity *a, PlayerEntity *b);
+void swap(PlayerEntry *a, PlayerEntry *b);
 
 #endif /* SRC_SDCARD_SDCARD_H_ */

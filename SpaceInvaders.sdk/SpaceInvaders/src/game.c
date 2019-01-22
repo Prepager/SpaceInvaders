@@ -31,6 +31,7 @@ int enemyBonusCounter = 0;
 
 u32 enemySpeed = ENEMY_SPEED;
 u32 nextEnemySpeed = ENEMY_SPEED;
+u8 deaths = 0;
 
 /**
  * Initialize program and start rendering.
@@ -90,6 +91,9 @@ int main()
 
 			// Check for input from player.
 			if (readPlayerInput() || keyPressed(KEY_ENTER)) {
+				// Paint to catch keypress.
+				paint();
+
 				// Disable menu and redraw.
 				showMenu = 0;
 				drawScene = 1;
@@ -124,6 +128,7 @@ void initializeDevices()
 	// Initialize the devices.
 	initializeDisplay();
 	initializeKeyboard();
+	Initialize_Sound_IPs();
 }
 
 /**

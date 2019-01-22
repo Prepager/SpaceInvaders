@@ -9,6 +9,10 @@
 #include "initializeDisplay.h"
 #include "display_ctrl/display_ctrl.h"
 
+#include "SDCARD/platform.h"
+#include "Timer/Timer.h"
+#include "audio/audio.h"
+
 // Settings
 #include "settings.h"
 

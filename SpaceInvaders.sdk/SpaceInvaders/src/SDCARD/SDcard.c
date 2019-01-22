@@ -9,13 +9,13 @@ unsigned int BytesWr;							// Bytes written
 
 void insertScore(int newScore, char * name) {
 	// Read Scores
-	PlayerEntity scores[MAX_SCORES];
+	PlayerEntry scores[MAX_SCORES];
 	readScores(scores);
 
 	// If new score is high enough add it to list
 	if(scores[MAX_SCORES - 1].playerScore < newScore) {
 		// Create new player list and populate with old players
-		PlayerEntity scoreList[MAX_SCORES+1];
+		PlayerEntry scoreList[MAX_SCORES+1];
 		for(int i = 0; i < MAX_SCORES; i++) {
 				scoreList[i].playerScore = scores[i].playerScore;
 				scoreList[i].playerName[0] = '\0';
@@ -23,7 +23,7 @@ void insertScore(int newScore, char * name) {
 		}
 
 		// Create new player entity and add to list
-		PlayerEntity newPlayer;
+		PlayerEntry newPlayer;
 		newPlayer.playerScore = newScore;
 		strcpy(newPlayer.playerName, name);
 		scoreList[MAX_SCORES] = newPlayer;
@@ -41,7 +41,7 @@ void insertScore(int newScore, char * name) {
 
 }
 
-void saveScores(PlayerEntity *scoreList) {
+void saveScores(PlayerEntry *scoreList) {
 	// Initializes the SD Card
 	initializeSD();
 
@@ -88,7 +88,7 @@ void saveScores(PlayerEntity *scoreList) {
 //    cleanup_platform();
 }
 
-void bubbleSort(PlayerEntity *array) {
+void bubbleSort(PlayerEntry *array) {
 	for(int i = 0; i <= (MAX_SCORES); i++) {
 		for(int j = 0; j < (MAX_SCORES - i); j++) {
 			if (array[j].playerScore < array[j+1].playerScore) {
@@ -99,13 +99,13 @@ void bubbleSort(PlayerEntity *array) {
 //	return array;
 }
 
-void swap(PlayerEntity *a, PlayerEntity *b) {
-	PlayerEntity temp = *a;
+void swap(PlayerEntry *a, PlayerEntry *b) {
+	PlayerEntry temp = *a;
 	*a = *b;
 	*b = temp;
 }
 
-void readScores(PlayerEntity * playerList) {
+void readScores(PlayerEntry * playerList) {
     // Initializes the SD Card
 	initializeSD();
 

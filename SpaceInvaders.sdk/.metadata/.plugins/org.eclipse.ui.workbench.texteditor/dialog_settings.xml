@@ -9,22 +9,23 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="if(debug)" key="selection"/>
+		<item value="entries" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="if(debug)"/>
-			<item value="SCORE_LIMIT"/>
-			<item value="players["/>
-			<item value="players"/>
-			<item value="f_gets"/>
-			<item value="playerScores"/>
-			<item value="f_size"/>
-			<item value="f_read"/>
+			<item value="menu-&gt;entries"/>
+			<item value="initializeObjects"/>
+			<item value="initializeMenu"/>
+			<item value="collide"/>
+			<item value="Timer"/>
+			<item value="TMRCTR"/>
+			<item value="XPAR_TMRCTR"/>
+			<item value="init_platform"/>
 		</list>
 		<list key="replacehistory">
+			<item value="entries"/>
 			<item value="playerList["/>
 			<item value="playerList"/>
 			<item value=" "/>

@@ -8,9 +8,7 @@ void initializeHealth(Health *health, int *value) {
 	health->drawnHealth = 0;
 
 	// Set text defaults.
-	health->text.length = 5;
 	health->text.text = "LIVES";
-
 	health->text.yPos = (TOPBAR_HEIGHT - CHAR_TEXT_HEIGHT) / 2;
 	health->text.xPos = DISPLAY_WIDTH - calculateTextWidth(&health->text);
 }

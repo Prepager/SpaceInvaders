@@ -10,6 +10,7 @@
 #include "../settings.h"
 
 // Constructors
+char keyPress();
 void processInput();
 void initializeKeyboard();
 unsigned char readKeyAddress();

@@ -21,6 +21,7 @@ typedef struct {
 	int score;
 	int health;
 	u32 position;
+	char name[PLAYERNAME_LENGTH];
 
 	// General
 	int dying;

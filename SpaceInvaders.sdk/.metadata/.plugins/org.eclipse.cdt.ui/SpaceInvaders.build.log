@@ -1,8 +1,23 @@
-13:33:35 **** Incremental Build of configuration Debug for project SpaceInvaders ****
+13:24:13 **** Auto Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
+'Building file: ../src/Menu/Menu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Menu/Menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Menu/Menu.d" -MT"src/Menu/Menu.o" -o "src/Menu/Menu.o" "../src/Menu/Menu.c"
+'Finished building: ../src/Menu/Menu.c'
+' '
+'Building target: SpaceInvaders.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/audio/audio.o  ./src/Timer/Timer.o  ./src/Text/Text.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/Score/Score.o  ./src/SDCARD/src/cc932.o ./src/SDCARD/src/diskio.o ./src/SDCARD/src/ff.o  ./src/SDCARD/SDcard.o ./src/SDCARD/platform.o  ./src/Player/Player.o  ./src/Menu/Menu.o  ./src/Keyboard/Keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Bullet/Bullet.o  ./src/Bonus/Bonus.o  ./src/game.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SpaceInvaders.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 167416	 693536	18693360	19554312	12a6008	SpaceInvaders.elf
+'Finished building: SpaceInvaders.elf.size'
+' '
 
-13:33:36 Build Finished (took 768ms)
+13:24:15 Build Finished (took 2s.487ms)
 
