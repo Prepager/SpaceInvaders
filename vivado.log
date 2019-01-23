@@ -31,3 +31,8 @@ launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvader
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

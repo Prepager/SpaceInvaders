@@ -9,12 +9,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="controller" key="selection"/>
+		<item value="press" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="press"/>
 			<item value="controller"/>
 			<item value="xil_"/>
 			<item value="xil_p"/>
@@ -22,7 +23,6 @@
 			<item value="fire"/>
 			<item value="nextEnemySpeed"/>
 			<item value="enemySpeed"/>
-			<item value="insert"/>
 		</list>
 		<list key="replacehistory">
 			<item value="entries"/>

@@ -1,0 +1,198 @@
+// Header
+#include "Keyboard.h"
+
+// Globals
+axi_ps2 PS2Instance;
+axi_ps2_Config PS2Config;
+
+char press = 0;
+int extended = 0;
+int releasing = 0;
+
+int pressedCount = 0;
+char pressed[PRESSED_LIMIT];
+
+// Initialize the keyboard.
+void initializeKeyboard() {
+	// Initialize PS2 instance.
+	int status = axi_ps2_CfgInitialize(&PS2Instance, &PS2Config, PS2_BASE_ADDRESS);
+	if (status != XST_SUCCESS)
+	{
+		xil_printf("Keyboard initialization failed %d\r\n", status);
+		return;
+	}
+}
+
+// Return the pressed key without stream.
+char keyPress() {
+	return press;
+}
+
+// Return if input is the same as passed char.
+int keyPressed(char character) {
+	// Loop through pressed count.
+	for (int i = 0; i < pressedCount; i++) {
+		// Return 1 if equals.
+		if (pressed[i] == character) {
+			return 1;
+		}
+	}
+
+	// Return 0 if not equals.
+	return 0;
+}
+
+// Return if input is the same as passed chars.
+int keysPressed(char char1, char char2) {
+	return keyPressed(char1) || keyPressed(char2);
+}
+
+// Read in and return address from keyboard.
+unsigned char readKeyAddress() {
+	// Created unsigned char buffer.
+	unsigned char key;
+	u8 * buffer = &key;
+
+	// Read in data from PS2 instance.
+	int readBytes = axi_ps2_Recv(&PS2Instance, buffer, 1);
+
+	// todo
+	if (readBytes) xil_printf("Key: %u, Extended: %d, Relasing: %d\r\n", key, extended, releasing);
+
+	// Return key if read bytes.
+	return readBytes ? key : 0;
+}
+
+// Process the incoming keyboard input.
+void processInput() {
+	// Read raw key input address.
+	unsigned char input = readKeyAddress();
+	char character = mapCharacter(input);
+
+	// Reset pressed character.
+	press = 0;
+
+	// Check if should be added or removed.
+	if (releasing && character) {
+		extended = 0;
+		removeInputCharacter(character);
+	} else if (character) {
+		addInputCharacter(character);
+	}
+
+	// Reset releasing status.
+	releasing = 0;
+
+	// Enable extended buttons.
+	if (input == 0xE0) {
+		extended = 1;
+		return;
+	}
+
+	// Enable releasing status.
+	if (input == 0xF0) {
+		releasing = 1;
+		return;
+	}
+}
+
+// Add a input character as pressed.
+void addInputCharacter(char character) {
+	// Skip if already is pressed.
+	if (keyPressed(character)) return;
+
+	// Save pressed character.
+	press = character;
+
+	// Remove first pressed if over limit.
+	if ((pressedCount + 1) >= PRESSED_LIMIT) {
+		removeInputCharacter(pressed[0]);
+	}
+
+	// Add character to pressed list.
+	pressed[pressedCount++] = character;
+}
+
+
+// Remove a input character as pressed.
+void removeInputCharacter(char character) {
+	// Skip if not already is pressed.
+	if (! keyPressed(character)) return;
+
+	// Loop through the pressed keys.
+	int newCount = 0;
+	for (int i = 0; i < pressedCount; i++) {
+		// Skip if character to be removed.
+		if (pressed[i] == character) continue;
+
+		// Copy key char to pressed input
+		pressed[newCount++] = pressed[i];
+	}
+
+	// Save new counter.
+	pressedCount = newCount;
+}
+
+// Map and return the correct char from the passed value.
+char mapCharacter(unsigned char character) {
+	// Check if extended keys.
+	if (extended) {
+		// Map extended addresses to chars.
+		switch (character) {
+			case 0x6B: return '<';
+			case 0x74: return '>';
+			case 0x75: return '^';
+		}
+
+		// Return 0 if not found.
+		return (char) 0;
+	}
+
+	// Map addresses to chars.
+	switch (character) {
+		case 0x1C: return 'A';
+		case 0x32: return 'B';
+		case 0x21: return 'C';
+		case 0x23: return 'D';
+		case 0x24: return 'E';
+		case 0x2B: return 'F';
+		case 0x34: return 'G';
+		case 0x33: return 'H';
+		case 0x43: return 'I';
+		case 0x3B: return 'J';
+		case 0x42: return 'K';
+		case 0x4B: return 'L';
+		case 0x3A: return 'M';
+		case 0x31: return 'N';
+		case 0x44: return 'O';
+		case 0x4D: return 'P';
+		case 0x15: return 'Q';
+		case 0x2D: return 'R';
+		case 0x1B: return 'S';
+		case 0x2C: return 'T';
+		case 0x3C: return 'U';
+		case 0x2A: return 'V';
+		case 0x1D: return 'W';
+		case 0x22: return 'X';
+		case 0x35: return 'Y';
+		case 0x1A: return 'Z';
+
+		case 0x45: case 0x70: return '0';
+		case 0x16: case 0x69: return '1';
+		case 0x1E: case 0x72: return '2';
+		case 0x26: case 0x7A: return '3';
+		case 0x25: case 0x6B: return '4';
+		case 0x2E: case 0x73: return '5';
+		case 0x36: case 0x74: return '6';
+		case 0x3D: case 0x6C: return '7';
+		case 0x3E: case 0x75: return '8';
+		case 0x46: case 0x7D: return '9';
+
+		case 0x29: return (char) 32; // Space
+		case 0x5A: return (char) KEY_ENTER; // Enter
+		case 0x66: return (char) KEY_BACKSPACE; // Backspace
+	}
+
+	// Return 0 if not found.
+	return (char) 0;
+}

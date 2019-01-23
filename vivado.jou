@@ -13,3 +13,4 @@ start_gui
 open_project C:/SpaceInvaders/SpaceInvaders.xpr
 update_compile_order -fileset sources_1
 launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
+launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf

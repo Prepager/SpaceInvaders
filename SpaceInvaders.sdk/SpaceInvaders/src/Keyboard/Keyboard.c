@@ -69,9 +69,11 @@ void processInput() {
 	// Reset pressed character.
 	press = 0;
 
+	// Reset extended on release.
+	if (releasing) extended = 0;
+
 	// Check if should be added or removed.
 	if (releasing && character) {
-		extended = 0;
 		removeInputCharacter(character);
 	} else if (character) {
 		addInputCharacter(character);

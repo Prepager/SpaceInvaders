@@ -35,6 +35,7 @@ void saveScores(PlayerEntry *entries) {
 
 	// Create file writing buffer.
 	char buffer[SCORE_BYTES];
+	buffer[0] = '\0';
 
 	// Loop through the top scores.
 	for (int i = 0; i < MAX_SCORES; i++) {
@@ -75,6 +76,7 @@ void readScores(PlayerEntry *entries) {
 
 	// Create file reading buffer.
 	char buffer[SCORE_BYTES];
+	buffer[0] = '\0';
 
 	// Read in passed amount of bytes from file.
 	UINT bytes_read;

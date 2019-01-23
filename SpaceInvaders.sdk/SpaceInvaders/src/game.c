@@ -65,7 +65,8 @@ int main()
 				if (enemyBonusCounter >= ENEMY_BONUS_SPAWN) {
 					// Respawn bonus enemy.
 					bonusEnemy.dead = 0;
-					// set bonus enemy flag for interrupt
+
+					// Set bonus enemy flag for interrupt
 					ufo = 1;
 					bonusEnemy.dying = 0;
 					bonusEnemy.xPos = -ENEMY_BONUS_WIDTH;

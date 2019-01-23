@@ -138,3 +138,27 @@ expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sourc
 // HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 44 MB. Current time: 1/23/19 7:08:25 PM CET
 // WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1268 ms. Increasing delay to 3000 ms.
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2425 ms. Increasing delay to 3000 ms.
+// Elapsed time: 3668 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+selectButton("PAResourceItoN.NewLaunchHardwareDialog_EXPORTED_HARDWARE_SYSTEM_OUT_OF_DATE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file. 
+// Tcl Message: launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 45 MB. Current time: 1/23/19 7:38:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 44 MB. Current time: 1/23/19 8:08:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 44 MB. Current time: 1/23/19 8:38:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 44 MB. Current time: 1/23/19 9:08:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 83 MB. Current time: 1/23/19 9:47:14 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 45 MB. Current time: 1/23/19 10:17:14 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 45 MB. Current time: 1/23/19 10:47:19 PM CET
