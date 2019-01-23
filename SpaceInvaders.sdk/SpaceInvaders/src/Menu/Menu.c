@@ -23,8 +23,8 @@ void initializeMenu(Player *player) {
 		// Initialize the SD card.
 		initializeSDCard(entries);
 
-		// Read in score entries.
-		readScores(entries);
+		// Read in score entries. todo
+		//readScores(entries);
 
 		// Skip future inits.
 		firstInit--;

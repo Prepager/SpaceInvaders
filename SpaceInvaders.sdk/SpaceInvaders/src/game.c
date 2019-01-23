@@ -8,8 +8,9 @@ XTime enemyTimer = 0;
 XTime currentTime = 0;
 
 // Buffer arrays.
-u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
+extern DisplayCtrl controller;
 u8 *bufferPointer[DISPLAY_NUM_FRAMES];
+u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
 
 // Object arrays.
 Score score;
@@ -128,10 +129,10 @@ int main()
 void initializeDevices()
 {
 	// Initialize the devices.
+	initializeSound();
 	initializeTimer();
 	initializeDisplay();
 	initializeKeyboard();
-	Initialize_Sound_IPs();
 }
 
 /**

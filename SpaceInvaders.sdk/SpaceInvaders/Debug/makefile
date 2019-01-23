@@ -8,9 +8,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/dynclk/subdir.mk
--include src/display_ctrl/subdir.mk
--include src/audio/subdir.mk
 -include src/Timer/subdir.mk
 -include src/Text/subdir.mk
 -include src/Shield/Corner/subdir.mk
@@ -24,8 +21,12 @@ RM := rm -rf
 -include src/Keyboard/subdir.mk
 -include src/Health/subdir.mk
 -include src/Enemy/subdir.mk
+-include src/Display/dynclk/subdir.mk
+-include src/Display/display_ctrl/subdir.mk
+-include src/Display/subdir.mk
 -include src/Bullet/subdir.mk
 -include src/Bonus/subdir.mk
+-include src/Audio/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

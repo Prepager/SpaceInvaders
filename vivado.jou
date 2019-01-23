@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Jan 23 08:30:52 2019
-# Process ID: 1728
+# Start of session at: Wed Jan 23 17:58:52 2019
+# Process ID: 6956
 # Current directory: C:/SpaceInvaders
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6468 C:\SpaceInvaders\SpaceInvaders.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent364 C:\SpaceInvaders\SpaceInvaders.xpr
 # Log file: C:/SpaceInvaders/vivado.log
 # Journal file: C:/SpaceInvaders\vivado.jou
 #-----------------------------------------------------------

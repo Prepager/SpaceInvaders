@@ -1,20 +1,5 @@
-#ifndef SRC_INITIALIZEDISPLAY_H_
-#define SRC_INITIALIZEDISPLAY_H_
-
-// Includes
-#include "xil_types.h"
-#include "xil_cache.h"
-#include "xparameters.h"
-#include "display_ctrl/display_ctrl.h"
-
-// Video defines
-#define MAX_FRAME 	(1920*1080*3)
-#define STRIDE 		(1920 * 3)
-
-// XPAR defines
-#define DYNCLK_BASEADDR XPAR_AXI_DYNCLK_0_BASEADDR
-#define VGA_VDMA_ID XPAR_AXIVDMA_0_DEVICE_ID
-#define DISP_VTC_ID XPAR_VTC_0_DEVICE_ID
+// Header
+#include "Display.c"
 
 // Video driver struct.
 XAxiVdma vdma;
@@ -26,11 +11,8 @@ DisplayCtrl controller;
 extern u8 buffer[DISPLAY_NUM_FRAMES][MAX_FRAME];
 extern u8 *bufferPointer[DISPLAY_NUM_FRAMES];
 
-/**
- * Initialize the display.
- */
-void initializeDisplay()
-{
+// Initialize the display.
+void initializeDisplay() {
 	// Create status variable.
 	int status;
 
@@ -75,5 +57,3 @@ void initializeDisplay()
 		return;
 	}
 }
-
-#endif

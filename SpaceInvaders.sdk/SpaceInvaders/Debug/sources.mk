@@ -16,8 +16,12 @@ ELFSIZE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+src/Audio \
 src/Bonus \
 src/Bullet \
+src/Display \
+src/Display/display_ctrl \
+src/Display/dynclk \
 src/Enemy \
 src/Health \
 src/Keyboard \
@@ -31,8 +35,5 @@ src/Shield/Corner \
 src/Shield \
 src/Text \
 src/Timer \
-src/audio \
-src/display_ctrl \
-src/dynclk \
 src \
 

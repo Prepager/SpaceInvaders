@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Jan 18 21:26:47 2019
-# Process ID: 364
+# Start of session at: Wed Jan 23 15:52:19 2019
+# Process ID: 1332
 # Current directory: C:/SpaceInvaders
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6556 C:\SpaceInvaders\SpaceInvaders.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3076 C:\SpaceInvaders\SpaceInvaders.xpr
 # Log file: C:/SpaceInvaders/vivado.log
 # Journal file: C:/SpaceInvaders\vivado.jou
 #-----------------------------------------------------------
@@ -24,7 +24,7 @@ List of locked IPs:
 hdmi_in_axi_dynclk_0_0
 hdmi_in_rgb2vga_0_0
 
-open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 834.348 ; gain = 166.859
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 840.000 ; gain = 138.008
 update_compile_order -fileset sources_1
 INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
 launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
@@ -36,3 +36,29 @@ launch_sdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvader
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/SpaceInvaders/SpaceInvaders.sdk -hwspec C:/SpaceInvaders/SpaceInvaders.sdk/hdmi_in_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/hdmi_in.bd}
+Adding cell -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding cell -- digilentinc.com:ip:rgb2vga:1.0 - rgb2vga_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_btn
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_led
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_sw
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_150M
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:xilinx:zybo_audio_ctrl:1.0 - zybo_audio_ctrl_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - Digital_Mute
+Adding cell -- digilentinc.com:IP:axi_ps2:1.0 - axi_ps2_0
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Successfully read diagram <hdmi_in> from BD file <C:/SpaceInvaders/SpaceInvaders.srcs/sources_1/bd/hdmi_in/hdmi_in.bd>
+open_bd_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 962.996 ; gain = 107.898
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 23 16:51:23 2019...
