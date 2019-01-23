@@ -1,116 +1,6 @@
-22:59:55 **** Auto Build of configuration Debug for project SpaceInvaders ****
+23:43:56 **** Auto Build of configuration Debug for project SpaceInvaders ****
 make pre-build main-build 
 a9-linaro-pre-build-step
-' '
-'Building file: ../src/Timer/Timer.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Timer/Timer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Timer/Timer.d" -MT"src/Timer/Timer.o" -o "src/Timer/Timer.o" "../src/Timer/Timer.c"
-'Finished building: ../src/Timer/Timer.c'
-' '
-'Building file: ../src/Text/Text.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Text/Text.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Text/Text.d" -MT"src/Text/Text.o" -o "src/Text/Text.o" "../src/Text/Text.c"
-'Finished building: ../src/Text/Text.c'
-' '
-'Building file: ../src/Shield/Corner/Corner.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Shield/Corner/Corner.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Shield/Corner/Corner.d" -MT"src/Shield/Corner/Corner.o" -o "src/Shield/Corner/Corner.o" "../src/Shield/Corner/Corner.c"
-'Finished building: ../src/Shield/Corner/Corner.c'
-' '
-'Building file: ../src/Shield/Block/Block.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Shield/Block/Block.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Shield/Block/Block.d" -MT"src/Shield/Block/Block.o" -o "src/Shield/Block/Block.o" "../src/Shield/Block/Block.c"
-'Finished building: ../src/Shield/Block/Block.c'
-' '
-'Building file: ../src/Shield/Shield.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Shield/Shield.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Shield/Shield.d" -MT"src/Shield/Shield.o" -o "src/Shield/Shield.o" "../src/Shield/Shield.c"
-'Finished building: ../src/Shield/Shield.c'
-' '
-'Building file: ../src/Score/Score.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Score/Score.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Score/Score.d" -MT"src/Score/Score.o" -o "src/Score/Score.o" "../src/Score/Score.c"
-'Finished building: ../src/Score/Score.c'
-' '
-'Building file: ../src/SDCARD/src/cc932.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/src/cc932.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/src/cc932.d" -MT"src/SDCARD/src/cc932.o" -o "src/SDCARD/src/cc932.o" "../src/SDCARD/src/cc932.c"
-'Finished building: ../src/SDCARD/src/cc932.c'
-' '
-'Building file: ../src/SDCARD/src/diskio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/src/diskio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/src/diskio.d" -MT"src/SDCARD/src/diskio.o" -o "src/SDCARD/src/diskio.o" "../src/SDCARD/src/diskio.c"
-'Finished building: ../src/SDCARD/src/diskio.c'
-' '
-'Building file: ../src/SDCARD/src/ff.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/src/ff.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/src/ff.d" -MT"src/SDCARD/src/ff.o" -o "src/SDCARD/src/ff.o" "../src/SDCARD/src/ff.c"
-'Finished building: ../src/SDCARD/src/ff.c'
-' '
-'Building file: ../src/SDCARD/SDcard.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/SDcard.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/SDcard.d" -MT"src/SDCARD/SDcard.o" -o "src/SDCARD/SDcard.o" "../src/SDCARD/SDcard.c"
-'Finished building: ../src/SDCARD/SDcard.c'
-' '
-'Building file: ../src/SDCARD/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SDCARD/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SDCARD/platform.d" -MT"src/SDCARD/platform.o" -o "src/SDCARD/platform.o" "../src/SDCARD/platform.c"
-'Finished building: ../src/SDCARD/platform.c'
-' '
-'Building file: ../src/Player/Player.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Player/Player.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Player/Player.d" -MT"src/Player/Player.o" -o "src/Player/Player.o" "../src/Player/Player.c"
-'Finished building: ../src/Player/Player.c'
-' '
-'Building file: ../src/Menu/Menu.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Menu/Menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Menu/Menu.d" -MT"src/Menu/Menu.o" -o "src/Menu/Menu.o" "../src/Menu/Menu.c"
-'Finished building: ../src/Menu/Menu.c'
-' '
-'Building file: ../src/Keyboard/Keyboard.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Keyboard/Keyboard.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Keyboard/Keyboard.d" -MT"src/Keyboard/Keyboard.o" -o "src/Keyboard/Keyboard.o" "../src/Keyboard/Keyboard.c"
-'Finished building: ../src/Keyboard/Keyboard.c'
-' '
-'Building file: ../src/Health/Health.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Health/Health.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Health/Health.d" -MT"src/Health/Health.o" -o "src/Health/Health.o" "../src/Health/Health.c"
-'Finished building: ../src/Health/Health.c'
-' '
-'Building file: ../src/Enemy/Enemy.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Enemy/Enemy.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Enemy/Enemy.d" -MT"src/Enemy/Enemy.o" -o "src/Enemy/Enemy.o" "../src/Enemy/Enemy.c"
-'Finished building: ../src/Enemy/Enemy.c'
-' '
-'Building file: ../src/Display/dynclk/dynclk.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Display/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Display/dynclk/dynclk.d" -MT"src/Display/dynclk/dynclk.o" -o "src/Display/dynclk/dynclk.o" "../src/Display/dynclk/dynclk.c"
-'Finished building: ../src/Display/dynclk/dynclk.c'
-' '
-'Building file: ../src/Display/display_ctrl/display_ctrl.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Display/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Display/display_ctrl/display_ctrl.d" -MT"src/Display/display_ctrl/display_ctrl.o" -o "src/Display/display_ctrl/display_ctrl.o" "../src/Display/display_ctrl/display_ctrl.c"
-'Finished building: ../src/Display/display_ctrl/display_ctrl.c'
-' '
-'Building file: ../src/Display/Display.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Display/Display.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Display/Display.d" -MT"src/Display/Display.o" -o "src/Display/Display.o" "../src/Display/Display.c"
-'Finished building: ../src/Display/Display.c'
-' '
-'Building file: ../src/Bullet/Bullet.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bullet/Bullet.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Bullet/Bullet.d" -MT"src/Bullet/Bullet.o" -o "src/Bullet/Bullet.o" "../src/Bullet/Bullet.c"
-'Finished building: ../src/Bullet/Bullet.c'
-' '
-'Building file: ../src/Bonus/Bonus.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bonus/Bonus.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Bonus/Bonus.d" -MT"src/Bonus/Bonus.o" -o "src/Bonus/Bonus.o" "../src/Bonus/Bonus.c"
-'Finished building: ../src/Bonus/Bonus.c'
-' '
-'Building file: ../src/audio/audio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SpaceInvaders_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/audio/audio.d" -MT"src/audio/audio.o" -o "src/audio/audio.o" "../src/audio/audio.c"
-'Finished building: ../src/audio/audio.c'
 ' '
 'Building file: ../src/game.c'
 'Invoking: ARM v7 gcc compiler'
@@ -119,7 +9,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cort
 ' '
 'Building target: SpaceInvaders.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/Timer/Timer.o  ./src/Text/Text.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/Score/Score.o  ./src/SDCARD/src/cc932.o ./src/SDCARD/src/diskio.o ./src/SDCARD/src/ff.o  ./src/SDCARD/SDcard.o ./src/SDCARD/platform.o  ./src/Player/Player.o  ./src/Menu/Menu.o  ./src/Keyboard/Keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Display/dynclk/dynclk.o  ./src/Display/display_ctrl/display_ctrl.o  ./src/Display/Display.o  ./src/Bullet/Bullet.o  ./src/Bonus/Bonus.o  ./src/audio/audio.o  ./src/game.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SpaceInvaders_bsp/ps7_cortexa9_0/lib -o "SpaceInvaders.elf"  ./src/Timer/Timer.o  ./src/Text/Text.o  ./src/Shield/Corner/Corner.o  ./src/Shield/Block/Block.o  ./src/Shield/Shield.o  ./src/Score/Score.o  ./src/SDCard/src/cc932.o ./src/SDCard/src/diskio.o ./src/SDCard/src/ff.o  ./src/SDCard/SDCard.o ./src/SDCard/platform.o  ./src/Player/Player.o  ./src/Menu/Menu.o  ./src/Keyboard/Keyboard.o  ./src/Health/Health.o  ./src/Enemy/Enemy.o  ./src/Display/dynclk/dynclk.o  ./src/Display/display_ctrl/display_ctrl.o  ./src/Display/Display.o  ./src/Bullet/Bullet.o  ./src/Bonus/Bonus.o  ./src/Audio/Audio.o  ./src/game.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: SpaceInvaders.elf'
 ' '
 'Invoking: ARM v7 Print Size'
@@ -129,5 +19,5 @@ arm-none-eabi-size SpaceInvaders.elf  |tee "SpaceInvaders.elf.size"
 'Finished building: SpaceInvaders.elf.size'
 ' '
 
-23:00:09 Build Finished (took 13s.661ms)
+23:44:00 Build Finished (took 3s.530ms)
 

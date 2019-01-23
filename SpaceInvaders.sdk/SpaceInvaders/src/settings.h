@@ -92,7 +92,7 @@
 
 #define PLAYER_WIDTH 24
 #define PLAYER_HEIGHT 12
-#define PLAYER_HEALTH 1 // todo: 3
+#define PLAYER_HEALTH 3
 #define PLAYER_HEALTH_MAX 6
 #define PLAYER_MOVEMENT 1
 
