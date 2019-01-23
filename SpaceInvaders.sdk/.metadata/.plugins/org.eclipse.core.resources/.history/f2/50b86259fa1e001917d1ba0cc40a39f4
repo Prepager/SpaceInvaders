@@ -1,0 +1,159 @@
+// Header
+#include "SDcard.h"
+
+// Globals
+FATFS drive;
+FRESULT result;
+unsigned int written;
+
+// Initialize the SD Card device.
+void initializeSDCard(PlayerEntry *entries) {
+    // Mount the root SD card folder.
+	int status = f_mount(&drive, "0:/", 1);
+	if (status != FR_OK) {
+		xil_printf("Unable to mount drive: %d\r\n", status);
+		return;
+	}
+
+	// Reset entries array to blank data.
+	for(int i = 0; i < MAX_SCORES; i++) {
+		entries[i].score = 0;
+		strcpy(entries[i].name, "NAME");
+	}
+}
+
+// Save the passed high scores.
+void saveScores(PlayerEntry *entries) {
+	// Open the scores text file.
+	FIL file;
+	int status = f_open(&file, SCORE_FILE, FA_CREATE_ALWAYS | FA_WRITE);
+	if (status != FR_OK) {
+		xil_printf("Unable to open file for writing: %d\r\n", status);
+	    f_close(&file);
+		return;
+	}
+
+	// Create file writing buffer.
+	char buffer[SCORE_BYTES];
+
+	// Loop through the top scores.
+	for (int i = 0; i < MAX_SCORES; i++) {
+		// Convert scores to strings.
+		char score[SCORE_LENGTH];
+		sprintf(score, "%d", entries[i].score);
+
+		// Add player entry to buffer.
+		strcat(buffer, score);
+		strcat(buffer, ";");
+		strcat(buffer, entries[i].name);
+		strcat(buffer, "\r\n");
+	}
+
+	// Attempt to write buffer to file.
+	UINT bytes_written;
+	status = f_write(&file, &buffer, strlen(buffer), &bytes_written);
+	if (status != FR_OK) {
+		xil_printf("Unable to write to file: %d\r\n", status);
+	    f_close(&file);
+		return;
+	}
+
+	// Close the open file.
+	f_close(&file);
+}
+
+// Read in the high scores.
+void readScores(PlayerEntry *entries) {
+	// Open the scores text file.
+	FIL file;
+	int status = f_open(&file, SCORE_FILE, FA_OPEN_ALWAYS | FA_READ);
+	if (status != FR_OK) {
+		xil_printf("Unable to open file for reading: %d\r\n", status);
+	    f_close(&file);
+		return;
+	}
+
+	// Create file reading buffer.
+	char buffer[SCORE_BYTES];
+
+	// Read in passed amount of bytes from file.
+	UINT bytes_read;
+	f_read(&file, buffer, SCORE_BYTES, &bytes_read);
+
+	// Loop through the top scores.
+	int offset = 0;
+	for (int i = 0; i < MAX_SCORES; i++) {
+		// Read digits until separator.
+		int scoreOffset = 0;
+		char scoreString[SCORE_LENGTH];
+		for (; buffer[offset] != ';'; offset++) {
+			scoreString[scoreOffset++] = buffer[offset];
+		}
+
+		// Add string ending.
+		scoreString[scoreOffset++] = '\0';
+
+		// Skip separator.
+		offset++;
+
+		// Convert score string to integer.
+		xil_printf("---- Index %d\r\n", i);
+		xil_printf("-- Score: %d\r\n", entries[i].score);
+		for (int x = 0; x < strlen(scoreString); x++) {
+			if (scoreString[x] < 48 || scoreString[x] > 57) continue;
+			xil_printf("Char: %c\r\n", scoreString[x]);
+			xil_printf("Convert: %d\r\n", scoreString[x] - '0');
+			entries[i].score = (entries[i].score * 10) + (scoreString[x] - '0');
+			xil_printf("New: %d\r\n", entries[i].score);
+		}
+
+		// Read name until line-break.
+		int nameOffset = 0;
+		for (; buffer[offset] != '\r'; offset++) {
+			entries[i].name[nameOffset++] = buffer[offset];
+		}
+
+		// Add string ending.
+		entries[i].name[nameOffset++] = '\0';
+
+		// Skip line-endings.
+		offset += 2;
+	}
+
+	// Close the open file.
+	f_close(&file);
+}
+
+// Insert new score data into entries.
+void insertScore(PlayerEntry *entries, int score, char *name) {
+	// Return out if score is not higher than last.
+	if (score < entries[MAX_SCORES - 1].score) return;
+
+	// Copy new date into last position.
+	entries[MAX_SCORES - 1].score = score;
+	strcpy(entries[MAX_SCORES - 1].name, name);
+
+	// Sort the entries by score.
+	bubbleSort(entries);
+
+	// Save the updated entries.
+	saveScores(entries);
+}
+
+// Bubble sort the passed entry array.
+void bubbleSort(PlayerEntry *array) {
+	for(int i = 0; i <= MAX_SCORES; i++) {
+		for(int j = 0; j < (MAX_SCORES - i); j++) {
+			if (array[j].score < array[j+1].score) {
+				swap(&array[j], &array[j+1]);
+			}
+		}
+	}
+}
+
+// Swap two player entry pointers.
+void swap(PlayerEntry *a, PlayerEntry *b) {
+	PlayerEntry temp = *a;
+	*a = *b;
+	*b = temp;
+}

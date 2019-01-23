@@ -10,7 +10,7 @@ XTmrCtr TimerInstance;
 void timerHandler(void *InstancePtr, u8 timerIndex) {
 	if(! (kills || dead || ufo || pew)) return;
 
-	unsigned long out = 0;
+	unsigned long out[2] = {0, 0};
 	// if something happened
 	//|| dead || ufo || pew
 //	if(kills){
@@ -19,7 +19,8 @@ void timerHandler(void *InstancePtr, u8 timerIndex) {
 	if(kills){
 		if(i < DEATH_ELEMENTS) {
 			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
-			out += invaderKilled[i];
+			out[0] += invaderKilled[i];
+			out[1] += invaderKilled[i+1];
 			i++;
 		} else {
 			i = 0;
@@ -30,7 +31,8 @@ void timerHandler(void *InstancePtr, u8 timerIndex) {
 	if(dead){
 		if(j < EXPLOSION_LENGTH) {
 			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
-			out += explosion[j];
+			out[0] += explosion[j];
+			out[1] += explosion[j+1];
 			j++;
 		} else {
 			j = 0;
@@ -40,7 +42,8 @@ void timerHandler(void *InstancePtr, u8 timerIndex) {
 
 	if(ufo){
 		if(k < UFOHIGHPITCH_LENGTH) {
-			out += (ufohighpitch[k] >> 2);
+			out[0] += (ufohighpitch[k] >> 2);
+			out[1] += (ufohighpitch[k+1] >> 2);
 //			out = invaderKilled[i];
 			k++;
 		} else {
@@ -52,7 +55,8 @@ void timerHandler(void *InstancePtr, u8 timerIndex) {
 	if(pew){
 		if(l < SHOT_LENGTH) {
 			//audio_stream(invaderKilled[i], DEATH_ELEMENTS, i);
-			out += shot[l];
+			out[0] += shot[l];
+			out[1] += shot[l+1];
 			l++;
 		} else {
 			l = 0;

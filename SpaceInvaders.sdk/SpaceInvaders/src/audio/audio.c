@@ -133,11 +133,11 @@ void AudioWriteToReg(u8 u8RegAddr, u16 u16Data) {
  *
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
-void audio_stream(u32 /***/Track/*, u32 length*/){
+void audio_stream(u32 *Track/*, u32 length*/){
 	u32  BUFF,bitsize;
 	bitsize = 8;
 
-	BUFF = 	(uint32_t)(	(Track/*[i]*/<<0)|(Track/*[i+1]*/<<bitsize) );
+	BUFF = 	(uint32_t)(	(Track[0]<<0)|(Track[1]<<bitsize) );
 
 	// Write audio input to codec
 	Xil_Out32(I2S_DATA_TX_L_REG, BUFF);

@@ -4,6 +4,7 @@
 // Includes
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "xil_io.h"
 #include "../settings.h"
 #include "src/include/ff.h"
@@ -15,7 +16,7 @@ typedef struct {
 } PlayerEntry;
 
 // Prototypes
-void bubbleSort(PlayerEntry *array[]);
+void bubbleSort(PlayerEntry *array);
 void saveScores(PlayerEntry *entries);
 void readScores(PlayerEntry * entries);
 void swap(PlayerEntry *a, PlayerEntry *b);

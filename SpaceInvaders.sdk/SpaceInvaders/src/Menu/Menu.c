@@ -3,7 +3,8 @@
 
 // General
 Text pressKey;
-int redrawScores;
+int firstInit = 1;
+int redrawScores = 1;
 
 // Scores
 Text playerName;
@@ -17,12 +18,17 @@ Player *playerPtr;
 
 // Initialize the menu.
 void initializeMenu(Player *player) {
-	// Initialize the SD card.
-	initializeSDCard(entries);
-	saveScores(entries); // todo
+	// Check if first run.
+	if (firstInit) {
+		// Initialize the SD card.
+		initializeSDCard(entries);
 
-	// Read in score entries.
-	readScores(entries);
+		// Read in score entries.
+		readScores(entries);
+
+		// Skip future inits.
+		firstInit--;
+	}
 
 	// Set relations.
 	playerPtr = player;
@@ -122,13 +128,12 @@ void paintNewScore(u8 *frame) {
 
 		// Check if enter, backspace, or char.
 		if (keyPress() == KEY_ENTER) {
-			// Save the player score and reload.
+			// Save the new player score.
 			insertScore(entries, playerPtr->score, playerPtr->name);
-			saveScores(entries);
 		} else if (keyPress() == KEY_BACKSPACE) {
 			// Remove character at last position.
 			playerPtr->name[length - 1] = '\0';
-		} else if (length < (PLAYERNAME_LENGTH - 1)) {
+		} else if (length < (PLAYERNAME_LENGTH - 1) && ! keysPressed('<', '>') && ! keyPressed('^')) {
 			// Add key press to player name.
 			playerPtr->name[length] = keyPress();
 			playerPtr->name[length + 1] = '\0';

@@ -39,7 +39,7 @@ void saveScores(PlayerEntry *entries) {
 	// Loop through the top scores.
 	for (int i = 0; i < MAX_SCORES; i++) {
 		// Convert scores to strings.
-		char score[SCORE_LENGTH];
+		char score[SCORE_LENGTH + 1];
 		sprintf(score, "%d", entries[i].score);
 
 		// Add player entry to buffer.
@@ -63,7 +63,7 @@ void saveScores(PlayerEntry *entries) {
 }
 
 // Read in the high scores.
-void readScores(PlayerEntry * entries) {
+void readScores(PlayerEntry *entries) {
 	// Open the scores text file.
 	FIL file;
 	int status = f_open(&file, SCORE_FILE, FA_OPEN_ALWAYS | FA_READ);
@@ -96,6 +96,9 @@ void readScores(PlayerEntry * entries) {
 		// Skip separator.
 		offset++;
 
+		// Reset the entry score.
+		entries[i].score = 0;
+
 		// Convert score string to integer.
 		for (int x = 0; x < strlen(scoreString); x++) {
 			if (scoreString[x] < 48 || scoreString[x] > 57) continue;
@@ -121,39 +124,26 @@ void readScores(PlayerEntry * entries) {
 
 // Insert new score data into entries.
 void insertScore(PlayerEntry *entries, int score, char *name) {
-	// Make a copy of the passed entries.
-	PlayerEntry *newEntries[MAX_SCORES + 1];
-	for (int i = 0; i < MAX_SCORES; i ++) {
-		newEntries[i] = &entries[i];
-	}
+	// Return out if score is not higher than last.
+	if (score < entries[MAX_SCORES - 1].score) return;
 
-	// Create new object for passed data.
-	PlayerEntry newEntry;
-	newEntry.score = score;
-	strcpy(newEntry.name, name);
-
-	// Add new entry to list.
-	newEntries[MAX_SCORES + 1] = &newEntry;
+	// Copy new date into last position.
+	entries[MAX_SCORES - 1].score = score;
+	strcpy(entries[MAX_SCORES - 1].name, name);
 
 	// Sort the entries by score.
-	bubbleSort(newEntries);
+	bubbleSort(entries);
 
-	// Copy new entry order into array.
-	for (int i = 0; i < MAX_SCORES; i ++) {
-		entries[i].score = newEntries[i]->score;
-		strcpy(entries[i].name, newEntries[i]->name);
-	}
-
-	// todo
-	for (int i = 0; i < MAX_SCORES; i++) xil_printf("%d %s\r\n",entries[i].score,entries[i].name);
+	// Save the updated entries.
+	saveScores(entries);
 }
 
 // Bubble sort the passed entry array.
-void bubbleSort(PlayerEntry *array[]) {
-	for(int i = 0; i <= (MAX_SCORES + 1); i++) {
-		for(int j = 0; j < ((MAX_SCORES + 1) - i); j++) {
-			if (array[j]->score < array[j+1]->score) {
-				swap(array[j], array[j+1]);
+void bubbleSort(PlayerEntry *array) {
+	for(int i = 0; i <= (MAX_SCORES - 1); i++) {
+		for(int j = 0; j < (MAX_SCORES - 1 - i); j++) {
+			if (array[j].score < array[j+1].score) {
+				swap(&array[j], &array[j+1]);
 			}
 		}
 	}
@@ -161,7 +151,18 @@ void bubbleSort(PlayerEntry *array[]) {
 
 // Swap two player entry pointers.
 void swap(PlayerEntry *a, PlayerEntry *b) {
-	PlayerEntry temp = *a;
-	*a = *b;
-	*b = temp;
+	// Declare temp values of a.
+	int tempScore = a->score;
+	char tempName[PLAYERNAME_LENGTH + 1];
+
+	// Copy a name into temp variable.
+	strcpy(tempName, a->name);
+
+	// Replace a with b values.
+	a->score = b->score;
+	strcpy(a->name, b->name);
+
+	// Replace b with temp values.
+	b->score = tempScore;
+	strcpy(b->name, tempName);
 }

@@ -9,20 +9,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="BonusEnemy" key="selection"/>
+		<item value="Xil_" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="bonusEnemy"/>
-			<item value="malloc"/>
-			<item value="dead"/>
-			<item value="collision"/>
-			<item value="menu-&gt;entries"/>
-			<item value="initializeObjects"/>
-			<item value="initializeMenu"/>
-			<item value="collide"/>
+			<item value="xil_"/>
+			<item value="xil_p"/>
+			<item value="gameOver"/>
+			<item value="fire"/>
+			<item value="nextEnemySpeed"/>
+			<item value="enemySpeed"/>
+			<item value="insert"/>
+			<item value="name"/>
 		</list>
 		<list key="replacehistory">
 			<item value="entries"/>
@@ -36,7 +36,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="388" key="DIALOG_HEIGHT"/>
-		<item value="1374" key="DIALOG_X_ORIGIN"/>
+		<item value="1004" key="DIALOG_X_ORIGIN"/>
 		<item value="133" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

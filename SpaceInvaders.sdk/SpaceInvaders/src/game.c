@@ -128,10 +128,10 @@ int main()
 void initializeDevices()
 {
 	// Initialize the devices.
-	//initializeTimer();
+	initializeTimer();
 	initializeDisplay();
 	initializeKeyboard();
-	//Initialize_Sound_IPs();
+	Initialize_Sound_IPs();
 }
 
 /**
@@ -140,8 +140,8 @@ void initializeDevices()
 void initializeObjects()
 {
 	// Initialize game objects.
-	initializePlayer(&player);
 	initializeMenu(&player);
+	initializePlayer(&player);
 	initializeShields(shields);
 	initializeEnemies(enemies);
 	initializeBonusEnemy(&bonusEnemy);

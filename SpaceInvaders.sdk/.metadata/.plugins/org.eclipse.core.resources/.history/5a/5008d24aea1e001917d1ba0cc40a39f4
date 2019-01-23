@@ -1,0 +1,160 @@
+// Header
+#include "Menu.h"
+
+// General
+Text pressKey;
+int redrawScores;
+
+// Scores
+Text playerName;
+Text playerScore;
+Text entryNames[MAX_SCORES];
+Text entryScores[MAX_SCORES];
+PlayerEntry entries[MAX_SCORES];
+
+// Relations
+Player *playerPtr;
+
+// Initialize the menu.
+void initializeMenu(Player *player) {
+	// Initialize the SD card.
+	initializeSDCard(&entries);
+	//saveScores(entries); // todo
+
+	// Read in score entries.
+	//readScores(entries);
+
+	// Set relations.
+	playerPtr = player;
+
+	// Set defaults.
+	redrawScores = 1;
+
+	// Set instructions text defaults.
+	pressKey.text = "PRESS ENTER TO CONTINUE";
+	pressKey.yPos = DISPLAY_HEIGHT - (CHAR_TEXT_HEIGHT * 2);
+	pressKey.xPos = (DISPLAY_WIDTH / 2) - (calculateTextWidth(&pressKey) / 2);
+}
+
+// Paint the menu.
+void paintMenu(u8 *frame) {
+	// Loop through the display height.
+	for (int ycoi = 0; ycoi < DISPLAY_HEIGHT; ycoi++) {
+		// Check if inside logo bounds.
+		if (ycoi > MENU_LOGO_Y && ycoi < (MENU_LOGO_Y + MENU_LOGO_HEIGHT)) {
+			// Copy logo image into frame.
+			memcpy(
+				&frame[(ycoi * STRIDE) + (MENU_LOGO_X * 3)],
+				&Logo[(ycoi - MENU_LOGO_Y) * MENU_LOGO_WIDTH * 3],
+				MENU_LOGO_WIDTH * 3
+			);
+		}
+
+		// Check if inside stripe bounds.
+		if (ycoi <= DISPLAY_HEIGHT - (CHAR_TEXT_HEIGHT * 3)) {
+			// Left stripe
+			frame[(ycoi * STRIDE) + (MENU_OFFSET * 3) + 0] = 255;
+			frame[(ycoi * STRIDE) + (MENU_OFFSET * 3) + 1] = 0;
+			frame[(ycoi * STRIDE) + (MENU_OFFSET * 3) + 2] = 0;
+
+			// Right stripe
+			frame[(ycoi * STRIDE) + ((DISPLAY_WIDTH - MENU_OFFSET) * 3) + 0] = 255;
+			frame[(ycoi * STRIDE) + ((DISPLAY_WIDTH - MENU_OFFSET) * 3) + 1] = 0;
+			frame[(ycoi * STRIDE) + ((DISPLAY_WIDTH - MENU_OFFSET) * 3) + 2] = 0;
+		}
+	}
+
+	// Paint the instructions text.
+	paintText(&pressKey, frame);
+
+	// Check if scores need to be redrawn. todo
+	if (redrawScores) {
+		// Draw the entry scores.
+		for (int i = 0; i < MAX_SCORES; i++) {
+			paintEntries(&entries[i], i, frame);
+		}
+
+		// Decrement future redraws.
+		redrawScores--;
+	}
+
+	// Paint new score.
+	paintNewScore(frame);
+}
+
+// Paint the highscore entries.
+void paintEntries(PlayerEntry *entry, int index, u8 *frame) {
+	// Convert score to string.
+	char strScore[SCORE_LENGTH];
+	sprintf(strScore, "%d", entry->score);
+
+	// Depaint the previous elements.
+	depaintText(&entryScores[index], frame);
+	depaintText(&entryNames[index], frame);
+
+	// Get and position the entry scores.
+	Text *score = &entryScores[index];
+	score->text = strScore;
+	score->xPos = 140;
+	score->yPos = 180 + (34 * index);
+
+	// Get and position the entry names.
+	Text *name = &entryNames[index];
+	name->text = entry->name;
+	name->xPos = 280;
+	name->yPos = 180 + (34 * index);
+
+	// Paint the text on the frame.
+	paintText(name, frame);
+	paintText(score, frame);
+}
+
+// Paint the new player score.
+void paintNewScore(u8 *frame) {
+	// Check if has pressed key.
+	if (keyPress()) {
+		// Find current name length.
+		int length;
+		for (length = 0; playerPtr->name[length] != '\0'; length++);
+
+		// Depaint the current name.
+		depaintText(&playerName, frame);
+
+		// Check if enter, backspace, or char.
+		if (keyPress() == KEY_ENTER) {
+			// Save the new player score.
+			insertScore(&entries, playerPtr->score, playerPtr->name);
+			//saveScores(&entries);
+
+			// Request to redraw scores.
+			redrawScores++;
+		} else if (keyPress() == KEY_BACKSPACE) {
+			// Remove character at last position.
+			playerPtr->name[length - 1] = '\0';
+		} else if (length < (PLAYERNAME_LENGTH - 1) && ! keysPressed('<', '>') && ! keyPressed('^')) {
+			// Add key press to player name.
+			playerPtr->name[length] = keyPress();
+			playerPtr->name[length + 1] = '\0';
+		}
+	}
+
+	// Convert score to string.
+	char strScore[SCORE_LENGTH];
+	sprintf(strScore, "%d", playerPtr->score);
+
+	// Get and position the score text.
+	Text *newScore = &playerScore;
+	newScore->text = strScore;
+	newScore->xPos = 140;
+	newScore->yPos = 200 + (34 * MAX_SCORES) + 10;
+
+	// Get and position the entry names.
+	Text *name = &playerName;
+	name->text = playerPtr->name;
+	name->xPos = 280;
+	name->yPos = 200 + (34 * MAX_SCORES) + 10;
+
+	// Paint the text on the frame.
+	paintText(newScore, frame);
+	paintText(name, frame);
+}
