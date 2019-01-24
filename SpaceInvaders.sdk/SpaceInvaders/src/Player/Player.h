@@ -33,6 +33,7 @@ typedef struct {
 
 // Constructors
 u8 readPlayerInput();
+u8 readPlayerSpeed();
 void centerPlayer(Player *player);
 void writePlayerHealth(int health);
 void positionPlayer(Player *player);

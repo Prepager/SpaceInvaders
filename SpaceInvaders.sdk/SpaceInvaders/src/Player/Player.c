@@ -2,7 +2,7 @@
 #include "Player.h"
 
 // Globals
-XGpio BTNGpio, LEDGpio;
+XGpio BTNGpio, LEDGpio, SWSGpio;
 
 extern u8 pew;
 
@@ -30,6 +30,10 @@ void initializePlayer(Player *player) {
 	// Initialize the button XGPIO.
 	XGpio_Initialize(&BTNGpio, BTN_ID);
 	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
+
+	// Initialize the switch XGPIO.
+	XGpio_Initialize(&SWSGpio, SWS_ID);
+	XGpio_SetDataDirection(&SWSGpio, SWS_CHANNEL, 0xFF);
 }
 
 // Place player at the center.
@@ -115,6 +119,11 @@ void depaintPlayer(Player *player, u8 *frame) {
 // Read input from player.
 u8 readPlayerInput() {
 	return XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+}
+
+// Read speed input from player.
+u8 readPlayerSpeed() {
+	return XGpio_DiscreteRead(&SWSGpio, SWS_MASK);
 }
 
 // Write player health.

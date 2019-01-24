@@ -289,6 +289,7 @@ void position()
 		nextEnemySpeed = ENEMY_SPEED;
 		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (ENEMY_TOTAL - alive);
 		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (gameLevel * (ENEMY_TOTAL / 1.5));
+		nextEnemySpeed -= ENEMY_SPEED_INCREASE * (readPlayerSpeed() * (ENEMY_TOTAL / 1.5));
 
 		// Check next enemy speed bounds.
 		if (nextEnemySpeed > ENEMY_SPEED_MAX) {

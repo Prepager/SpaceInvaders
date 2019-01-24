@@ -1,0 +1,194 @@
+// Header
+#include "Player.h"
+
+// Globals
+XGpio BTNGpio, LEDGpio, SWSGpio;
+
+extern u8 pew;
+
+// Initialize the player.
+void initializePlayer(Player *player) {
+	// Set base values.
+	player->score = 0;
+	player->dying = 0;
+	strcpy(player->name, "");
+	player->health = PLAYER_HEALTH;
+
+	// Delete bullet if exists.
+	if (player->bullet) {
+		free(player->bullet);
+		player->bullet = NULL;
+	}
+
+	// Set starting position.
+	centerPlayer(player);
+
+	// Initialize the LED XGPIO.
+	XGpio_Initialize(&LEDGpio, LED_ID);
+	XGpio_SetDataDirection(&LEDGpio, LED_CHANNEL, 0x00);
+
+	// Initialize the button XGPIO.
+	XGpio_Initialize(&BTNGpio, BTN_ID);
+	XGpio_SetDataDirection(&BTNGpio, BTN_CHANNEL, 0xFF);
+
+	// Initialize the switch XGPIO.
+	XGpio_Initialize(&SWSGpio, BTN_ID);
+	XGpio_SetDataDirection(&SWSGpio, SWS_CHANNEL, 0xFF);
+}
+
+// Place player at the center.
+void centerPlayer(Player *player) {
+	player->position = (DISPLAY_WIDTH / 2) - (PLAYER_WIDTH / 2);
+}
+
+// Paint the player.
+void paintPlayer(Player *player, u8 *frame) {
+	// Generate the frame address for the starting position.
+	int addr = (player->position * 3) + (PLAYER_Y_OFFSET * STRIDE);
+
+	// Point to current player image.
+	u8 *image = Ship;
+
+	// Check if player is dying.
+	if (player->dying) {
+		// Change dying state every defined change.
+		if ((player->dying % PLAYER_DYING_CHANGE) == 0) {
+			player->dyingState = ! player->dyingState;
+		}
+
+		// Select current death state image.
+		image = player->dyingState ? PlayerDeathState0 : PlayerDeathState1;
+
+		// Decrement dying counter.
+		player->dying--;
+
+		// Center player if no longer dying.
+		if (player->health && ! player->dying) {
+			// Depaint the current player.
+			depaintPlayer(player, frame);
+
+			// Return the player to the center.
+			centerPlayer(player);
+
+			// Return out to prevent redraw.
+			return;
+		} else if (! player->health && ! player->dying) {
+			// Restart the death animation.
+			player->dying = PLAYER_DYING;
+		}
+	}
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < PLAYER_HEIGHT; ycoi++) {
+		// Copy enemy image data into frame.
+		memcpy(&frame[addr], &image[ycoi * PLAYER_WIDTH * 3], PLAYER_WIDTH * 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+
+	// Paint the bullet if exists.
+	if (player->bullet != NULL) {
+		paintBullet(player->bullet, frame);
+	}
+
+	// Write the player health to LEDs.
+	writePlayerHealth(player->health);
+}
+
+// Depaint the player.
+void depaintPlayer(Player *player, u8 *frame) {
+	// Generate the frame address for the starting position.
+	int addr = (player->position * 3) + (PLAYER_Y_OFFSET * STRIDE);
+
+	// Loop through the height and set data.
+	for (int ycoi = 0; ycoi < PLAYER_HEIGHT; ycoi++) {
+		// Draw the background color.
+		memset(&frame[addr], BACKGROUND, PLAYER_WIDTH * 3);
+
+		// Jump to next line.
+		addr += STRIDE;
+	}
+
+	// Depaint the bullet if exists.
+	if (player->bullet != NULL) {
+		depaintBullet(player->bullet, frame);
+	}
+}
+
+// Read input from player.
+u8 readPlayerInput() {
+	return XGpio_DiscreteRead(&BTNGpio, BTN_MASK);
+}
+
+// Read speed input from player.
+u8 readPlayerSpeed() {
+	return XGpio_DiscreteRead(&SWSGpio, SWS_MASK);
+}
+
+// Write player health.
+void writePlayerHealth(int health) {
+	return XGpio_DiscreteWrite(&LEDGpio, BTN_MASK, health);
+}
+
+// Position the enemies.
+void positionPlayer(Player *player) {
+	// Set default next position.
+	u32 nextPosition = player->position;
+
+	// Read in input from buttons.
+	u8 input = readPlayerInput();
+
+	// Determine the direction.
+	if ((input & PLAYER_KEY_LEFT) || keysPressed('A', '<')) {
+		nextPosition -= PLAYER_MOVEMENT;
+	} else if ((input & PLAYER_KEY_RIGHT) || keysPressed('D', '>')) {
+		nextPosition += PLAYER_MOVEMENT;
+	}
+
+	// Update position if not outside bounds.
+	if (nextPosition > 0 && nextPosition < (DISPLAY_WIDTH - PLAYER_WIDTH)) {
+		player->position = nextPosition;
+	}
+
+	// Check if shooting and no bullet exists.
+	if (player->bullet == NULL && ((input & PLAYER_KEY_SHOOT) || keyPressed('W') || keysPressed('^', ' '))) {
+		// Set flag for shoot sound
+		pew++;
+		// Allocate space for new bullet.
+		player->bullet = malloc(sizeof(Bullet));
+
+		// Set new bullet position.
+		player->bullet->direction = 1;
+		player->bullet->yPos = PLAYER_Y_OFFSET;
+		player->bullet->xPos = player->position + (PLAYER_WIDTH / 2) - (BULLET_WIDTH / 2);
+	}
+
+	// Position bullet if exists.
+	if (player->bullet != NULL) {
+		player->bullet = positionBullet(player->bullet, BULLET_PLAYER_MOVEMENT);
+	}
+}
+
+// Check collision between bullet and player.
+Bullet* collidesPlayer(Player *player, Bullet *bullet) {
+	// Skip if player is already dead.
+	if (player->health <= 0) return NULL;
+
+	// Check if bullet collides with player.
+	if (collidesBullet(bullet, player->position, PLAYER_Y_OFFSET, PLAYER_WIDTH, PLAYER_HEIGHT)) {
+		// Decrement player health.
+		player->health--;
+
+		// Enable player dying time.
+		player->dying = PLAYER_DYING;
+		player->dyingState = 0;
+
+		// Delete the bullet and pointer.
+		free(bullet);
+		return NULL;
+	}
+
+	// Return the original bullet
+	return bullet;
+}
